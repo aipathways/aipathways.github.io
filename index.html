@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arizona AI Transition Pathways</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Arizona Workforce Prototype</p>
+      <h1>AI Transition Pathways Explorer</h1>
+      <p class="subtitle">
+        Search occupations, review AI exposure, explore labor market information,
+        and identify lower-exposure transition options and Arizona training pathways.
+      </p>
+      <div class="search-panel">
+        <input id="searchInput" type="text" placeholder="Search occupations (e.g., Bookkeeping, Customer Service, Payroll)" />
+        <button id="clearBtn">Clear</button>
+      </div>
+      <div class="filters">
+        <button class="chip active" data-filter="ALL">All exposures</button>
+        <button class="chip" data-filter="High">High</button>
+        <button class="chip" data-filter="Medium">Medium</button>
+        <button class="chip" data-filter="Low">Low</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap main-grid">
+    <section>
+      <div class="section-head">
+        <h2>Occupations</h2>
+        <span id="resultCount" class="muted"></span>
+      </div>
+      <div id="occupationList" class="card-grid"></div>
+    </section>
+
+    <aside>
+      <div id="detailPanel" class="detail-panel empty-state">
+        <h2>Select an occupation</h2>
+        <p>
+          Click an occupation card to view AI exposure, labor market data, related
+          lower-exposure jobs, and Arizona training options.
+        </p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer wrap">
+    <p>
+      Prototype only. Replace seeded demo values in <code>data.js</code> with your own
+      O*NET, labor market, transition, and training crosswalk data.
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
