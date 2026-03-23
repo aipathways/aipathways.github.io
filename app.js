@@ -4,17 +4,33 @@ const searchInput = document.getElementById('searchInput');
 const clearBtn = document.getElementById('clearBtn');
 const resultCount = document.getElementById('resultCount');
 const chips = Array.from(document.querySelectorAll('.chip'));
+const occupationPage = document.getElementById('occupationPage');
 
 let activeFilter = 'ALL';
 let activeOccupationId = null;
+const MAX_VISIBLE_OCCUPATIONS = 6;
 
 function getOccupationById(id) {
   return occupations.find(o => o.id === id);
 }
 
-function renderOccupationCards() {
-  const query = searchInput.value.trim().toLowerCase();
-  const filtered = occupations.filter(o => {
+function escapeHtml(str) {
+  return String(str ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function fullOccupationLink(id) {
+  return `occupation.html?id=${encodeURIComponent(id)}`;
+}
+
+function getFilteredOccupations() {
+  const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+
+  return occupations.filter(o => {
     const matchesSearch = !query ||
       o.title.toLowerCase().includes(query) ||
       o.soc.toLowerCase().includes(query) ||
@@ -23,8 +39,32 @@ function renderOccupationCards() {
     const matchesExposure = activeFilter === 'ALL' || o.exposure === activeFilter;
     return matchesSearch && matchesExposure;
   });
+}
 
-  resultCount.textContent = `${filtered.length} occupation${filtered.length === 1 ? '' : 's'}`;
+function emptyDetailPanel() {
+  if (!detailPanel) return;
+  detailPanel.classList.add('empty-state');
+  detailPanel.innerHTML = `
+    <h3>Select an occupation</h3>
+    <p>
+      Click an occupation card to view AI exposure, labor market data, and up to two
+      related lower-exposure occupations. Use the full occupation page for all details,
+      including Arizona training opportunities.
+    </p>
+  `;
+}
+
+function renderOccupationCards() {
+  if (!occupationList) return;
+
+  const filtered = getFilteredOccupations();
+  const visible = filtered.slice(0, MAX_VISIBLE_OCCUPATIONS);
+
+  if (resultCount) {
+    resultCount.textContent = filtered.length > MAX_VISIBLE_OCCUPATIONS
+      ? `Showing ${visible.length} of ${filtered.length} occupations`
+      : `${filtered.length} occupation${filtered.length === 1 ? '' : 's'}`;
+  }
 
   if (!filtered.length) {
     occupationList.innerHTML = `
@@ -33,19 +73,20 @@ function renderOccupationCards() {
         <p class="muted">Try a different search term or exposure filter.</p>
       </div>
     `;
+    emptyDetailPanel();
     return;
   }
 
-  occupationList.innerHTML = filtered.map(o => `
-    <article class="card" data-id="${o.id}">
+  occupationList.innerHTML = visible.map(o => `
+    <article class="card" data-id="${escapeHtml(o.id)}">
       <div class="inline-row">
-        <span class="badge ${o.exposure}">${o.exposure} AI Exposure</span>
-        <span class="badge Blue">SOC ${o.soc}</span>
+        <span class="badge ${escapeHtml(o.exposure)}">${escapeHtml(o.exposure)} AI Exposure</span>
+        <span class="badge Blue">SOC ${escapeHtml(o.soc)}</span>
       </div>
-      <h3>${o.title}</h3>
-      <p>${o.summary}</p>
-      <p class="muted"><strong>Median wage:</strong> ${o.laborMarket.medianWage}</p>
-      <p class="muted"><strong>Employment:</strong> ${o.laborMarket.employment}</p>
+      <h3>${escapeHtml(o.title)}</h3>
+      <p>${escapeHtml(o.summary)}</p>
+      <p class="muted"><strong>Median wage:</strong> ${escapeHtml(o.laborMarket.medianWage)}</p>
+      <p class="muted"><strong>Employment:</strong> ${escapeHtml(o.laborMarket.employment)}</p>
     </article>
   `).join('');
 
@@ -57,21 +98,25 @@ function renderOccupationCards() {
   });
 }
 
-function renderRelatedOccupations(occupation) {
+function renderRelatedOccupations(occupation, limit = null, includeLinks = false) {
   if (occupation.exposure !== 'High') {
     return `
       <div class="subsection">
-        <h3>Transition pathways</h3>
+        <h3>Related lower-exposure occupations</h3>
         <p class="muted">Lower-exposure transition options are highlighted when a high-exposure occupation is selected.</p>
       </div>
     `;
   }
 
-  const related = occupation.relatedOccupationIds.map(getOccupationById).filter(Boolean);
+  let related = occupation.relatedOccupationIds.map(getOccupationById).filter(Boolean);
+  if (typeof limit === 'number') {
+    related = related.slice(0, limit);
+  }
+
   if (!related.length) {
     return `
       <div class="subsection">
-        <h3>Transition pathways</h3>
+        <h3>Related lower-exposure occupations</h3>
         <p class="muted">No related lower-exposure occupations are currently mapped for this role.</p>
       </div>
     `;
@@ -84,13 +129,16 @@ function renderRelatedOccupations(occupation) {
         ${related.map(item => `
           <div class="mini-card">
             <div class="inline-row">
-              <span class="badge ${item.exposure}">${item.exposure} Exposure</span>
-              <span class="badge Blue">SOC ${item.soc}</span>
+              <span class="badge ${escapeHtml(item.exposure)}">${escapeHtml(item.exposure)} Exposure</span>
+              <span class="badge Blue">SOC ${escapeHtml(item.soc)}</span>
             </div>
-            <h4>${item.title}</h4>
-            <p class="muted">${item.summary}</p>
-            <p><strong>Median wage:</strong> ${item.laborMarket.medianWage} · <strong>Openings:</strong> ${item.laborMarket.annualOpenings}</p>
-            <button class="action-btn" onclick="renderDetail('${item.id}')">View occupation</button>
+            <h4>${escapeHtml(item.title)}</h4>
+            <p class="muted">${escapeHtml(item.summary)}</p>
+            <p><strong>Median wage:</strong> ${escapeHtml(item.laborMarket.medianWage)} · <strong>Openings:</strong> ${escapeHtml(item.laborMarket.annualOpenings)}</p>
+            <div class="button-row">
+              <button class="action-btn" onclick="renderDetail('${escapeHtml(item.id)}')">View here</button>
+              ${includeLinks ? `<a class="action-btn action-link" href="${fullOccupationLink(item.id)}">Open full page</a>` : ''}
+            </div>
           </div>
         `).join('')}
       </div>
@@ -114,11 +162,11 @@ function renderTraining(occupation) {
       <div class="training-list">
         ${occupation.training.map(t => `
           <div class="mini-card">
-            <h4>${t.program}</h4>
-            <p><strong>Provider:</strong> ${t.provider}</p>
-            <p><strong>Award:</strong> ${t.award}</p>
-            <p><strong>CIP:</strong> ${t.cip}</p>
-            <p><strong>Location:</strong> ${t.location}</p>
+            <h4>${escapeHtml(t.program)}</h4>
+            <p><strong>Provider:</strong> ${escapeHtml(t.provider)}</p>
+            <p><strong>Award:</strong> ${escapeHtml(t.award)}</p>
+            <p><strong>CIP:</strong> ${escapeHtml(t.cip)}</p>
+            <p><strong>Location:</strong> ${escapeHtml(t.location)}</p>
           </div>
         `).join('')}
       </div>
@@ -126,59 +174,98 @@ function renderTraining(occupation) {
   `;
 }
 
-function renderDetail(id) {
-  const o = getOccupationById(id);
-  if (!o) return;
-
-  activeOccupationId = id;
-  detailPanel.classList.remove('empty-state');
-  detailPanel.innerHTML = `
+function detailMarkup(o) {
+  return `
     <div class="inline-row">
-      <span class="badge ${o.exposure}">${o.exposure} AI Exposure</span>
-      <span class="badge Blue">SOC ${o.soc}</span>
+      <span class="badge ${escapeHtml(o.exposure)}">${escapeHtml(o.exposure)} AI Exposure</span>
+      <span class="badge Blue">SOC ${escapeHtml(o.soc)}</span>
     </div>
-    <h2>${o.title}</h2>
-    <p>${o.summary}</p>
+    <h2>${escapeHtml(o.title)}</h2>
+    <p>${escapeHtml(o.summary)}</p>
 
     <div class="metrics">
       <div class="metric">
         <div class="metric-label">Median wage</div>
-        <div class="metric-value">${o.laborMarket.medianWage}</div>
+        <div class="metric-value">${escapeHtml(o.laborMarket.medianWage)}</div>
       </div>
       <div class="metric">
         <div class="metric-label">Annual openings</div>
-        <div class="metric-value">${o.laborMarket.annualOpenings}</div>
+        <div class="metric-value">${escapeHtml(o.laborMarket.annualOpenings)}</div>
       </div>
       <div class="metric">
         <div class="metric-label">Employment</div>
-        <div class="metric-value">${o.laborMarket.employment}</div>
+        <div class="metric-value">${escapeHtml(o.laborMarket.employment)}</div>
       </div>
       <div class="metric">
         <div class="metric-label">Projected growth</div>
-        <div class="metric-value">${o.laborMarket.projectedGrowth}</div>
+        <div class="metric-value">${escapeHtml(o.laborMarket.projectedGrowth)}</div>
       </div>
       <div class="metric">
         <div class="metric-label">Typical education</div>
-        <div class="metric-value">${o.laborMarket.typicalEducation}</div>
+        <div class="metric-value">${escapeHtml(o.laborMarket.typicalEducation)}</div>
       </div>
       <div class="metric">
         <div class="metric-label">Use case</div>
         <div class="metric-value">Transition planning</div>
       </div>
     </div>
-
-    ${renderRelatedOccupations(o)}
-    ${renderTraining(o)}
   `;
 }
 
-searchInput.addEventListener('input', renderOccupationCards);
-clearBtn.addEventListener('click', () => {
-  searchInput.value = '';
-  activeFilter = 'ALL';
-  chips.forEach(c => c.classList.toggle('active', c.dataset.filter === 'ALL'));
-  renderOccupationCards();
-});
+function renderDetail(id) {
+  if (!detailPanel) return;
+  const o = getOccupationById(id);
+  if (!o) return;
+
+  activeOccupationId = id;
+  detailPanel.classList.remove('empty-state');
+  detailPanel.innerHTML = `
+    ${detailMarkup(o)}
+    <div class="subsection">
+      <a class="full-page-link" href="${fullOccupationLink(o.id)}">Open full occupation page</a>
+    </div>
+    ${renderRelatedOccupations(o, 2, true)}
+  `;
+}
+
+function renderOccupationPage() {
+  if (!occupationPage) return;
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const occupation = getOccupationById(id);
+
+  if (!occupation) {
+    occupationPage.innerHTML = `
+      <div class="detail-panel">
+        <h2>Occupation not found</h2>
+        <p class="muted">The requested occupation could not be found in the current demo dataset.</p>
+        <p><a class="full-page-link" href="index.html">Return to explorer</a></p>
+      </div>
+    `;
+    return;
+  }
+
+  document.title = `${occupation.title} | Arizona AI Transition Pathways`;
+  occupationPage.innerHTML = `
+    <div class="detail-panel occupation-page-panel">
+      ${detailMarkup(occupation)}
+      ${renderRelatedOccupations(occupation, null, true)}
+      ${renderTraining(occupation)}
+    </div>
+  `;
+}
+
+if (searchInput) searchInput.addEventListener('input', renderOccupationCards);
+if (clearBtn) {
+  clearBtn.addEventListener('click', () => {
+    if (searchInput) searchInput.value = '';
+    activeFilter = 'ALL';
+    activeOccupationId = null;
+    chips.forEach(c => c.classList.toggle('active', c.dataset.filter === 'ALL'));
+    renderOccupationCards();
+    emptyDetailPanel();
+  });
+}
 
 chips.forEach(chip => {
   chip.addEventListener('click', () => {
@@ -189,3 +276,4 @@ chips.forEach(chip => {
 });
 
 renderOccupationCards();
+renderOccupationPage();

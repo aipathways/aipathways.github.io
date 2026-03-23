@@ -30,6 +30,9 @@ body {
   color: white;
   padding: 44px 0 28px;
 }
+.compact-hero {
+  padding: 32px 0 20px;
+}
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -46,6 +49,11 @@ body {
   line-height: 1.55;
   color: rgba(255,255,255,0.88);
 }
+.hero-link {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
 .search-panel {
   display: flex;
   gap: 10px;
@@ -60,17 +68,30 @@ body {
 }
 .search-panel button,
 .chip,
-.action-btn {
+.action-btn,
+.full-page-link {
   border: none;
   border-radius: 12px;
   padding: 12px 14px;
   cursor: pointer;
   font-weight: 600;
+  text-decoration: none;
 }
 .search-panel button,
-.action-btn {
+.action-btn,
+.full-page-link {
   background: white;
   color: #0f172a;
+}
+.action-link,
+.full-page-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.full-page-link {
+  background: #eef2ff;
+  color: var(--blue);
 }
 .filters {
   display: flex;
@@ -98,6 +119,9 @@ body {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
+}
+.right-head {
+  margin-bottom: 14px;
 }
 .card-grid {
   display: grid;
@@ -140,6 +164,12 @@ body {
   position: sticky;
   top: 20px;
   padding: 22px;
+}
+.occupation-page-panel {
+  position: static;
+}
+.occupation-page-wrap {
+  padding: 28px 0 42px;
 }
 .empty-state {
   min-height: 240px;
@@ -190,6 +220,12 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   align-items: center;
+}
+.button-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 .footer {
   padding: 0 0 32px;
