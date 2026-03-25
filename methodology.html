@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Methodology | Arizona AI Transition Pathways</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="nav-links">
+        <a class="nav-link" href="index.html">Occupations</a>
+        <a class="nav-link active" href="methodology.html">Methodology</a>
+        <a class="nav-link" href="about.html">About</a>
+      </div>
+      <form class="nav-search" id="globalSearchForm">
+        <input id="globalSearchInput" type="text" placeholder="Search all occupations" aria-label="Search all occupations" />
+      </form>
+    </div>
+  </nav>
+
+  <header class="hero compact-hero">
+    <div class="wrap">
+      <p class="eyebrow">Arizona Workforce Prototype</p>
+      <h1>Methodology</h1>
+      <p class="subtitle">Sample language describing how AI exposure and occupational transition pathways may be derived.</p>
+    </div>
+  </header>
+
+  <main class="wrap page-wrap">
+    <div class="detail-panel static-page">
+      <h2>Sample methodology text</h2>
+      <p>
+        This prototype classifies occupations into high, medium, and low AI exposure categories using a sample framework that combines task content, occupational descriptors, and labor market context. In a production version, exposure estimates could be derived by linking Standard Occupational Classification (SOC) codes to O*NET task statements, ratings for task importance and frequency, and external research on the current capabilities of generative AI and other automation technologies. Tasks that are highly information-based, repetitive, rules-driven, or language-heavy may receive higher exposure scores, while tasks requiring physical dexterity, in-person service delivery, judgment under uncertainty, relationship management, or complex coordination may receive lower exposure scores.
+      </p>
+      <p>
+        Transition pathways can be developed by identifying occupations that share overlapping skills, knowledge domains, work activities, tools, credentials, or industry contexts, while offering lower estimated AI exposure. In practice, this may involve using O*NET similarity measures, skill crosswalks, wage and demand thresholds, and state labor market information to prioritize realistic alternatives. Labor market indicators shown in this prototype are sample values, but a full implementation could integrate Arizona employment, openings, projected growth, and wage data along with training program linkages derived from CIP-to-SOC crosswalks and state education provider inventories.
+      </p>
+    </div>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

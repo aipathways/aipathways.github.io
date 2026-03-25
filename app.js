@@ -1,6 +1,8 @@
 const occupationList = document.getElementById('occupationList');
 const detailPanel = document.getElementById('detailPanel');
 const searchInput = document.getElementById('searchInput');
+const globalSearchInput = document.getElementById('globalSearchInput');
+const globalSearchForm = document.getElementById('globalSearchForm');
 const clearBtn = document.getElementById('clearBtn');
 const resultCount = document.getElementById('resultCount');
 const chips = Array.from(document.querySelectorAll('.chip'));
@@ -27,8 +29,25 @@ function fullOccupationLink(id) {
   return `occupation.html?id=${encodeURIComponent(id)}`;
 }
 
+function getSearchValue() {
+  if (searchInput) return searchInput.value.trim().toLowerCase();
+  if (globalSearchInput) return globalSearchInput.value.trim().toLowerCase();
+  return '';
+}
+
+function setSearchValue(value) {
+  if (searchInput) searchInput.value = value;
+  if (globalSearchInput) globalSearchInput.value = value;
+}
+
+function initSearchFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get('q') || '';
+  if (q) setSearchValue(q);
+}
+
 function getFilteredOccupations() {
-  const query = searchInput ? searchInput.value.trim().toLowerCase() : '';
+  const query = getSearchValue();
 
   return occupations.filter(o => {
     const matchesSearch = !query ||
@@ -68,7 +87,7 @@ function renderOccupationCards() {
 
   if (!filtered.length) {
     occupationList.innerHTML = `
-      <div class="card">
+      <div class="card static-card">
         <h3>No occupations found</h3>
         <p class="muted">Try a different search term or exposure filter.</p>
       </div>
@@ -236,7 +255,7 @@ function renderOccupationPage() {
 
   if (!occupation) {
     occupationPage.innerHTML = `
-      <div class="detail-panel">
+      <div class="detail-panel occupation-page-panel">
         <h2>Occupation not found</h2>
         <p class="muted">The requested occupation could not be found in the current demo dataset.</p>
         <p><a class="full-page-link" href="index.html">Return to explorer</a></p>
@@ -255,15 +274,37 @@ function renderOccupationPage() {
   `;
 }
 
-if (searchInput) searchInput.addEventListener('input', renderOccupationCards);
+if (globalSearchForm) {
+  globalSearchForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const query = (globalSearchInput ? globalSearchInput.value : searchInput ? searchInput.value : '').trim();
+    window.location.href = `index.html${query ? `?q=${encodeURIComponent(query)}` : ''}`;
+  });
+}
+
+if (searchInput) {
+  searchInput.addEventListener('input', () => {
+    if (globalSearchInput) globalSearchInput.value = searchInput.value;
+    renderOccupationCards();
+    if (activeOccupationId) {
+      const stillVisible = getFilteredOccupations().some(o => o.id === activeOccupationId);
+      if (!stillVisible) {
+        activeOccupationId = null;
+        emptyDetailPanel();
+      }
+    }
+  });
+}
+
 if (clearBtn) {
   clearBtn.addEventListener('click', () => {
-    if (searchInput) searchInput.value = '';
+    setSearchValue('');
     activeFilter = 'ALL';
     activeOccupationId = null;
     chips.forEach(c => c.classList.toggle('active', c.dataset.filter === 'ALL'));
     renderOccupationCards();
     emptyDetailPanel();
+    window.history.replaceState({}, '', 'index.html');
   });
 }
 
@@ -272,8 +313,16 @@ chips.forEach(chip => {
     activeFilter = chip.dataset.filter;
     chips.forEach(c => c.classList.toggle('active', c === chip));
     renderOccupationCards();
+    if (activeOccupationId) {
+      const stillVisible = getFilteredOccupations().some(o => o.id === activeOccupationId);
+      if (!stillVisible) {
+        activeOccupationId = null;
+        emptyDetailPanel();
+      }
+    }
   });
 });
 
+initSearchFromUrl();
 renderOccupationCards();
 renderOccupationPage();

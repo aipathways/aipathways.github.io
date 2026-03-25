@@ -7,23 +7,35 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <nav class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="nav-links">
+        <a class="nav-link active" href="index.html">Occupations</a>
+        <a class="nav-link" href="methodology.html">Methodology</a>
+        <a class="nav-link" href="about.html">About</a>
+      </div>
+      <form class="nav-search" id="globalSearchForm">
+        <input id="searchInput" type="text" placeholder="Search all occupations" aria-label="Search all occupations" />
+      </form>
+    </div>
+  </nav>
+
   <header class="hero">
     <div class="wrap">
-      <p class="eyebrow">Prototype</p>
+      <p class="eyebrow">Arizona Workforce Prototype</p>
       <h1>AI Transition Pathways Explorer</h1>
       <p class="subtitle">
         Search occupations, review AI exposure, explore labor market information,
         and identify lower-exposure transition options and Arizona training pathways.
       </p>
-      <div class="search-panel">
-        <input id="searchInput" type="text" placeholder="Search occupations (e.g., Bookkeeping, Customer Service, Payroll)" />
-        <button id="clearBtn">Clear</button>
-      </div>
-      <div class="filters">
-        <button class="chip active" data-filter="ALL">All exposures</button>
-        <button class="chip" data-filter="High">High</button>
-        <button class="chip" data-filter="Medium">Medium</button>
-        <button class="chip" data-filter="Low">Low</button>
+      <div class="filters-row">
+        <div class="filters">
+          <button class="chip active" data-filter="ALL">All exposures</button>
+          <button class="chip" data-filter="High">High</button>
+          <button class="chip" data-filter="Medium">Medium</button>
+          <button class="chip" data-filter="Low">Low</button>
+        </div>
+        <button id="clearBtn" class="secondary-btn">Clear</button>
       </div>
     </div>
   </header>
@@ -54,7 +66,8 @@
 
   <footer class="footer wrap">
     <p>
-      Prototype only. Replace seeded demo values in <code>data.js</code> with final O*NET, labor market, transition, and training crosswalk data.
+      Prototype only. Replace seeded demo values in <code>data.js</code> with your own
+      O*NET, labor market, transition, and training crosswalk data.
     </p>
   </footer>
 
