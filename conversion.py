@@ -2,7 +2,7 @@ import pandas as pd
 import json
 import re
 
-# Load CSV
+# Load exposure files 
 df = pd.read_csv("data.csv")
 
 # Helper to create ID

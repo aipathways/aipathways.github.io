@@ -1,16 +1,16 @@
 Arizona AI Transition Pathways Website Prototype
 
+What is the value of this website?
+1. Provide Arizonan's with an understanding of which jobs are exposed to AI in the state2
+2. Showcase transition Pathways
+3. Provide an exhaustive list of trainings beyond what is available through IPEDS
+
 Files included:
 - index.html
 - occupation.html
 - styles.css
 - app.js
 - data.js
-
-How to use:
-1. Unzip the folder.
-2. Open index.html in a browser.
-3. Update data.js with your own occupation, labor market, transition, and Arizona training data.
 
 Current prototype behavior:
 - Shows up to 6 occupations at a time in the explorer.
@@ -25,3 +25,4 @@ Suggested next upgrades:
 - Add pagination or a "Load more" pattern.
 - Add export, comparison, and county filters.
 - Link training results to a live CIP-to-SOC crosswalk.
+
