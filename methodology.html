@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Methodology | Arizona AI Transition Pathways</title>
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    window.MathJax = {
+      tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 </head>
 <body>
   <nav class="topbar">
@@ -20,24 +27,282 @@
     </div>
   </nav>
 
-  <header class="hero compact-hero">
-    <div class="wrap">
-      <p class="eyebrow">Arizona Workforce Prototype</p>
-      <h1>Methodology</h1>
-      <p class="subtitle">Sample language describing how AI exposure and occupational transition pathways may be derived.</p>
-    </div>
-  </header>
+  <main class="wrap methodology-page">
+    <header class="page-header">
+      <h1>AI Risk Methods</h1>
+      <p>This page explains how the website defines AI risk, measures labor market change, and recommends lower-exposure occupational transitions connected to education and training pathways.</p>
+    </header>
 
-  <main class="wrap page-wrap">
-    <div class="detail-panel static-page">
-      <h2>Sample methodology text</h2>
-      <p>
-        This prototype classifies occupations into high, medium, and low AI exposure categories using a sample framework that combines task content, occupational descriptors, and labor market context. In a production version, exposure estimates could be derived by linking Standard Occupational Classification (SOC) codes to O*NET task statements, ratings for task importance and frequency, and external research on the current capabilities of generative AI and other automation technologies. Tasks that are highly information-based, repetitive, rules-driven, or language-heavy may receive higher exposure scores, while tasks requiring physical dexterity, in-person service delivery, judgment under uncertainty, relationship management, or complex coordination may receive lower exposure scores.
-      </p>
-      <p>
-        Transition pathways can be developed by identifying occupations that share overlapping skills, knowledge domains, work activities, tools, credentials, or industry contexts, while offering lower estimated AI exposure. In practice, this may involve using O*NET similarity measures, skill crosswalks, wage and demand thresholds, and state labor market information to prioritize realistic alternatives. Labor market indicators shown in this prototype are sample values, but a full implementation could integrate Arizona employment, openings, projected growth, and wage data along with training program linkages derived from CIP-to-SOC crosswalks and state education provider inventories.
-      </p>
-    </div>
+    <section class="method-section" id="overview">
+      <h2>Overview</h2>
+      <p>This resource provides an <strong>AI Risk</strong> score for each Standard Occupational Classification (SOC) code, grouped into five categories: <strong>Very High</strong>, <strong>High</strong>, <strong>Medium</strong>, <strong>Low</strong>, and <strong>Very Low</strong> exposure. Occupations with tasks that are repetitive, rules-based, or language-intensive tend to have higher exposure, while those requiring physical skills, in-person interaction, or complex decision-making tend to have lower exposure.</p>
+      <p>Unlike traditional measures, AI Risk combines three dimensions: <strong>(1) theoretical task-based exposure</strong>, <strong>(2) adaptive capacity</strong>, and <strong>(3) real-world labor market trends</strong>.</p>
+
+      <figure class="figure-block">
+        <h3>Figure 1. Occupational AI Risk Dimensions</h3>
+        <div class="figure-grid">
+          <div class="figure-item">Theoretical Exposure</div>
+          <div class="figure-item">Adaptive Capacity</div>
+          <div class="figure-item">Labor Market Impact</div>
+        </div>
+      </figure>
+
+      <p>This approach reflects research showing that no single measure fully captures AI’s impact on jobs. By incorporating worker characteristics such as skill transferability alongside observed changes in employment and job postings, AI Risk provides a more complete and practical view of how occupations may be affected by AI.</p>
+    </section>
+
+    <section class="method-section" id="occupational-transition">
+      <h2>Occupational Transition</h2>
+      <p>Occupations with high AI exposure are connected to related occupations with lower exposure to help users explore potential career transitions. Rather than treating occupations in isolation, the approach leverages relationships between occupations to identify feasible pathways into roles that are less susceptible to AI-driven disruption.</p>
+      <p>For each high-exposure occupation, we surface a curated set of related occupations with lower or moderate exposure levels. We then link these occupations to relevant education and training programs, allowing users to understand not only where they could transition, but also how to get there.</p>
+    </section>
+
+    <section class="method-section" id="defining-ai-risk">
+      <h2>Defining AI Risk</h2>
+
+      <section class="subsection" id="theoretical-exposure">
+        <h3>Theoretical Exposure</h3>
+        <p>Organizations including <strong>O*NET</strong>, the <strong>International Labour Organization</strong>, <strong>Anthropic</strong>, and academic researchers have developed independent measures of occupational AI exposure. One of the most widely used is from <strong>Tyna Eloundou et al.</strong>, which estimates how much generative AI can accelerate task completion. However, multiple alternative measures exist, each capturing different dimensions of exposure.</p>
+        <p>Research from the <strong>Yale Budget Lab</strong> shows that while these measures tend to align for low-exposure occupations, they diverge substantially for highly exposed roles. For example, one metric may identify web developers as most at risk, while another highlights telemarketers—reflecting differences in how exposure is defined. This variability underscores a key limitation: theoretical exposure alone does not indicate where displacement will occur, how large the effects will be, or how quickly they may materialize.</p>
+        <p>To address this, we adopt a hybrid approach inspired by the Yale Budget Lab, combining multiple exposure measures into a single index using <strong>principal component analysis (PCA)</strong>. Conceptually, PCA extracts the shared signal across measures by identifying a weighted combination that explains the greatest common variation. If \(X_1, X_2, \dots, X_k\) represent standardized exposure measures, the composite index is:</p>
+
+        <div class="equation-block">
+          \[
+          PC_1 = w_1 X_1 + w_2 X_2 + \dots + w_k X_k
+          \]
+        </div>
+
+        <p>where weights \(w_j\) are chosen to maximize explained variance. This produces a more stable, consensus-based estimate of exposure. A complete list of selected AI measures and PCA weights are provided in Table 1.</p>
+
+        <div class="table-wrap">
+          <table>
+            <caption>Table 1. AI Measures and Associated Principal Component Weights</caption>
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Source</th>
+                <th>Measuring</th>
+                <th>PCA Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>dv_rating_beta</td>
+                <td>Eloundou et al. (2024)</td>
+                <td>GPTs and auxiliary technologies speeding up task completion</td>
+                <td>0.426</td>
+              </tr>
+              <tr>
+                <td>human_rating_beta</td>
+                <td>Eloundou et al. (2024)</td>
+                <td>GPTs and auxiliary technologies speeding up task completion</td>
+                <td>0.425</td>
+              </tr>
+              <tr>
+                <td>genaiexp_estz_total</td>
+                <td>Eisfeldt et al. (2023)</td>
+                <td>Task completion efficiency (all tasks)</td>
+                <td>0.419</td>
+              </tr>
+              <tr>
+                <td>genai_exp_estz_core</td>
+                <td>Eisfeldt et al. (2023)</td>
+                <td>Task completion efficiency (core tasks)</td>
+                <td>0.407</td>
+              </tr>
+              <tr>
+                <td>AIOE</td>
+                <td>Felten et al. (2021)</td>
+                <td>Occupational ability's exposure to various AI applications</td>
+                <td>0.410</td>
+              </tr>
+              <tr>
+                <td>ai_applicability_score</td>
+                <td>Tomlinson et al. (2025)</td>
+                <td>How successfully does the model complete the user's task</td>
+                <td>0.359</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>We exclude the exposure measure developed by Michael Webb, as it captures patent-based technological overlap rather than task-level AI capability. Including this measure did not materially change PCA-derived scores but substantially reduced occupational coverage due to data limitations. As a result, excluding it improved consistency and completeness without affecting overall results.</p>
+        <p>By integrating multiple theoretical measures into a single composite index, this approach provides a more robust foundation for assessing occupational exposure, while recognizing that exposure alone is only one component of broader labor market risk.</p>
+      </section>
+
+      <section class="subsection" id="adaptive-capacity">
+        <h3>Adaptive Capacity</h3>
+        <p>To complement measures of AI exposure, this analysis incorporates an occupation-level measure of <strong>adaptive capacity</strong>, following the framework developed by Manning and Aguirre. Adaptive capacity is defined as the ability of workers within an occupation to transition to alternative employment opportunities and mitigate welfare losses in response to technological disruption.</p>
+        <p>Adaptive capacity is modeled as a composite index capturing multiple dimensions of worker resilience. Let \(i\) index occupations. The adaptive capacity score for occupation \(i\), denoted \(AC_i\), is defined as a weighted combination of standardized components:</p>
+
+        <div class="equation-block">
+          \[
+          AC_i = \sum_{m=1}^{M} \omega_m Z_{im}
+          \]
+        </div>
+
+        <p>where:</p>
+        <ul>
+          <li>\(Z_{im}\) represents the standardized (z-scored) value of component \(m\) for occupation \(i\),</li>
+          <li>\(\omega_m\) are weights applied to each component, and</li>
+          <li>\(M\) is the number of dimensions included in the index.</li>
+        </ul>
+
+        <p>Following the NBER framework, the index incorporates four primary dimensions:</p>
+        <ul>
+          <li><strong>Financial Capacity</strong><br />Proxied by measures of liquid or net wealth available to workers in the occupation, capturing the ability to withstand periods of unemployment or invest in retraining.</li>
+          <li><strong>Skill Transferability</strong><br />Measures the extent to which an occupation’s skill set can be applied to other occupations. This is typically derived from task or skill similarity metrics (for example, O*NET-based similarity scores), reflecting the breadth of feasible occupational transitions.</li>
+          <li><strong>Local Labor Market Density</strong><br />Captures the availability of alternative employment opportunities within local labor markets, often proxied by occupational employment concentration or job availability across regions.</li>
+          <li><strong>Demographic Factors</strong><br />Incorporates age-related characteristics, recognizing that younger workers may have greater flexibility in retraining and occupational mobility relative to older workers.</li>
+        </ul>
+
+        <p>Each component is standardized:</p>
+
+        <div class="equation-block">
+          \[
+          Z_{im} = \frac{X_{im} - \mu_m}{\sigma_m}
+          \]
+        </div>
+
+        <p>where \(X_{im}\) is the raw value of component \(m\) for occupation \(i\), and \(\mu_m\), \(\sigma_m\) are the mean and standard deviation across occupations.</p>
+        <p>In the absence of explicit weighting guidance, equal weights are applied:</p>
+
+        <div class="equation-block">
+          \[
+          \omega_m = \frac{1}{M}
+          \]
+        </div>
+
+        <p>resulting in a normalized index where higher values indicate greater adaptive capacity.</p>
+      </section>
+
+      <section class="subsection" id="labor-market-impact">
+        <h3>Labor Market Impact</h3>
+        <p>To estimate how AI is affecting occupations, we apply the <strong>Synthetic Control Method (SCM)</strong> to both employment and job posting data. This approach allows us to compare observed trends for high AI-exposed occupations to a data-driven counterfactual (ie what would have likely occurred in the absence of recent advances in AI).</p>
+        <p>Employment estimates were derived from <strong>Lightcast</strong> OES time series data, which integrates federal Occupational Employment and Wage Statistics (OEWS) with additional modeling to produce consistent, time-indexed occupation-level employment estimates. Job posting data are sourced from Lightcast’s Job Posting Analytics database, which aggregates postings from thousands of online sources and applies deduplication and occupational coding.</p>
+        <p>Occupations were first classified by AI exposure using our composite AI Risk measure. Occupations in the “High” and “Very High” categories are considered <strong>treated units</strong>, representing those most exposed to AI capabilities. A <strong>donor pool</strong> of lower-exposure occupations (Medium, Low, and Very Low) is then constructed to serve as potential comparison units.</p>
+        <p>To ensure comparability, donor occupations are restricted to those with similar pre-period trends in employment or postings and are drawn from the same major occupational groups.</p>
+        <p>For each high-exposure occupation, SCM creates a <strong>synthetic control</strong>, a weighted combination of lower-exposure occupations that closely matches the treated occupation’s pre-AI trend. These weights are optimized so that the synthetic control reproduces the treated occupation’s trajectory prior to the widespread adoption of modern AI systems.</p>
+        <p>The <strong>treatment period</strong> is defined as beginning following 2022, corresponding with the rapid diffusion of large language models such as <strong>ChatGPT</strong>. After constructing the synthetic control, we compared observed outcomes to the counterfactual:</p>
+        <ul>
+          <li><strong>Employment impact:</strong> Difference between actual and synthetic employment levels using Lightcast OES data</li>
+          <li><strong>Demand impact:</strong> Difference in job postings relative to the synthetic trend</li>
+        </ul>
+
+        <p>These differences were interpreted as <strong>AI-associated deviations</strong>, capturing whether high-exposure occupations experienced relative declines, stability, or growth compared to similar, lower-exposure occupations.</p>
+        <p>We assess model quality using standard SCM diagnostics, including pre-period fit and placebo tests applied to donor occupations. Results are interpreted cautiously: SCM estimates reflect <strong>relative changes</strong>, not absolute causal effects, and should be understood as indicative of divergence from expected trends rather than definitive measures of displacement.</p>
+
+        <div class="equation-block">
+          \[
+          \hat{Y}_{1t}^{N} = \sum_{j=2}^{J+1} w_j Y_{jt}
+          \]
+        </div>
+
+        <div class="equation-block">
+          \[
+          \hat{\alpha}_{1t} = Y_{1t} - \hat{Y}_{1t}^{N}
+          \]
+        </div>
+      </section>
+
+      <section class="subsection" id="integrating-exposures">
+        <h3>Integrating Exposures</h3>
+        <p>AI exposure, adaptive capacity and observed labor market changes were combined to assess occupational vulnerability to AI. Let:</p>
+        <ul>
+          <li>\(E_i\) denote AI exposure for occupation \(i\), derived from task-based measures (for example, share of tasks exposed),</li>
+          <li>\(L_i\) denote labor market change indicators (for example, percent change in employment or job postings), and</li>
+          <li>\(AC_i\) denote adaptive capacity.</li>
+        </ul>
+
+        <p>We define a composite <strong>AI vulnerability index</strong> as:</p>
+
+        <div class="equation-block">
+          \[
+          V_i = \alpha E_i - \beta AC_i
+          \]
+        </div>
+
+        <p>where higher \(E_i\) increases vulnerability and higher \(AC_i\) reduces vulnerability.</p>
+        <p>To incorporate observed labor market dynamics, the framework was extended as:</p>
+
+        <div class="equation-block">
+          \[
+          V_i^{*} = \alpha E_i + \gamma f(L_i) - \beta AC_i
+          \]
+        </div>
+
+        <p>where \(f(L_i)\) is a transformation of labor market trends. This allows the model to distinguish between occupations that are highly exposed but currently stable versus those already experiencing declines.</p>
+      </section>
+    </section>
+
+    <section class="method-section" id="defining-occupational-transitions">
+      <h2>Defining Occupational Transitions</h2>
+
+      <section class="subsection" id="identifying-related-occupations">
+        <h3>Identifying Related Occupations</h3>
+        <p>We use occupational similarity data from <strong>O*NET</strong> to identify relationships between occupations. Specifically, we rely on O*NET’s “Related Occupations” framework, which links occupations based on:</p>
+        <ul>
+          <li>Shared skills (for example, critical thinking, programming)</li>
+          <li>Common work activities (for example, data analysis, customer interaction)</li>
+          <li>Overlapping knowledge domains (for example, finance, healthcare)</li>
+        </ul>
+        <p>These relationships are precomputed by O*NET using a combination of task similarity and expert validation.</p>
+        <p>For each high AI-exposure occupation, we extract its set of related occupations and retain those that meet two criteria:</p>
+        <ul>
+          <li>Lower or moderate AI exposure classification</li>
+          <li>Sufficient similarity score, ensuring transitions are realistic in terms of skill transferability</li>
+        </ul>
+        <p>This filtering produces a set of viable transition occupations grounded in empirical similarity measures.</p>
+      </section>
+
+      <section class="subsection" id="ai-exposure-alignment">
+        <h3>AI Exposure Alignment</h3>
+        <p>Each occupation is assigned an AI exposure level based on a composite measure. To construct transition pathways:</p>
+        <ul>
+          <li>High-exposure occupations serve as the starting point</li>
+          <li>Related occupations with lower exposure levels are identified as target roles</li>
+          <li>Occupations with equal or higher exposure are excluded from transition recommendations</li>
+        </ul>
+        <p>This ensures that suggested pathways consistently move users toward roles that are less exposed to automation or augmentation risks.</p>
+      </section>
+
+      <section class="subsection" id="ranking-transition-pathways">
+        <h3>Ranking Transition Pathways</h3>
+        <p>Not all related occupations are equally viable. We rank potential transitions using a combination of:</p>
+        <ul>
+          <li>O*NET similarity scores (primary driver)</li>
+          <li>Exposure reduction magnitude (difference between source and target exposure)</li>
+          <li>Optional labor market indicators (for example, demand, wage levels)</li>
+        </ul>
+        <p>This prioritization ensures that recommended occupations balance feasibility with meaningful risk reduction.</p>
+      </section>
+
+      <section class="subsection" id="linking-education-and-training-pathways">
+        <h3>Linking Education and Training Pathways</h3>
+        <p>To translate occupational transitions into actionable steps, we connect target occupations to education and training programs using standardized classification systems:</p>
+        <ul>
+          <li>Occupations are mapped to instructional programs using a CIP-SOC crosswalk (Classification of Instructional Programs to Standard Occupational Classification)</li>
+          <li>Training programs are sourced from state and national education datasets (for example, community colleges, workforce training providers)</li>
+        </ul>
+        <p>For each target occupation, we identify:</p>
+        <ul>
+          <li>Relevant degree or certificate programs</li>
+          <li>Training providers aligned with occupational requirements</li>
+          <li>Program types (for example, short-term certificates, apprenticeships, associate degrees)</li>
+        </ul>
+      </section>
+
+      <section class="subsection" id="data-integration-pipeline">
+        <h3>Data Integration Pipeline</h3>
+        <p>The full pipeline integrates multiple data sources:</p>
+        <ul>
+          <li>Occupation-level AI exposure scores</li>
+          <li>O*NET related occupation mappings</li>
+          <li>CIP-SOC crosswalks</li>
+          <li>Training provider and program data</li>
+        </ul>
+        <p>These datasets are merged at the occupation level, allowing the system to generate transition pathways and associated training opportunities.</p>
+      </section>
+    </section>
   </main>
 
   <script src="data.js"></script>
