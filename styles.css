@@ -201,9 +201,31 @@ h1 {
   font-size: 0.82rem;
   font-weight: 700;
 }
-.badge.High { background: var(--red-soft); color: var(--red); }
-.badge.Medium { background: var(--amber-soft); color: var(--amber); }
-.badge.Low { background: var(--green-soft); color: var(--green); }
+.badge.Very-High {
+  background: #8b0000;
+  color: #ffffff;
+}
+
+.badge.High {
+  background: #d73027;
+  color: #ffffff;
+}
+
+.badge.Medium {
+  background: #ffd84d;
+  color: #1f2937;
+}
+
+.badge.Low {
+  background: #5cb85c;
+  color: #ffffff;
+}
+
+.badge.Very-Low {
+  background: #b7e4a8;
+  color: #1b2532;
+}
+
 .badge.Blue { background: var(--blue-soft); color: var(--blue); }
 .muted { color: var(--muted); }
 .detail-panel {
