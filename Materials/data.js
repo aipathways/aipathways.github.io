@@ -1,6 +1,6 @@
 const data = [
   {
-    id: "accountants-and-auditors",
+    "id": "accountants-and-auditors",
     "title": "Accountants and Auditors",
     "soc": "13-2011",
     "exposure": "Very High",
