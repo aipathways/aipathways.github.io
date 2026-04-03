@@ -38,7 +38,7 @@ function initApp(rawData) {
 
     const laborMarketSource = item.laborMarket ?? item.lmi ?? {};
 
-    const normalized = {
+    return {
       id: item.id ?? makeId(title || soc || `occupation-${index}`),
       title: String(title || "Untitled occupation"),
       soc: String(soc || ""),
@@ -58,19 +58,20 @@ function initApp(rawData) {
           : [],
       training: Array.isArray(item.training) ? item.training : []
     };
-
-    return normalized;
   }
 
   function normalizeExposure(value) {
     const v = String(value ?? "").trim().toLowerCase();
-
     if (v === "very high") return "Very High";
     if (v === "high") return "High";
     if (v === "medium") return "Medium";
     if (v === "low") return "Low";
     if (v === "very low") return "Very Low";
     return String(value ?? "Unknown");
+  }
+
+  function cssExposureClass(exposure) {
+    return String(exposure || "").trim().replace(/\s+/g, "-");
   }
 
   function makeId(value) {
@@ -203,10 +204,6 @@ function initApp(rawData) {
         renderDetail(activeOccupationId);
       });
     });
-  }
-
-  function cssExposureClass(exposure) {
-    return String(exposure || "").replace(/\s+/g, "-");
   }
 
   function renderRelatedOccupations(occupation, limit = null, includeLinks = false) {
