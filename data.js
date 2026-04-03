@@ -1,263 +1,19999 @@
-const occupations = [
+const data = [
   {
-    id: "bookkeeping-accounting-clerks",
-    title: "Bookkeeping, Accounting, and Auditing Clerks",
-    soc: "43-3031",
-    exposure: "High",
-    summary: "Routine clerical, reconciliation, and data-entry tasks create relatively high AI exposure.",
-    laborMarket: {
-      medianWage: "$48,300",
-      annualOpenings: "1,240",
-      employment: "18,600",
-      projectedGrowth: "2%",
-      typicalEducation: "High school diploma / some college"
+    "id": "accountants-and-auditors",
+    "title": "Accountants and Auditors",
+    "soc": "13-2011",
+    "exposure": "Very High",
+    "summary": "Examine, analyze, and interpret accounting records to prepare financial statements, give advice, or audit and evaluate statements prepared by others. Install or advise on systems of recording costs or other financial and budgetary data.",
+    "laborMarket": {
+      "medianWage": "$78,620",
+      "annualOpenings": "2,347",
+      "employment": "26,030",
+      "projectedGrowth": "0.71%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: ["payroll-timekeeping-clerks", "insurance-claims-clerks", "billing-posting-calculating-machines"],
-    training: []
+    "relatedOccupationIds": [
+      "bookkeeping-accounting-and-auditing-clerks",
+      "financial-examiners",
+      "treasurers-and-controllers",
+      "tax-preparers",
+      "budget-analysts",
+      "credit-analysts",
+      "personal-financial-advisors",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "financial-and-investment-analysts",
+      "payroll-and-timekeeping-clerks",
+      "management-analysts",
+      "credit-authorizers-checkers-and-clerks",
+      "billing-and-posting-clerks",
+      "financial-risk-specialists",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "compensation-benefits-and-job-analysis-specialists",
+      "brokerage-clerks",
+      "statistical-assistants",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel"
+    ],
+    "training": []
   },
   {
-    id: "customer-service-representatives",
-    title: "Customer Service Representatives",
-    soc: "43-4051",
-    exposure: "High",
-    summary: "Scripted communications and information retrieval tasks may be heavily augmented by AI tools.",
-    laborMarket: {
-      medianWage: "$41,900",
-      annualOpenings: "4,520",
-      employment: "55,200",
-      projectedGrowth: "1%",
-      typicalEducation: "High school diploma"
+    "id": "actors",
+    "title": "Actors",
+    "soc": "27-2011",
+    "exposure": "Low",
+    "summary": "Play parts in stage, television, radio, video, or film productions, or other settings for entertainment, information, or instruction. Interpret serious or comic role by speech, gesture, and body movement to entertain or inform audience. May dance and sing.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "81",
+      "employment": "360",
+      "projectedGrowth": "1.59%",
+      "typicalEducation": "Some college, no degree"
     },
-    relatedOccupationIds: ["sales-representatives-services-all-other", "eligibility-interviewers-government-programs", "training-development-specialists"],
-    training: []
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "executive-secretaries",
-    title: "Executive Secretaries and Executive Administrative Assistants",
-    soc: "43-6011",
-    exposure: "High",
-    summary: "Scheduling, drafting, documentation, and meeting support activities are exposed to generative AI tools.",
-    laborMarket: {
-      medianWage: "$59,500",
-      annualOpenings: "620",
-      employment: "7,100",
-      projectedGrowth: "-1%",
-      typicalEducation: "High school diploma / associate degree"
+    "id": "actuaries",
+    "title": "Actuaries",
+    "soc": "15-2011",
+    "exposure": "High",
+    "summary": "Analyze statistical data, such as mortality, accident, sickness, disability, and retirement rates and construct probability tables to forecast risk and liability for payment of future benefits. May ascertain insurance rates required and cash reserves necessary to ensure payment of future benefits.",
+    "laborMarket": {
+      "medianWage": "$124,000",
+      "annualOpenings": "18",
+      "employment": "170",
+      "projectedGrowth": "2.45%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: ["project-management-specialists", "human-resources-specialists", "training-development-specialists"],
-    training: []
+    "relatedOccupationIds": [
+      "personal-financial-advisors",
+      "financial-risk-specialists",
+      "financial-and-investment-analysts",
+      "compensation-benefits-and-job-analysis-specialists",
+      "accountants-and-auditors",
+      "economists",
+      "insurance-underwriters",
+      "statistical-assistants",
+      "financial-examiners",
+      "financial-managers",
+      "financial-quantitative-analysts",
+      "management-analysts",
+      "securities-commodities-and-financial-services-sales-agents",
+      "compensation-and-benefits-managers",
+      "credit-analysts",
+      "insurance-sales-agents",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "statisticians",
+      "business-intelligence-analysts"
+    ],
+    "training": []
   },
   {
-    id: "payroll-timekeeping-clerks",
-    title: "Payroll and Timekeeping Clerks",
-    soc: "43-3051",
-    exposure: "Medium",
-    summary: "Processing tasks remain exposed, though compliance and exception handling create some resilience.",
-    laborMarket: {
-      medianWage: "$51,400",
-      annualOpenings: "430",
-      employment: "4,900",
-      projectedGrowth: "3%",
-      typicalEducation: "High school diploma / certificate"
+    "id": "acupuncturists",
+    "title": "Acupuncturists",
+    "soc": "29-1291",
+    "exposure": "Low",
+    "summary": "Diagnose, treat, and prevent disorders by stimulating specific acupuncture points within the body using acupuncture needles. May also use cups, nutritional supplements, therapeutic massage, acupressure, and other alternative health therapies.",
+    "laborMarket": {
+      "medianWage": "$87,780",
+      "annualOpenings": "38",
+      "employment": "0",
+      "projectedGrowth": "2.27%",
+      "typicalEducation": "Master's degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "Mesa Community College",
-        program: "Accounting Certificate",
-        cip: "52.0302",
-        award: "Certificate",
-        location: "Mesa, AZ"
-      },
-      {
-        provider: "Pima Community College",
-        program: "Bookkeeping Technician",
-        cip: "52.0302",
-        award: "Certificate",
-        location: "Tucson, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "insurance-claims-clerks",
-    title: "Insurance Claims and Policy Processing Clerks",
-    soc: "43-9041",
-    exposure: "Medium",
-    summary: "Document review can be automated, but exception handling and regulated processes still require human review.",
-    laborMarket: {
-      medianWage: "$46,100",
-      annualOpenings: "280",
-      employment: "3,200",
-      projectedGrowth: "2%",
-      typicalEducation: "High school diploma / certificate"
+    "id": "acute-care-nurses",
+    "title": "Acute Care Nurses",
+    "soc": "29-1141",
+    "exposure": "Medium",
+    "summary": "Provide advanced nursing care for patients with acute conditions such as heart attacks, respiratory distress syndrome, or shock. May care for pre- and post-operative patients or perform advanced, invasive diagnostic or therapeutic procedures.",
+    "laborMarket": {
+      "medianWage": "$96,890",
+      "annualOpenings": "5,662",
+      "employment": "64,430",
+      "projectedGrowth": "2.79%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "Rio Salado College",
-        program: "Insurance Studies",
-        cip: "52.1701",
-        award: "Certificate",
-        location: "Tempe, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "billing-posting-calculating-machines",
-    title: "Billing and Posting Clerks",
-    soc: "43-3021",
-    exposure: "Low",
-    summary: "Still exposed to automation, but some roles shift into coordination and exception-based workflows.",
-    laborMarket: {
-      medianWage: "$45,700",
-      annualOpenings: "710",
-      employment: "9,100",
-      projectedGrowth: "4%",
-      typicalEducation: "High school diploma / certificate"
+    "id": "adapted-physical-education-specialists",
+    "title": "Adapted Physical Education Specialists",
+    "soc": "25-2059",
+    "exposure": "High",
+    "summary": "Provide individualized physical education instruction or services to children, youth, or adults with exceptional physical needs due to gross motor developmental delays or other impairments.",
+    "laborMarket": {
+      "medianWage": "$59,880",
+      "annualOpenings": "11",
+      "employment": "80",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "GateWay Community College",
-        program: "Business Operations Support",
-        cip: "52.0101",
-        award: "Certificate",
-        location: "Phoenix, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "sales-representatives-services-all-other",
-    title: "Sales Representatives, Services, All Other",
-    soc: "41-3099",
-    exposure: "Medium",
-    summary: "Human relationship-building and consultative communication can reduce direct replacement risk.",
-    laborMarket: {
-      medianWage: "$63,400",
-      annualOpenings: "1,180",
-      employment: "12,300",
-      projectedGrowth: "6%",
-      typicalEducation: "High school diploma / bachelor’s"
+    "id": "adhesive-bonding-machine-operators-and-tenders",
+    "title": "Adhesive Bonding Machine Operators and Tenders",
+    "soc": "51-9191",
+    "exposure": "Very Low",
+    "summary": "Operate or tend bonding machines that use adhesives to join items for further processing or to form a completed product. Processes include joining veneer sheets into plywood; gluing paper; or joining rubber and rubberized fabric parts, plastic, simulated leather, or other materials.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "2.9%",
+      "typicalEducation": "High school diploma"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "Estrella Mountain Community College",
-        program: "Business and Organizational Management",
-        cip: "52.0201",
-        award: "Associate",
-        location: "Avondale, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "eligibility-interviewers-government-programs",
-    title: "Eligibility Interviewers, Government Programs",
-    soc: "43-4061",
-    exposure: "Low",
-    summary: "The role blends administrative review with sensitive client interaction and case judgment.",
-    laborMarket: {
-      medianWage: "$49,800",
-      annualOpenings: "350",
-      employment: "4,000",
-      projectedGrowth: "5%",
-      typicalEducation: "High school diploma / associate degree"
+    "id": "administrative-law-judges-adjudicators-and-hearing-officers",
+    "title": "Administrative Law Judges, Adjudicators, and Hearing Officers",
+    "soc": "23-1021",
+    "exposure": "High",
+    "summary": "Conduct hearings to recommend or make decisions on claims concerning government programs or other government-related matters. Determine liability, sanctions, or penalties, or recommend the acceptance or rejection of claims or settlements.",
+    "laborMarket": {
+      "medianWage": "$118,810",
+      "annualOpenings": "11",
+      "employment": "320",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Doctoral or professional degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "Arizona Western College",
-        program: "Human Services",
-        cip: "44.0000",
-        award: "Associate",
-        location: "Yuma, AZ"
-      }
-    ]
+    "relatedOccupationIds": [
+      "judges-magistrate-judges-and-magistrates",
+      "judicial-law-clerks",
+      "lawyers",
+      "arbitrators-mediators-and-conciliators",
+      "claims-adjusters-examiners-and-investigators",
+      "equal-opportunity-representatives-and-officers",
+      "probation-officers-and-correctional-treatment-specialists",
+      "labor-relations-specialists",
+      "fraud-examiners-investigators-and-analysts",
+      "chief-executives",
+      "paralegals-and-legal-assistants",
+      "court-municipal-and-license-clerks",
+      "legal-secretaries-and-administrative-assistants",
+      "eligibility-interviewers-government-programs",
+      "court-reporters-and-simultaneous-captioners",
+      "detectives-and-criminal-investigators",
+      "title-examiners-abstractors-and-searchers",
+      "police-and-sheriff-s-patrol-officers"
+    ],
+    "training": []
   },
   {
-    id: "training-development-specialists",
-    title: "Training and Development Specialists",
-    soc: "13-1151",
-    exposure: "Low",
-    summary: "AI can support content creation, but facilitation, employer engagement, and instructional adaptation remain human-centered.",
-    laborMarket: {
-      medianWage: "$64,700",
-      annualOpenings: "840",
-      employment: "9,800",
-      projectedGrowth: "9%",
-      typicalEducation: "Bachelor’s degree"
+    "id": "administrative-services-managers",
+    "title": "Administrative Services Managers",
+    "soc": "11-3012",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate one or more administrative services of an organization, such as records and information management, mail distribution, and other office support services.",
+    "laborMarket": {
+      "medianWage": "$99,800",
+      "annualOpenings": "509",
+      "employment": "6,310",
+      "projectedGrowth": "0.85%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "Arizona State University",
-        program: "Learning Design and Technologies",
-        cip: "13.0501",
-        award: "Bachelor’s / Graduate",
-        location: "Tempe, AZ"
-      },
-      {
-        provider: "Northern Arizona University",
-        program: "Workforce Development and Training",
-        cip: "13.9999",
-        award: "Certificate",
-        location: "Flagstaff, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "project-management-specialists",
-    title: "Project Management Specialists",
-    soc: "13-1082",
-    exposure: "Low",
-    summary: "AI can streamline planning artifacts, but cross-functional coordination, stakeholder management, and judgment remain central.",
-    laborMarket: {
-      medianWage: "$79,200",
-      annualOpenings: "2,100",
-      employment: "24,900",
-      projectedGrowth: "8%",
-      typicalEducation: "Bachelor’s degree"
+    "id": "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+    "title": "Adult Basic Education, Adult Secondary Education, and English as a Second Language Instructors",
+    "soc": "25-3011",
+    "exposure": "Medium",
+    "summary": "Teach or instruct out-of-school youths and adults in basic education, literacy, or English as a Second Language classes, or in classes for earning a high school equivalency credential.",
+    "laborMarket": {
+      "medianWage": "$60,250",
+      "annualOpenings": "77",
+      "employment": "650",
+      "projectedGrowth": "-0.15%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "University of Arizona",
-        program: "Project Management Certificate",
-        cip: "52.0211",
-        award: "Certificate",
-        location: "Tucson, AZ"
-      },
-      {
-        provider: "Scottsdale Community College",
-        program: "Project Management",
-        cip: "52.0211",
-        award: "Certificate",
-        location: "Scottsdale, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
   },
   {
-    id: "human-resources-specialists",
-    title: "Human Resources Specialists",
-    soc: "13-1071",
-    exposure: "Low",
-    summary: "Administrative pieces can be automated, but employee relations, recruiting nuance, and compliance interpretation preserve demand.",
-    laborMarket: {
-      medianWage: "$62,900",
-      annualOpenings: "1,020",
-      employment: "11,200",
-      projectedGrowth: "7%",
-      typicalEducation: "Bachelor’s degree"
+    "id": "advanced-practice-psychiatric-nurses",
+    "title": "Advanced Practice Psychiatric Nurses",
+    "soc": "29-1141",
+    "exposure": "Medium",
+    "summary": "Assess, diagnose, and treat individuals and families with mental health or substance use disorders or the potential for such disorders. Apply therapeutic activities, including the prescription of medication, per state regulations, and the administration of psychotherapy.",
+    "laborMarket": {
+      "medianWage": "$96,890",
+      "annualOpenings": "5,662",
+      "employment": "64,430",
+      "projectedGrowth": "2.79%",
+      "typicalEducation": "Bachelor's degree"
     },
-    relatedOccupationIds: [],
-    training: [
-      {
-        provider: "Phoenix College",
-        program: "Human Resources Management",
-        cip: "52.1001",
-        award: "Certificate",
-        location: "Phoenix, AZ"
-      }
-    ]
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "advertising-sales-agents",
+    "title": "Advertising Sales Agents",
+    "soc": "41-3011",
+    "exposure": "Very High",
+    "summary": "Sell or solicit advertising space, time, or media in publications, signage, TV, radio, or Internet establishments or public spaces.",
+    "laborMarket": {
+      "medianWage": "$54,760",
+      "annualOpenings": "114",
+      "employment": "1,530",
+      "projectedGrowth": "-0.34%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "advertising-and-promotions-managers",
+      "marketing-managers",
+      "market-research-analysts-and-marketing-specialists",
+      "telemarketers",
+      "public-relations-specialists",
+      "sales-managers",
+      "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+      "real-estate-sales-agents",
+      "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "writers-and-authors",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "merchandise-displayers-and-window-trimmers",
+      "online-merchants",
+      "public-relations-managers",
+      "retail-salespersons",
+      "counter-and-rental-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "advertising-and-promotions-managers",
+    "title": "Advertising and Promotions Managers",
+    "soc": "11-2011",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate advertising policies and programs or produce collateral materials, such as posters, contests, coupons, or giveaways, to create extra interest in the purchase of a product or service for a department, an entire organization, or on an account basis.",
+    "laborMarket": {
+      "medianWage": "$107,000",
+      "annualOpenings": "8",
+      "employment": "50",
+      "projectedGrowth": "0.5%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "advertising-sales-agents",
+      "marketing-managers",
+      "market-research-analysts-and-marketing-specialists",
+      "public-relations-specialists",
+      "public-relations-managers",
+      "sales-managers",
+      "fundraising-managers",
+      "fundraisers",
+      "online-merchants",
+      "writers-and-authors",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "management-analysts",
+      "merchandise-displayers-and-window-trimmers",
+      "business-intelligence-analysts",
+      "purchasing-managers",
+      "telemarketers",
+      "web-administrators",
+      "art-directors"
+    ],
+    "training": []
+  },
+  {
+    "id": "aerospace-engineering-and-operations-technologists-and-technicians",
+    "title": "Aerospace Engineering and Operations Technologists and Technicians",
+    "soc": "17-3021",
+    "exposure": "Medium",
+    "summary": "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data.",
+    "laborMarket": {
+      "medianWage": "$62,160",
+      "annualOpenings": "18",
+      "employment": "180",
+      "projectedGrowth": "1.29%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "aerospace-engineers",
+    "title": "Aerospace Engineers",
+    "soc": "17-2011",
+    "exposure": "Very High",
+    "summary": "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques.",
+    "laborMarket": {
+      "medianWage": "$135,620",
+      "annualOpenings": "106",
+      "employment": "1,770",
+      "projectedGrowth": "0.54%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "electro-mechanical-and-mechatronics-technologists-and-technicians",
+      "avionics-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "mechanical-engineers",
+      "aircraft-mechanics-and-service-technicians",
+      "electronics-engineers-except-computer",
+      "mechatronics-engineers",
+      "marine-engineers-and-naval-architects",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "industrial-engineers",
+      "aircraft-structure-surfaces-rigging-and-systems-assemblers",
+      "calibration-technologists-and-technicians",
+      "electrical-engineers",
+      "industrial-engineering-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "agents-and-business-managers-of-artists-performers-and-athletes",
+    "title": "Agents and Business Managers of Artists, Performers, and Athletes",
+    "soc": "13-1011",
+    "exposure": "Very High",
+    "summary": "Represent and promote artists, performers, and athletes in dealings with current or prospective employers. May handle contract negotiation and other business matters for clients.",
+    "laborMarket": {
+      "medianWage": "$70,100",
+      "annualOpenings": "35",
+      "employment": "130",
+      "projectedGrowth": "2.08%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "talent-directors",
+      "advertising-sales-agents",
+      "public-relations-specialists",
+      "advertising-and-promotions-managers",
+      "writers-and-authors",
+      "marketing-managers",
+      "meeting-convention-and-event-planners",
+      "market-research-analysts-and-marketing-specialists",
+      "sales-managers",
+      "public-relations-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "telemarketers",
+      "fundraisers",
+      "real-estate-sales-agents",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "personal-financial-advisors",
+      "fundraising-managers",
+      "art-directors",
+      "securities-commodities-and-financial-services-sales-agents"
+    ],
+    "training": []
+  },
+  {
+    "id": "agricultural-engineers",
+    "title": "Agricultural Engineers",
+    "soc": "17-2021",
+    "exposure": "Medium",
+    "summary": "Apply knowledge of engineering technology and biological science to agricultural problems concerned with power and machinery, electrification, structures, soil and water conservation, and processing of agricultural products.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "agricultural-equipment-operators",
+    "title": "Agricultural Equipment Operators",
+    "soc": "45-2091",
+    "exposure": "Very Low",
+    "summary": "Drive and control equipment to support agricultural activities such as tilling soil; planting, cultivating, and harvesting crops; feeding and herding livestock; or removing animal waste. May perform tasks such as crop baling or hay bucking. May operate stationary equipment to perform post-harvest tasks such as husking, shelling, threshing, and ginning.",
+    "laborMarket": {
+      "medianWage": "$34,270",
+      "annualOpenings": "181",
+      "employment": "1,020",
+      "projectedGrowth": "-0.65%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "agricultural-inspectors",
+    "title": "Agricultural Inspectors",
+    "soc": "45-2011",
+    "exposure": "Medium",
+    "summary": "Inspect agricultural commodities, processing equipment, and facilities, and fish and logging operations, to ensure compliance with regulations and laws governing health, quality, and safety.",
+    "laborMarket": {
+      "medianWage": "$44,100",
+      "annualOpenings": "37",
+      "employment": "170",
+      "projectedGrowth": "1.41%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "agricultural-sciences-teachers-postsecondary",
+    "title": "Agricultural Sciences Teachers, Postsecondary",
+    "soc": "25-1041",
+    "exposure": "High",
+    "summary": "Teach courses in the agricultural sciences. Includes teachers of agronomy, dairy sciences, fisheries management, horticultural sciences, poultry sciences, range management, and agricultural soil conservation. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$63,720",
+      "annualOpenings": "4",
+      "employment": "50",
+      "projectedGrowth": "1.16%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-science-teachers-postsecondary",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "farmers-ranchers-and-other-agricultural-managers",
+      "soil-and-plant-scientists",
+      "career-technical-education-teachers-postsecondary",
+      "farm-and-home-management-educators",
+      "agricultural-technicians",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "career-technical-education-teachers-secondary-school",
+      "chemistry-teachers-postsecondary",
+      "health-specialties-teachers-postsecondary",
+      "agricultural-engineers",
+      "economics-teachers-postsecondary",
+      "animal-scientists",
+      "natural-sciences-managers",
+      "biologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "agricultural-technicians",
+    "title": "Agricultural Technicians",
+    "soc": "19-4012",
+    "exposure": "Medium",
+    "summary": "Work with agricultural scientists in plant, fiber, and animal research, or assist with animal breeding and nutrition. Set up or maintain laboratory equipment and collect samples from crops or animals. Prepare specimens or record data to assist scientists in biology or related life science experiments. Conduct tests and experiments to improve yield and quality of crops or to increase the resistance of plants and animals to disease or insects.",
+    "laborMarket": {
+      "medianWage": "$63,340",
+      "annualOpenings": "44",
+      "employment": "0",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "air-traffic-controllers",
+    "title": "Air Traffic Controllers",
+    "soc": "53-2021",
+    "exposure": "Medium",
+    "summary": "Control air traffic on and within vicinity of airport, and movement of air traffic between altitude sectors and control centers, according to established procedures and policies. Authorize, regulate, and control commercial airline flights according to government or company regulations to expedite and ensure flight safety.",
+    "laborMarket": {
+      "medianWage": "$130,960",
+      "annualOpenings": "26",
+      "employment": "380",
+      "projectedGrowth": "0.36%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "aircraft-cargo-handling-supervisors",
+    "title": "Aircraft Cargo Handling Supervisors",
+    "soc": "53-1041",
+    "exposure": "Medium",
+    "summary": "Supervise and coordinate the activities of ground crew in the loading, unloading, securing, and staging of aircraft cargo or baggage. May determine the quantity and orientation of cargo and compute aircraft center of gravity. May accompany aircraft as member of flight crew and monitor and handle cargo in flight, and assist and brief passengers on safety and emergency procedures. Includes loadmasters.",
+    "laborMarket": {
+      "medianWage": "$74,230",
+      "annualOpenings": "23",
+      "employment": "240",
+      "projectedGrowth": "1.45%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "aircraft-mechanics-and-service-technicians",
+    "title": "Aircraft Mechanics and Service Technicians",
+    "soc": "49-3011",
+    "exposure": "Low",
+    "summary": "Diagnose, adjust, repair, or overhaul aircraft engines and assemblies, such as hydraulic and pneumatic systems.",
+    "laborMarket": {
+      "medianWage": "$77,130",
+      "annualOpenings": "505",
+      "employment": "4,620",
+      "projectedGrowth": "1.95%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "aircraft-structure-surfaces-rigging-and-systems-assemblers",
+    "title": "Aircraft Structure, Surfaces, Rigging, and Systems Assemblers",
+    "soc": "51-2011",
+    "exposure": "Very Low",
+    "summary": "Assemble, fit, fasten, and install parts of airplanes, space vehicles, or missiles, such as tails, wings, fuselage, bulkheads, stabilizers, landing gear, rigging and control equipment, or heating and ventilating systems.",
+    "laborMarket": {
+      "medianWage": "$66,930",
+      "annualOpenings": "90",
+      "employment": "640",
+      "projectedGrowth": "-0.56%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "airfield-operations-specialists",
+    "title": "Airfield Operations Specialists",
+    "soc": "53-2022",
+    "exposure": "Medium",
+    "summary": "Ensure the safe takeoff and landing of commercial and military aircraft. Duties include coordination between air-traffic control and maintenance personnel, dispatching, using airfield landing and navigational aids, implementing airfield safety procedures, monitoring and maintaining flight records, and applying knowledge of weather information.",
+    "laborMarket": {
+      "medianWage": "$80,260",
+      "annualOpenings": "15",
+      "employment": "150",
+      "projectedGrowth": "1.75%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "airline-pilots-copilots-and-flight-engineers",
+    "title": "Airline Pilots, Copilots, and Flight Engineers",
+    "soc": "53-2011",
+    "exposure": "Medium",
+    "summary": "Pilot and navigate the flight of fixed-wing aircraft, usually on scheduled air carrier routes, for the transport of passengers and cargo. Requires Federal Air Transport certificate and rating for specific aircraft type used. Includes regional, national, and international airline pilots and flight instructors of airline pilots.",
+    "laborMarket": {
+      "medianWage": "$198,800",
+      "annualOpenings": "277",
+      "employment": "2,070",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "allergists-and-immunologists",
+    "title": "Allergists and Immunologists",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "Diagnose, treat, and help prevent allergic diseases and disease processes affecting the immune system.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "ambulance-drivers-and-attendants-except-emergency-medical-technicians",
+    "title": "Ambulance Drivers and Attendants, Except Emergency Medical Technicians",
+    "soc": "53-3011",
+    "exposure": "Very Low",
+    "summary": "Drive ambulance or assist ambulance driver in transporting sick, injured, or convalescent persons. Assist in lifting patients.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "30",
+      "employment": "nan",
+      "projectedGrowth": "0.86%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "amusement-and-recreation-attendants",
+    "title": "Amusement and Recreation Attendants",
+    "soc": "39-3091",
+    "exposure": "Low",
+    "summary": "Perform a variety of attending duties at amusement or recreation facility. May schedule use of recreation facilities, maintain and provide equipment to participants of sporting events or recreational pursuits, or operate amusement concessions and rides.",
+    "laborMarket": {
+      "medianWage": "$31,070",
+      "annualOpenings": "2,076",
+      "employment": "6,250",
+      "projectedGrowth": "1.4%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "anesthesiologist-assistants",
+    "title": "Anesthesiologist Assistants",
+    "soc": "29-1071",
+    "exposure": "Low",
+    "summary": "Assist anesthesiologists in the administration of anesthesia for surgical and non-surgical procedures. Monitor patient status and provide patient care during surgical treatment.",
+    "laborMarket": {
+      "medianWage": "$135,240",
+      "annualOpenings": "351",
+      "employment": "3,540",
+      "projectedGrowth": "4.01%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "anesthesiologists",
+    "title": "Anesthesiologists",
+    "soc": "29-1211",
+    "exposure": "Low",
+    "summary": "Administer anesthetics and analgesics for pain management prior to, during, or after surgery.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "9",
+      "employment": "nan",
+      "projectedGrowth": "1.84%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "animal-breeders",
+    "title": "Animal Breeders",
+    "soc": "45-2021",
+    "exposure": "Low",
+    "summary": "Select and breed animals according to their genealogy, characteristics, and offspring. May require knowledge of artificial insemination techniques and equipment use. May involve keeping records on heats, birth intervals, or pedigree.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "21",
+      "employment": "nan",
+      "projectedGrowth": "-0.7%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "animal-caretakers",
+    "title": "Animal Caretakers",
+    "soc": "39-2021",
+    "exposure": "Low",
+    "summary": "Feed, water, groom, bathe, exercise, or otherwise provide care to promote and maintain the well-being of pets and other animals that are not raised for consumption, such as dogs, cats, race horses, ornamental fish or birds, zoo animals, and mice. Work in settings such as kennels, animal shelters, zoos, circuses, and aquariums. May keep records of feedings, treatments, and animals received or discharged. May clean, disinfect, and repair cages, pens, or fish tanks.",
+    "laborMarket": {
+      "medianWage": "$35,170",
+      "annualOpenings": "1,649",
+      "employment": "5,450",
+      "projectedGrowth": "1.97%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "animal-control-workers",
+    "title": "Animal Control Workers",
+    "soc": "33-9011",
+    "exposure": "Medium",
+    "summary": "Handle animals for the purpose of investigations of mistreatment, or control of abandoned, dangerous, or unattended animals.",
+    "laborMarket": {
+      "medianWage": "$47,260",
+      "annualOpenings": "18",
+      "employment": "190",
+      "projectedGrowth": "1.31%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "animal-scientists",
+    "title": "Animal Scientists",
+    "soc": "19-1011",
+    "exposure": "Very High",
+    "summary": "Conduct research in the genetics, nutrition, reproduction, growth, and development of domestic farm animals.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "food-scientists-and-technologists",
+      "soil-and-plant-scientists",
+      "microbiologists",
+      "farmers-ranchers-and-other-agricultural-managers",
+      "veterinarians",
+      "agricultural-sciences-teachers-postsecondary",
+      "biochemists-and-biophysicists",
+      "geneticists",
+      "zoologists-and-wildlife-biologists",
+      "animal-breeders",
+      "agricultural-technicians",
+      "farmworkers-farm-ranch-and-aquacultural-animals",
+      "food-science-technicians",
+      "dietitians-and-nutritionists",
+      "veterinary-assistants-and-laboratory-animal-caretakers",
+      "agricultural-inspectors",
+      "biological-technicians",
+      "dietetic-technicians",
+      "veterinary-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "animal-trainers",
+    "title": "Animal Trainers",
+    "soc": "39-2011",
+    "exposure": "Very Low",
+    "summary": "Train animals for riding, harness, security, performance, or obedience, or for assisting persons with disabilities. Accustom animals to human voice and contact, and condition animals to respond to commands. Train animals according to prescribed standards for show or competition. May train animals to carry pack loads or work as part of pack team.",
+    "laborMarket": {
+      "medianWage": "$32,230",
+      "annualOpenings": "306",
+      "employment": "710",
+      "projectedGrowth": "1.75%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "anthropologists-and-archeologists",
+    "title": "Anthropologists and Archeologists",
+    "soc": "19-3091",
+    "exposure": "High",
+    "summary": "Study the origin, development, and behavior of human beings. May study the way of life, language, or physical characteristics of people in various parts of the world. May engage in systematic recovery and examination of material evidence, such as tools or pottery remaining from past human cultures, in order to determine the history, customs, and living habits of earlier civilizations.",
+    "laborMarket": {
+      "medianWage": "$60,630",
+      "annualOpenings": "59",
+      "employment": "620",
+      "projectedGrowth": "0.14%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "historians",
+      "sociologists",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "geographers",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "history-teachers-postsecondary",
+      "curators",
+      "archivists",
+      "geoscientists-except-hydrologists-and-geographers",
+      "social-science-research-assistants",
+      "sociology-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "data-scientists",
+      "political-science-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "political-scientists",
+      "survey-researchers",
+      "social-work-teachers-postsecondary",
+      "foreign-language-and-literature-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "anthropology-and-archeology-teachers-postsecondary",
+    "title": "Anthropology and Archeology Teachers, Postsecondary",
+    "soc": "25-1061",
+    "exposure": "High",
+    "summary": "Teach courses in anthropology or archeology. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$97,940",
+      "annualOpenings": "9",
+      "employment": "70",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "sociology-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "history-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "anthropologists-and-archeologists",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "environmental-science-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "elementary-school-teachers-except-special-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "arbitrators-mediators-and-conciliators",
+    "title": "Arbitrators, Mediators, and Conciliators",
+    "soc": "23-1022",
+    "exposure": "High",
+    "summary": "Facilitate negotiation and conflict resolution through dialogue. Resolve conflicts outside of the court system by mutual consent of parties involved.",
+    "laborMarket": {
+      "medianWage": "$80,600",
+      "annualOpenings": "7",
+      "employment": "150",
+      "projectedGrowth": "1.3%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "lawyers",
+      "labor-relations-specialists",
+      "judicial-law-clerks",
+      "judges-magistrate-judges-and-magistrates",
+      "equal-opportunity-representatives-and-officers",
+      "claims-adjusters-examiners-and-investigators",
+      "child-family-and-school-social-workers",
+      "fraud-examiners-investigators-and-analysts",
+      "financial-examiners",
+      "paralegals-and-legal-assistants",
+      "legal-secretaries-and-administrative-assistants",
+      "chief-executives",
+      "eligibility-interviewers-government-programs",
+      "court-municipal-and-license-clerks",
+      "private-detectives-and-investigators",
+      "compliance-managers",
+      "management-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "architects-except-landscape-and-naval",
+    "title": "Architects, Except Landscape and Naval",
+    "soc": "17-1011",
+    "exposure": "High",
+    "summary": "Plan and design structures, such as private residences, office buildings, theaters, factories, and other structural property.",
+    "laborMarket": {
+      "medianWage": "$97,470",
+      "annualOpenings": "119",
+      "employment": "1,430",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "landscape-architects",
+      "construction-managers",
+      "interior-designers",
+      "civil-engineers",
+      "construction-and-building-inspectors",
+      "architectural-and-engineering-managers",
+      "industrial-engineers",
+      "commercial-and-industrial-designers",
+      "project-management-specialists",
+      "architecture-teachers-postsecondary",
+      "architectural-and-civil-drafters",
+      "solar-energy-installation-managers",
+      "civil-engineering-technologists-and-technicians",
+      "electrical-and-electronics-drafters",
+      "wind-energy-development-managers",
+      "maintenance-and-repair-workers-general",
+      "solar-energy-systems-engineers",
+      "facilities-managers",
+      "sustainability-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "architectural-and-civil-drafters",
+    "title": "Architectural and Civil Drafters",
+    "soc": "17-3011",
+    "exposure": "Very High",
+    "summary": "Prepare detailed drawings of architectural and structural features of buildings or drawings and topographical relief maps used in civil engineering projects, such as highways, bridges, and public works. Use knowledge of building materials, engineering practices, and mathematics to complete drawings.",
+    "laborMarket": {
+      "medianWage": "$61,460",
+      "annualOpenings": "172",
+      "employment": "2,600",
+      "projectedGrowth": "-0.18%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "mechanical-drafters",
+      "electrical-and-electronics-drafters",
+      "civil-engineering-technologists-and-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "architectural-and-engineering-managers",
+      "civil-engineers",
+      "architects-except-landscape-and-naval",
+      "layout-workers-metal-and-plastic",
+      "surveying-and-mapping-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "industrial-engineers",
+      "mechanical-engineers",
+      "commercial-and-industrial-designers",
+      "electronics-engineers-except-computer",
+      "construction-and-building-inspectors",
+      "construction-managers",
+      "electrical-engineers",
+      "computer-numerically-controlled-tool-programmers",
+      "calibration-technologists-and-technicians",
+      "software-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "architectural-and-engineering-managers",
+    "title": "Architectural and Engineering Managers",
+    "soc": "11-9041",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate activities in such fields as architecture and engineering or research and development in these fields.",
+    "laborMarket": {
+      "medianWage": "$172,680",
+      "annualOpenings": "299",
+      "employment": "4,720",
+      "projectedGrowth": "0.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "project-management-specialists",
+      "industrial-engineers",
+      "logistics-engineers",
+      "electrical-engineers",
+      "engineering-teachers-postsecondary",
+      "architectural-and-civil-drafters",
+      "mechatronics-engineers",
+      "electronics-engineers-except-computer",
+      "natural-sciences-managers",
+      "biofuels-biodiesel-technology-and-product-development-managers",
+      "civil-engineering-technologists-and-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "mechanical-engineers",
+      "civil-engineers",
+      "construction-managers",
+      "sales-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "electrical-and-electronics-drafters"
+    ],
+    "training": []
+  },
+  {
+    "id": "architecture-teachers-postsecondary",
+    "title": "Architecture Teachers, Postsecondary",
+    "soc": "25-1031",
+    "exposure": "High",
+    "summary": "Teach courses in architecture and architectural design, such as architectural environmental design, interior architecture/design, and landscape architecture. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$75,730",
+      "annualOpenings": "9",
+      "employment": "80",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "art-drama-and-music-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "career-technical-education-teachers-postsecondary",
+      "landscape-architects",
+      "engineering-teachers-postsecondary",
+      "instructional-coordinators",
+      "computer-science-teachers-postsecondary",
+      "career-technical-education-teachers-secondary-school",
+      "environmental-science-teachers-postsecondary",
+      "architects-except-landscape-and-naval",
+      "teaching-assistants-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "middle-school-teachers-except-special-and-career-technical-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "archivists",
+    "title": "Archivists",
+    "soc": "25-4011",
+    "exposure": "High",
+    "summary": "Appraise, edit, and direct safekeeping of permanent records and historically valuable documents. Participate in research activities based on archival materials.",
+    "laborMarket": {
+      "medianWage": "$48,920",
+      "annualOpenings": "10",
+      "employment": "50",
+      "projectedGrowth": "2.78%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "librarians-and-media-collections-specialists",
+      "historians",
+      "curators",
+      "document-management-specialists",
+      "library-science-teachers-postsecondary",
+      "social-science-research-assistants",
+      "museum-technicians-and-conservators",
+      "statistical-assistants",
+      "anthropologists-and-archeologists",
+      "library-technicians",
+      "file-clerks",
+      "library-assistants-clerical",
+      "instructional-coordinators",
+      "proofreaders-and-copy-markers",
+      "office-clerks-general",
+      "editors",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "health-information-technologists-and-medical-registrars",
+      "correspondence-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "area-ethnic-and-cultural-studies-teachers-postsecondary",
+    "title": "Area, Ethnic, and Cultural Studies Teachers, Postsecondary",
+    "soc": "25-1062",
+    "exposure": "High",
+    "summary": "Teach courses pertaining to the culture and development of an area, an ethnic group, or any other group, such as Latin American studies, women's studies, or urban affairs. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$87,140",
+      "annualOpenings": "19",
+      "employment": "190",
+      "projectedGrowth": "1.1%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "history-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "foreign-language-and-literature-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "teaching-assistants-postsecondary",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "social-work-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "law-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "art-directors",
+    "title": "Art Directors",
+    "soc": "27-1011",
+    "exposure": "High",
+    "summary": "Formulate design concepts and presentation approaches for visual productions and media, such as print, broadcasting, video, and film. Direct workers engaged in artwork or layout design.",
+    "laborMarket": {
+      "medianWage": "$85,470",
+      "annualOpenings": "261",
+      "employment": "370",
+      "projectedGrowth": "2.09%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "graphic-designers",
+      "special-effects-artists-and-animators",
+      "producers-and-directors",
+      "project-management-specialists",
+      "writers-and-authors",
+      "set-and-exhibit-designers",
+      "information-technology-project-managers",
+      "public-relations-specialists",
+      "fine-artists-including-painters-sculptors-and-illustrators",
+      "web-and-digital-interface-designers",
+      "craft-artists",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "technical-writers",
+      "fashion-designers",
+      "merchandise-displayers-and-window-trimmers",
+      "film-and-video-editors"
+    ],
+    "training": []
+  },
+  {
+    "id": "art-drama-and-music-teachers-postsecondary",
+    "title": "Art, Drama, and Music Teachers, Postsecondary",
+    "soc": "25-1121",
+    "exposure": "Medium",
+    "summary": "Teach courses in drama, music, and the arts including fine and applied art, such as painting and sculpture, or design and crafts. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "100",
+      "employment": "1,160",
+      "projectedGrowth": "0.98%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "astronomers",
+    "title": "Astronomers",
+    "soc": "19-2011",
+    "exposure": "Medium",
+    "summary": "Observe, research, and interpret astronomical phenomena to increase basic knowledge or apply such information to practical problems.",
+    "laborMarket": {
+      "medianWage": "$125,480",
+      "annualOpenings": "11",
+      "employment": "90",
+      "projectedGrowth": "1.02%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "athletes-and-sports-competitors",
+    "title": "Athletes and Sports Competitors",
+    "soc": "27-2021",
+    "exposure": "Very Low",
+    "summary": "Compete in athletic events.",
+    "laborMarket": {
+      "medianWage": "$33,640",
+      "annualOpenings": "134",
+      "employment": "0",
+      "projectedGrowth": "1.23%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "athletic-trainers",
+    "title": "Athletic Trainers",
+    "soc": "29-9091",
+    "exposure": "Low",
+    "summary": "Evaluate and treat musculoskeletal injuries or illnesses. Provide preventive, therapeutic, emergency, and rehabilitative care.",
+    "laborMarket": {
+      "medianWage": "$58,270",
+      "annualOpenings": "72",
+      "employment": "790",
+      "projectedGrowth": "2.37%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "atmospheric-and-space-scientists",
+    "title": "Atmospheric and Space Scientists",
+    "soc": "19-2021",
+    "exposure": "Very High",
+    "summary": "Investigate atmospheric phenomena and interpret meteorological data, gathered by surface and air stations, satellites, and radar to prepare reports and forecasts for public and other uses. Includes weather analysts and forecasters whose functions require the detailed knowledge of meteorology.",
+    "laborMarket": {
+      "medianWage": "$77,000",
+      "annualOpenings": "7",
+      "employment": "100",
+      "projectedGrowth": "0.62%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "hydrologists",
+      "geoscientists-except-hydrologists-and-geographers",
+      "remote-sensing-scientists-and-technologists",
+      "data-scientists",
+      "geographic-information-systems-technologists-and-technicians",
+      "geological-technicians-except-hydrologic-technicians",
+      "climate-change-policy-analysts",
+      "geodetic-surveyors",
+      "geographers",
+      "astronomers",
+      "hydrologic-technicians",
+      "remote-sensing-technicians",
+      "statisticians",
+      "surveying-and-mapping-technicians",
+      "conservation-scientists",
+      "physicists",
+      "precision-agriculture-technicians",
+      "soil-and-plant-scientists"
+    ],
+    "training": []
+  },
+  {
+    "id": "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+    "title": "Atmospheric, Earth, Marine, and Space Sciences Teachers, Postsecondary",
+    "soc": "25-1051",
+    "exposure": "High",
+    "summary": "Teach courses in the physical sciences, except chemistry and physics. Includes both teachers primarily engaged in teaching, and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$113,790",
+      "annualOpenings": "29",
+      "employment": "340",
+      "projectedGrowth": "1.2%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "biological-science-teachers-postsecondary",
+      "environmental-science-teachers-postsecondary",
+      "physics-teachers-postsecondary",
+      "chemistry-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "agricultural-sciences-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "engineering-teachers-postsecondary",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "tutors",
+      "natural-sciences-managers",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "career-technical-education-teachers-middle-school",
+      "health-specialties-teachers-postsecondary",
+      "computer-science-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "sociology-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "audio-and-video-technicians",
+    "title": "Audio and Video Technicians",
+    "soc": "27-4011",
+    "exposure": "Medium",
+    "summary": "Set up, maintain, and dismantle audio and video equipment, such as microphones, sound speakers, connecting wires and cables, sound and mixing boards, video cameras, video monitors and servers, and related electronic equipment for live or recorded events, such as concerts, meetings, conventions, presentations, podcasts, news conferences, and sporting events.",
+    "laborMarket": {
+      "medianWage": "$45,790",
+      "annualOpenings": "206",
+      "employment": "1,680",
+      "projectedGrowth": "0.81%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "audiologists",
+    "title": "Audiologists",
+    "soc": "29-1181",
+    "exposure": "High",
+    "summary": "Assess and treat persons with hearing and related disorders. May fit hearing aids and provide auditory training. May perform research related to hearing problems.",
+    "laborMarket": {
+      "medianWage": "$102,130",
+      "annualOpenings": "31",
+      "employment": "450",
+      "projectedGrowth": "2.57%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "hearing-aid-specialists",
+      "optometrists",
+      "pediatric-surgeons",
+      "pediatricians-general",
+      "neurologists",
+      "physical-medicine-and-rehabilitation-physicians",
+      "occupational-therapists",
+      "ophthalmologists-except-pediatric",
+      "speech-language-pathologists",
+      "emergency-medicine-physicians",
+      "general-internal-medicine-physicians",
+      "cardiologists",
+      "orthopedic-surgeons-except-pediatric",
+      "chiropractors",
+      "physicians-pathologists",
+      "occupational-therapy-aides",
+      "psychiatrists",
+      "dermatologists",
+      "nurse-practitioners"
+    ],
+    "training": []
+  },
+  {
+    "id": "audiovisual-equipment-installers-and-repairers",
+    "title": "Audiovisual Equipment Installers and Repairers",
+    "soc": "49-2097",
+    "exposure": "Low",
+    "summary": "Install, repair, or adjust audio or television receivers, stereo systems, camcorders, video systems, or other electronic entertainment equipment in homes or other venues. May perform routine maintenance.",
+    "laborMarket": {
+      "medianWage": "$45,650",
+      "annualOpenings": "96",
+      "employment": "1,020",
+      "projectedGrowth": "0.3%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "automotive-body-and-related-repairers",
+    "title": "Automotive Body and Related Repairers",
+    "soc": "49-3021",
+    "exposure": "Very Low",
+    "summary": "Repair and refinish automotive vehicle bodies and straighten vehicle frames.",
+    "laborMarket": {
+      "medianWage": "$49,460",
+      "annualOpenings": "218",
+      "employment": "2,460",
+      "projectedGrowth": "0.13%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "automotive-engineering-technicians",
+    "title": "Automotive Engineering Technicians",
+    "soc": "17-3027",
+    "exposure": "Medium",
+    "summary": "Assist engineers in determining the practicality of proposed product design changes and plan and carry out tests on experimental test devices or equipment for performance, durability, or efficiency.",
+    "laborMarket": {
+      "medianWage": "$68,280",
+      "annualOpenings": "42",
+      "employment": "630",
+      "projectedGrowth": "0.1%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "automotive-engineers",
+    "title": "Automotive Engineers",
+    "soc": "17-2141",
+    "exposure": "Very High",
+    "summary": "Develop new or improved designs for vehicle structural members, engines, transmissions, or other vehicle systems, using computer-assisted design technology. Direct building, modification, or testing of vehicle or components.",
+    "laborMarket": {
+      "medianWage": "$102,510",
+      "annualOpenings": "386",
+      "employment": "5,440",
+      "projectedGrowth": "1.37%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "mechatronics-engineers",
+      "industrial-engineers",
+      "electronics-engineers-except-computer",
+      "calibration-technologists-and-technicians",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "automotive-engineers",
+      "industrial-machinery-mechanics",
+      "engine-and-other-machine-assemblers",
+      "stationary-engineers-and-boiler-operators",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "industrial-engineering-technologists-and-technicians",
+      "aircraft-structure-surfaces-rigging-and-systems-assemblers",
+      "control-and-valve-installers-and-repairers-except-mechanical-door",
+      "electrical-and-electronic-equipment-assemblers",
+      "electromechanical-equipment-assemblers"
+    ],
+    "training": []
+  },
+  {
+    "id": "automotive-glass-installers-and-repairers",
+    "title": "Automotive Glass Installers and Repairers",
+    "soc": "49-3022",
+    "exposure": "Very Low",
+    "summary": "Replace or repair broken windshields and window glass in motor vehicles.",
+    "laborMarket": {
+      "medianWage": "$45,910",
+      "annualOpenings": "86",
+      "employment": "700",
+      "projectedGrowth": "0.38%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "automotive-service-technicians-and-mechanics",
+    "title": "Automotive Service Technicians and Mechanics",
+    "soc": "49-3023",
+    "exposure": "Very Low",
+    "summary": "Diagnose, adjust, repair, or overhaul automotive vehicles.",
+    "laborMarket": {
+      "medianWage": "$49,400",
+      "annualOpenings": "1,660",
+      "employment": "17,390",
+      "projectedGrowth": "0.34%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "automotive-and-watercraft-service-attendants",
+    "title": "Automotive and Watercraft Service Attendants",
+    "soc": "53-6031",
+    "exposure": "Low",
+    "summary": "Service automobiles, buses, trucks, boats, and other automotive or marine vehicles with fuel, lubricants, and accessories. Collect payment for services and supplies. May lubricate vehicle, change motor oil, refill antifreeze, or replace lights or other accessories, such as windshield wiper blades or fan belts. May repair or replace tires.",
+    "laborMarket": {
+      "medianWage": "$34,740",
+      "annualOpenings": "97",
+      "employment": "670",
+      "projectedGrowth": "0.16%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "aviation-inspectors",
+    "title": "Aviation Inspectors",
+    "soc": "53-6051",
+    "exposure": "Medium",
+    "summary": "Inspect aircraft, maintenance procedures, air navigational aids, air traffic controls, and communications equipment to ensure conformance with Federal safety regulations.",
+    "laborMarket": {
+      "medianWage": "$45,950",
+      "annualOpenings": "74",
+      "employment": "930",
+      "projectedGrowth": "0.46%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "avionics-technicians",
+    "title": "Avionics Technicians",
+    "soc": "49-2091",
+    "exposure": "Low",
+    "summary": "Install, inspect, test, adjust, or repair avionics equipment, such as radar, radio, navigation, and missile control systems in aircraft or space vehicles.",
+    "laborMarket": {
+      "medianWage": "$84,550",
+      "annualOpenings": "27",
+      "employment": "440",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "baggage-porters-and-bellhops",
+    "title": "Baggage Porters and Bellhops",
+    "soc": "39-6011",
+    "exposure": "Low",
+    "summary": "Handle baggage for travelers at transportation terminals or for guests at hotels or similar establishments.",
+    "laborMarket": {
+      "medianWage": "$35,200",
+      "annualOpenings": "67",
+      "employment": "450",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bailiffs",
+    "title": "Bailiffs",
+    "soc": "33-3011",
+    "exposure": "Very Low",
+    "summary": "Maintain order in courts of law.",
+    "laborMarket": {
+      "medianWage": "$46,430",
+      "annualOpenings": "23",
+      "employment": "280",
+      "projectedGrowth": "0.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bakers",
+    "title": "Bakers",
+    "soc": "51-3011",
+    "exposure": "Low",
+    "summary": "Mix and bake ingredients to produce breads, rolls, cookies, cakes, pies, pastries, or other baked goods.",
+    "laborMarket": {
+      "medianWage": "$37,940",
+      "annualOpenings": "844",
+      "employment": "4,950",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "barbers",
+    "title": "Barbers",
+    "soc": "39-5011",
+    "exposure": "Low",
+    "summary": "Provide barbering services, such as cutting, trimming, shampooing, and styling hair; trimming beards; or giving shaves.",
+    "laborMarket": {
+      "medianWage": "$32,840",
+      "annualOpenings": "296",
+      "employment": "0",
+      "projectedGrowth": "2.09%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "baristas",
+    "title": "Baristas",
+    "soc": "35-3023",
+    "exposure": "Very Low",
+    "summary": "Prepare or serve specialty coffee or other beverages. Serve food such as baked goods or sandwiches to patrons.",
+    "laborMarket": {
+      "medianWage": "$33,060",
+      "annualOpenings": "25,091",
+      "employment": "86,640",
+      "projectedGrowth": "0.57%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bartenders",
+    "title": "Bartenders",
+    "soc": "35-3011",
+    "exposure": "Low",
+    "summary": "Mix and serve drinks to patrons, directly or through waitstaff.",
+    "laborMarket": {
+      "medianWage": "$40,860",
+      "annualOpenings": "2,635",
+      "employment": "13,360",
+      "projectedGrowth": "0.93%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bicycle-repairers",
+    "title": "Bicycle Repairers",
+    "soc": "49-3091",
+    "exposure": "Very Low",
+    "summary": "Repair and service bicycles.",
+    "laborMarket": {
+      "medianWage": "$38,340",
+      "annualOpenings": "58",
+      "employment": "500",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bill-and-account-collectors",
+    "title": "Bill and Account Collectors",
+    "soc": "43-3011",
+    "exposure": "Very High",
+    "summary": "Locate and notify customers of delinquent accounts by mail, telephone, or personal visit to solicit payment. Duties include receiving payment and posting amount to customer's account, preparing statements to credit department if customer fails to respond, initiating repossession proceedings or service disconnection, and keeping records of collection and status of accounts.",
+    "laborMarket": {
+      "medianWage": "$45,950",
+      "annualOpenings": "687",
+      "employment": "6,360",
+      "projectedGrowth": "-0.9%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "credit-authorizers-checkers-and-clerks",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "customer-service-representatives",
+      "tellers",
+      "billing-and-posting-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "correspondence-clerks",
+      "payroll-and-timekeeping-clerks",
+      "order-clerks",
+      "loan-interviewers-and-clerks",
+      "credit-analysts",
+      "new-accounts-clerks",
+      "loan-officers",
+      "credit-counselors",
+      "brokerage-clerks",
+      "financial-managers",
+      "accountants-and-auditors",
+      "personal-financial-advisors",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel"
+    ],
+    "training": []
+  },
+  {
+    "id": "billing-and-posting-clerks",
+    "title": "Billing and Posting Clerks",
+    "soc": "43-3021",
+    "exposure": "Very High",
+    "summary": "Compile, compute, and record billing, accounting, statistical, and other numerical data for billing purposes. Prepare billing invoices for services rendered or for delivery or shipment of goods.",
+    "laborMarket": {
+      "medianWage": "$47,200",
+      "annualOpenings": "1,143",
+      "employment": "10,330",
+      "projectedGrowth": "1.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "bookkeeping-accounting-and-auditing-clerks",
+      "customer-service-representatives",
+      "insurance-claims-and-policy-processing-clerks",
+      "office-clerks-general",
+      "credit-authorizers-checkers-and-clerks",
+      "brokerage-clerks",
+      "payroll-and-timekeeping-clerks",
+      "bill-and-account-collectors",
+      "file-clerks",
+      "order-clerks",
+      "correspondence-clerks",
+      "accountants-and-auditors",
+      "tellers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "financial-managers",
+      "procurement-clerks",
+      "postal-service-clerks",
+      "shipping-receiving-and-inventory-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel"
+    ],
+    "training": []
+  },
+  {
+    "id": "biochemists-and-biophysicists",
+    "title": "Biochemists and Biophysicists",
+    "soc": "19-1021",
+    "exposure": "High",
+    "summary": "Study the chemical composition or physical principles of living cells and organisms, their electrical and mechanical energy, and related phenomena. May conduct research to further understanding of the complex chemical combinations and reactions involved in metabolism, reproduction, growth, and heredity. May determine the effects of foods, drugs, serums, hormones, and other substances on tissues and vital processes of living organisms.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "7",
+      "employment": "nan",
+      "projectedGrowth": "2.15%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "molecular-and-cellular-biologists",
+      "microbiologists",
+      "medical-scientists-except-epidemiologists",
+      "chemists",
+      "bioengineers-and-biomedical-engineers",
+      "physicists",
+      "medical-and-clinical-laboratory-technicians",
+      "animal-scientists",
+      "medical-and-clinical-laboratory-technologists",
+      "biological-technicians",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "nanosystems-engineers",
+      "data-scientists",
+      "chemistry-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "bioengineers-and-biomedical-engineers",
+    "title": "Bioengineers and Biomedical Engineers",
+    "soc": "17-2031",
+    "exposure": "Very High",
+    "summary": "Apply knowledge of engineering, biology, chemistry, computer science, and biomechanical principles to the design, development, and evaluation of biological, agricultural, and health systems and products, such as artificial organs, prostheses, instrumentation, medical information systems, and health management and care delivery systems.",
+    "laborMarket": {
+      "medianWage": "$121,680",
+      "annualOpenings": "25",
+      "employment": "410",
+      "projectedGrowth": "0.24%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "nanotechnology-engineering-technologists-and-technicians",
+      "nanosystems-engineers",
+      "bioinformatics-scientists",
+      "biochemists-and-biophysicists",
+      "bioinformatics-technicians",
+      "data-scientists",
+      "chemists",
+      "chemical-engineers",
+      "medical-and-clinical-laboratory-technologists",
+      "natural-sciences-managers",
+      "medical-equipment-repairers",
+      "calibration-technologists-and-technicians",
+      "microbiologists",
+      "biological-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "materials-scientists"
+    ],
+    "training": []
+  },
+  {
+    "id": "biofuels-processing-technicians",
+    "title": "Biofuels Processing Technicians",
+    "soc": "51-8099",
+    "exposure": "Very Low",
+    "summary": "Calculate, measure, load, mix, and process refined feedstock with additives in fermentation or reaction process vessels and monitor production process. Perform, and keep records of, plant maintenance, repairs, and safety inspections.",
+    "laborMarket": {
+      "medianWage": "$66,540",
+      "annualOpenings": "8",
+      "employment": "170",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biofuels-production-managers",
+    "title": "Biofuels Production Managers",
+    "soc": "11-3051",
+    "exposure": "Medium",
+    "summary": "Manage biofuels production and plant operations. Collect and process information on plant production and performance, diagnose problems, and design corrective procedures.",
+    "laborMarket": {
+      "medianWage": "$128,870",
+      "annualOpenings": "247",
+      "employment": "3,670",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biofuels-biodiesel-technology-and-product-development-managers",
+    "title": "Biofuels/Biodiesel Technology and Product Development Managers",
+    "soc": "11-9041",
+    "exposure": "High",
+    "summary": "Define, plan, or execute biofuels/biodiesel research programs that evaluate alternative feedstock and process technologies with near-term commercial potential.",
+    "laborMarket": {
+      "medianWage": "$172,680",
+      "annualOpenings": "299",
+      "employment": "4,720",
+      "projectedGrowth": "0.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "project-management-specialists",
+      "industrial-engineers",
+      "logistics-engineers",
+      "electrical-engineers",
+      "engineering-teachers-postsecondary",
+      "architectural-and-civil-drafters",
+      "mechatronics-engineers",
+      "electronics-engineers-except-computer",
+      "natural-sciences-managers",
+      "biofuels-biodiesel-technology-and-product-development-managers",
+      "civil-engineering-technologists-and-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "mechanical-engineers",
+      "civil-engineers",
+      "construction-managers",
+      "sales-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "electrical-and-electronics-drafters"
+    ],
+    "training": []
+  },
+  {
+    "id": "bioinformatics-scientists",
+    "title": "Bioinformatics Scientists",
+    "soc": "19-1029",
+    "exposure": "Very High",
+    "summary": "Conduct research using bioinformatics theory and methods in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. May design databases and develop algorithms for processing and analyzing genomic information, or other biological information.",
+    "laborMarket": {
+      "medianWage": "$88,610",
+      "annualOpenings": "46",
+      "employment": "620",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bioinformatics-technicians",
+    "title": "Bioinformatics Technicians",
+    "soc": "15-2099",
+    "exposure": "Very High",
+    "summary": "Apply principles and methods of bioinformatics to assist scientists in areas such as pharmaceuticals, medical technology, biotechnology, computational biology, proteomics, computer information science, biology and medical informatics. Apply bioinformatics tools to visualize, analyze, manipulate or interpret molecular data. May build and maintain databases for processing and analyzing genomic or other biological information.",
+    "laborMarket": {
+      "medianWage": "$92,500",
+      "annualOpenings": "2",
+      "employment": "30",
+      "projectedGrowth": "3.39%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biological-science-teachers-postsecondary",
+    "title": "Biological Science Teachers, Postsecondary",
+    "soc": "25-1042",
+    "exposure": "High",
+    "summary": "Teach courses in biological sciences. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$77,650",
+      "annualOpenings": "220",
+      "employment": "2,520",
+      "projectedGrowth": "1.56%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "chemistry-teachers-postsecondary",
+      "environmental-science-teachers-postsecondary",
+      "health-specialties-teachers-postsecondary",
+      "molecular-and-cellular-biologists",
+      "agricultural-sciences-teachers-postsecondary",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "physics-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "biological-technicians",
+      "psychology-teachers-postsecondary",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "biochemists-and-biophysicists",
+      "tutors"
+    ],
+    "training": []
+  },
+  {
+    "id": "biological-scientists-all-other",
+    "title": "Biological Scientists, All Other",
+    "soc": "19-1029",
+    "exposure": "Very High",
+    "summary": "All biological scientists not listed separately.",
+    "laborMarket": {
+      "medianWage": "$88,610",
+      "annualOpenings": "46",
+      "employment": "620",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biological-technicians",
+    "title": "Biological Technicians",
+    "soc": "19-4021",
+    "exposure": "Medium",
+    "summary": "Assist biological and medical scientists. Set up, operate, and maintain laboratory instruments and equipment, monitor experiments, collect data and samples, make observations, and calculate and record results. May analyze organic substances, such as blood, food, and drugs.",
+    "laborMarket": {
+      "medianWage": "$51,850",
+      "annualOpenings": "192",
+      "employment": "870",
+      "projectedGrowth": "1.14%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biologists",
+    "title": "Biologists",
+    "soc": "19-1029",
+    "exposure": "Very High",
+    "summary": "Research or study basic principles of plant and animal life, such as origin, relationship, development, anatomy, and functions.",
+    "laborMarket": {
+      "medianWage": "$88,610",
+      "annualOpenings": "46",
+      "employment": "620",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biomass-plant-technicians",
+    "title": "Biomass Plant Technicians",
+    "soc": "51-8013",
+    "exposure": "Low",
+    "summary": "Control and monitor biomass plant activities and perform maintenance as needed.",
+    "laborMarket": {
+      "medianWage": "$107,210",
+      "annualOpenings": "107",
+      "employment": "890",
+      "projectedGrowth": "-0.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biomass-power-plant-managers",
+    "title": "Biomass Power Plant Managers",
+    "soc": "11-3051",
+    "exposure": "Medium",
+    "summary": "Manage operations at biomass power generation facilities. Direct work activities at plant, including supervision of operations and maintenance staff.",
+    "laborMarket": {
+      "medianWage": "$128,870",
+      "annualOpenings": "247",
+      "employment": "3,670",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "biostatisticians",
+    "title": "Biostatisticians",
+    "soc": "15-2041",
+    "exposure": "Very High",
+    "summary": "Develop and apply biostatistical theory and methods to the study of life sciences.",
+    "laborMarket": {
+      "medianWage": "$91,320",
+      "annualOpenings": "33",
+      "employment": "360",
+      "projectedGrowth": "1.15%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "biostatisticians",
+      "mathematicians",
+      "bioinformatics-scientists",
+      "financial-quantitative-analysts",
+      "survey-researchers",
+      "operations-research-analysts",
+      "computer-and-information-research-scientists",
+      "environmental-economists",
+      "statistical-assistants",
+      "bioinformatics-technicians",
+      "social-science-research-assistants",
+      "geographic-information-systems-technologists-and-technicians",
+      "health-information-technologists-and-medical-registrars",
+      "bioengineers-and-biomedical-engineers",
+      "management-analysts",
+      "database-architects"
+    ],
+    "training": []
+  },
+  {
+    "id": "blockchain-engineers",
+    "title": "Blockchain Engineers",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Maintain and support distributed and decentralized blockchain-based networks or block-chain applications such as cryptocurrency exchange, payment processing, document sharing, and digital voting. Design and deploy secure block-chain design patterns and solutions over geographically distributed networks using advanced technologies. May assist with infrastructure setup and testing for application transparency and security.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "boilermakers",
+    "title": "Boilermakers",
+    "soc": "47-2011",
+    "exposure": "Very Low",
+    "summary": "Construct, assemble, maintain, and repair stationary steam boilers and boiler house auxiliaries. Align structures or plate sections to assemble boiler frame tanks or vats, following blueprints. Work involves use of hand and power tools, plumb bobs, levels, wedges, dogs, or turnbuckles. Assist in testing assembled vessels. Direct cleaning of boilers and boiler furnaces. Inspect and repair boiler fittings, such as safety valves, regulators, automatic-control mechanisms, water columns, and auxiliary machines.",
+    "laborMarket": {
+      "medianWage": "$75,770",
+      "annualOpenings": "17",
+      "employment": "0",
+      "projectedGrowth": "2.9%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bookkeeping-accounting-and-auditing-clerks",
+    "title": "Bookkeeping, Accounting, and Auditing Clerks",
+    "soc": "43-3031",
+    "exposure": "Very High",
+    "summary": "Compute, classify, and record numerical data to keep financial records complete. Perform any combination of routine calculating, posting, and verifying duties to obtain primary financial data for use in maintaining accounting records. May also check the accuracy of figures, calculations, and postings pertaining to business transactions recorded by other workers.",
+    "laborMarket": {
+      "medianWage": "$49,030",
+      "annualOpenings": "3,278",
+      "employment": "24,260",
+      "projectedGrowth": "-0.1%",
+      "typicalEducation": "Some college, no degree"
+    },
+    "relatedOccupationIds": [
+      "billing-and-posting-clerks",
+      "payroll-and-timekeeping-clerks",
+      "brokerage-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "office-clerks-general",
+      "tellers",
+      "file-clerks",
+      "loan-interviewers-and-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "new-accounts-clerks",
+      "accountants-and-auditors",
+      "financial-managers",
+      "statistical-assistants",
+      "credit-analysts",
+      "correspondence-clerks",
+      "tax-preparers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "bill-and-account-collectors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "loan-officers"
+    ],
+    "training": []
+  },
+  {
+    "id": "brickmasons-and-blockmasons",
+    "title": "Brickmasons and Blockmasons",
+    "soc": "47-2021",
+    "exposure": "Very Low",
+    "summary": "Lay and bind building materials, such as brick, structural tile, concrete block, cinder block, glass block, and terra-cotta block, with mortar and other substances, to construct or repair walls, partitions, arches, sewers, and other structures.",
+    "laborMarket": {
+      "medianWage": "$59,400",
+      "annualOpenings": "180",
+      "employment": "1,620",
+      "projectedGrowth": "1.38%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "broadcast-announcers-and-radio-disc-jockeys",
+    "title": "Broadcast Announcers and Radio Disc Jockeys",
+    "soc": "27-3011",
+    "exposure": "Very High",
+    "summary": "Speak or read from scripted materials, such as news reports or commercial messages, on radio, television, or other communications media. May play and queue music, announce artist or title of performance, identify station, or interview guests.",
+    "laborMarket": {
+      "medianWage": "$38,830",
+      "annualOpenings": "28",
+      "employment": "320",
+      "projectedGrowth": "0.65%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "news-analysts-reporters-and-journalists",
+      "producers-and-directors",
+      "film-and-video-editors",
+      "disc-jockeys-except-radio",
+      "editors",
+      "poets-lyricists-and-creative-writers",
+      "public-relations-specialists",
+      "camera-operators-television-video-and-film",
+      "broadcast-technicians",
+      "audio-and-video-technicians",
+      "audiovisual-equipment-installers-and-repairers",
+      "actors",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "advertising-sales-agents",
+      "advertising-and-promotions-managers",
+      "special-effects-artists-and-animators"
+    ],
+    "training": []
+  },
+  {
+    "id": "broadcast-technicians",
+    "title": "Broadcast Technicians",
+    "soc": "27-4012",
+    "exposure": "High",
+    "summary": "Set up, operate, and maintain the electronic equipment used to acquire, edit, and transmit audio and video for radio or television programs. Control and adjust incoming and outgoing broadcast signals to regulate sound volume, signal strength, and signal clarity. Operate satellite, microwave, or other transmitter equipment to broadcast radio or television programs.",
+    "laborMarket": {
+      "medianWage": "$63,080",
+      "annualOpenings": "23",
+      "employment": "460",
+      "projectedGrowth": "0.38%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "audio-and-video-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "robotics-technicians",
+      "power-distributors-and-dispatchers",
+      "calibration-technologists-and-technicians",
+      "sound-engineering-technicians",
+      "audiovisual-equipment-installers-and-repairers",
+      "lighting-technicians",
+      "telecommunications-engineering-specialists",
+      "media-technical-directors-managers",
+      "electronics-engineers-except-computer",
+      "radio-cellular-and-tower-equipment-installers-and-repairers",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "camera-operators-television-video-and-film",
+      "computer-network-support-specialists",
+      "aerospace-engineering-and-operations-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "brokerage-clerks",
+    "title": "Brokerage Clerks",
+    "soc": "43-4011",
+    "exposure": "Very High",
+    "summary": "Perform duties related to the purchase, sale, or holding of securities. Duties include writing orders for stock purchases or sales, computing transfer taxes, verifying stock transactions, accepting and delivering securities, tracking stock price fluctuations, computing equity, distributing dividends, and keeping records of daily transactions and holdings.",
+    "laborMarket": {
+      "medianWage": "$63,470",
+      "annualOpenings": "154",
+      "employment": "1,140",
+      "projectedGrowth": "-0.43%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "securities-commodities-and-financial-services-sales-agents",
+      "new-accounts-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "customer-service-representatives",
+      "tellers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "billing-and-posting-clerks",
+      "loan-interviewers-and-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "bill-and-account-collectors",
+      "financial-and-investment-analysts",
+      "personal-financial-advisors",
+      "office-clerks-general",
+      "loan-officers",
+      "financial-managers",
+      "accountants-and-auditors",
+      "insurance-claims-and-policy-processing-clerks",
+      "credit-analysts",
+      "management-analysts",
+      "procurement-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "brownfield-redevelopment-specialists-and-site-managers",
+    "title": "Brownfield Redevelopment Specialists and Site Managers",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "Plan and direct cleanup and redevelopment of contaminated properties for reuse. Does not include properties sufficiently contaminated to qualify as Superfund sites.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "budget-analysts",
+    "title": "Budget Analysts",
+    "soc": "13-2031",
+    "exposure": "High",
+    "summary": "Examine budget estimates for completeness, accuracy, and conformance with procedures and regulations. Analyze budgeting and accounting reports.",
+    "laborMarket": {
+      "medianWage": "$85,880",
+      "annualOpenings": "62",
+      "employment": "850",
+      "projectedGrowth": "0.86%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "accountants-and-auditors",
+      "treasurers-and-controllers",
+      "credit-analysts",
+      "personal-financial-advisors",
+      "financial-examiners",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "compensation-benefits-and-job-analysis-specialists",
+      "compensation-and-benefits-managers",
+      "fundraising-managers",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "payroll-and-timekeeping-clerks",
+      "tax-preparers",
+      "management-analysts",
+      "project-management-specialists",
+      "financial-and-investment-analysts",
+      "eligibility-interviewers-government-programs",
+      "financial-risk-specialists",
+      "chief-executives"
+    ],
+    "training": []
+  },
+  {
+    "id": "bus-drivers-school",
+    "title": "Bus Drivers, School",
+    "soc": "53-3051",
+    "exposure": "Medium",
+    "summary": "Drive a school bus to transport students. Ensure adherence to safety rules. May assist students in boarding or exiting.",
+    "laborMarket": {
+      "medianWage": "$43,610",
+      "annualOpenings": "735",
+      "employment": "4,710",
+      "projectedGrowth": "0.67%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bus-drivers-transit-and-intercity",
+    "title": "Bus Drivers, Transit and Intercity",
+    "soc": "53-3052",
+    "exposure": "Low",
+    "summary": "Drive bus or motor coach, including regular route operations, charters, and private carriage. May assist passengers with baggage. May collect fares or tickets.",
+    "laborMarket": {
+      "medianWage": "$48,660",
+      "annualOpenings": "368",
+      "employment": "2,850",
+      "projectedGrowth": "0.85%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "bus-and-truck-mechanics-and-diesel-engine-specialists",
+    "title": "Bus and Truck Mechanics and Diesel Engine Specialists",
+    "soc": "49-3031",
+    "exposure": "Very Low",
+    "summary": "Diagnose, adjust, repair, or overhaul buses and trucks, or maintain and repair any type of diesel engines. Includes mechanics working primarily with automobile or marine diesel engines.",
+    "laborMarket": {
+      "medianWage": "$59,270",
+      "annualOpenings": "409",
+      "employment": "5,430",
+      "projectedGrowth": "0.67%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "business-continuity-planners",
+    "title": "Business Continuity Planners",
+    "soc": "13-1199",
+    "exposure": "Very High",
+    "summary": "Develop, maintain, or implement business continuity and disaster recovery strategies and solutions, including risk assessments, business impact analyses, strategy selection, and documentation of business continuity and disaster recovery procedures. Plan, conduct, and debrief regular mock-disaster exercises to test the adequacy of existing plans and strategies, updating procedures and plans regularly. Act as a coordinator for continuity efforts after a disruption event.",
+    "laborMarket": {
+      "medianWage": "$85,390",
+      "annualOpenings": "1,329",
+      "employment": "14,700",
+      "projectedGrowth": "0.63%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "business-operations-specialists-all-other",
+    "title": "Business Operations Specialists, All Other",
+    "soc": "13-1199",
+    "exposure": "Very High",
+    "summary": "All business operations specialists not listed separately.",
+    "laborMarket": {
+      "medianWage": "$85,390",
+      "annualOpenings": "1,329",
+      "employment": "14,700",
+      "projectedGrowth": "0.63%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "business-teachers-postsecondary",
+    "title": "Business Teachers, Postsecondary",
+    "soc": "25-1011",
+    "exposure": "High",
+    "summary": "Teach courses in business administration and management, such as accounting, finance, human resources, labor and industrial relations, marketing, and operations research. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$89,690",
+      "annualOpenings": "145",
+      "employment": "1,670",
+      "projectedGrowth": "1.41%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "economics-teachers-postsecondary",
+      "management-analysts",
+      "career-technical-education-teachers-secondary-school",
+      "law-teachers-postsecondary",
+      "instructional-coordinators",
+      "computer-science-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "career-technical-education-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "education-administrators-postsecondary",
+      "political-science-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "business-intelligence-analysts",
+      "administrative-services-managers",
+      "market-research-analysts-and-marketing-specialists",
+      "training-and-development-specialists",
+      "teaching-assistants-postsecondary",
+      "social-work-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "butchers-and-meat-cutters",
+    "title": "Butchers and Meat Cutters",
+    "soc": "51-3021",
+    "exposure": "Low",
+    "summary": "Cut, trim, or prepare consumer-sized portions of meat for use or sale in retail establishments.",
+    "laborMarket": {
+      "medianWage": "$39,160",
+      "annualOpenings": "260",
+      "employment": "2,220",
+      "projectedGrowth": "-0.11%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cabinetmakers-and-bench-carpenters",
+    "title": "Cabinetmakers and Bench Carpenters",
+    "soc": "51-7011",
+    "exposure": "Low",
+    "summary": "Cut, shape, and assemble wooden articles or set up and operate a variety of woodworking machines, such as power saws, jointers, and mortisers to surface, cut, or shape lumber or to fabricate parts for wood products.",
+    "laborMarket": {
+      "medianWage": "$43,930",
+      "annualOpenings": "124",
+      "employment": "1,440",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "calibration-technologists-and-technicians",
+    "title": "Calibration Technologists and Technicians",
+    "soc": "17-3028",
+    "exposure": "Medium",
+    "summary": "Execute or adapt procedures and techniques for calibrating measurement devices, by applying knowledge of measurement science, mathematics, physics, chemistry, and electronics, sometimes under the direction of engineering staff. Determine measurement standard suitability for calibrating measurement devices. May perform preventive maintenance on equipment. May perform corrective actions to address identified calibration problems.",
+    "laborMarket": {
+      "medianWage": "$82,890",
+      "annualOpenings": "42",
+      "employment": "440",
+      "projectedGrowth": "0.77%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "camera-operators-television-video-and-film",
+    "title": "Camera Operators, Television, Video, and Film",
+    "soc": "27-4031",
+    "exposure": "Medium",
+    "summary": "Operate television, video, or film camera to record images or scenes for television, video, or film productions.",
+    "laborMarket": {
+      "medianWage": "$74,830",
+      "annualOpenings": "84",
+      "employment": "630",
+      "projectedGrowth": "1.11%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "camera-and-photographic-equipment-repairers",
+    "title": "Camera and Photographic Equipment Repairers",
+    "soc": "49-9061",
+    "exposure": "Low",
+    "summary": "Repair and adjust cameras and photographic equipment, including commercial video and motion picture camera equipment.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "captains-mates-and-pilots-of-water-vessels",
+    "title": "Captains, Mates, and Pilots of Water Vessels",
+    "soc": "53-5021",
+    "exposure": "Low",
+    "summary": "Command or supervise operations of ships and water vessels, such as tugboats and ferryboats. Required to hold license issued by U.S. Coast Guard.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "20",
+      "employment": "nan",
+      "projectedGrowth": "0.89%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cardiologists",
+    "title": "Cardiologists",
+    "soc": "29-1212",
+    "exposure": "Medium",
+    "summary": "Diagnose, treat, manage, and prevent diseases or conditions of the cardiovascular system. May further subspecialize in interventional procedures (e.g., balloon angioplasty and stent placement), echocardiography, or electrophysiology.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "14",
+      "employment": "nan",
+      "projectedGrowth": "1.9%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cardiovascular-technologists-and-technicians",
+    "title": "Cardiovascular Technologists and Technicians",
+    "soc": "29-2031",
+    "exposure": "Medium",
+    "summary": "Conduct tests on pulmonary or cardiovascular systems of patients for diagnostic, therapeutic, or research purposes. May conduct or assist in electrocardiograms, cardiac catheterizations, pulmonary functions, lung capacity, and similar tests.",
+    "laborMarket": {
+      "medianWage": "$65,720",
+      "annualOpenings": "149",
+      "employment": "1,700",
+      "projectedGrowth": "3.09%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "career-technical-education-teachers-middle-school",
+    "title": "Career/Technical Education Teachers, Middle School",
+    "soc": "25-2023",
+    "exposure": "Medium",
+    "summary": "Teach occupational, vocational, career, or technical subjects to students at the middle, intermediate, or junior high school level.",
+    "laborMarket": {
+      "medianWage": "$48,630",
+      "annualOpenings": "4",
+      "employment": "60",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "career-technical-education-teachers-postsecondary",
+    "title": "Career/Technical Education Teachers, Postsecondary",
+    "soc": "25-1194",
+    "exposure": "High",
+    "summary": "Teach vocational courses intended to provide occupational training below the baccalaureate level in subjects such as construction, mechanics/repair, manufacturing, transportation, or cosmetology, primarily to students who have graduated from or left high school. Teaching takes place in public or private schools whose primary business is academic or vocational education.",
+    "laborMarket": {
+      "medianWage": "$62,100",
+      "annualOpenings": "204",
+      "employment": "2,250",
+      "projectedGrowth": "0.72%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "career-technical-education-teachers-secondary-school",
+      "career-technical-education-teachers-middle-school",
+      "engineering-teachers-postsecondary",
+      "instructional-coordinators",
+      "training-and-development-specialists",
+      "computer-science-teachers-postsecondary",
+      "mechanical-engineering-technologists-and-technicians",
+      "tutors",
+      "industrial-engineering-technologists-and-technicians",
+      "teaching-assistants-postsecondary",
+      "special-education-teachers-kindergarten",
+      "industrial-engineers",
+      "special-education-teachers-secondary-school",
+      "business-teachers-postsecondary",
+      "health-specialties-teachers-postsecondary",
+      "self-enrichment-teachers",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "mechanical-engineers",
+      "teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "career-technical-education-teachers-secondary-school",
+    "title": "Career/Technical Education Teachers, Secondary School",
+    "soc": "25-2032",
+    "exposure": "Medium",
+    "summary": "Teach occupational, vocational, career, or technical subjects to students at the secondary school level.",
+    "laborMarket": {
+      "medianWage": "$54,130",
+      "annualOpenings": "24",
+      "employment": "590",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cargo-and-freight-agents",
+    "title": "Cargo and Freight Agents",
+    "soc": "43-5011",
+    "exposure": "Very High",
+    "summary": "Expedite and route movement of incoming and outgoing cargo and freight shipments in airline, train, and trucking terminals and shipping docks. Take orders from customers and arrange pickup of freight and cargo for delivery to loading platform. Prepare and examine bills of lading to determine shipping charges and tariffs.",
+    "laborMarket": {
+      "medianWage": "$42,640",
+      "annualOpenings": "442",
+      "employment": "3,050",
+      "projectedGrowth": "2.63%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "freight-forwarders",
+      "shipping-receiving-and-inventory-clerks",
+      "customs-brokers",
+      "aircraft-cargo-handling-supervisors",
+      "postal-service-clerks",
+      "postal-service-mail-carriers",
+      "light-truck-drivers",
+      "postal-service-mail-sorters-processors-and-processing-machine-operators",
+      "dispatchers-except-police-fire-and-ambulance",
+      "order-clerks",
+      "transportation-storage-and-distribution-managers",
+      "logistics-analysts",
+      "transportation-inspectors",
+      "couriers-and-messengers",
+      "railroad-conductors-and-yardmasters",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "heavy-and-tractor-trailer-truck-drivers"
+    ],
+    "training": []
+  },
+  {
+    "id": "carpenters",
+    "title": "Carpenters",
+    "soc": "47-2031",
+    "exposure": "Low",
+    "summary": "Construct, erect, install, or repair structures and fixtures made of wood and comparable materials, such as concrete forms; building frameworks, including partitions, joists, studding, and rafters; and wood stairways, window and door frames, and hardwood floors. May also install cabinets, siding, drywall, and batt or roll insulation. Includes brattice builders who build doors or brattices (ventilation walls or partitions) in underground passageways.",
+    "laborMarket": {
+      "medianWage": "$54,540",
+      "annualOpenings": "2,073",
+      "employment": "18,290",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "carpet-installers",
+    "title": "Carpet Installers",
+    "soc": "47-2041",
+    "exposure": "Very Low",
+    "summary": "Lay and install carpet from rolls or blocks on floors. Install padding and trim flooring materials.",
+    "laborMarket": {
+      "medianWage": "$54,620",
+      "annualOpenings": "30",
+      "employment": "320",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cartographers-and-photogrammetrists",
+    "title": "Cartographers and Photogrammetrists",
+    "soc": "17-1021",
+    "exposure": "High",
+    "summary": "Research, study, and prepare maps and other spatial data in digital or graphic form for one or more purposes, such as legal, social, political, educational, and design purposes. May work with Geographic Information Systems (GIS). May design and evaluate algorithms, data structures, and user interfaces for GIS and mapping systems. May collect, analyze, and interpret geographic information provided by geodetic surveys, aerial photographs, and satellite data.",
+    "laborMarket": {
+      "medianWage": "$74,970",
+      "annualOpenings": "32",
+      "employment": "360",
+      "projectedGrowth": "1.01%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "surveying-and-mapping-technicians",
+      "geodetic-surveyors",
+      "geographic-information-systems-technologists-and-technicians",
+      "remote-sensing-technicians",
+      "geographers",
+      "remote-sensing-scientists-and-technologists",
+      "geological-technicians-except-hydrologic-technicians",
+      "architectural-and-civil-drafters",
+      "data-scientists",
+      "hydrologic-technicians",
+      "electrical-and-electronics-drafters",
+      "statistical-assistants",
+      "database-architects",
+      "calibration-technologists-and-technicians",
+      "geoscientists-except-hydrologists-and-geographers",
+      "civil-engineering-technologists-and-technicians",
+      "software-developers",
+      "atmospheric-and-space-scientists"
+    ],
+    "training": []
+  },
+  {
+    "id": "cashiers",
+    "title": "Cashiers",
+    "soc": "41-2011",
+    "exposure": "Low",
+    "summary": "Receive and disburse money in establishments other than financial institutions. May use electronic scanners, cash registers, or related equipment. May process credit or debit card transactions and validate checks.",
+    "laborMarket": {
+      "medianWage": "$32,990",
+      "annualOpenings": "13,177",
+      "employment": "70,780",
+      "projectedGrowth": "-0.56%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cement-masons-and-concrete-finishers",
+    "title": "Cement Masons and Concrete Finishers",
+    "soc": "47-2051",
+    "exposure": "Very Low",
+    "summary": "Smooth and finish surfaces of poured concrete, such as floors, walks, sidewalks, roads, or curbs using a variety of hand and power tools. Align forms for sidewalks, curbs, or gutters; patch voids; and use saws to cut expansion joints.",
+    "laborMarket": {
+      "medianWage": "$57,360",
+      "annualOpenings": "663",
+      "employment": "6,440",
+      "projectedGrowth": "0.87%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chefs-and-head-cooks",
+    "title": "Chefs and Head Cooks",
+    "soc": "35-1011",
+    "exposure": "Low",
+    "summary": "Direct and may participate in the preparation, seasoning, and cooking of salads, soups, fish, meats, vegetables, desserts, or other foods. May plan and price menu items, order supplies, and keep records and accounts.",
+    "laborMarket": {
+      "medianWage": "$61,950",
+      "annualOpenings": "413",
+      "employment": "3,260",
+      "projectedGrowth": "1.47%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chemical-engineers",
+    "title": "Chemical Engineers",
+    "soc": "17-2041",
+    "exposure": "High",
+    "summary": "Design chemical plant equipment and devise processes for manufacturing chemicals and products, such as gasoline, synthetic rubber, plastics, detergents, cement, paper, and pulp, by applying principles and technology of chemistry, physics, and engineering.",
+    "laborMarket": {
+      "medianWage": "$125,050",
+      "annualOpenings": "6",
+      "employment": "170",
+      "projectedGrowth": "0.51%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "materials-engineers",
+      "manufacturing-engineers",
+      "materials-scientists",
+      "chemists",
+      "biofuels-biodiesel-technology-and-product-development-managers",
+      "petroleum-engineers",
+      "mechanical-engineers",
+      "nuclear-engineers",
+      "mechatronics-engineers",
+      "chemical-plant-and-system-operators",
+      "industrial-engineering-technologists-and-technicians",
+      "chemical-technicians",
+      "chemical-equipment-operators-and-tenders",
+      "biomass-plant-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "biofuels-processing-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "chemical-equipment-operators-and-tenders",
+    "title": "Chemical Equipment Operators and Tenders",
+    "soc": "51-9011",
+    "exposure": "Low",
+    "summary": "Operate or tend equipment to control chemical changes or reactions in the processing of industrial or consumer products. Equipment used includes devulcanizers, steam-jacketed kettles, and reactor vessels.",
+    "laborMarket": {
+      "medianWage": "$46,110",
+      "annualOpenings": "122",
+      "employment": "1,310",
+      "projectedGrowth": "-1.26%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chemical-plant-and-system-operators",
+    "title": "Chemical Plant and System Operators",
+    "soc": "51-8091",
+    "exposure": "Low",
+    "summary": "Control or operate entire chemical processes or system of machines.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "2.06%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chemical-technicians",
+    "title": "Chemical Technicians",
+    "soc": "19-4031",
+    "exposure": "Medium",
+    "summary": "Conduct chemical and physical laboratory tests to assist scientists in making qualitative and quantitative analyses of solids, liquids, and gaseous materials for research and development of new products or processes, quality control, maintenance of environmental standards, and other work involving experimental, theoretical, or practical application of chemistry and related sciences.",
+    "laborMarket": {
+      "medianWage": "$63,030",
+      "annualOpenings": "64",
+      "employment": "470",
+      "projectedGrowth": "0.48%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chemistry-teachers-postsecondary",
+    "title": "Chemistry Teachers, Postsecondary",
+    "soc": "25-1052",
+    "exposure": "Medium",
+    "summary": "Teach courses pertaining to the chemical and physical properties and compositional changes of substances. Work may include providing instruction in the methods of qualitative and quantitative chemical analysis. Includes both teachers primarily engaged in teaching, and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$106,430",
+      "annualOpenings": "18",
+      "employment": "190",
+      "projectedGrowth": "0.91%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chemists",
+    "title": "Chemists",
+    "soc": "19-2031",
+    "exposure": "Medium",
+    "summary": "Conduct qualitative and quantitative chemical analyses or experiments in laboratories for quality or process control or to develop new products or knowledge.",
+    "laborMarket": {
+      "medianWage": "$79,330",
+      "annualOpenings": "68",
+      "employment": "870",
+      "projectedGrowth": "0.38%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chief-executives",
+    "title": "Chief Executives",
+    "soc": "11-1011",
+    "exposure": "High",
+    "summary": "Determine and formulate policies and provide overall direction of companies or private and public sector organizations within guidelines set up by a board of directors or similar governing body. Plan, direct, or coordinate operational activities at the highest level of management with the help of subordinate executives and staff managers.",
+    "laborMarket": {
+      "medianWage": "$150,590",
+      "annualOpenings": "462",
+      "employment": "3,100",
+      "projectedGrowth": "1.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "general-and-operations-managers",
+      "management-analysts",
+      "treasurers-and-controllers",
+      "social-and-community-service-managers",
+      "public-relations-managers",
+      "compliance-managers",
+      "education-administrators-postsecondary",
+      "legislators",
+      "chief-sustainability-officers",
+      "administrative-services-managers",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "human-resources-managers",
+      "public-relations-specialists",
+      "labor-relations-specialists",
+      "financial-examiners",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "sales-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "chief-sustainability-officers",
+    "title": "Chief Sustainability Officers",
+    "soc": "11-1011",
+    "exposure": "High",
+    "summary": "Communicate and coordinate with management, shareholders, customers, and employees to address sustainability issues. Enact or oversee a corporate sustainability strategy.",
+    "laborMarket": {
+      "medianWage": "$150,590",
+      "annualOpenings": "462",
+      "employment": "3,100",
+      "projectedGrowth": "1.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "general-and-operations-managers",
+      "management-analysts",
+      "treasurers-and-controllers",
+      "social-and-community-service-managers",
+      "public-relations-managers",
+      "compliance-managers",
+      "education-administrators-postsecondary",
+      "legislators",
+      "chief-sustainability-officers",
+      "administrative-services-managers",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "human-resources-managers",
+      "public-relations-specialists",
+      "labor-relations-specialists",
+      "financial-examiners",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "sales-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "child-family-and-school-social-workers",
+    "title": "Child, Family, and School Social Workers",
+    "soc": "21-1021",
+    "exposure": "Low",
+    "summary": "Provide social services and assistance to improve the social and psychological functioning of children and their families and to maximize the family well-being and the academic functioning of children. May assist parents, arrange adoptions, and find foster homes for abandoned or abused children. In schools, they address such problems as teenage pregnancy, misbehavior, and truancy. May also advise teachers.",
+    "laborMarket": {
+      "medianWage": "$50,140",
+      "annualOpenings": "731",
+      "employment": "7,770",
+      "projectedGrowth": "1.33%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "childcare-workers",
+    "title": "Childcare Workers",
+    "soc": "39-9011",
+    "exposure": "Low",
+    "summary": "Attend to children at schools, businesses, private households, and childcare institutions. Perform a variety of tasks, such as dressing, feeding, bathing, and overseeing play.",
+    "laborMarket": {
+      "medianWage": "$35,140",
+      "annualOpenings": "2,250",
+      "employment": "6,190",
+      "projectedGrowth": "1.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "chiropractors",
+    "title": "Chiropractors",
+    "soc": "29-1011",
+    "exposure": "High",
+    "summary": "Assess, treat, and care for patients by manipulation of spine and musculoskeletal system. May provide spinal adjustment or address sacral or pelvic misalignment.",
+    "laborMarket": {
+      "medianWage": "$95,580",
+      "annualOpenings": "95",
+      "employment": "1,180",
+      "projectedGrowth": "2.22%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "pediatric-surgeons",
+      "orthopedic-surgeons-except-pediatric",
+      "neurologists",
+      "cardiologists",
+      "naturopathic-physicians",
+      "physical-medicine-and-rehabilitation-physicians",
+      "general-internal-medicine-physicians",
+      "acupuncturists",
+      "dermatologists",
+      "emergency-medicine-physicians",
+      "pediatricians-general",
+      "ophthalmologists-except-pediatric",
+      "obstetricians-and-gynecologists",
+      "family-medicine-physicians",
+      "psychiatrists",
+      "nurse-practitioners",
+      "optometrists",
+      "anesthesiologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "choreographers",
+    "title": "Choreographers",
+    "soc": "27-2032",
+    "exposure": "Low",
+    "summary": "Create new dance routines. Rehearse performance of routines. May direct and stage presentations.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "7",
+      "employment": "nan",
+      "projectedGrowth": "2.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "civil-engineering-technologists-and-technicians",
+    "title": "Civil Engineering Technologists and Technicians",
+    "soc": "17-3022",
+    "exposure": "Very High",
+    "summary": "Apply theory and principles of civil engineering in planning, designing, and overseeing construction and maintenance of structures and facilities under the direction of engineering staff or physical scientists.",
+    "laborMarket": {
+      "medianWage": "$69,800",
+      "annualOpenings": "110",
+      "employment": "1,340",
+      "projectedGrowth": "0.12%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "architectural-and-civil-drafters",
+      "mechanical-engineering-technologists-and-technicians",
+      "construction-managers",
+      "construction-and-building-inspectors",
+      "electrical-and-electronics-drafters",
+      "mechanical-drafters",
+      "transportation-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "environmental-engineering-technologists-and-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "architectural-and-engineering-managers",
+      "industrial-engineers",
+      "first-line-supervisors-of-construction-trades-and-extraction-workers",
+      "project-management-specialists",
+      "marine-engineers-and-naval-architects",
+      "cost-estimators",
+      "architects-except-landscape-and-naval",
+      "mechanical-engineers",
+      "logistics-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "civil-engineers",
+    "title": "Civil Engineers",
+    "soc": "17-2051",
+    "exposure": "High",
+    "summary": "Perform engineering duties in planning, designing, and overseeing construction and maintenance of building structures and facilities, such as roads, railroads, airports, bridges, harbors, channels, dams, irrigation projects, pipelines, power plants, and water and sewage systems.",
+    "laborMarket": {
+      "medianWage": "$93,500",
+      "annualOpenings": "430",
+      "employment": "6,270",
+      "projectedGrowth": "0.77%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "civil-engineering-technologists-and-technicians",
+      "transportation-engineers",
+      "construction-managers",
+      "construction-and-building-inspectors",
+      "environmental-engineers",
+      "architectural-and-civil-drafters",
+      "architectural-and-engineering-managers",
+      "architects-except-landscape-and-naval",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "industrial-engineers",
+      "solar-energy-installation-managers",
+      "wind-energy-engineers",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "electrical-engineers",
+      "maintenance-and-repair-workers-general",
+      "marine-engineers-and-naval-architects",
+      "mechanical-engineering-technologists-and-technicians",
+      "facilities-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "claims-adjusters-examiners-and-investigators",
+    "title": "Claims Adjusters, Examiners, and Investigators",
+    "soc": "13-1031",
+    "exposure": "High",
+    "summary": "Review settled claims to determine that payments and settlements are made in accordance with company practices and procedures. Confer with legal counsel on claims requiring litigation. May also settle insurance claims.",
+    "laborMarket": {
+      "medianWage": "$63,240",
+      "annualOpenings": "893",
+      "employment": "14,840",
+      "projectedGrowth": "0.03%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "insurance-claims-and-policy-processing-clerks",
+      "eligibility-interviewers-government-programs",
+      "customer-service-representatives",
+      "insurance-underwriters",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "compliance-officers",
+      "compensation-benefits-and-job-analysis-specialists",
+      "insurance-sales-agents",
+      "fraud-examiners-investigators-and-analysts",
+      "appraisers-and-assessors-of-real-estate",
+      "lawyers",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "credit-authorizers-checkers-and-clerks",
+      "private-detectives-and-investigators",
+      "paralegals-and-legal-assistants",
+      "legal-secretaries-and-administrative-assistants",
+      "title-examiners-abstractors-and-searchers",
+      "arbitrators-mediators-and-conciliators",
+      "accountants-and-auditors",
+      "compensation-and-benefits-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "cleaners-of-vehicles-and-equipment",
+    "title": "Cleaners of Vehicles and Equipment",
+    "soc": "53-7061",
+    "exposure": "Very Low",
+    "summary": "Wash or otherwise clean vehicles, machinery, and other equipment. Use such materials as water, cleaning agents, brushes, cloths, and hoses.",
+    "laborMarket": {
+      "medianWage": "$35,130",
+      "annualOpenings": "1,056",
+      "employment": "6,600",
+      "projectedGrowth": "0.51%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cleaning-washing-and-metal-pickling-equipment-operators-and-tenders",
+    "title": "Cleaning, Washing, and Metal Pickling Equipment Operators and Tenders",
+    "soc": "51-9192",
+    "exposure": "Very Low",
+    "summary": "Operate or tend machines to wash or clean products, such as barrels or kegs, glass items, tin plate, food, pulp, coal, plastic, or rubber, to remove impurities.",
+    "laborMarket": {
+      "medianWage": "$38,550",
+      "annualOpenings": "37",
+      "employment": "290",
+      "projectedGrowth": "1.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "clergy",
+    "title": "Clergy",
+    "soc": "21-2011",
+    "exposure": "Medium",
+    "summary": "Conduct religious worship and perform other spiritual functions associated with beliefs and practices of religious faith or denomination. Provide spiritual and moral guidance and assistance to members.",
+    "laborMarket": {
+      "medianWage": "$62,380",
+      "annualOpenings": "276",
+      "employment": "1,380",
+      "projectedGrowth": "1.43%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "climate-change-policy-analysts",
+    "title": "Climate Change Policy Analysts",
+    "soc": "19-2041",
+    "exposure": "High",
+    "summary": "Research and analyze policy developments related to climate change. Make climate-related recommendations for actions such as legislation, awareness campaigns, or fundraising approaches.",
+    "laborMarket": {
+      "medianWage": "$78,870",
+      "annualOpenings": "124",
+      "employment": "1,590",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-compliance-inspectors",
+      "environmental-engineers",
+      "industrial-ecologists",
+      "environmental-science-and-protection-technicians-including-health",
+      "conservation-scientists",
+      "environmental-engineering-technologists-and-technicians",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologic-technicians",
+      "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+      "hydrologists",
+      "occupational-health-and-safety-specialists",
+      "water-resource-specialists",
+      "environmental-science-teachers-postsecondary",
+      "chief-sustainability-officers",
+      "soil-and-plant-scientists",
+      "occupational-health-and-safety-technicians",
+      "foresters"
+    ],
+    "training": []
+  },
+  {
+    "id": "clinical-neuropsychologists",
+    "title": "Clinical Neuropsychologists",
+    "soc": "19-3039",
+    "exposure": "High",
+    "summary": "Assess and diagnose patients with neurobehavioral problems related to acquired or developmental disorders of the nervous system, such as neurodegenerative disorders, traumatic brain injury, seizure disorders, and learning disabilities. Recommend treatment after diagnosis, such as therapy, medication, or surgery. Assist with evaluation before and after neurosurgical procedures, such as deep brain stimulation.",
+    "laborMarket": {
+      "medianWage": "$128,040",
+      "annualOpenings": "115",
+      "employment": "270",
+      "projectedGrowth": "2.36%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "clinical-nurse-specialists",
+    "title": "Clinical Nurse Specialists",
+    "soc": "29-1141",
+    "exposure": "Medium",
+    "summary": "Direct nursing staff in the provision of patient care in a clinical practice setting, such as a hospital, hospice, clinic, or home. Ensure adherence to established clinical policies, protocols, regulations, and standards.",
+    "laborMarket": {
+      "medianWage": "$96,890",
+      "annualOpenings": "5,662",
+      "employment": "64,430",
+      "projectedGrowth": "2.79%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "clinical-research-coordinators",
+    "title": "Clinical Research Coordinators",
+    "soc": "11-9121",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate clinical research projects. Direct the activities of workers engaged in clinical research projects to ensure compliance with protocols and overall clinical objectives. May evaluate and analyze clinical data.",
+    "laborMarket": {
+      "medianWage": "$126,320",
+      "annualOpenings": "61",
+      "employment": "770",
+      "projectedGrowth": "0.45%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "project-management-specialists",
+      "bioengineers-and-biomedical-engineers",
+      "data-scientists",
+      "biological-technicians",
+      "molecular-and-cellular-biologists",
+      "environmental-science-teachers-postsecondary",
+      "clinical-research-coordinators",
+      "architectural-and-engineering-managers",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "chemists",
+      "chemical-technicians",
+      "computer-and-information-research-scientists",
+      "management-analysts",
+      "bioinformatics-technicians",
+      "environmental-scientists-and-specialists-including-health",
+      "industrial-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "clinical-and-counseling-psychologists",
+    "title": "Clinical and Counseling Psychologists",
+    "soc": "19-3033",
+    "exposure": "Medium",
+    "summary": "Assess, diagnose, and treat mental and emotional disorders of individuals through observation, interview, and psychological tests. Help individuals with distress or maladjustment understand their problems through their knowledge of case history, interviews with patients, and theory. Provide individual or group counseling services to assist individuals in achieving more effective personal, social, educational, and vocational development and adjustment. May design behavior modification programs and consult with medical personnel regarding the best treatment for patients.",
+    "laborMarket": {
+      "medianWage": "$106,970",
+      "annualOpenings": "59",
+      "employment": "1,140",
+      "projectedGrowth": "2.49%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "coaches-and-scouts",
+    "title": "Coaches and Scouts",
+    "soc": "27-2022",
+    "exposure": "Medium",
+    "summary": "Instruct or coach groups or individuals in the fundamentals of sports for the primary purpose of competition. Demonstrate techniques and methods of participation. May evaluate athletes' strengths and weaknesses as possible recruits or to improve the athletes' technique to prepare them for competition. Those required to hold teaching certifications should be reported in the appropriate teaching category.",
+    "laborMarket": {
+      "medianWage": "$47,460",
+      "annualOpenings": "706",
+      "employment": "4,140",
+      "projectedGrowth": "2.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "coating-painting-and-spraying-machine-setters-operators-and-tenders",
+    "title": "Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",
+    "soc": "51-9124",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend spraying or rolling machines to coat or paint any of a wide variety of products, including glassware, cloth, ceramics, metal, plastic, paper, or wood, with lacquer, silver, copper, rubber, varnish, glaze, enamel, oil, or rust-proofing materials. Includes painters of transportation vehicles such as painters in auto body repair facilities.",
+    "laborMarket": {
+      "medianWage": "$45,400",
+      "annualOpenings": "262",
+      "employment": "2,080",
+      "projectedGrowth": "0.83%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "coil-winders-tapers-and-finishers",
+    "title": "Coil Winders, Tapers, and Finishers",
+    "soc": "51-2021",
+    "exposure": "Low",
+    "summary": "Wind wire coils used in electrical components, such as resistors and transformers, and in electrical equipment and instruments, such as field cores, bobbins, armature cores, electrical motors, generators, and control equipment.",
+    "laborMarket": {
+      "medianWage": "$42,290",
+      "annualOpenings": "1",
+      "employment": "40",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "coin-vending-and-amusement-machine-servicers-and-repairers",
+    "title": "Coin, Vending, and Amusement Machine Servicers and Repairers",
+    "soc": "49-9091",
+    "exposure": "Medium",
+    "summary": "Install, service, adjust, or repair coin, vending, or amusement machines including video games, juke boxes, pinball machines, or slot machines.",
+    "laborMarket": {
+      "medianWage": "$51,240",
+      "annualOpenings": "153",
+      "employment": "1,180",
+      "projectedGrowth": "-0.17%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "commercial-divers",
+    "title": "Commercial Divers",
+    "soc": "49-9092",
+    "exposure": "Very Low",
+    "summary": "Work below surface of water, using surface-supplied air or scuba equipment to inspect, repair, remove, or install equipment and structures. May use a variety of power and hand tools, such as drills, sledgehammers, torches, and welding equipment. May conduct tests or experiments, rig explosives, or photograph structures or marine life.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "3",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "commercial-pilots",
+    "title": "Commercial Pilots",
+    "soc": "53-2012",
+    "exposure": "Low",
+    "summary": "Pilot and navigate the flight of fixed-wing aircraft on nonscheduled air carrier routes, or helicopters. Requires Commercial Pilot certificate. Includes charter pilots with similar certification, and air ambulance and air tour pilots. Excludes regional, national, and international airline pilots.",
+    "laborMarket": {
+      "medianWage": "$102,280",
+      "annualOpenings": "232",
+      "employment": "1,330",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "commercial-and-industrial-designers",
+    "title": "Commercial and Industrial Designers",
+    "soc": "27-1021",
+    "exposure": "High",
+    "summary": "Design and develop manufactured products, such as cars, home appliances, and children's toys. Combine artistic talent with research on product use, marketing, and materials to create the most functional and appealing product design.",
+    "laborMarket": {
+      "medianWage": "$80,860",
+      "annualOpenings": "20",
+      "employment": "290",
+      "projectedGrowth": "0.91%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "mechanical-drafters",
+      "model-makers-metal-and-plastic",
+      "fabric-and-apparel-patternmakers",
+      "patternmakers-metal-and-plastic",
+      "fashion-designers",
+      "industrial-engineers",
+      "layout-workers-metal-and-plastic",
+      "mechanical-engineering-technologists-and-technicians",
+      "materials-engineers",
+      "mechanical-engineers",
+      "craft-artists",
+      "model-makers-wood",
+      "industrial-engineering-technologists-and-technicians",
+      "patternmakers-wood",
+      "electrical-and-electronics-drafters",
+      "molders-shapers-and-casters-except-metal-and-plastic",
+      "materials-scientists",
+      "interior-designers",
+      "electrical-and-electronic-engineering-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "communications-teachers-postsecondary",
+    "title": "Communications Teachers, Postsecondary",
+    "soc": "25-1122",
+    "exposure": "Medium",
+    "summary": "Teach courses in communications, such as organizational communications, public relations, radio/television broadcasting, and journalism. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "71",
+      "employment": "860",
+      "projectedGrowth": "1.01%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "community-health-workers",
+    "title": "Community Health Workers",
+    "soc": "21-1094",
+    "exposure": "Medium",
+    "summary": "Promote health within a community by assisting individuals to adopt healthy behaviors. Serve as an advocate for the health needs of individuals by assisting community residents in effectively communicating with healthcare providers or social service agencies. Act as liaison or advocate and implement programs that promote, maintain, and improve individual and overall community health. May deliver health-related preventive services such as blood pressure, glaucoma, and hearing screenings. May collect data to help identify community health needs.",
+    "laborMarket": {
+      "medianWage": "$48,050",
+      "annualOpenings": "163",
+      "employment": "1,160",
+      "projectedGrowth": "2.35%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "compensation-and-benefits-managers",
+    "title": "Compensation and Benefits Managers",
+    "soc": "11-3111",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate compensation and benefits activities of an organization.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "50",
+      "employment": "nan",
+      "projectedGrowth": "0.06%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compensation-benefits-and-job-analysis-specialists",
+      "human-resources-specialists",
+      "human-resources-managers",
+      "labor-relations-specialists",
+      "financial-managers",
+      "equal-opportunity-representatives-and-officers",
+      "accountants-and-auditors",
+      "financial-examiners",
+      "budget-analysts",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "eligibility-interviewers-government-programs",
+      "payroll-and-timekeeping-clerks",
+      "management-analysts",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "medical-and-health-services-managers",
+      "compliance-managers",
+      "social-and-community-service-managers",
+      "administrative-services-managers",
+      "chief-executives"
+    ],
+    "training": []
+  },
+  {
+    "id": "compensation-benefits-and-job-analysis-specialists",
+    "title": "Compensation, Benefits, and Job Analysis Specialists",
+    "soc": "13-1141",
+    "exposure": "High",
+    "summary": "Conduct programs of compensation and benefits and job analysis for employer. May specialize in specific areas, such as position classification and pension programs.",
+    "laborMarket": {
+      "medianWage": "$77,730",
+      "annualOpenings": "183",
+      "employment": "2,350",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compensation-and-benefits-managers",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "eligibility-interviewers-government-programs",
+      "human-resources-specialists",
+      "human-resources-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "administrative-services-managers",
+      "labor-relations-specialists",
+      "equal-opportunity-representatives-and-officers",
+      "budget-analysts",
+      "management-analysts",
+      "payroll-and-timekeeping-clerks",
+      "medical-and-health-services-managers",
+      "compliance-managers",
+      "social-and-community-service-managers",
+      "chief-executives",
+      "accountants-and-auditors",
+      "financial-managers",
+      "financial-examiners",
+      "insurance-claims-and-policy-processing-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "compliance-managers",
+    "title": "Compliance Managers",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate activities of an organization to ensure compliance with ethical or regulatory standards.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "compliance-officers",
+    "title": "Compliance Officers",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Examine, evaluate, and investigate eligibility for or conformity with laws and regulations governing contract compliance of licenses and permits, and perform other compliance and enforcement inspection and analysis activities not classified elsewhere.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-hardware-engineers",
+    "title": "Computer Hardware Engineers",
+    "soc": "17-2061",
+    "exposure": "Very High",
+    "summary": "Research, design, develop, or test computer or computer-related equipment for commercial, industrial, military, or scientific use. May supervise the manufacturing and installation of computer or computer-related equipment and components.",
+    "laborMarket": {
+      "medianWage": "$163,090",
+      "annualOpenings": "109",
+      "employment": "3,390",
+      "projectedGrowth": "0.19%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "electronics-engineers-except-computer",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "microsystems-engineers",
+      "software-developers",
+      "robotics-technicians",
+      "computer-systems-engineers-architects",
+      "electrical-engineers",
+      "mechanical-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "electrical-and-electronics-drafters",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "software-quality-assurance-analysts-and-testers",
+      "mechanical-engineers",
+      "computer-numerically-controlled-tool-programmers",
+      "computer-systems-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-network-architects",
+    "title": "Computer Network Architects",
+    "soc": "15-1241",
+    "exposure": "Very High",
+    "summary": "Design and implement computer and information networks, such as local area networks (LAN), wide area networks (WAN), intranets, extranets, and other data communications networks. Perform network modeling, analysis, and planning, including analysis of capacity needs for network infrastructures. May also design network and computer security measures. May research and recommend network and data communications hardware and software.",
+    "laborMarket": {
+      "medianWage": "$124,700",
+      "annualOpenings": "263",
+      "employment": "4,340",
+      "projectedGrowth": "0.68%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "computer-network-support-specialists",
+      "network-and-computer-systems-administrators",
+      "computer-systems-engineers-architects",
+      "telecommunications-engineering-specialists",
+      "computer-systems-analysts",
+      "software-developers",
+      "database-administrators",
+      "database-architects",
+      "computer-hardware-engineers",
+      "information-security-analysts",
+      "computer-user-support-specialists",
+      "computer-and-information-systems-managers",
+      "electronics-engineers-except-computer",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "broadcast-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-network-support-specialists",
+    "title": "Computer Network Support Specialists",
+    "soc": "15-1231",
+    "exposure": "Very High",
+    "summary": "Analyze, test, troubleshoot, and evaluate existing network systems, such as local area networks (LAN), wide area networks (WAN), cloud networks, servers, and other data communications networks. Perform network maintenance to ensure networks operate correctly with minimal interruption.",
+    "laborMarket": {
+      "medianWage": "$65,340",
+      "annualOpenings": "168",
+      "employment": "1,460",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "computer-network-architects",
+      "network-and-computer-systems-administrators",
+      "computer-user-support-specialists",
+      "computer-systems-engineers-architects",
+      "information-security-analysts",
+      "computer-systems-analysts",
+      "database-administrators",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "software-developers",
+      "broadcast-technicians",
+      "computer-and-information-systems-managers",
+      "database-architects",
+      "software-quality-assurance-analysts-and-testers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-numerically-controlled-tool-operators",
+    "title": "Computer Numerically Controlled Tool Operators",
+    "soc": "51-9161",
+    "exposure": "Low",
+    "summary": "Operate computer-controlled tools, machines, or robots to machine or process parts, tools, or other work pieces made of metal, plastic, wood, stone, or other materials. May also set up and maintain equipment.",
+    "laborMarket": {
+      "medianWage": "$48,650",
+      "annualOpenings": "140",
+      "employment": "1,810",
+      "projectedGrowth": "-0.56%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "computer-numerically-controlled-tool-programmers",
+    "title": "Computer Numerically Controlled Tool Programmers",
+    "soc": "51-9162",
+    "exposure": "Very High",
+    "summary": "Develop programs to control machining or processing of materials by automatic machine tools, equipment, or systems. May also set up, operate, or maintain equipment.",
+    "laborMarket": {
+      "medianWage": "$69,220",
+      "annualOpenings": "54",
+      "employment": "520",
+      "projectedGrowth": "1.52%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [
+      "computer-numerically-controlled-tool-operators",
+      "machinists",
+      "robotics-technicians",
+      "model-makers-metal-and-plastic",
+      "electromechanical-equipment-assemblers",
+      "mechanical-drafters",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "patternmakers-metal-and-plastic",
+      "milling-and-planing-machine-setters-operators-and-tenders-metal-and-plastic",
+      "lathe-and-turning-machine-tool-setters-operators-and-tenders-metal-and-plastic",
+      "mechatronics-engineers",
+      "electrical-and-electronic-equipment-assemblers",
+      "multiple-machine-tool-setters-operators-and-tenders-metal-and-plastic",
+      "computer-hardware-engineers",
+      "computer-programmers",
+      "engine-and-other-machine-assemblers"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-occupations-all-other",
+    "title": "Computer Occupations, All Other",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "All computer occupations not listed separately.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "computer-programmers",
+    "title": "Computer Programmers",
+    "soc": "15-1251",
+    "exposure": "Very High",
+    "summary": "Create, modify, and test the code and scripts that allow computer applications to run. Work from specifications drawn up by software and web developers or other individuals. May develop and write computer programs to store, locate, and retrieve specific documents, data, and information.",
+    "laborMarket": {
+      "medianWage": "$71,930",
+      "annualOpenings": "181",
+      "employment": "4,170",
+      "projectedGrowth": "-0.54%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "software-developers",
+      "web-and-digital-interface-designers",
+      "computer-systems-engineers-architects",
+      "computer-systems-analysts",
+      "database-administrators",
+      "database-architects",
+      "software-quality-assurance-analysts-and-testers",
+      "computer-hardware-engineers",
+      "computer-network-architects",
+      "web-developers",
+      "computer-numerically-controlled-tool-programmers",
+      "network-and-computer-systems-administrators",
+      "computer-and-information-systems-managers",
+      "computer-and-information-research-scientists",
+      "computer-user-support-specialists",
+      "data-scientists",
+      "computer-science-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-science-teachers-postsecondary",
+    "title": "Computer Science Teachers, Postsecondary",
+    "soc": "25-1021",
+    "exposure": "High",
+    "summary": "Teach courses in computer science. May specialize in a field of computer science, such as the design and function of computers or operations and research analysis. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$80,230",
+      "annualOpenings": "73",
+      "employment": "830",
+      "projectedGrowth": "1.34%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "computer-and-information-systems-managers",
+      "business-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "engineering-teachers-postsecondary",
+      "software-developers",
+      "physics-teachers-postsecondary",
+      "computer-and-information-research-scientists",
+      "computer-systems-engineers-architects",
+      "computer-hardware-engineers",
+      "career-technical-education-teachers-middle-school",
+      "career-technical-education-teachers-secondary-school",
+      "career-technical-education-teachers-postsecondary",
+      "instructional-coordinators",
+      "computer-systems-analysts",
+      "teaching-assistants-postsecondary",
+      "communications-teachers-postsecondary",
+      "computer-programmers",
+      "management-analysts",
+      "tutors"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-systems-analysts",
+    "title": "Computer Systems Analysts",
+    "soc": "15-1211",
+    "exposure": "Very High",
+    "summary": "Analyze science, engineering, business, and other data processing problems to develop and implement solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions, improve existing computer systems, and review computer system capabilities, workflow, and schedule limitations. May analyze or recommend commercially available software.",
+    "laborMarket": {
+      "medianWage": "$101,730",
+      "annualOpenings": "782",
+      "employment": "10,010",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "software-developers",
+      "computer-systems-engineers-architects",
+      "database-administrators",
+      "computer-and-information-systems-managers",
+      "database-architects",
+      "network-and-computer-systems-administrators",
+      "information-security-analysts",
+      "software-quality-assurance-analysts-and-testers",
+      "health-informatics-specialists",
+      "computer-programmers",
+      "computer-network-architects",
+      "computer-network-support-specialists",
+      "computer-user-support-specialists",
+      "management-analysts",
+      "data-scientists"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-systems-engineers-architects",
+    "title": "Computer Systems Engineers/Architects",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Design and develop solutions to complex applications problems, system administration issues, or network concerns. Perform systems management and integration functions.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "computer-user-support-specialists",
+    "title": "Computer User Support Specialists",
+    "soc": "15-1232",
+    "exposure": "Very High",
+    "summary": "Provide technical assistance to computer users. Answer questions or resolve computer problems for clients in person, via telephone, or electronically. May provide assistance concerning the use of computer hardware and software, including printing, installation, word processing, electronic mail, and operating systems.",
+    "laborMarket": {
+      "medianWage": "$61,990",
+      "annualOpenings": "1,376",
+      "employment": "20,400",
+      "projectedGrowth": "0.37%",
+      "typicalEducation": "Some college, no degree"
+    },
+    "relatedOccupationIds": [
+      "computer-network-support-specialists",
+      "network-and-computer-systems-administrators",
+      "computer-systems-engineers-architects",
+      "computer-systems-analysts",
+      "software-developers",
+      "database-administrators",
+      "computer-automated-teller-and-office-machine-repairers",
+      "information-security-analysts",
+      "software-quality-assurance-analysts-and-testers",
+      "computer-network-architects",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "computer-programmers",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "computer-and-information-systems-managers",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "web-and-digital-interface-designers",
+      "broadcast-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-and-information-research-scientists",
+    "title": "Computer and Information Research Scientists",
+    "soc": "15-1221",
+    "exposure": "Very High",
+    "summary": "Conduct research into fundamental computer and information science as theorists, designers, or inventors. Develop solutions to problems in the field of computer hardware and software.",
+    "laborMarket": {
+      "medianWage": "$128,520",
+      "annualOpenings": "26",
+      "employment": "420",
+      "projectedGrowth": "1.95%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "mathematicians",
+      "software-developers",
+      "computer-programmers",
+      "operations-research-analysts",
+      "computer-systems-engineers-architects",
+      "computer-systems-analysts",
+      "bioinformatics-technicians",
+      "bioinformatics-scientists",
+      "database-architects",
+      "natural-sciences-managers",
+      "bioengineers-and-biomedical-engineers",
+      "computer-and-information-systems-managers",
+      "architectural-and-engineering-managers",
+      "statisticians",
+      "computer-science-teachers-postsecondary",
+      "robotics-engineers",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "computer-hardware-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-and-information-systems-managers",
+    "title": "Computer and Information Systems Managers",
+    "soc": "11-3021",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate activities in such fields as electronic data processing, information systems, systems analysis, and computer programming.",
+    "laborMarket": {
+      "medianWage": "$160,900",
+      "annualOpenings": "1,158",
+      "employment": "14,530",
+      "projectedGrowth": "1.34%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "computer-systems-analysts",
+      "project-management-specialists",
+      "software-developers",
+      "computer-systems-engineers-architects",
+      "management-analysts",
+      "database-architects",
+      "computer-network-architects",
+      "database-administrators",
+      "computer-science-teachers-postsecondary",
+      "network-and-computer-systems-administrators",
+      "information-security-analysts",
+      "computer-programmers",
+      "business-intelligence-analysts",
+      "software-quality-assurance-analysts-and-testers",
+      "computer-network-support-specialists",
+      "computer-user-support-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "computer-automated-teller-and-office-machine-repairers",
+    "title": "Computer, Automated Teller, and Office Machine Repairers",
+    "soc": "49-2011",
+    "exposure": "Medium",
+    "summary": "Repair, maintain, or install computers, word processing systems, automated teller machines, and electronic office machines, such as duplicating and fax machines.",
+    "laborMarket": {
+      "medianWage": "$41,480",
+      "annualOpenings": "130",
+      "employment": "940",
+      "projectedGrowth": "-0.74%",
+      "typicalEducation": "Some college, no degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "concierges",
+    "title": "Concierges",
+    "soc": "39-6012",
+    "exposure": "High",
+    "summary": "Assist patrons at hotel, apartment, or office building with personal services. May take messages; arrange or give advice on transportation, business services, or entertainment; or monitor guest requests for housekeeping and maintenance.",
+    "laborMarket": {
+      "medianWage": "$37,040",
+      "annualOpenings": "130",
+      "employment": "450",
+      "projectedGrowth": "0.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "hotel-motel-and-resort-desk-clerks",
+      "baggage-porters-and-bellhops",
+      "counter-and-rental-clerks",
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "locker-room-coatroom-and-dressing-room-attendants",
+      "passenger-attendants",
+      "receptionists-and-information-clerks",
+      "lodging-managers",
+      "ushers-lobby-attendants-and-ticket-takers",
+      "travel-agents",
+      "parking-attendants",
+      "hosts-and-hostesses-restaurant-lounge-and-coffee-shop",
+      "dining-room-and-cafeteria-attendants-and-bartender-helpers",
+      "travel-guides",
+      "waiters-and-waitresses",
+      "meeting-convention-and-event-planners",
+      "maids-and-housekeeping-cleaners",
+      "food-servers-nonrestaurant",
+      "customer-service-representatives",
+      "flight-attendants"
+    ],
+    "training": []
+  },
+  {
+    "id": "conservation-scientists",
+    "title": "Conservation Scientists",
+    "soc": "19-1031",
+    "exposure": "High",
+    "summary": "Manage, improve, and protect natural resources to maximize their use without damaging the environment. May conduct soil surveys and develop plans to eliminate soil erosion or to protect rangelands. May instruct farmers, agricultural production managers, or ranchers in best ways to use crop rotation, contour plowing, or terracing to conserve soil and water; in the number and kind of livestock and forage plants best suited to particular ranges; and in range and farm improvements, such as fencing and reservoirs for stock watering.",
+    "laborMarket": {
+      "medianWage": "$76,100",
+      "annualOpenings": "30",
+      "employment": "360",
+      "projectedGrowth": "1.52%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-restoration-planners",
+      "range-managers",
+      "soil-and-plant-scientists",
+      "water-resource-specialists",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologists",
+      "foresters",
+      "hydrologic-technicians",
+      "forest-and-conservation-technicians",
+      "environmental-engineers",
+      "agricultural-engineers",
+      "geoscientists-except-hydrologists-and-geographers",
+      "water-wastewater-engineers",
+      "environmental-science-and-protection-technicians-including-health",
+      "biologists",
+      "environmental-compliance-inspectors",
+      "zoologists-and-wildlife-biologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "construction-laborers",
+    "title": "Construction Laborers",
+    "soc": "47-2061",
+    "exposure": "Very Low",
+    "summary": "Perform tasks involving physical labor at construction sites. May operate hand and power tools of all types: air hammers, earth tampers, cement mixers, small mechanical hoists, surveying and measuring equipment, and a variety of other equipment and instruments. May clean and prepare sites, dig trenches, set braces to support the sides of excavations, erect scaffolding, and clean up rubble, debris, and other waste materials. May assist other craft workers.",
+    "laborMarket": {
+      "medianWage": "$46,200",
+      "annualOpenings": "4,522",
+      "employment": "30,310",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "construction-managers",
+    "title": "Construction Managers",
+    "soc": "11-9021",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate, usually through subordinate supervisory personnel, activities concerned with the construction and maintenance of structures, facilities, and systems. Participate in the conceptual development of a construction project and oversee its organization, scheduling, budgeting, and implementation. Includes managers in specialized construction fields, such as carpentry or plumbing.",
+    "laborMarket": {
+      "medianWage": "$110,120",
+      "annualOpenings": "1,420",
+      "employment": "9,080",
+      "projectedGrowth": "2.57%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "civil-engineers",
+      "solar-energy-installation-managers",
+      "civil-engineering-technologists-and-technicians",
+      "construction-and-building-inspectors",
+      "architects-except-landscape-and-naval",
+      "industrial-engineers",
+      "architectural-and-engineering-managers",
+      "project-management-specialists",
+      "facilities-managers",
+      "maintenance-and-repair-workers-general",
+      "general-and-operations-managers",
+      "industrial-production-managers",
+      "first-line-supervisors-of-landscaping-lawn-service-and-groundskeeping-workers",
+      "wind-energy-development-managers",
+      "cost-estimators",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "mechanical-engineers",
+      "government-property-inspectors-and-investigators"
+    ],
+    "training": []
+  },
+  {
+    "id": "construction-and-building-inspectors",
+    "title": "Construction and Building Inspectors",
+    "soc": "47-4011",
+    "exposure": "Medium",
+    "summary": "Inspect structures using engineering skills to determine structural soundness and compliance with specifications, building codes, and other regulations. Inspections may be general in nature or may be limited to a specific area, such as electrical systems or plumbing.",
+    "laborMarket": {
+      "medianWage": "$73,040",
+      "annualOpenings": "315",
+      "employment": "3,580",
+      "projectedGrowth": "0.19%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "continuous-mining-machine-operators",
+    "title": "Continuous Mining Machine Operators",
+    "soc": "47-5041",
+    "exposure": "Very Low",
+    "summary": "Operate self-propelled mining machines that rip coal, metal and nonmetal ores, rock, stone, or sand from the mine face and load it onto conveyors, shuttle cars, or trucks in a continuous operation.",
+    "laborMarket": {
+      "medianWage": "$58,790",
+      "annualOpenings": "341",
+      "employment": "2,190",
+      "projectedGrowth": "2.53%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "control-and-valve-installers-and-repairers-except-mechanical-door",
+    "title": "Control and Valve Installers and Repairers, Except Mechanical Door",
+    "soc": "49-9012",
+    "exposure": "Low",
+    "summary": "Install, repair, and maintain mechanical regulating and controlling devices, such as electric meters, gas regulators, thermostats, safety and flow valves, and other mechanical governors.",
+    "laborMarket": {
+      "medianWage": "$73,610",
+      "annualOpenings": "69",
+      "employment": "560",
+      "projectedGrowth": "0.84%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "conveyor-operators-and-tenders",
+    "title": "Conveyor Operators and Tenders",
+    "soc": "53-7011",
+    "exposure": "Very Low",
+    "summary": "Control or tend conveyors or conveyor systems that move materials or products to and from stockpiles, processing stations, departments, or vehicles. May control speed and routing of materials or products.",
+    "laborMarket": {
+      "medianWage": "$38,560",
+      "annualOpenings": "36",
+      "employment": "670",
+      "projectedGrowth": "1.46%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cooks-fast-food",
+    "title": "Cooks, Fast Food",
+    "soc": "35-2011",
+    "exposure": "Very Low",
+    "summary": "Prepare and cook food in a fast food restaurant with a limited menu. Duties of these cooks are limited to preparation of a few basic items and normally involve operating large-volume single-purpose cooking equipment.",
+    "laborMarket": {
+      "medianWage": "$31,090",
+      "annualOpenings": "796",
+      "employment": "11,220",
+      "projectedGrowth": "-1.37%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cooks-institution-and-cafeteria",
+    "title": "Cooks, Institution and Cafeteria",
+    "soc": "35-2012",
+    "exposure": "Low",
+    "summary": "Prepare and cook large quantities of food for institutions, such as schools, hospitals, or cafeterias.",
+    "laborMarket": {
+      "medianWage": "$39,470",
+      "annualOpenings": "1,181",
+      "employment": "6,840",
+      "projectedGrowth": "1.97%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cooks-private-household",
+    "title": "Cooks, Private Household",
+    "soc": "35-2013",
+    "exposure": "Low",
+    "summary": "Prepare meals in private homes. Includes personal chefs.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "148",
+      "employment": "nan",
+      "projectedGrowth": "1.26%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cooks-restaurant",
+    "title": "Cooks, Restaurant",
+    "soc": "35-2014",
+    "exposure": "Very Low",
+    "summary": "Prepare, season, and cook dishes such as soups, meats, vegetables, or desserts in restaurants. May order supplies, keep records and accounts, price items on menu, or plan menu.",
+    "laborMarket": {
+      "medianWage": "$37,940",
+      "annualOpenings": "5,013",
+      "employment": "34,740",
+      "projectedGrowth": "1.67%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cooks-short-order",
+    "title": "Cooks, Short Order",
+    "soc": "35-2015",
+    "exposure": "Very Low",
+    "summary": "Prepare and cook to order a variety of foods that require only a short preparation time. May take orders from customers and serve patrons at counters or tables.",
+    "laborMarket": {
+      "medianWage": "$46,240",
+      "annualOpenings": "69",
+      "employment": "0",
+      "projectedGrowth": "0.34%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cooling-and-freezing-equipment-operators-and-tenders",
+    "title": "Cooling and Freezing Equipment Operators and Tenders",
+    "soc": "51-9193",
+    "exposure": "Very Low",
+    "summary": "Operate or tend equipment such as cooling and freezing units, refrigerators, batch freezers, and freezing tunnels, to cool or freeze products, food, blood plasma, and chemicals.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "5",
+      "employment": "nan",
+      "projectedGrowth": "1.16%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "coroners",
+    "title": "Coroners",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Direct activities such as autopsies, pathological and toxicological analyses, and inquests relating to the investigation of deaths occurring within a legal jurisdiction to determine cause of death or to fix responsibility for accidental, violent, or unexplained deaths.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "correctional-officers-and-jailers",
+    "title": "Correctional Officers and Jailers",
+    "soc": "33-3012",
+    "exposure": "Low",
+    "summary": "Guard inmates in penal or rehabilitative institutions in accordance with established regulations and procedures. May guard prisoners in transit between jail, courtroom, prison, or other point. Includes deputy sheriffs and police who spend the majority of their time guarding prisoners in correctional institutions.",
+    "laborMarket": {
+      "medianWage": "$54,970",
+      "annualOpenings": "973",
+      "employment": "13,840",
+      "projectedGrowth": "-0.34%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "correspondence-clerks",
+    "title": "Correspondence Clerks",
+    "soc": "43-4021",
+    "exposure": "Very High",
+    "summary": "Compose letters or electronic correspondence in reply to requests for merchandise, damage claims, credit and other information, delinquent accounts, incorrect billings, or unsatisfactory services. Duties may include gathering data to formulate reply and preparing correspondence.",
+    "laborMarket": {
+      "medianWage": "$38,740",
+      "annualOpenings": "34",
+      "employment": "0",
+      "projectedGrowth": "-0.49%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "office-clerks-general",
+      "file-clerks",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "legal-secretaries-and-administrative-assistants",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "billing-and-posting-clerks",
+      "customer-service-representatives",
+      "credit-authorizers-checkers-and-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "court-reporters-and-simultaneous-captioners",
+      "administrative-services-managers",
+      "document-management-specialists",
+      "bill-and-account-collectors",
+      "statistical-assistants",
+      "court-municipal-and-license-clerks",
+      "eligibility-interviewers-government-programs",
+      "interviewers-except-eligibility-and-loan",
+      "receptionists-and-information-clerks",
+      "payroll-and-timekeeping-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "cost-estimators",
+    "title": "Cost Estimators",
+    "soc": "13-1051",
+    "exposure": "High",
+    "summary": "Prepare cost estimates for product manufacturing, construction projects, or services to aid management in bidding on or determining price of product or service. May specialize according to particular service performed or type of product manufactured.",
+    "laborMarket": {
+      "medianWage": "$79,310",
+      "annualOpenings": "444",
+      "employment": "4,540",
+      "projectedGrowth": "0.36%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "logistics-engineers",
+      "civil-engineering-technologists-and-technicians",
+      "construction-managers",
+      "industrial-engineers",
+      "architectural-and-engineering-managers",
+      "production-planning-and-expediting-clerks",
+      "architectural-and-civil-drafters",
+      "civil-engineers",
+      "project-management-specialists",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "mechanical-engineering-technologists-and-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "energy-auditors",
+      "solar-energy-installation-managers",
+      "mechanical-engineers",
+      "electrical-engineers",
+      "sales-engineers",
+      "appraisers-and-assessors-of-real-estate"
+    ],
+    "training": []
+  },
+  {
+    "id": "costume-attendants",
+    "title": "Costume Attendants",
+    "soc": "39-3092",
+    "exposure": "Low",
+    "summary": "Select, fit, and take care of costumes for cast members, and aid entertainers. May assist with multiple costume changes during performances.",
+    "laborMarket": {
+      "medianWage": "$37,660",
+      "annualOpenings": "11",
+      "employment": "90",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "counter-and-rental-clerks",
+    "title": "Counter and Rental Clerks",
+    "soc": "41-2021",
+    "exposure": "Very High",
+    "summary": "Receive orders, generally in person, for repairs, rentals, and services. May describe available options, compute cost, and accept payment.",
+    "laborMarket": {
+      "medianWage": "$40,360",
+      "annualOpenings": "676",
+      "employment": "8,100",
+      "projectedGrowth": "0.14%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [
+      "retail-salespersons",
+      "cashiers",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers",
+      "stockers-and-order-fillers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "customer-service-representatives",
+      "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+      "telemarketers",
+      "parts-salespersons",
+      "order-clerks",
+      "shipping-receiving-and-inventory-clerks",
+      "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+      "receptionists-and-information-clerks",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "first-line-supervisors-of-retail-sales-workers",
+      "hotel-motel-and-resort-desk-clerks",
+      "concierges",
+      "postal-service-clerks",
+      "procurement-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "couriers-and-messengers",
+    "title": "Couriers and Messengers",
+    "soc": "43-5021",
+    "exposure": "Medium",
+    "summary": "Pick up and deliver messages, documents, packages, and other items between offices or departments within an establishment or directly to other business concerns, traveling by foot, bicycle, motorcycle, automobile, or public conveyance.",
+    "laborMarket": {
+      "medianWage": "$37,220",
+      "annualOpenings": "627",
+      "employment": "1,010",
+      "projectedGrowth": "3.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "court-reporters-and-simultaneous-captioners",
+    "title": "Court Reporters and Simultaneous Captioners",
+    "soc": "27-3092",
+    "exposure": "Very High",
+    "summary": "Use verbatim methods and equipment to capture, store, retrieve, and transcribe pretrial and trial proceedings or other information. Includes stenocaptioners who operate computerized stenographic captioning equipment to provide captions of live or prerecorded broadcasts for hearing-impaired viewers.",
+    "laborMarket": {
+      "medianWage": "$66,890",
+      "annualOpenings": "41",
+      "employment": "140",
+      "projectedGrowth": "0.96%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [
+      "legal-secretaries-and-administrative-assistants",
+      "court-municipal-and-license-clerks",
+      "paralegals-and-legal-assistants",
+      "word-processors-and-typists",
+      "file-clerks",
+      "correspondence-clerks",
+      "medical-transcriptionists",
+      "office-clerks-general",
+      "data-entry-keyers",
+      "medical-records-specialists",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "lawyers",
+      "judges-magistrate-judges-and-magistrates",
+      "proofreaders-and-copy-markers",
+      "document-management-specialists",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "statistical-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "court-municipal-and-license-clerks",
+    "title": "Court, Municipal, and License Clerks",
+    "soc": "43-4031",
+    "exposure": "Very High",
+    "summary": "Perform clerical duties for courts of law, municipalities, or governmental licensing agencies and bureaus. May prepare docket of cases to be called; secure information for judges and court; prepare draft agendas or bylaws for town or city council; answer official correspondence; keep fiscal records and accounts; issue licenses or permits; and record data, administer tests, or collect fees.",
+    "laborMarket": {
+      "medianWage": "$47,110",
+      "annualOpenings": "261",
+      "employment": "3,520",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "legal-secretaries-and-administrative-assistants",
+      "compliance-officers",
+      "office-clerks-general",
+      "paralegals-and-legal-assistants",
+      "title-examiners-abstractors-and-searchers",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "correspondence-clerks",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "insurance-claims-and-policy-processing-clerks",
+      "receptionists-and-information-clerks",
+      "judicial-law-clerks",
+      "court-reporters-and-simultaneous-captioners",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "lawyers",
+      "administrative-services-managers",
+      "eligibility-interviewers-government-programs",
+      "file-clerks",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "judges-magistrate-judges-and-magistrates",
+      "first-line-supervisors-of-office-and-administrative-support-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "craft-artists",
+    "title": "Craft Artists",
+    "soc": "27-1012",
+    "exposure": "Low",
+    "summary": "Create or reproduce handmade objects for sale and exhibition using a variety of techniques, such as welding, weaving, pottery, and needlecraft.",
+    "laborMarket": {
+      "medianWage": "$29,950",
+      "annualOpenings": "42",
+      "employment": "0",
+      "projectedGrowth": "1.56%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "crane-and-tower-operators",
+    "title": "Crane and Tower Operators",
+    "soc": "53-7021",
+    "exposure": "Low",
+    "summary": "Operate mechanical boom and cable or tower and cable equipment to lift and move materials, machines, or products in many directions.",
+    "laborMarket": {
+      "medianWage": "$67,960",
+      "annualOpenings": "88",
+      "employment": "1,110",
+      "projectedGrowth": "1.18%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "credit-analysts",
+    "title": "Credit Analysts",
+    "soc": "13-2041",
+    "exposure": "Very High",
+    "summary": "Analyze credit data and financial statements of individuals or firms to determine the degree of risk involved in extending credit or lending money. Prepare reports with credit information for use in decisionmaking.",
+    "laborMarket": {
+      "medianWage": "$74,580",
+      "annualOpenings": "165",
+      "employment": "2,430",
+      "projectedGrowth": "-0.63%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "credit-authorizers-checkers-and-clerks",
+      "loan-officers",
+      "loan-interviewers-and-clerks",
+      "credit-counselors",
+      "financial-and-investment-analysts",
+      "personal-financial-advisors",
+      "financial-risk-specialists",
+      "accountants-and-auditors",
+      "financial-examiners",
+      "securities-commodities-and-financial-services-sales-agents",
+      "bill-and-account-collectors",
+      "financial-managers",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "tellers",
+      "insurance-underwriters",
+      "budget-analysts",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "tax-preparers",
+      "insurance-claims-and-policy-processing-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "credit-authorizers-checkers-and-clerks",
+    "title": "Credit Authorizers, Checkers, and Clerks",
+    "soc": "43-4041",
+    "exposure": "Very High",
+    "summary": "Authorize credit charges against customers' accounts. Investigate history and credit standing of individuals or business establishments applying for credit. May interview applicants to obtain personal and financial data, determine credit worthiness, process applications, and notify customers of acceptance or rejection of credit.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "39",
+      "employment": "230",
+      "projectedGrowth": "-0.87%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "credit-analysts",
+      "loan-interviewers-and-clerks",
+      "loan-officers",
+      "bill-and-account-collectors",
+      "credit-counselors",
+      "customer-service-representatives",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "new-accounts-clerks",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "tellers",
+      "financial-managers",
+      "personal-financial-advisors",
+      "billing-and-posting-clerks",
+      "accountants-and-auditors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "eligibility-interviewers-government-programs",
+      "brokerage-clerks",
+      "correspondence-clerks",
+      "financial-examiners"
+    ],
+    "training": []
+  },
+  {
+    "id": "credit-counselors",
+    "title": "Credit Counselors",
+    "soc": "13-2071",
+    "exposure": "Very High",
+    "summary": "Advise and educate individuals or organizations on acquiring and managing debt. May provide guidance in determining the best type of loan and explain loan requirements or restrictions. May help develop debt management plans or student financial aid packages. May advise on credit issues, or provide budget, mortgage, bankruptcy, or student financial aid counseling.",
+    "laborMarket": {
+      "medianWage": "$47,300",
+      "annualOpenings": "90",
+      "employment": "1,240",
+      "projectedGrowth": "0.56%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "personal-financial-advisors",
+      "loan-officers",
+      "credit-authorizers-checkers-and-clerks",
+      "credit-analysts",
+      "loan-interviewers-and-clerks",
+      "financial-and-investment-analysts",
+      "securities-commodities-and-financial-services-sales-agents",
+      "eligibility-interviewers-government-programs",
+      "financial-managers",
+      "bill-and-account-collectors",
+      "new-accounts-clerks",
+      "rehabilitation-counselors",
+      "tax-preparers",
+      "customer-service-representatives",
+      "insurance-sales-agents",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "insurance-claims-and-policy-processing-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "accountants-and-auditors",
+      "child-family-and-school-social-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "criminal-justice-and-law-enforcement-teachers-postsecondary",
+    "title": "Criminal Justice and Law Enforcement Teachers, Postsecondary",
+    "soc": "25-1111",
+    "exposure": "High",
+    "summary": "Teach courses in criminal justice, corrections, and law enforcement administration. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "35",
+      "employment": "400",
+      "projectedGrowth": "0.96%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "law-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "business-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "economics-teachers-postsecondary",
+      "education-administrators-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "special-education-teachers-secondary-school",
+      "special-education-teachers-elementary-school",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "instructional-coordinators",
+      "middle-school-teachers-except-special-and-career-technical-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "critical-care-nurses",
+    "title": "Critical Care Nurses",
+    "soc": "29-1141",
+    "exposure": "Medium",
+    "summary": "Provide specialized nursing care for patients in critical or coronary care units.",
+    "laborMarket": {
+      "medianWage": "$96,890",
+      "annualOpenings": "5,662",
+      "employment": "64,430",
+      "projectedGrowth": "2.79%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "crossing-guards-and-flaggers",
+    "title": "Crossing Guards and Flaggers",
+    "soc": "33-9091",
+    "exposure": "Very Low",
+    "summary": "Guide or control vehicular or pedestrian traffic at such places as streets, schools, railroad crossings, or construction sites.",
+    "laborMarket": {
+      "medianWage": "$34,020",
+      "annualOpenings": "365",
+      "employment": "1,730",
+      "projectedGrowth": "0.57%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "crushing-grinding-and-polishing-machine-setters-operators-and-tenders",
+    "title": "Crushing, Grinding, and Polishing Machine Setters, Operators, and Tenders",
+    "soc": "51-9021",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend machines to crush, grind, or polish materials, such as coal, glass, grain, stone, food, or rubber.",
+    "laborMarket": {
+      "medianWage": "$48,040",
+      "annualOpenings": "54",
+      "employment": "0",
+      "projectedGrowth": "-0.09%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "curators",
+    "title": "Curators",
+    "soc": "25-4012",
+    "exposure": "High",
+    "summary": "Administer collections, such as artwork, collectibles, historic items, or scientific specimens of museums or other institutions. May conduct instructional, research, or public service activities of institution.",
+    "laborMarket": {
+      "medianWage": "$63,900",
+      "annualOpenings": "31",
+      "employment": "100",
+      "projectedGrowth": "2.11%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "archivists",
+      "historians",
+      "museum-technicians-and-conservators",
+      "librarians-and-media-collections-specialists",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "set-and-exhibit-designers",
+      "anthropologists-and-archeologists",
+      "history-teachers-postsecondary",
+      "art-directors",
+      "library-science-teachers-postsecondary",
+      "art-drama-and-music-teachers-postsecondary",
+      "library-technicians",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "architecture-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "library-assistants-clerical",
+      "instructional-coordinators",
+      "tour-guides-and-escorts",
+      "social-science-research-assistants",
+      "geography-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "customer-service-representatives",
+    "title": "Customer Service Representatives",
+    "soc": "43-4051",
+    "exposure": "Very High",
+    "summary": "Interact with customers to provide basic or scripted information in response to routine inquiries about products and services. May handle and resolve general complaints. Excludes individuals whose duties are primarily installation, sales, repair, and technical support.",
+    "laborMarket": {
+      "medianWage": "$43,440",
+      "annualOpenings": "12,606",
+      "employment": "89,030",
+      "projectedGrowth": "-0.29%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "telemarketers",
+      "insurance-claims-and-policy-processing-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "new-accounts-clerks",
+      "receptionists-and-information-clerks",
+      "billing-and-posting-clerks",
+      "brokerage-clerks",
+      "bill-and-account-collectors",
+      "order-clerks",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "counter-and-rental-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "office-clerks-general",
+      "eligibility-interviewers-government-programs",
+      "insurance-sales-agents",
+      "correspondence-clerks",
+      "management-analysts",
+      "tellers",
+      "cashiers"
+    ],
+    "training": []
+  },
+  {
+    "id": "customs-brokers",
+    "title": "Customs Brokers",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Prepare customs documentation and ensure that shipments meet all applicable laws to facilitate the import and export of goods. Determine and track duties and taxes payable and process payments on behalf of client. Sign documents under a power of attorney. Represent clients in meetings with customs officials and apply for duty refunds and tariff reclassifications. Coordinate transportation and storage of imported goods.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "customs-and-border-protection-officers",
+    "title": "Customs and Border Protection Officers",
+    "soc": "33-3051",
+    "exposure": "Medium",
+    "summary": "Investigate and inspect persons, common carriers, goods, and merchandise, arriving in or departing from the United States or between states to detect violations of immigration and customs laws and regulations.",
+    "laborMarket": {
+      "medianWage": "$79,370",
+      "annualOpenings": "832",
+      "employment": "12,430",
+      "projectedGrowth": "1.04%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cutters-and-trimmers-hand",
+    "title": "Cutters and Trimmers, Hand",
+    "soc": "51-9031",
+    "exposure": "Very Low",
+    "summary": "Use hand tools or hand-held power tools to cut and trim a variety of manufactured items, such as carpet, fabric, stone, glass, or rubber.",
+    "laborMarket": {
+      "medianWage": "$30,110",
+      "annualOpenings": "6",
+      "employment": "0",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cutting-and-slicing-machine-setters-operators-and-tenders",
+    "title": "Cutting and Slicing Machine Setters, Operators, and Tenders",
+    "soc": "51-9032",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend machines that cut or slice materials, such as glass, stone, cork, rubber, tobacco, food, paper, or insulating material.",
+    "laborMarket": {
+      "medianWage": "$45,320",
+      "annualOpenings": "100",
+      "employment": "710",
+      "projectedGrowth": "1.11%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "cutting-punching-and-press-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4031",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend machines to saw, cut, shear, slit, punch, crimp, notch, bend, or straighten metal or plastic material.",
+    "laborMarket": {
+      "medianWage": "$46,490",
+      "annualOpenings": "163",
+      "employment": "1,140",
+      "projectedGrowth": "-0.33%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dancers",
+    "title": "Dancers",
+    "soc": "27-2031",
+    "exposure": "Very Low",
+    "summary": "Perform dances. May perform on stage, for broadcasting, or for video recording.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "31",
+      "employment": "nan",
+      "projectedGrowth": "1.65%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "data-entry-keyers",
+    "title": "Data Entry Keyers",
+    "soc": "43-9021",
+    "exposure": "Very High",
+    "summary": "Operate data entry device, such as keyboard or photo composing perforator. Duties may include verifying data and preparing materials for printing.",
+    "laborMarket": {
+      "medianWage": "$42,800",
+      "annualOpenings": "294",
+      "employment": "3,750",
+      "projectedGrowth": "-2.24%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "file-clerks",
+      "word-processors-and-typists",
+      "office-machine-operators-except-computer",
+      "mail-clerks-and-mail-machine-operators-except-postal-service",
+      "office-clerks-general",
+      "postal-service-mail-sorters-processors-and-processing-machine-operators",
+      "production-planning-and-expediting-clerks",
+      "billing-and-posting-clerks",
+      "shipping-receiving-and-inventory-clerks",
+      "payroll-and-timekeeping-clerks",
+      "statistical-assistants",
+      "document-management-specialists",
+      "proofreaders-and-copy-markers",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "correspondence-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "switchboard-operators-including-answering-service",
+      "medical-records-specialists",
+      "calibration-technologists-and-technicians",
+      "weighers-measurers-checkers-and-samplers-recordkeeping"
+    ],
+    "training": []
+  },
+  {
+    "id": "data-warehousing-specialists",
+    "title": "Data Warehousing Specialists",
+    "soc": "15-1243",
+    "exposure": "Very High",
+    "summary": "Design, model, or implement corporate data warehousing activities. Program and configure warehouses of database information and provide support to warehouse users.",
+    "laborMarket": {
+      "medianWage": "$130,620",
+      "annualOpenings": "63",
+      "employment": "850",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "database-administrators",
+      "data-warehousing-specialists",
+      "software-developers",
+      "computer-systems-analysts",
+      "computer-systems-engineers-architects",
+      "data-scientists",
+      "software-quality-assurance-analysts-and-testers",
+      "network-and-computer-systems-administrators",
+      "computer-network-architects",
+      "computer-programmers",
+      "web-and-digital-interface-designers",
+      "computer-and-information-systems-managers",
+      "operations-research-analysts",
+      "project-management-specialists",
+      "computer-hardware-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "database-administrators",
+    "title": "Database Administrators",
+    "soc": "15-1242",
+    "exposure": "Very High",
+    "summary": "Administer, test, and implement computer databases, applying knowledge of database management systems. Coordinate changes to computer databases. Identify, investigate, and resolve database performance issues, database capacity, and database scalability. May plan, coordinate, and implement security measures to safeguard computer databases.",
+    "laborMarket": {
+      "medianWage": "$96,320",
+      "annualOpenings": "99",
+      "employment": "1,330",
+      "projectedGrowth": "0.66%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "database-architects",
+      "computer-systems-analysts",
+      "network-and-computer-systems-administrators",
+      "software-developers",
+      "computer-systems-engineers-architects",
+      "information-security-analysts",
+      "computer-programmers",
+      "software-quality-assurance-analysts-and-testers",
+      "computer-network-support-specialists",
+      "web-and-digital-interface-designers",
+      "computer-network-architects",
+      "computer-user-support-specialists",
+      "computer-and-information-systems-managers",
+      "web-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "database-architects",
+    "title": "Database Architects",
+    "soc": "15-1243",
+    "exposure": "Very High",
+    "summary": "Design strategies for enterprise databases, data warehouse systems, and multidimensional networks. Set standards for database operations, programming, query processes, and security. Model, design, and construct large relational databases or data warehouses. Create and optimize data models for warehouse infrastructure and workflow. Integrate new systems with existing warehouse structure and refine system performance and functionality.",
+    "laborMarket": {
+      "medianWage": "$130,620",
+      "annualOpenings": "63",
+      "employment": "850",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "database-administrators",
+      "data-warehousing-specialists",
+      "software-developers",
+      "computer-systems-analysts",
+      "computer-systems-engineers-architects",
+      "data-scientists",
+      "software-quality-assurance-analysts-and-testers",
+      "network-and-computer-systems-administrators",
+      "computer-network-architects",
+      "computer-programmers",
+      "web-and-digital-interface-designers",
+      "computer-and-information-systems-managers",
+      "operations-research-analysts",
+      "project-management-specialists",
+      "computer-hardware-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "demonstrators-and-product-promoters",
+    "title": "Demonstrators and Product Promoters",
+    "soc": "41-9011",
+    "exposure": "Low",
+    "summary": "Demonstrate merchandise and answer questions for the purpose of creating public interest in buying the product. May sell demonstrated merchandise.",
+    "laborMarket": {
+      "medianWage": "$33,280",
+      "annualOpenings": "264",
+      "employment": "1,930",
+      "projectedGrowth": "-0.81%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dental-assistants",
+    "title": "Dental Assistants",
+    "soc": "31-9091",
+    "exposure": "Low",
+    "summary": "Perform limited clinical duties under the direction of a dentist. Clinical duties may include equipment preparation and sterilization, preparing patients for treatment, assisting the dentist during treatment, and providing patients with instructions for oral healthcare procedures. May perform administrative duties such as scheduling appointments, maintaining medical records, billing, and coding information for insurance purposes.",
+    "laborMarket": {
+      "medianWage": "$49,000",
+      "annualOpenings": "1,221",
+      "employment": "7,480",
+      "projectedGrowth": "1.79%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dental-hygienists",
+    "title": "Dental Hygienists",
+    "soc": "29-1292",
+    "exposure": "Low",
+    "summary": "Administer oral hygiene care to patients. Assess patient oral hygiene problems or needs and maintain health records. Advise patients on oral health maintenance and disease prevention. May provide advanced care such as providing fluoride treatment or administering topical anesthesia.",
+    "laborMarket": {
+      "medianWage": "$97,530",
+      "annualOpenings": "433",
+      "employment": "5,040",
+      "projectedGrowth": "1.8%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dental-laboratory-technicians",
+    "title": "Dental Laboratory Technicians",
+    "soc": "51-9081",
+    "exposure": "Very Low",
+    "summary": "Construct and repair full or partial dentures or dental appliances.",
+    "laborMarket": {
+      "medianWage": "$47,560",
+      "annualOpenings": "90",
+      "employment": "930",
+      "projectedGrowth": "-0.69%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dentists-general",
+    "title": "Dentists, General",
+    "soc": "29-1021",
+    "exposure": "Low",
+    "summary": "Examine, diagnose, and treat diseases, injuries, and malformations of teeth and gums. May treat diseases of nerve, pulp, and other dental tissues affecting oral hygiene and retention of teeth. May fit dental appliances or provide preventive care.",
+    "laborMarket": {
+      "medianWage": "$206,660",
+      "annualOpenings": "117",
+      "employment": "2,930",
+      "projectedGrowth": "1.61%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dermatologists",
+    "title": "Dermatologists",
+    "soc": "29-1213",
+    "exposure": "Medium",
+    "summary": "Diagnose and treat diseases relating to the skin, hair, and nails. May perform both medical and dermatological surgery functions.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "14",
+      "employment": "nan",
+      "projectedGrowth": "1.68%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "derrick-operators-oil-and-gas",
+    "title": "Derrick Operators, Oil and Gas",
+    "soc": "47-5011",
+    "exposure": "Very Low",
+    "summary": "Rig derrick equipment and operate pumps to circulate mud or fluid through drill hole.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "desktop-publishers",
+    "title": "Desktop Publishers",
+    "soc": "43-9031",
+    "exposure": "Very High",
+    "summary": "Format typescript and graphic elements using computer software to produce publication-ready material.",
+    "laborMarket": {
+      "medianWage": "$54,310",
+      "annualOpenings": "21",
+      "employment": "80",
+      "projectedGrowth": "-0.67%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "prepress-technicians-and-workers",
+      "graphic-designers",
+      "proofreaders-and-copy-markers",
+      "web-and-digital-interface-designers",
+      "special-effects-artists-and-animators",
+      "film-and-video-editors",
+      "office-machine-operators-except-computer",
+      "web-developers",
+      "editors",
+      "web-administrators",
+      "technical-writers",
+      "computer-programmers",
+      "software-developers",
+      "data-entry-keyers",
+      "art-directors",
+      "photographic-process-workers-and-processing-machine-operators",
+      "file-clerks",
+      "computer-systems-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "detectives-and-criminal-investigators",
+    "title": "Detectives and Criminal Investigators",
+    "soc": "33-3021",
+    "exposure": "Medium",
+    "summary": "Conduct investigations related to suspected violations of federal, state, or local laws to prevent or solve crimes.",
+    "laborMarket": {
+      "medianWage": "$103,270",
+      "annualOpenings": "310",
+      "employment": "5,220",
+      "projectedGrowth": "0.39%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "diagnostic-medical-sonographers",
+    "title": "Diagnostic Medical Sonographers",
+    "soc": "29-2032",
+    "exposure": "Medium",
+    "summary": "Produce ultrasonic recordings of internal organs for use by physicians. Includes vascular technologists.",
+    "laborMarket": {
+      "medianWage": "$101,100",
+      "annualOpenings": "153",
+      "employment": "1,790",
+      "projectedGrowth": "3.52%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dietetic-technicians",
+    "title": "Dietetic Technicians",
+    "soc": "29-2051",
+    "exposure": "Very High",
+    "summary": "Assist in the provision of food service and nutritional programs, under the supervision of a dietitian. May plan and produce meals based on established guidelines, teach principles of food and nutrition, or counsel individuals.",
+    "laborMarket": {
+      "medianWage": "$41,770",
+      "annualOpenings": "81",
+      "employment": "520",
+      "projectedGrowth": "2.75%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "dietitians-and-nutritionists",
+      "health-education-specialists",
+      "home-health-aides",
+      "psychiatric-technicians",
+      "community-health-workers",
+      "exercise-physiologists",
+      "nursing-assistants",
+      "registered-nurses",
+      "medical-assistants",
+      "licensed-practical-and-licensed-vocational-nurses",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "fitness-and-wellness-coordinators",
+      "preventive-medicine-physicians",
+      "cooks-institution-and-cafeteria",
+      "food-scientists-and-technologists",
+      "medical-and-health-services-managers",
+      "food-service-managers",
+      "rehabilitation-counselors"
+    ],
+    "training": []
+  },
+  {
+    "id": "dietitians-and-nutritionists",
+    "title": "Dietitians and Nutritionists",
+    "soc": "29-1031",
+    "exposure": "Very High",
+    "summary": "Plan and conduct food service or nutritional programs to assist in the promotion of health and control of disease. May supervise activities of a department providing quantity food services, counsel individuals, or conduct nutritional research.",
+    "laborMarket": {
+      "medianWage": "$65,330",
+      "annualOpenings": "125",
+      "employment": "1,280",
+      "projectedGrowth": "2.44%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "dietetic-technicians",
+      "nurse-practitioners",
+      "family-medicine-physicians",
+      "pediatricians-general",
+      "clinical-nurse-specialists",
+      "naturopathic-physicians",
+      "health-education-specialists",
+      "exercise-physiologists",
+      "genetic-counselors",
+      "preventive-medicine-physicians",
+      "psychiatrists",
+      "nurse-midwives",
+      "general-internal-medicine-physicians",
+      "obstetricians-and-gynecologists",
+      "neurologists",
+      "occupational-therapists",
+      "pharmacists"
+    ],
+    "training": []
+  },
+  {
+    "id": "digital-forensics-analysts",
+    "title": "Digital Forensics Analysts",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Conduct investigations on computer-based crimes establishing documentary or physical evidence, such as digital media and logs associated with cyber intrusion incidents. Analyze digital evidence and investigate computer security incidents to derive information in support of system and network vulnerability mitigation. Preserve and present computer-related evidence in support of criminal, fraud, counterintelligence, or law enforcement investigations.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dining-room-and-cafeteria-attendants-and-bartender-helpers",
+    "title": "Dining Room and Cafeteria Attendants and Bartender Helpers",
+    "soc": "35-9011",
+    "exposure": "Very Low",
+    "summary": "Facilitate food service. Clean tables; remove dirty dishes; replace soiled table linens; set tables; replenish supply of clean linens, silverware, glassware, and dishes; supply service bar with food; and serve items such as water, condiments, and coffee to patrons.",
+    "laborMarket": {
+      "medianWage": "$35,870",
+      "annualOpenings": "2,360",
+      "employment": "11,520",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "directors-religious-activities-and-education",
+    "title": "Directors, Religious Activities and Education",
+    "soc": "21-2021",
+    "exposure": "High",
+    "summary": "Coordinate or design programs and conduct outreach to promote the religious education or activities of a denominational group. May provide counseling, guidance, and leadership relative to marital, health, financial, and religious problems.",
+    "laborMarket": {
+      "medianWage": "$52,810",
+      "annualOpenings": "13",
+      "employment": "130",
+      "projectedGrowth": "1.31%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "clergy",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "social-and-community-service-managers",
+      "community-health-workers",
+      "child-family-and-school-social-workers",
+      "education-teachers-postsecondary",
+      "rehabilitation-counselors",
+      "education-administrators-postsecondary",
+      "instructional-coordinators",
+      "health-education-specialists",
+      "education-administrators-kindergarten-through-secondary",
+      "social-and-human-service-assistants",
+      "education-and-childcare-administrators-preschool-and-daycare",
+      "mental-health-and-substance-abuse-social-workers",
+      "residential-advisors",
+      "recreation-workers",
+      "social-work-teachers-postsecondary",
+      "healthcare-social-workers",
+      "mental-health-counselors",
+      "training-and-development-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "dishwashers",
+    "title": "Dishwashers",
+    "soc": "35-9021",
+    "exposure": "Very Low",
+    "summary": "Clean dishes, kitchen, food preparation equipment, or utensils.",
+    "laborMarket": {
+      "medianWage": "$34,850",
+      "annualOpenings": "1,846",
+      "employment": "10,220",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dispatchers-except-police-fire-and-ambulance",
+    "title": "Dispatchers, Except Police, Fire, and Ambulance",
+    "soc": "43-5032",
+    "exposure": "Very High",
+    "summary": "Schedule and dispatch workers, work crews, equipment, or service vehicles for conveyance of materials, freight, or passengers, or for normal installation, service, or emergency repairs rendered outside the place of business. Duties may include using radio, telephone, or computer to transmit assignments and compiling statistics and reports on work progress.",
+    "laborMarket": {
+      "medianWage": "$46,710",
+      "annualOpenings": "553",
+      "employment": "5,340",
+      "projectedGrowth": "0.33%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "first-line-supervisors-of-passenger-attendants",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "public-safety-telecommunicators",
+      "railroad-conductors-and-yardmasters",
+      "production-planning-and-expediting-clerks",
+      "aircraft-cargo-handling-supervisors",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "power-distributors-and-dispatchers",
+      "switchboard-operators-including-answering-service",
+      "transportation-storage-and-distribution-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "shipping-receiving-and-inventory-clerks",
+      "heavy-and-tractor-trailer-truck-drivers",
+      "light-truck-drivers",
+      "postmasters-and-mail-superintendents",
+      "locomotive-engineers",
+      "laborers-and-freight-stock-and-material-movers-hand",
+      "shuttle-drivers-and-chauffeurs",
+      "rail-yard-engineers-dinkey-operators-and-hostlers"
+    ],
+    "training": []
+  },
+  {
+    "id": "document-management-specialists",
+    "title": "Document Management Specialists",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Implement and administer enterprise-wide document management systems and related procedures that allow organizations to capture, store, retrieve, share, and destroy electronic records and documents.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "door-to-door-sales-workers-news-and-street-vendors-and-related-workers",
+    "title": "Door-to-Door Sales Workers, News and Street Vendors, and Related Workers",
+    "soc": "41-9091",
+    "exposure": "Low",
+    "summary": "Sell goods or services door-to-door or on the street.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "102",
+      "employment": "nan",
+      "projectedGrowth": "0.34%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "dredge-operators",
+    "title": "Dredge Operators",
+    "soc": "53-7031",
+    "exposure": "Very Low",
+    "summary": "Operate dredge to remove sand, gravel, or other materials in order to excavate and maintain navigable channels in waterways.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "9.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "drilling-and-boring-machine-tool-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Drilling and Boring Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4032",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend drilling machines to drill, bore, ream, mill, or countersink metal or plastic work pieces.",
+    "laborMarket": {
+      "medianWage": "$46,630",
+      "annualOpenings": "17",
+      "employment": "0",
+      "projectedGrowth": "-1.94%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "driver-sales-workers",
+    "title": "Driver/Sales Workers",
+    "soc": "53-3031",
+    "exposure": "Medium",
+    "summary": "Drive truck or other vehicle over established routes or within an established territory and sell or deliver goods, such as food products, including restaurant take-out items, or pick up or deliver items such as commercial laundry. May also take orders, collect payment, or stock merchandise at point of delivery.",
+    "laborMarket": {
+      "medianWage": "$38,910",
+      "annualOpenings": "1,456",
+      "employment": "10,020",
+      "projectedGrowth": "0.99%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "drywall-and-ceiling-tile-installers",
+    "title": "Drywall and Ceiling Tile Installers",
+    "soc": "47-2081",
+    "exposure": "Very Low",
+    "summary": "Apply plasterboard or other wallboard to ceilings or interior walls of buildings. Apply or mount acoustical tiles or blocks, strips, or sheets of shock-absorbing materials to ceilings and walls of buildings to reduce or reflect sound. Materials may be of decorative quality. Includes lathers who fasten wooden, metal, or rockboard lath to walls, ceilings, or partitions of buildings to provide support base for plaster, fireproofing, or acoustical material.",
+    "laborMarket": {
+      "medianWage": "$48,130",
+      "annualOpenings": "458",
+      "employment": "3,420",
+      "projectedGrowth": "1.65%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "earth-drillers-except-oil-and-gas",
+    "title": "Earth Drillers, Except Oil and Gas",
+    "soc": "47-5023",
+    "exposure": "Low",
+    "summary": "Operate a variety of drills such as rotary, churn, and pneumatic to tap subsurface water and salt deposits, to remove core samples during mineral exploration or soil testing, and to facilitate the use of explosives in mining or construction. Includes horizontal and earth boring machine operators.",
+    "laborMarket": {
+      "medianWage": "$61,640",
+      "annualOpenings": "138",
+      "employment": "680",
+      "projectedGrowth": "1.52%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "economics-teachers-postsecondary",
+    "title": "Economics Teachers, Postsecondary",
+    "soc": "25-1063",
+    "exposure": "High",
+    "summary": "Teach courses in economics. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$131,710",
+      "annualOpenings": "10",
+      "employment": "90",
+      "projectedGrowth": "1.45%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "business-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "economists",
+      "mathematical-science-teachers-postsecondary",
+      "law-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "environmental-science-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "geography-teachers-postsecondary",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "agricultural-sciences-teachers-postsecondary",
+      "education-administrators-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "economists",
+    "title": "Economists",
+    "soc": "19-3011",
+    "exposure": "Very High",
+    "summary": "Conduct research, prepare reports, or formulate plans to address economic problems related to the production and distribution of goods and services or monetary and fiscal policy. May collect and process economic and statistical data using sampling techniques and econometric methods.",
+    "laborMarket": {
+      "medianWage": "$96,390",
+      "annualOpenings": "9",
+      "employment": "0",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-economists",
+      "economics-teachers-postsecondary",
+      "financial-and-investment-analysts",
+      "political-scientists",
+      "business-teachers-postsecondary",
+      "financial-quantitative-analysts",
+      "investment-fund-managers",
+      "financial-risk-specialists",
+      "data-scientists",
+      "statisticians",
+      "sociologists",
+      "climate-change-policy-analysts",
+      "market-research-analysts-and-marketing-specialists",
+      "actuaries",
+      "personal-financial-advisors",
+      "political-science-teachers-postsecondary",
+      "social-science-research-assistants",
+      "securities-commodities-and-financial-services-sales-agents",
+      "operations-research-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "editors",
+    "title": "Editors",
+    "soc": "27-3041",
+    "exposure": "Very High",
+    "summary": "Plan, coordinate, revise, or edit written material. May review proposals and drafts for possible publication.",
+    "laborMarket": {
+      "medianWage": "$61,530",
+      "annualOpenings": "145",
+      "employment": "1,090",
+      "projectedGrowth": "0.3%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "proofreaders-and-copy-markers",
+      "film-and-video-editors",
+      "news-analysts-reporters-and-journalists",
+      "poets-lyricists-and-creative-writers",
+      "technical-writers",
+      "producers-and-directors",
+      "desktop-publishers",
+      "public-relations-specialists",
+      "art-directors",
+      "librarians-and-media-collections-specialists",
+      "web-and-digital-interface-designers",
+      "library-technicians",
+      "web-administrators",
+      "management-analysts",
+      "library-science-teachers-postsecondary",
+      "graphic-designers"
+    ],
+    "training": []
+  },
+  {
+    "id": "education-administrators-kindergarten-through-secondary",
+    "title": "Education Administrators, Kindergarten through Secondary",
+    "soc": "11-9032",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate the academic, administrative, or auxiliary activities of kindergarten, elementary, or secondary schools.",
+    "laborMarket": {
+      "medianWage": "$90,490",
+      "annualOpenings": "376",
+      "employment": "5,360",
+      "projectedGrowth": "0.72%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "education-administrators-postsecondary",
+    "title": "Education Administrators, Postsecondary",
+    "soc": "11-9033",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate student instruction, administration, and services, as well as other research and educational activities, at postsecondary institutions, including universities, colleges, and junior and community colleges.",
+    "laborMarket": {
+      "medianWage": "$102,080",
+      "annualOpenings": "418",
+      "employment": "5,550",
+      "projectedGrowth": "1.06%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "education-administrators-kindergarten-through-secondary",
+      "education-teachers-postsecondary",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "teaching-assistants-postsecondary",
+      "instructional-coordinators",
+      "library-science-teachers-postsecondary",
+      "social-and-community-service-managers",
+      "training-and-development-managers",
+      "education-and-childcare-administrators-preschool-and-daycare",
+      "management-analysts",
+      "career-technical-education-teachers-middle-school",
+      "business-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "social-science-research-assistants",
+      "chief-executives",
+      "medical-and-health-services-managers",
+      "sociology-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "middle-school-teachers-except-special-and-career-technical-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "education-teachers-postsecondary",
+    "title": "Education Teachers, Postsecondary",
+    "soc": "25-1081",
+    "exposure": "High",
+    "summary": "Teach courses pertaining to education, such as counseling, curriculum, guidance, instruction, teacher education, and teaching English as a second language. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "179",
+      "employment": "2,150",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "instructional-coordinators",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "teaching-assistants-postsecondary",
+      "sociology-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "education-administrators-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "special-education-teachers-kindergarten",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "special-education-teachers-secondary-school",
+      "special-education-teachers-elementary-school",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "special-education-teachers-middle-school",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "tutors",
+      "career-technical-education-teachers-middle-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "education-and-childcare-administrators-preschool-and-daycare",
+    "title": "Education and Childcare Administrators, Preschool and Daycare",
+    "soc": "11-9031",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate academic or nonacademic activities of preschools or childcare centers and programs, including before- and after-school care.",
+    "laborMarket": {
+      "medianWage": "$49,220",
+      "annualOpenings": "113",
+      "employment": "1,380",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "education-administrators-kindergarten-through-secondary",
+      "preschool-teachers-except-special-education",
+      "social-and-community-service-managers",
+      "special-education-teachers-kindergarten",
+      "special-education-teachers-secondary-school",
+      "kindergarten-teachers-except-special-education",
+      "health-education-specialists",
+      "instructional-coordinators",
+      "training-and-development-managers",
+      "special-education-teachers-elementary-school",
+      "medical-and-health-services-managers",
+      "childcare-workers",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "career-technical-education-teachers-middle-school",
+      "special-education-teachers-middle-school",
+      "teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education",
+      "education-administrators-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "management-analysts",
+      "training-and-development-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "educational-guidance-and-career-counselors-and-advisors",
+    "title": "Educational, Guidance, and Career Counselors and Advisors",
+    "soc": "21-1012",
+    "exposure": "Medium",
+    "summary": "Advise and assist students and provide educational and vocational guidance services.",
+    "laborMarket": {
+      "medianWage": "$57,940",
+      "annualOpenings": "511",
+      "employment": "6,060",
+      "projectedGrowth": "1.16%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electric-motor-power-tool-and-related-repairers",
+    "title": "Electric Motor, Power Tool, and Related Repairers",
+    "soc": "49-2092",
+    "exposure": "Very Low",
+    "summary": "Repair, maintain, or install electric motors, wiring, or switches.",
+    "laborMarket": {
+      "medianWage": "$48,510",
+      "annualOpenings": "48",
+      "employment": "340",
+      "projectedGrowth": "1.42%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electrical-engineers",
+    "title": "Electrical Engineers",
+    "soc": "17-2071",
+    "exposure": "Very High",
+    "summary": "Research, design, develop, test, or supervise the manufacturing and installation of electrical equipment, components, or systems for commercial, industrial, military, or scientific use.",
+    "laborMarket": {
+      "medianWage": "$110,510",
+      "annualOpenings": "371",
+      "employment": "4,970",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "electronics-engineers-except-computer",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "mechanical-engineers",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronics-repairers-powerhouse-substation-and-relay",
+      "mechatronics-engineers",
+      "industrial-engineers",
+      "power-distributors-and-dispatchers",
+      "electrical-and-electronics-installers-and-repairers-transportation-equipment",
+      "robotics-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "electrical-and-electronics-drafters",
+      "calibration-technologists-and-technicians",
+      "electrical-and-electronic-equipment-assemblers",
+      "aerospace-engineering-and-operations-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "electrical-power-line-installers-and-repairers",
+    "title": "Electrical Power-Line Installers and Repairers",
+    "soc": "49-9051",
+    "exposure": "Very Low",
+    "summary": "Install or repair cables or wires used in electrical power or distribution systems. May erect poles and light or heavy duty transmission towers.",
+    "laborMarket": {
+      "medianWage": "$101,980",
+      "annualOpenings": "264",
+      "employment": "1,520",
+      "projectedGrowth": "1.69%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electrical-and-electronic-engineering-technologists-and-technicians",
+    "title": "Electrical and Electronic Engineering Technologists and Technicians",
+    "soc": "17-3023",
+    "exposure": "Medium",
+    "summary": "Apply electrical and electronic theory and related knowledge, usually under the direction of engineering staff, to design, build, repair, adjust, and modify electrical components, circuitry, controls, and machinery for subsequent evaluation and use by engineering staff in making engineering design decisions.",
+    "laborMarket": {
+      "medianWage": "$78,760",
+      "annualOpenings": "257",
+      "employment": "2,360",
+      "projectedGrowth": "0.14%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electrical-and-electronics-drafters",
+    "title": "Electrical and Electronics Drafters",
+    "soc": "17-3012",
+    "exposure": "Very High",
+    "summary": "Prepare wiring diagrams, circuit board assembly diagrams, and layout drawings used for the manufacture, installation, or repair of electrical equipment.",
+    "laborMarket": {
+      "medianWage": "$65,220",
+      "annualOpenings": "78",
+      "employment": "530",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "mechanical-drafters",
+      "architectural-and-civil-drafters",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "electronics-engineers-except-computer",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-engineers",
+      "civil-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "computer-numerically-controlled-tool-programmers",
+      "commercial-and-industrial-designers",
+      "computer-hardware-engineers",
+      "mechanical-engineers",
+      "layout-workers-metal-and-plastic",
+      "mechatronics-engineers",
+      "electrical-and-electronic-equipment-assemblers",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "industrial-engineers",
+      "robotics-technicians",
+      "electromechanical-equipment-assemblers"
+    ],
+    "training": []
+  },
+  {
+    "id": "electrical-and-electronics-installers-and-repairers-transportation-equipment",
+    "title": "Electrical and Electronics Installers and Repairers, Transportation Equipment",
+    "soc": "49-2093",
+    "exposure": "Low",
+    "summary": "Install, adjust, or maintain mobile electronics communication equipment, including sound, sonar, security, navigation, and surveillance systems on trains, watercraft, or other mobile equipment.",
+    "laborMarket": {
+      "medianWage": "$82,840",
+      "annualOpenings": "13",
+      "employment": "70",
+      "projectedGrowth": "-0.57%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+    "title": "Electrical and Electronics Repairers, Commercial and Industrial Equipment",
+    "soc": "49-2094",
+    "exposure": "Medium",
+    "summary": "Repair, test, adjust, or install electronic equipment, such as industrial controls, transmitters, and antennas.",
+    "laborMarket": {
+      "medianWage": "$75,340",
+      "annualOpenings": "63",
+      "employment": "580",
+      "projectedGrowth": "1.03%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electrical-and-electronics-repairers-powerhouse-substation-and-relay",
+    "title": "Electrical and Electronics Repairers, Powerhouse, Substation, and Relay",
+    "soc": "49-2095",
+    "exposure": "Medium",
+    "summary": "Inspect, test, repair, or maintain electrical equipment in generating stations, substations, and in-service relays.",
+    "laborMarket": {
+      "medianWage": "$118,470",
+      "annualOpenings": "35",
+      "employment": "270",
+      "projectedGrowth": "0.77%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electricians",
+    "title": "Electricians",
+    "soc": "47-2111",
+    "exposure": "Low",
+    "summary": "Install, maintain, and repair electrical wiring, equipment, and fixtures. Ensure that work is in accordance with relevant codes. May install or service street lights, intercom systems, or electrical control systems.",
+    "laborMarket": {
+      "medianWage": "$59,480",
+      "annualOpenings": "2,196",
+      "employment": "21,280",
+      "projectedGrowth": "1.95%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electro-mechanical-and-mechatronics-technologists-and-technicians",
+    "title": "Electro-Mechanical and Mechatronics Technologists and Technicians",
+    "soc": "17-3024",
+    "exposure": "Medium",
+    "summary": "Operate, test, maintain, or adjust unmanned, automated, servomechanical, or electromechanical equipment. May operate unmanned submarines, aircraft, or other equipment to observe or record visual information at sites such as oil rigs, crop fields, buildings, or for similar infrastructure, deep ocean exploration, or hazardous waste removal. May assist engineers in testing and designing robotics equipment.",
+    "laborMarket": {
+      "medianWage": "$78,360",
+      "annualOpenings": "14",
+      "employment": "150",
+      "projectedGrowth": "0.64%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electronic-equipment-installers-and-repairers-motor-vehicles",
+    "title": "Electronic Equipment Installers and Repairers, Motor Vehicles",
+    "soc": "49-2096",
+    "exposure": "Low",
+    "summary": "Install, diagnose, or repair communications, sound, security, or navigation equipment in motor vehicles.",
+    "laborMarket": {
+      "medianWage": "$48,450",
+      "annualOpenings": "24",
+      "employment": "0",
+      "projectedGrowth": "-1.02%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "electronics-engineers-except-computer",
+    "title": "Electronics Engineers, Except Computer",
+    "soc": "17-2072",
+    "exposure": "Very High",
+    "summary": "Research, design, develop, or test electronic components and systems for commercial, industrial, military, or scientific use employing knowledge of electronic theory and materials properties. Design electronic circuits and components for use in fields such as telecommunications, aerospace guidance and propulsion control, acoustics, or instruments and controls.",
+    "laborMarket": {
+      "medianWage": "$135,200",
+      "annualOpenings": "206",
+      "employment": "2,360",
+      "projectedGrowth": "0.43%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "electrical-engineers",
+      "microsystems-engineers",
+      "radio-frequency-identification-device-specialists",
+      "mechanical-engineers",
+      "industrial-engineers",
+      "computer-hardware-engineers",
+      "calibration-technologists-and-technicians",
+      "robotics-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronics-drafters",
+      "electromechanical-equipment-assemblers",
+      "electrical-and-electronic-equipment-assemblers",
+      "electrical-and-electronics-repairers-powerhouse-substation-and-relay",
+      "aerospace-engineering-and-operations-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "elementary-school-teachers-except-special-education",
+    "title": "Elementary School Teachers, Except Special Education",
+    "soc": "25-2021",
+    "exposure": "Medium",
+    "summary": "Teach academic and social skills to students at the elementary school level.",
+    "laborMarket": {
+      "medianWage": "$50,980",
+      "annualOpenings": "1,633",
+      "employment": "23,250",
+      "projectedGrowth": "0.66%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "elevator-and-escalator-installers-and-repairers",
+    "title": "Elevator and Escalator Installers and Repairers",
+    "soc": "47-4021",
+    "exposure": "Low",
+    "summary": "Assemble, install, repair, or maintain electric or hydraulic freight or passenger elevators, escalators, or dumbwaiters.",
+    "laborMarket": {
+      "medianWage": "$110,500",
+      "annualOpenings": "15",
+      "employment": "0",
+      "projectedGrowth": "1.27%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "eligibility-interviewers-government-programs",
+    "title": "Eligibility Interviewers, Government Programs",
+    "soc": "43-4061",
+    "exposure": "Very High",
+    "summary": "Determine eligibility of persons applying to receive assistance from government programs and agency resources, such as welfare, unemployment benefits, social security, and public housing.",
+    "laborMarket": {
+      "medianWage": "$41,690",
+      "annualOpenings": "380",
+      "employment": "3,840",
+      "projectedGrowth": "0.78%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "human-resources-specialists",
+      "interviewers-except-eligibility-and-loan",
+      "compensation-benefits-and-job-analysis-specialists",
+      "social-and-community-service-managers",
+      "insurance-claims-and-policy-processing-clerks",
+      "compliance-officers",
+      "claims-adjusters-examiners-and-investigators",
+      "patient-representatives",
+      "child-family-and-school-social-workers",
+      "management-analysts",
+      "compensation-and-benefits-managers",
+      "rehabilitation-counselors",
+      "credit-counselors",
+      "credit-authorizers-checkers-and-clerks",
+      "customer-service-representatives",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "legal-secretaries-and-administrative-assistants",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "office-clerks-general"
+    ],
+    "training": []
+  },
+  {
+    "id": "embalmers",
+    "title": "Embalmers",
+    "soc": "39-4011",
+    "exposure": "Very Low",
+    "summary": "Prepare bodies for interment in conformity with legal requirements.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "emergency-management-directors",
+    "title": "Emergency Management Directors",
+    "soc": "11-9161",
+    "exposure": "Medium",
+    "summary": "Plan and direct disaster response or crisis management activities, provide disaster preparedness training, and prepare emergency plans and procedures for natural (e.g., hurricanes, floods, earthquakes), wartime, or technological (e.g., nuclear power plant emergencies or hazardous materials spills) disasters or hostage situations.",
+    "laborMarket": {
+      "medianWage": "$79,740",
+      "annualOpenings": "12",
+      "employment": "150",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "emergency-medical-technicians",
+    "title": "Emergency Medical Technicians",
+    "soc": "29-2042",
+    "exposure": "Low",
+    "summary": "Assess injuries and illnesses and administer basic emergency medical care. May transport injured or sick persons to medical facilities.",
+    "laborMarket": {
+      "medianWage": "$38,110",
+      "annualOpenings": "299",
+      "employment": "3,660",
+      "projectedGrowth": "2.03%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "emergency-medicine-physicians",
+    "title": "Emergency Medicine Physicians",
+    "soc": "29-1214",
+    "exposure": "High",
+    "summary": "Make immediate medical decisions and act to prevent death or further disability. Provide immediate recognition, evaluation, care, stabilization, and disposition of patients. May direct emergency medical staff in an emergency department.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "9",
+      "employment": "0",
+      "projectedGrowth": "2.11%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "paramedics",
+      "pediatric-surgeons",
+      "family-medicine-physicians",
+      "general-internal-medicine-physicians",
+      "physician-assistants",
+      "pediatricians-general",
+      "anesthesiologists",
+      "obstetricians-and-gynecologists",
+      "hospitalists",
+      "psychiatrists",
+      "cardiologists",
+      "emergency-medical-technicians",
+      "orthopedic-surgeons-except-pediatric",
+      "nurse-practitioners",
+      "acute-care-nurses",
+      "neurologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "endoscopy-technicians",
+    "title": "Endoscopy Technicians",
+    "soc": "31-9099",
+    "exposure": "Medium",
+    "summary": "Maintain a sterile field to provide support for physicians and nurses during endoscopy procedures. Prepare and maintain instruments and equipment. May obtain specimens.",
+    "laborMarket": {
+      "medianWage": "$46,530",
+      "annualOpenings": "556",
+      "employment": "3,390",
+      "projectedGrowth": "2.01%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "energy-auditors",
+    "title": "Energy Auditors",
+    "soc": "47-4011",
+    "exposure": "Medium",
+    "summary": "Conduct energy audits of buildings, building systems, or process systems. May also conduct investment grade audits of buildings or systems.",
+    "laborMarket": {
+      "medianWage": "$73,040",
+      "annualOpenings": "315",
+      "employment": "3,580",
+      "projectedGrowth": "0.19%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "energy-engineers-except-wind-and-solar",
+    "title": "Energy Engineers, Except Wind and Solar",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Design, develop, or evaluate energy-related projects or programs to reduce energy costs or improve energy efficiency during the designing, building, or remodeling stages of construction. May specialize in electrical systems; heating, ventilation, and air-conditioning (HVAC) systems; green buildings; lighting; air quality; or energy procurement.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "engine-and-other-machine-assemblers",
+    "title": "Engine and Other Machine Assemblers",
+    "soc": "51-2031",
+    "exposure": "Very Low",
+    "summary": "Construct, assemble, or rebuild machines, such as engines, turbines, and similar equipment used in such industries as construction, extraction, textiles, and paper manufacturing.",
+    "laborMarket": {
+      "medianWage": "$42,860",
+      "annualOpenings": "28",
+      "employment": "120",
+      "projectedGrowth": "-1.58%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "engineering-teachers-postsecondary",
+    "title": "Engineering Teachers, Postsecondary",
+    "soc": "25-1032",
+    "exposure": "High",
+    "summary": "Teach courses pertaining to the application of physical laws and principles of engineering for the development of machines, materials, instruments, processes, and services. Includes teachers of subjects such as chemical, civil, electrical, industrial, mechanical, mineral, and petroleum engineering. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$105,690",
+      "annualOpenings": "56",
+      "employment": "580",
+      "projectedGrowth": "1.62%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "career-technical-education-teachers-postsecondary",
+      "physics-teachers-postsecondary",
+      "architectural-and-engineering-managers",
+      "computer-science-teachers-postsecondary",
+      "materials-scientists",
+      "environmental-science-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "chemistry-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "architecture-teachers-postsecondary",
+      "mechanical-engineering-technologists-and-technicians",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "mechatronics-engineers",
+      "career-technical-education-teachers-middle-school",
+      "career-technical-education-teachers-secondary-school",
+      "bioengineers-and-biomedical-engineers",
+      "materials-engineers",
+      "industrial-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "engineering-technologists-and-technicians-except-drafters-all-other",
+    "title": "Engineering Technologists and Technicians, Except Drafters, All Other",
+    "soc": "17-3029",
+    "exposure": "Low",
+    "summary": "All engineering technologists and technicians, except drafters, not listed separately.",
+    "laborMarket": {
+      "medianWage": "$63,570",
+      "annualOpenings": "96",
+      "employment": "0",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "engineers-all-other",
+    "title": "Engineers, All Other",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "All engineers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "english-language-and-literature-teachers-postsecondary",
+    "title": "English Language and Literature Teachers, Postsecondary",
+    "soc": "25-1123",
+    "exposure": "Very High",
+    "summary": "Teach courses in English language and literature, including linguistics and comparative literature. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,370",
+      "annualOpenings": "89",
+      "employment": "1,080",
+      "projectedGrowth": "0.83%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "foreign-language-and-literature-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "history-teachers-postsecondary",
+      "art-drama-and-music-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "elementary-school-teachers-except-special-education",
+      "tutors",
+      "teaching-assistants-postsecondary",
+      "instructional-coordinators",
+      "psychology-teachers-postsecondary",
+      "self-enrichment-teachers",
+      "family-and-consumer-sciences-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "entertainment-and-recreation-managers-except-gambling",
+    "title": "Entertainment and Recreation Managers, Except Gambling",
+    "soc": "11-9072",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate entertainment and recreational activities and operations of a recreational facility, including cruise ships and parks.",
+    "laborMarket": {
+      "medianWage": "$61,080",
+      "annualOpenings": "103",
+      "employment": "880",
+      "projectedGrowth": "2.08%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "environmental-compliance-inspectors",
+    "title": "Environmental Compliance Inspectors",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Inspect and investigate sources of pollution to protect the public and environment and ensure conformance with Federal, State, and local regulations and ordinances.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "environmental-economists",
+    "title": "Environmental Economists",
+    "soc": "19-3011",
+    "exposure": "Very High",
+    "summary": "Conduct economic analysis related to environmental protection and use of the natural environment, such as water, air, land, and renewable energy resources. Evaluate and quantify benefits, costs, incentives, and impacts of alternative options using economic principles and statistical techniques.",
+    "laborMarket": {
+      "medianWage": "$96,390",
+      "annualOpenings": "9",
+      "employment": "0",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-economists",
+      "economics-teachers-postsecondary",
+      "financial-and-investment-analysts",
+      "political-scientists",
+      "business-teachers-postsecondary",
+      "financial-quantitative-analysts",
+      "investment-fund-managers",
+      "financial-risk-specialists",
+      "data-scientists",
+      "statisticians",
+      "sociologists",
+      "climate-change-policy-analysts",
+      "market-research-analysts-and-marketing-specialists",
+      "actuaries",
+      "personal-financial-advisors",
+      "political-science-teachers-postsecondary",
+      "social-science-research-assistants",
+      "securities-commodities-and-financial-services-sales-agents",
+      "operations-research-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "environmental-engineering-technologists-and-technicians",
+    "title": "Environmental Engineering Technologists and Technicians",
+    "soc": "17-3025",
+    "exposure": "Medium",
+    "summary": "Apply theory and principles of environmental engineering to modify, test, and operate equipment and devices used in the prevention, control, and remediation of environmental problems, including waste treatment and site remediation, under the direction of engineering staff or scientists. May assist in the development of environmental remediation devices.",
+    "laborMarket": {
+      "medianWage": "$62,430",
+      "annualOpenings": "30",
+      "employment": "290",
+      "projectedGrowth": "1.45%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "environmental-engineers",
+    "title": "Environmental Engineers",
+    "soc": "17-2081",
+    "exposure": "Very High",
+    "summary": "Research, design, plan, or perform engineering duties in the prevention, control, and remediation of environmental hazards using various engineering disciplines. Work may include waste treatment, site remediation, or pollution control technology.",
+    "laborMarket": {
+      "medianWage": "$91,520",
+      "annualOpenings": "43",
+      "employment": "620",
+      "projectedGrowth": "0.74%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-scientists-and-specialists-including-health",
+      "water-wastewater-engineers",
+      "environmental-engineering-technologists-and-technicians",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "environmental-compliance-inspectors",
+      "environmental-science-and-protection-technicians-including-health",
+      "water-resource-specialists",
+      "conservation-scientists",
+      "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+      "nuclear-engineers",
+      "water-and-wastewater-treatment-plant-and-system-operators",
+      "occupational-health-and-safety-specialists",
+      "agricultural-engineers",
+      "petroleum-engineers",
+      "hydrologists",
+      "chemical-engineers",
+      "hydrologic-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "environmental-restoration-planners",
+    "title": "Environmental Restoration Planners",
+    "soc": "19-2041",
+    "exposure": "High",
+    "summary": "Collaborate with field and biology staff to oversee the implementation of restoration projects and to develop new products. Process and synthesize complex scientific data into practical strategies for restoration, monitoring or management.",
+    "laborMarket": {
+      "medianWage": "$78,870",
+      "annualOpenings": "124",
+      "employment": "1,590",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-compliance-inspectors",
+      "environmental-engineers",
+      "industrial-ecologists",
+      "environmental-science-and-protection-technicians-including-health",
+      "conservation-scientists",
+      "environmental-engineering-technologists-and-technicians",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologic-technicians",
+      "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+      "hydrologists",
+      "occupational-health-and-safety-specialists",
+      "water-resource-specialists",
+      "environmental-science-teachers-postsecondary",
+      "chief-sustainability-officers",
+      "soil-and-plant-scientists",
+      "occupational-health-and-safety-technicians",
+      "foresters"
+    ],
+    "training": []
+  },
+  {
+    "id": "environmental-science-teachers-postsecondary",
+    "title": "Environmental Science Teachers, Postsecondary",
+    "soc": "25-1053",
+    "exposure": "High",
+    "summary": "Teach courses in environmental science. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "18",
+      "employment": "230",
+      "projectedGrowth": "1.15%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "agricultural-sciences-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "chemistry-teachers-postsecondary",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "environmental-scientists-and-specialists-including-health",
+      "geography-teachers-postsecondary",
+      "physics-teachers-postsecondary",
+      "natural-sciences-managers",
+      "engineering-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "biologists",
+      "economics-teachers-postsecondary",
+      "conservation-scientists",
+      "health-specialties-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "career-technical-education-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "environmental-science-and-protection-technicians-including-health",
+    "title": "Environmental Science and Protection Technicians, Including Health",
+    "soc": "19-4042",
+    "exposure": "High",
+    "summary": "Perform laboratory and field tests to monitor the environment and investigate sources of pollution, including those that affect health, under the direction of an environmental scientist, engineer, or other specialist. May collect samples of gases, soil, water, and other materials for testing.",
+    "laborMarket": {
+      "medianWage": "$51,210",
+      "annualOpenings": "68",
+      "employment": "510",
+      "projectedGrowth": "0.5%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-engineering-technologists-and-technicians",
+      "environmental-scientists-and-specialists-including-health",
+      "environmental-compliance-inspectors",
+      "environmental-engineers",
+      "water-and-wastewater-treatment-plant-and-system-operators",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "geological-technicians-except-hydrologic-technicians",
+      "water-wastewater-engineers",
+      "conservation-scientists",
+      "water-resource-specialists",
+      "nuclear-monitoring-technicians",
+      "hazardous-materials-removal-workers",
+      "chemical-technicians",
+      "occupational-health-and-safety-specialists",
+      "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+      "hydrologic-technicians",
+      "hydrologists",
+      "biological-technicians",
+      "nuclear-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "environmental-scientists-and-specialists-including-health",
+    "title": "Environmental Scientists and Specialists, Including Health",
+    "soc": "19-2041",
+    "exposure": "High",
+    "summary": "Conduct research or perform investigation for the purpose of identifying, abating, or eliminating sources of pollutants or hazards that affect either the environment or public health. Using knowledge of various scientific disciplines, may collect, synthesize, study, report, and recommend action based on data derived from measurements or observations of air, food, soil, water, and other sources.",
+    "laborMarket": {
+      "medianWage": "$78,870",
+      "annualOpenings": "124",
+      "employment": "1,590",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-compliance-inspectors",
+      "environmental-engineers",
+      "industrial-ecologists",
+      "environmental-science-and-protection-technicians-including-health",
+      "conservation-scientists",
+      "environmental-engineering-technologists-and-technicians",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologic-technicians",
+      "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+      "hydrologists",
+      "occupational-health-and-safety-specialists",
+      "water-resource-specialists",
+      "environmental-science-teachers-postsecondary",
+      "chief-sustainability-officers",
+      "soil-and-plant-scientists",
+      "occupational-health-and-safety-technicians",
+      "foresters"
+    ],
+    "training": []
+  },
+  {
+    "id": "epidemiologists",
+    "title": "Epidemiologists",
+    "soc": "19-1041",
+    "exposure": "High",
+    "summary": "Investigate and describe the determinants and distribution of disease, disability, or health outcomes. May develop the means for prevention and control.",
+    "laborMarket": {
+      "medianWage": "$69,300",
+      "annualOpenings": "20",
+      "employment": "290",
+      "projectedGrowth": "1.85%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "preventive-medicine-physicians",
+      "medical-scientists-except-epidemiologists",
+      "clinical-nurse-specialists",
+      "geneticists",
+      "physicians-pathologists",
+      "general-internal-medicine-physicians",
+      "microbiologists",
+      "emergency-medicine-physicians",
+      "clinical-neuropsychologists",
+      "health-informatics-specialists",
+      "genetic-counselors",
+      "health-specialties-teachers-postsecondary",
+      "cardiologists",
+      "clinical-research-coordinators",
+      "health-education-specialists",
+      "nurse-practitioners",
+      "health-information-technologists-and-medical-registrars",
+      "pediatric-surgeons"
+    ],
+    "training": []
+  },
+  {
+    "id": "equal-opportunity-representatives-and-officers",
+    "title": "Equal Opportunity Representatives and Officers",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Monitor and evaluate compliance with equal opportunity laws, guidelines, and policies to ensure that employment practices and contracting arrangements give equal opportunity without regard to race, religion, color, national origin, sex, age, or disability.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "etchers-and-engravers",
+    "title": "Etchers and Engravers",
+    "soc": "51-9194",
+    "exposure": "Low",
+    "summary": "Engrave or etch metal, wood, rubber, or other materials. Includes such workers as etcher-circuit processors, pantograph engravers, and silk screen etchers.",
+    "laborMarket": {
+      "medianWage": "$35,330",
+      "annualOpenings": "44",
+      "employment": "220",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "excavating-and-loading-machine-and-dragline-operators-surface-mining",
+    "title": "Excavating and Loading Machine and Dragline Operators, Surface Mining",
+    "soc": "47-5022",
+    "exposure": "Very Low",
+    "summary": "Operate or tend machinery at surface mining site, equipped with scoops, shovels, or buckets to excavate and load loose materials.",
+    "laborMarket": {
+      "medianWage": "$57,110",
+      "annualOpenings": "67",
+      "employment": "370",
+      "projectedGrowth": "1.61%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "executive-secretaries-and-executive-administrative-assistants",
+    "title": "Executive Secretaries and Executive Administrative Assistants",
+    "soc": "43-6011",
+    "exposure": "Very High",
+    "summary": "Provide high-level administrative support by conducting research, preparing statistical reports, and handling information requests, as well as performing routine administrative functions such as preparing correspondence, receiving visitors, arranging conference calls, and scheduling meetings. May also train and supervise lower-level clerical staff.",
+    "laborMarket": {
+      "medianWage": "$67,930",
+      "annualOpenings": "747",
+      "employment": "6,640",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "administrative-services-managers",
+      "legal-secretaries-and-administrative-assistants",
+      "office-clerks-general",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "correspondence-clerks",
+      "medical-secretaries-and-administrative-assistants",
+      "receptionists-and-information-clerks",
+      "paralegals-and-legal-assistants",
+      "chief-executives",
+      "human-resources-specialists",
+      "management-analysts",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "social-science-research-assistants",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "eligibility-interviewers-government-programs",
+      "project-management-specialists",
+      "public-relations-managers",
+      "public-relations-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "exercise-physiologists",
+    "title": "Exercise Physiologists",
+    "soc": "29-1128",
+    "exposure": "Low",
+    "summary": "Assess, plan, or implement fitness programs that include exercise or physical activities such as those designed to improve cardiorespiratory function, body composition, muscular strength, muscular endurance, or flexibility.",
+    "laborMarket": {
+      "medianWage": "$59,460",
+      "annualOpenings": "46",
+      "employment": "130",
+      "projectedGrowth": "3.18%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "exercise-trainers-and-group-fitness-instructors",
+    "title": "Exercise Trainers and Group Fitness Instructors",
+    "soc": "39-9031",
+    "exposure": "Very Low",
+    "summary": "Instruct or coach groups or individuals in exercise activities for the primary purpose of personal fitness. Demonstrate techniques and form, observe participants, and explain to them corrective measures necessary to improve their skills. Develop and implement individualized approaches to exercise.",
+    "laborMarket": {
+      "medianWage": "$47,570",
+      "annualOpenings": "1,889",
+      "employment": "5,810",
+      "projectedGrowth": "2.58%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "explosives-workers-ordnance-handling-experts-and-blasters",
+    "title": "Explosives Workers, Ordnance Handling Experts, and Blasters",
+    "soc": "47-5032",
+    "exposure": "Low",
+    "summary": "Place and detonate explosives to demolish structures or to loosen, remove, or displace earth, rock, or other materials. May perform specialized handling, storage, and accounting procedures.",
+    "laborMarket": {
+      "medianWage": "$63,010",
+      "annualOpenings": "2",
+      "employment": "30",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "extruding-and-drawing-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Extruding and Drawing Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4021",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend machines to extrude or draw thermoplastic or metal materials into tubes, rods, hoses, wire, bars, or structural shapes.",
+    "laborMarket": {
+      "medianWage": "$49,850",
+      "annualOpenings": "46",
+      "employment": "390",
+      "projectedGrowth": "0.59%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "extruding-and-forming-machine-setters-operators-and-tenders-synthetic-and-glass-fibers",
+    "title": "Extruding and Forming Machine Setters, Operators, and Tenders, Synthetic and Glass Fibers",
+    "soc": "51-6091",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend machines that extrude and form continuous filaments from synthetic materials, such as liquid polymer, rayon, and fiberglass.",
+    "laborMarket": {
+      "medianWage": "$31,060",
+      "annualOpenings": "10",
+      "employment": "0",
+      "projectedGrowth": "-1.7%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "extruding-forming-pressing-and-compacting-machine-setters-operators-and-tenders",
+    "title": "Extruding, Forming, Pressing, and Compacting Machine Setters, Operators, and Tenders",
+    "soc": "51-9041",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend machines, such as glass-forming machines, plodder machines, and tuber machines, to shape and form products such as glassware, food, rubber, soap, brick, tile, clay, wax, tobacco, or cosmetics.",
+    "laborMarket": {
+      "medianWage": "$45,020",
+      "annualOpenings": "52",
+      "employment": "450",
+      "projectedGrowth": "-0.85%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fabric-and-apparel-patternmakers",
+    "title": "Fabric and Apparel Patternmakers",
+    "soc": "51-6092",
+    "exposure": "High",
+    "summary": "Draw and construct sets of precision master fabric patterns or layouts. May also mark and cut fabrics and apparel.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "patternmakers-metal-and-plastic",
+      "sewers-hand",
+      "patternmakers-wood",
+      "tailors-dressmakers-and-custom-sewers",
+      "fashion-designers",
+      "layout-workers-metal-and-plastic",
+      "cutters-and-trimmers-hand",
+      "sewing-machine-operators",
+      "etchers-and-engravers",
+      "molders-shapers-and-casters-except-metal-and-plastic",
+      "commercial-and-industrial-designers",
+      "model-makers-wood",
+      "craft-artists",
+      "tool-and-die-makers",
+      "shoe-and-leather-workers-and-repairers",
+      "painting-coating-and-decorating-workers",
+      "shoe-machine-operators-and-tenders",
+      "model-makers-metal-and-plastic",
+      "textile-cutting-machine-setters-operators-and-tenders"
+    ],
+    "training": []
+  },
+  {
+    "id": "facilities-managers",
+    "title": "Facilities Managers",
+    "soc": "11-3013",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate operations and functionalities of facilities and buildings. May include surrounding grounds or multiple facilities of an organization's campus.",
+    "laborMarket": {
+      "medianWage": "$92,700",
+      "annualOpenings": "307",
+      "employment": "3,180",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fallers",
+    "title": "Fallers",
+    "soc": "45-4021",
+    "exposure": "Very Low",
+    "summary": "Use axes or chainsaws to fell trees using knowledge of tree characteristics and cutting techniques to control direction of fall and minimize tree damage.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "12",
+      "employment": "nan",
+      "projectedGrowth": "2.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "family-medicine-physicians",
+    "title": "Family Medicine Physicians",
+    "soc": "29-1215",
+    "exposure": "Medium",
+    "summary": "Diagnose, treat, and provide preventive care to individuals and families across the lifespan. May refer patients to specialists when needed for further diagnosis or treatment.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "216",
+      "employment": "3,820",
+      "projectedGrowth": "2.34%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "family-and-consumer-sciences-teachers-postsecondary",
+    "title": "Family and Consumer Sciences Teachers, Postsecondary",
+    "soc": "25-1192",
+    "exposure": "Very High",
+    "summary": "Teach courses in childcare, family relations, finance, nutrition, and related subjects pertaining to home management. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "0.98%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "agricultural-sciences-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "instructional-coordinators",
+      "sociology-teachers-postsecondary",
+      "career-technical-education-teachers-secondary-school",
+      "health-specialties-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "elementary-school-teachers-except-special-education",
+      "psychology-teachers-postsecondary",
+      "business-teachers-postsecondary",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "special-education-teachers-secondary-school",
+      "health-education-specialists",
+      "library-science-teachers-postsecondary",
+      "special-education-teachers-kindergarten",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "farm-equipment-mechanics-and-service-technicians",
+    "title": "Farm Equipment Mechanics and Service Technicians",
+    "soc": "49-3041",
+    "exposure": "Low",
+    "summary": "Diagnose, adjust, repair, or overhaul farm machinery and vehicles, such as tractors, harvesters, dairy equipment, and irrigation systems.",
+    "laborMarket": {
+      "medianWage": "$60,130",
+      "annualOpenings": "64",
+      "employment": "350",
+      "projectedGrowth": "1.35%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "farm-labor-contractors",
+    "title": "Farm Labor Contractors",
+    "soc": "13-1074",
+    "exposure": "Low",
+    "summary": "Recruit and hire seasonal or temporary agricultural laborers. May transport, house, and provide meals for workers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "1.06%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "farm-and-home-management-educators",
+    "title": "Farm and Home Management Educators",
+    "soc": "25-9021",
+    "exposure": "Medium",
+    "summary": "Instruct and advise individuals and families engaged in agriculture, agricultural-related processes, or home management activities. Demonstrate procedures and apply research findings to advance agricultural and home management activities. May develop educational outreach programs. May instruct on either agricultural issues such as agricultural processes and techniques, pest management, and food safety, or on home management issues such as budgeting, nutrition, and child development.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "3",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "farmers-ranchers-and-other-agricultural-managers",
+    "title": "Farmers, Ranchers, and Other Agricultural Managers",
+    "soc": "11-9013",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate the management or operation of farms, ranches, greenhouses, aquacultural operations, nurseries, timber tracts, or other agricultural establishments. May hire, train, and supervise farm workers or contract for services to carry out the day-to-day activities of the managed operation. May engage in or supervise planting, cultivating, harvesting, and financial and marketing activities.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2,416",
+      "employment": "nan",
+      "projectedGrowth": "0.63%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "farmworkers-and-laborers-crop-nursery-and-greenhouse",
+    "title": "Farmworkers and Laborers, Crop, Nursery, and Greenhouse",
+    "soc": "45-2092",
+    "exposure": "Low",
+    "summary": "Manually plant, cultivate, and harvest vegetables, fruits, nuts, horticultural specialties, and field crops. Use hand tools, such as shovels, trowels, hoes, tampers, pruning hooks, shears, and knives. Duties may include tilling soil and applying fertilizers; transplanting, weeding, thinning, or pruning crops; applying pesticides; or cleaning, grading, sorting, packing, and loading harvested products. May construct trellises, repair fences and farm buildings, or participate in irrigation activities.",
+    "laborMarket": {
+      "medianWage": "$34,180",
+      "annualOpenings": "1,548",
+      "employment": "5,720",
+      "projectedGrowth": "-1.7%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "farmworkers-farm-ranch-and-aquacultural-animals",
+    "title": "Farmworkers, Farm, Ranch, and Aquacultural Animals",
+    "soc": "45-2093",
+    "exposure": "Very Low",
+    "summary": "Attend to live farm, ranch, open range or aquacultural animals that may include cattle, sheep, swine, goats, horses and other equines, poultry, rabbits, finfish, shellfish, and bees. Attend to animals produced for animal products, such as meat, fur, skins, feathers, eggs, milk, and honey. Duties may include feeding, watering, herding, grazing, milking, castrating, branding, de-beaking, weighing, catching, and loading animals. May maintain records on animals; examine animals to detect diseases and injuries; assist in birth deliveries; and administer medications, vaccinations, or insecticides as appropriate. May clean and maintain animal housing areas. Includes workers who shear wool from sheep and collect eggs in hatcheries.",
+    "laborMarket": {
+      "medianWage": "$37,470",
+      "annualOpenings": "602",
+      "employment": "510",
+      "projectedGrowth": "-2.03%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fashion-designers",
+    "title": "Fashion Designers",
+    "soc": "27-1022",
+    "exposure": "Medium",
+    "summary": "Design clothing and accessories. Create original designs or adapt fashion trends.",
+    "laborMarket": {
+      "medianWage": "$43,200",
+      "annualOpenings": "14",
+      "employment": "110",
+      "projectedGrowth": "1.14%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fast-food-and-counter-workers",
+    "title": "Fast Food and Counter Workers",
+    "soc": "35-3023",
+    "exposure": "Very Low",
+    "summary": "Perform duties such as taking orders and serving food and beverages. Serve customers at counter or from a steam table. May take payment. May prepare food and beverages.",
+    "laborMarket": {
+      "medianWage": "$33,060",
+      "annualOpenings": "25,091",
+      "employment": "86,640",
+      "projectedGrowth": "0.57%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fence-erectors",
+    "title": "Fence Erectors",
+    "soc": "47-4031",
+    "exposure": "Very Low",
+    "summary": "Erect and repair fences and fence gates, using hand and power tools.",
+    "laborMarket": {
+      "medianWage": "$45,970",
+      "annualOpenings": "42",
+      "employment": "370",
+      "projectedGrowth": "0.41%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fiberglass-laminators-and-fabricators",
+    "title": "Fiberglass Laminators and Fabricators",
+    "soc": "51-2051",
+    "exposure": "Very Low",
+    "summary": "Laminate layers of fiberglass on molds to form boat decks and hulls, bodies for golf carts, automobiles, or other products.",
+    "laborMarket": {
+      "medianWage": "$45,660",
+      "annualOpenings": "18",
+      "employment": "60",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "file-clerks",
+    "title": "File Clerks",
+    "soc": "43-4071",
+    "exposure": "Very High",
+    "summary": "File correspondence, cards, invoices, receipts, and other records in alphabetical or numerical order or according to the filing system used. Locate and remove material from file when requested.",
+    "laborMarket": {
+      "medianWage": "$41,390",
+      "annualOpenings": "226",
+      "employment": "2,110",
+      "projectedGrowth": "-1.36%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "data-entry-keyers",
+      "medical-records-specialists",
+      "office-clerks-general",
+      "correspondence-clerks",
+      "word-processors-and-typists",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "administrative-services-managers",
+      "billing-and-posting-clerks",
+      "postal-service-mail-sorters-processors-and-processing-machine-operators",
+      "payroll-and-timekeeping-clerks",
+      "document-management-specialists",
+      "statistical-assistants",
+      "title-examiners-abstractors-and-searchers",
+      "management-analysts",
+      "archivists",
+      "court-municipal-and-license-clerks",
+      "health-information-technologists-and-medical-registrars",
+      "court-reporters-and-simultaneous-captioners",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "receptionists-and-information-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "film-and-video-editors",
+    "title": "Film and Video Editors",
+    "soc": "27-4032",
+    "exposure": "Very High",
+    "summary": "Edit moving images on film, video, or other media. May work with a producer or director to organize images for final production. May edit or synchronize soundtracks with images.",
+    "laborMarket": {
+      "medianWage": "$49,920",
+      "annualOpenings": "69",
+      "employment": "200",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "editors",
+      "producers-and-directors",
+      "special-effects-artists-and-animators",
+      "desktop-publishers",
+      "audio-and-video-technicians",
+      "graphic-designers",
+      "sound-engineering-technicians",
+      "camera-operators-television-video-and-film",
+      "proofreaders-and-copy-markers",
+      "news-analysts-reporters-and-journalists",
+      "poets-lyricists-and-creative-writers",
+      "video-game-designers",
+      "prepress-technicians-and-workers",
+      "technical-writers",
+      "broadcast-announcers-and-radio-disc-jockeys",
+      "photographic-process-workers-and-processing-machine-operators",
+      "photographers"
+    ],
+    "training": []
+  },
+  {
+    "id": "financial-examiners",
+    "title": "Financial Examiners",
+    "soc": "13-2061",
+    "exposure": "High",
+    "summary": "Enforce or ensure compliance with laws and regulations governing financial and securities institutions and financial and real estate transactions. May examine, verify, or authenticate records.",
+    "laborMarket": {
+      "medianWage": "$77,570",
+      "annualOpenings": "103",
+      "employment": "1,560",
+      "projectedGrowth": "1.47%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "accountants-and-auditors",
+      "compliance-managers",
+      "fraud-examiners-investigators-and-analysts",
+      "credit-analysts",
+      "treasurers-and-controllers",
+      "financial-risk-specialists",
+      "financial-and-investment-analysts",
+      "credit-authorizers-checkers-and-clerks",
+      "loan-officers",
+      "management-analysts",
+      "chief-executives",
+      "personal-financial-advisors",
+      "budget-analysts",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "compensation-benefits-and-job-analysis-specialists",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "eligibility-interviewers-government-programs",
+      "security-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "financial-managers",
+    "title": "Financial Managers",
+    "soc": "11-3031",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate accounting, investing, banking, insurance, securities, and other financial activities of a branch, office, or department of an establishment.",
+    "laborMarket": {
+      "medianWage": "$132,290",
+      "annualOpenings": "1,331",
+      "employment": "14,570",
+      "projectedGrowth": "1.71%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "accountants-and-auditors",
+      "financial-and-investment-analysts",
+      "personal-financial-advisors",
+      "credit-analysts",
+      "loan-officers",
+      "financial-risk-specialists",
+      "securities-commodities-and-financial-services-sales-agents",
+      "treasurers-and-controllers",
+      "financial-examiners",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "management-analysts",
+      "credit-counselors",
+      "new-accounts-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "brokerage-clerks",
+      "budget-analysts",
+      "administrative-services-managers",
+      "tellers"
+    ],
+    "training": []
+  },
+  {
+    "id": "financial-quantitative-analysts",
+    "title": "Financial Quantitative Analysts",
+    "soc": "13-2099",
+    "exposure": "Very High",
+    "summary": "Develop quantitative techniques to inform securities investing, equities investing, pricing, or valuation of financial instruments. Develop mathematical or statistical models for risk management, asset optimization, pricing, or relative value analysis.",
+    "laborMarket": {
+      "medianWage": "$78,910",
+      "annualOpenings": "104",
+      "employment": "1,090",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "financial-risk-specialists",
+    "title": "Financial Risk Specialists",
+    "soc": "13-2054",
+    "exposure": "Very High",
+    "summary": "Analyze and measure exposure to credit and market risk threatening the assets, earning capacity, or economic state of an organization. May make recommendations to limit risk.",
+    "laborMarket": {
+      "medianWage": "$92,410",
+      "annualOpenings": "109",
+      "employment": "1,150",
+      "projectedGrowth": "0.52%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "financial-quantitative-analysts",
+      "financial-and-investment-analysts",
+      "investment-fund-managers",
+      "personal-financial-advisors",
+      "management-analysts",
+      "securities-commodities-and-financial-services-sales-agents",
+      "credit-analysts",
+      "financial-examiners",
+      "business-intelligence-analysts",
+      "insurance-underwriters",
+      "operations-research-analysts",
+      "regulatory-affairs-specialists",
+      "accountants-and-auditors",
+      "business-continuity-planners",
+      "compliance-managers",
+      "retail-loss-prevention-specialists",
+      "market-research-analysts-and-marketing-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "financial-specialists-all-other",
+    "title": "Financial Specialists, All Other",
+    "soc": "13-2099",
+    "exposure": "Very High",
+    "summary": "All financial specialists not listed separately.",
+    "laborMarket": {
+      "medianWage": "$78,910",
+      "annualOpenings": "104",
+      "employment": "1,090",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "financial-and-investment-analysts",
+    "title": "Financial and Investment Analysts",
+    "soc": "13-2051",
+    "exposure": "High",
+    "summary": "Conduct quantitative analyses of information involving investment programs or financial data of public or private institutions, including valuation of businesses.",
+    "laborMarket": {
+      "medianWage": "$88,190",
+      "annualOpenings": "496",
+      "employment": "4,910",
+      "projectedGrowth": "1.06%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "personal-financial-advisors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "investment-fund-managers",
+      "financial-risk-specialists",
+      "financial-quantitative-analysts",
+      "credit-analysts",
+      "loan-officers",
+      "brokerage-clerks",
+      "business-intelligence-analysts",
+      "credit-counselors",
+      "market-research-analysts-and-marketing-specialists",
+      "accountants-and-auditors",
+      "financial-examiners",
+      "economists",
+      "management-analysts",
+      "real-estate-brokers",
+      "marketing-managers",
+      "sales-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel"
+    ],
+    "training": []
+  },
+  {
+    "id": "fine-artists-including-painters-sculptors-and-illustrators",
+    "title": "Fine Artists, Including Painters, Sculptors, and Illustrators",
+    "soc": "27-1013",
+    "exposure": "Medium",
+    "summary": "Create original artwork using any of a wide variety of media and techniques.",
+    "laborMarket": {
+      "medianWage": "$63,380",
+      "annualOpenings": "56",
+      "employment": "80",
+      "projectedGrowth": "2.08%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fire-inspectors-and-investigators",
+    "title": "Fire Inspectors and Investigators",
+    "soc": "33-2021",
+    "exposure": "Medium",
+    "summary": "Inspect buildings to detect fire hazards and enforce local ordinances and state laws, or investigate and gather facts to determine cause of fires and explosions.",
+    "laborMarket": {
+      "medianWage": "$74,900",
+      "annualOpenings": "11",
+      "employment": "210",
+      "projectedGrowth": "0.8%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fire-prevention-and-protection-engineers",
+    "title": "Fire-Prevention and Protection Engineers",
+    "soc": "17-2111",
+    "exposure": "High",
+    "summary": "Research causes of fires, determine fire protection methods, and design or recommend materials or equipment such as structural components or fire-detection equipment to assist organizations in safeguarding life and property against fire, explosion, and related hazards.",
+    "laborMarket": {
+      "medianWage": "$109,790",
+      "annualOpenings": "12",
+      "employment": "180",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "occupational-health-and-safety-technicians",
+      "occupational-health-and-safety-specialists",
+      "environmental-compliance-inspectors",
+      "environmental-scientists-and-specialists-including-health",
+      "environmental-engineers",
+      "environmental-science-and-protection-technicians-including-health",
+      "fire-prevention-and-protection-engineers",
+      "industrial-engineers",
+      "environmental-engineering-technologists-and-technicians",
+      "security-management-specialists",
+      "construction-and-building-inspectors",
+      "agricultural-inspectors",
+      "aviation-inspectors",
+      "penetration-testers",
+      "quality-control-systems-managers",
+      "industrial-engineering-technologists-and-technicians",
+      "compliance-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "firefighters",
+    "title": "Firefighters",
+    "soc": "33-2011",
+    "exposure": "Low",
+    "summary": "Control and extinguish fires or respond to emergency situations where life, property, or the environment is at risk. Duties may include fire prevention, emergency medical service, hazardous material response, search and rescue, and disaster assistance.",
+    "laborMarket": {
+      "medianWage": "$58,650",
+      "annualOpenings": "475",
+      "employment": "6,870",
+      "projectedGrowth": "1.04%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-construction-trades-and-extraction-workers",
+    "title": "First-Line Supervisors of Construction Trades and Extraction Workers",
+    "soc": "47-1011",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate activities of construction or extraction workers.",
+    "laborMarket": {
+      "medianWage": "$78,350",
+      "annualOpenings": "2,274",
+      "employment": "21,250",
+      "projectedGrowth": "1.89%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-correctional-officers",
+    "title": "First-Line Supervisors of Correctional Officers",
+    "soc": "33-1011",
+    "exposure": "Low",
+    "summary": "Directly supervise and coordinate activities of correctional officers and jailers.",
+    "laborMarket": {
+      "medianWage": "$75,400",
+      "annualOpenings": "84",
+      "employment": "980",
+      "projectedGrowth": "0.36%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+    "title": "First-Line Supervisors of Entertainment and Recreation Workers, Except Gambling Services",
+    "soc": "39-1014",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate activities of entertainment and recreation related workers.",
+    "laborMarket": {
+      "medianWage": "$46,120",
+      "annualOpenings": "429",
+      "employment": "2,110",
+      "projectedGrowth": "2.09%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-farming-fishing-and-forestry-workers",
+    "title": "First-Line Supervisors of Farming, Fishing, and Forestry Workers",
+    "soc": "45-1011",
+    "exposure": "Low",
+    "summary": "Directly supervise and coordinate the activities of agricultural, forestry, aquacultural, and related workers.",
+    "laborMarket": {
+      "medianWage": "$70,910",
+      "annualOpenings": "190",
+      "employment": "590",
+      "projectedGrowth": "-0.68%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-firefighting-and-prevention-workers",
+    "title": "First-Line Supervisors of Firefighting and Prevention Workers",
+    "soc": "33-1021",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate activities of workers engaged in firefighting and fire prevention and control.",
+    "laborMarket": {
+      "medianWage": "$84,840",
+      "annualOpenings": "108",
+      "employment": "2,310",
+      "projectedGrowth": "1.1%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-food-preparation-and-serving-workers",
+    "title": "First-Line Supervisors of Food Preparation and Serving Workers",
+    "soc": "35-1012",
+    "exposure": "High",
+    "summary": "Directly supervise and coordinate activities of workers engaged in preparing and serving food.",
+    "laborMarket": {
+      "medianWage": "$42,790",
+      "annualOpenings": "4,101",
+      "employment": "23,520",
+      "projectedGrowth": "0.76%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "first-line-supervisors-of-farming-fishing-and-forestry-workers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-retail-sales-workers",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "first-line-supervisors-of-passenger-attendants",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "first-line-supervisors-of-personal-service-workers",
+      "food-service-managers",
+      "chefs-and-head-cooks",
+      "first-line-supervisors-of-construction-trades-and-extraction-workers",
+      "general-and-operations-managers",
+      "food-preparation-workers",
+      "first-line-supervisors-of-landscaping-lawn-service-and-groundskeeping-workers",
+      "fast-food-and-counter-workers",
+      "dining-room-and-cafeteria-attendants-and-bartender-helpers"
+    ],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-gambling-services-workers",
+    "title": "First-Line Supervisors of Gambling Services Workers",
+    "soc": "39-1013",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate activities of workers in assigned gambling areas. May circulate among tables, observe operations, and ensure that stations and games are covered for each shift. May verify and pay off jackpots. May reset slot machines after payoffs and make repairs or adjustments to slot machines or recommend removal of slot machines for repair. May plan and organize activities and services for guests in hotels/casinos.",
+    "laborMarket": {
+      "medianWage": "$65,580",
+      "annualOpenings": "110",
+      "employment": "580",
+      "projectedGrowth": "0.98%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+    "title": "First-Line Supervisors of Housekeeping and Janitorial Workers",
+    "soc": "37-1011",
+    "exposure": "Low",
+    "summary": "Directly supervise and coordinate work activities of cleaning personnel in hotels, hospitals, offices, and other establishments.",
+    "laborMarket": {
+      "medianWage": "$47,280",
+      "annualOpenings": "589",
+      "employment": "3,340",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-landscaping-lawn-service-and-groundskeeping-workers",
+    "title": "First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",
+    "soc": "37-1012",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate activities of workers engaged in landscaping or groundskeeping activities. Work may involve reviewing contracts to ascertain service, machine, and workforce requirements; answering inquiries from potential customers regarding methods, material, and price ranges; and preparing estimates according to labor, material, and machine costs.",
+    "laborMarket": {
+      "medianWage": "$49,170",
+      "annualOpenings": "602",
+      "employment": "2,640",
+      "projectedGrowth": "1.27%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-mechanics-installers-and-repairers",
+    "title": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+    "soc": "49-1011",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate the activities of mechanics, installers, and repairers. May also advise customers on recommended services. Excludes team or work leaders.",
+    "laborMarket": {
+      "medianWage": "$73,760",
+      "annualOpenings": "1,040",
+      "employment": "12,140",
+      "projectedGrowth": "0.81%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-non-retail-sales-workers",
+    "title": "First-Line Supervisors of Non-Retail Sales Workers",
+    "soc": "41-1012",
+    "exposure": "Very High",
+    "summary": "Directly supervise and coordinate activities of sales workers other than retail sales workers. May perform duties such as budgeting, accounting, and personnel work, in addition to supervisory duties.",
+    "laborMarket": {
+      "medianWage": "$78,110",
+      "annualOpenings": "527",
+      "employment": "2,860",
+      "projectedGrowth": "0.71%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-retail-sales-workers",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "first-line-supervisors-of-passenger-attendants",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "first-line-supervisors-of-personal-service-workers",
+      "first-line-supervisors-of-security-workers",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "general-and-operations-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "first-line-supervisors-of-food-preparation-and-serving-workers",
+      "customer-service-representatives",
+      "administrative-services-managers",
+      "management-analysts",
+      "first-line-supervisors-of-construction-trades-and-extraction-workers",
+      "human-resources-specialists",
+      "sales-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-office-and-administrative-support-workers",
+    "title": "First-Line Supervisors of Office and Administrative Support Workers",
+    "soc": "43-1011",
+    "exposure": "High",
+    "summary": "Directly supervise and coordinate the activities of clerical and administrative support workers.",
+    "laborMarket": {
+      "medianWage": "$63,030",
+      "annualOpenings": "3,068",
+      "employment": "31,750",
+      "projectedGrowth": "0.02%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "first-line-supervisors-of-passenger-attendants",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "administrative-services-managers",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "first-line-supervisors-of-construction-trades-and-extraction-workers",
+      "first-line-supervisors-of-retail-sales-workers",
+      "management-analysts",
+      "general-and-operations-managers",
+      "first-line-supervisors-of-personal-service-workers",
+      "human-resources-specialists",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "first-line-supervisors-of-security-workers",
+      "first-line-supervisors-of-food-preparation-and-serving-workers",
+      "office-clerks-general",
+      "project-management-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-personal-service-workers",
+    "title": "First-Line Supervisors of Personal Service Workers",
+    "soc": "39-1022",
+    "exposure": "Medium",
+    "summary": "Supervise and coordinate activities of personal service workers.",
+    "laborMarket": {
+      "medianWage": "$46,770",
+      "annualOpenings": "308",
+      "employment": "1,690",
+      "projectedGrowth": "2.6%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-police-and-detectives",
+    "title": "First-Line Supervisors of Police and Detectives",
+    "soc": "33-1012",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate activities of members of police force.",
+    "laborMarket": {
+      "medianWage": "$106,750",
+      "annualOpenings": "140",
+      "employment": "2,600",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-production-and-operating-workers",
+    "title": "First-Line Supervisors of Production and Operating Workers",
+    "soc": "51-1011",
+    "exposure": "Medium",
+    "summary": "Directly supervise and coordinate the activities of production and operating workers, such as inspectors, precision workers, machine setters and operators, assemblers, fabricators, and plant and system operators. Excludes team or work leaders.",
+    "laborMarket": {
+      "medianWage": "$72,960",
+      "annualOpenings": "851",
+      "employment": "8,950",
+      "projectedGrowth": "0.19%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "first-line-supervisors-of-retail-sales-workers",
+    "title": "First-Line Supervisors of Retail Sales Workers",
+    "soc": "41-1011",
+    "exposure": "High",
+    "summary": "Directly supervise and coordinate activities of retail sales workers in an establishment or department. Duties may include management functions, such as purchasing, budgeting, accounting, and personnel work, in addition to supervisory duties.",
+    "laborMarket": {
+      "medianWage": "$46,450",
+      "annualOpenings": "2,596",
+      "employment": "20,770",
+      "projectedGrowth": "-0.02%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-food-preparation-and-serving-workers",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "first-line-supervisors-of-personal-service-workers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "general-and-operations-managers",
+      "sales-managers",
+      "customer-service-representatives",
+      "retail-salespersons",
+      "counter-and-rental-clerks",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "stockers-and-order-fillers",
+      "cashiers",
+      "first-line-supervisors-of-passenger-attendants",
+      "administrative-services-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "fish-and-game-wardens",
+    "title": "Fish and Game Wardens",
+    "soc": "33-3031",
+    "exposure": "Low",
+    "summary": "Patrol assigned area to prevent fish and game law violations. Investigate reports of damage to crops or property by wildlife. Compile biological data.",
+    "laborMarket": {
+      "medianWage": "$45,000",
+      "annualOpenings": "22",
+      "employment": "250",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fishing-and-hunting-workers",
+    "title": "Fishing and Hunting Workers",
+    "soc": "45-3031",
+    "exposure": "Very Low",
+    "summary": "Hunt, trap, catch, or gather wild animals or aquatic animals and plants. May use nets, traps, or other equipment. May haul catch onto ship or other vessel.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "41",
+      "employment": "nan",
+      "projectedGrowth": "1.51%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fitness-and-wellness-coordinators",
+    "title": "Fitness and Wellness Coordinators",
+    "soc": "11-9179",
+    "exposure": "High",
+    "summary": "Manage or coordinate fitness and wellness programs and services. Manage and train staff of wellness specialists, health educators, or fitness instructors.",
+    "laborMarket": {
+      "medianWage": "$71,390",
+      "annualOpenings": "48",
+      "employment": "0",
+      "projectedGrowth": "2.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "flight-attendants",
+    "title": "Flight Attendants",
+    "soc": "53-2031",
+    "exposure": "Low",
+    "summary": "Monitor safety of the aircraft cabin. Provide services to airline passengers, explain safety information, serve food and beverages, and respond to emergency incidents.",
+    "laborMarket": {
+      "medianWage": "$38,130",
+      "annualOpenings": "532",
+      "employment": "3,950",
+      "projectedGrowth": "1.33%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "floor-layers-except-carpet-wood-and-hard-tiles",
+    "title": "Floor Layers, Except Carpet, Wood, and Hard Tiles",
+    "soc": "47-2042",
+    "exposure": "Very Low",
+    "summary": "Apply blocks, strips, or sheets of shock-absorbing, sound-deadening, or decorative coverings to floors.",
+    "laborMarket": {
+      "medianWage": "$46,450",
+      "annualOpenings": "75",
+      "employment": "220",
+      "projectedGrowth": "2.59%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "floor-sanders-and-finishers",
+    "title": "Floor Sanders and Finishers",
+    "soc": "47-2043",
+    "exposure": "Very Low",
+    "summary": "Scrape and sand wooden floors to smooth surfaces using floor scraper and floor sanding machine, and apply coats of finish.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "floral-designers",
+    "title": "Floral Designers",
+    "soc": "27-1023",
+    "exposure": "Low",
+    "summary": "Design, cut, and arrange live, dried, or artificial flowers and foliage.",
+    "laborMarket": {
+      "medianWage": "$36,070",
+      "annualOpenings": "74",
+      "employment": "240",
+      "projectedGrowth": "-0.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-batchmakers",
+    "title": "Food Batchmakers",
+    "soc": "51-3092",
+    "exposure": "Low",
+    "summary": "Set up and operate equipment that mixes or blends ingredients used in the manufacturing of food products. Includes candy makers and cheese makers.",
+    "laborMarket": {
+      "medianWage": "$39,270",
+      "annualOpenings": "258",
+      "employment": "2,240",
+      "projectedGrowth": "1.45%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-cooking-machine-operators-and-tenders",
+    "title": "Food Cooking Machine Operators and Tenders",
+    "soc": "51-3093",
+    "exposure": "Low",
+    "summary": "Operate or tend cooking equipment, such as steam cooking vats, deep fry cookers, pressure cookers, kettles, and boilers, to prepare food products.",
+    "laborMarket": {
+      "medianWage": "$33,560",
+      "annualOpenings": "61",
+      "employment": "700",
+      "projectedGrowth": "0.33%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-preparation-workers",
+    "title": "Food Preparation Workers",
+    "soc": "35-2021",
+    "exposure": "Very Low",
+    "summary": "Perform a variety of food preparation duties other than cooking, such as preparing cold foods and shellfish, slicing meat, and brewing coffee or tea.",
+    "laborMarket": {
+      "medianWage": "$35,480",
+      "annualOpenings": "2,617",
+      "employment": "15,500",
+      "projectedGrowth": "-0.05%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-science-technicians",
+    "title": "Food Science Technicians",
+    "soc": "19-4013",
+    "exposure": "Medium",
+    "summary": "Work with food scientists or technologists to perform standardized qualitative and quantitative tests to determine physical or chemical properties of food or beverage products. Includes technicians who assist in research and development of production technology, quality control, packaging, processing, and use of foods.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "59",
+      "employment": "nan",
+      "projectedGrowth": "0.78%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-scientists-and-technologists",
+    "title": "Food Scientists and Technologists",
+    "soc": "19-1012",
+    "exposure": "Medium",
+    "summary": "Use chemistry, microbiology, engineering, and other sciences to study the principles underlying the processing and deterioration of foods; analyze food content to determine levels of vitamins, fat, sugar, and protein; discover new food sources; research ways to make processed foods safe, palatable, and healthful; and apply food science knowledge to determine best ways to process, package, preserve, store, and distribute food.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-servers-nonrestaurant",
+    "title": "Food Servers, Nonrestaurant",
+    "soc": "35-3041",
+    "exposure": "Low",
+    "summary": "Serve food to individuals outside of a restaurant environment, such as in hotel rooms, hospital rooms, residential care facilities, or cars.",
+    "laborMarket": {
+      "medianWage": "$35,150",
+      "annualOpenings": "938",
+      "employment": "3,840",
+      "projectedGrowth": "2.08%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-service-managers",
+    "title": "Food Service Managers",
+    "soc": "11-9051",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate activities of an organization or department that serves food and beverages.",
+    "laborMarket": {
+      "medianWage": "$63,310",
+      "annualOpenings": "1,205",
+      "employment": "5,010",
+      "projectedGrowth": "0.99%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "food-and-tobacco-roasting-baking-and-drying-machine-operators-and-tenders",
+    "title": "Food and Tobacco Roasting, Baking, and Drying Machine Operators and Tenders",
+    "soc": "51-3091",
+    "exposure": "Very Low",
+    "summary": "Operate or tend food or tobacco roasting, baking, or drying equipment, including hearth ovens, kiln driers, roasters, char kilns, and vacuum drying equipment.",
+    "laborMarket": {
+      "medianWage": "$39,400",
+      "annualOpenings": "15",
+      "employment": "90",
+      "projectedGrowth": "0.96%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "foreign-language-and-literature-teachers-postsecondary",
+    "title": "Foreign Language and Literature Teachers, Postsecondary",
+    "soc": "25-1124",
+    "exposure": "Very High",
+    "summary": "Teach languages and literature courses in languages other than English. Includes teachers of American Sign Language (ASL). Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "31",
+      "employment": "340",
+      "projectedGrowth": "0.8%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "english-language-and-literature-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "history-teachers-postsecondary",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "interpreters-and-translators",
+      "sociology-teachers-postsecondary",
+      "art-drama-and-music-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "tutors",
+      "self-enrichment-teachers",
+      "geography-teachers-postsecondary",
+      "special-education-teachers-kindergarten",
+      "education-teachers-postsecondary",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "forensic-science-technicians",
+    "title": "Forensic Science Technicians",
+    "soc": "19-4092",
+    "exposure": "Medium",
+    "summary": "Collect, identify, classify, and analyze physical evidence related to criminal investigations. Perform tests on weapons or substances, such as fiber, hair, and tissue to determine significance to investigation. May testify as expert witnesses on evidence or crime laboratory techniques. May serve as specialists in area of expertise, such as ballistics, fingerprinting, handwriting, or biochemistry.",
+    "laborMarket": {
+      "medianWage": "$60,620",
+      "annualOpenings": "101",
+      "employment": "880",
+      "projectedGrowth": "1.94%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "forest-fire-inspectors-and-prevention-specialists",
+    "title": "Forest Fire Inspectors and Prevention Specialists",
+    "soc": "33-2022",
+    "exposure": "Low",
+    "summary": "Enforce fire regulations, inspect forest for fire hazards, and recommend forest fire prevention or control measures. May report forest fires and weather conditions.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "14",
+      "employment": "nan",
+      "projectedGrowth": "2.83%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "forest-and-conservation-technicians",
+    "title": "Forest and Conservation Technicians",
+    "soc": "19-4071",
+    "exposure": "Medium",
+    "summary": "Provide technical assistance regarding the conservation of soil, water, forests, or related natural resources. May compile data pertaining to size, content, condition, and other characteristics of forest tracts under the direction of foresters, or train and lead forest workers in forest propagation and fire prevention and suppression. May assist conservation scientists in managing, improving, and protecting rangelands and wildlife habitats.",
+    "laborMarket": {
+      "medianWage": "$54,310",
+      "annualOpenings": "145",
+      "employment": "1,350",
+      "projectedGrowth": "0.44%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "forest-and-conservation-workers",
+    "title": "Forest and Conservation Workers",
+    "soc": "45-4011",
+    "exposure": "Very Low",
+    "summary": "Under supervision, perform manual labor necessary to develop, maintain, or protect areas such as forests, forested areas, woodlands, wetlands, and rangelands through such activities as raising and transporting seedlings; combating insects, pests, and diseases harmful to plant life; and building structures to control water, erosion, and leaching of soil. Includes forester aides, seedling pullers, tree planters, and gatherers of nontimber forestry products such as pine straw.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "37",
+      "employment": "nan",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "foresters",
+    "title": "Foresters",
+    "soc": "19-1032",
+    "exposure": "Medium",
+    "summary": "Manage public and private forested lands for economic, recreational, and conservation purposes. May inventory the type, amount, and location of standing timber, appraise the timber's worth, negotiate the purchase, and draw up contracts for procurement. May determine how to conserve wildlife habitats, creek beds, water quality, and soil stability, and how best to comply with environmental regulations. May devise plans for planting and growing new trees, monitor trees for healthy growth, and determine optimal harvesting schedules.",
+    "laborMarket": {
+      "medianWage": "$65,960",
+      "annualOpenings": "37",
+      "employment": "70",
+      "projectedGrowth": "1.86%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "forestry-and-conservation-science-teachers-postsecondary",
+    "title": "Forestry and Conservation Science Teachers, Postsecondary",
+    "soc": "25-1043",
+    "exposure": "High",
+    "summary": "Teach courses in forestry and conservation science. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$71,670",
+      "annualOpenings": "0",
+      "employment": "30",
+      "projectedGrowth": "3.77%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-science-teachers-postsecondary",
+      "agricultural-sciences-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "economics-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "biologists",
+      "health-specialties-teachers-postsecondary",
+      "natural-sciences-managers",
+      "career-technical-education-teachers-middle-school",
+      "conservation-scientists",
+      "chemistry-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "instructional-coordinators",
+      "career-technical-education-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "forging-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Forging Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4022",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend forging machines to taper, shape, or form metal or plastic parts.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "-4.26%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "foundry-mold-and-coremakers",
+    "title": "Foundry Mold and Coremakers",
+    "soc": "51-4071",
+    "exposure": "Very Low",
+    "summary": "Make or form wax or sand cores or molds used in the production of metal castings in foundries.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "10",
+      "employment": "nan",
+      "projectedGrowth": "-2.86%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "fraud-examiners-investigators-and-analysts",
+    "title": "Fraud Examiners, Investigators and Analysts",
+    "soc": "13-2099",
+    "exposure": "Very High",
+    "summary": "Obtain evidence, take statements, produce reports, and testify to findings regarding resolution of fraud allegations. May coordinate fraud detection and prevention activities.",
+    "laborMarket": {
+      "medianWage": "$78,910",
+      "annualOpenings": "104",
+      "employment": "1,090",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "freight-forwarders",
+    "title": "Freight Forwarders",
+    "soc": "43-5011",
+    "exposure": "Very High",
+    "summary": "Research rates, routings, or modes of transport for shipment of products. Maintain awareness of regulations affecting the international movement of cargo. Make arrangements for additional services, such as storage or inland transportation.",
+    "laborMarket": {
+      "medianWage": "$42,640",
+      "annualOpenings": "442",
+      "employment": "3,050",
+      "projectedGrowth": "2.63%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "freight-forwarders",
+      "shipping-receiving-and-inventory-clerks",
+      "customs-brokers",
+      "aircraft-cargo-handling-supervisors",
+      "postal-service-clerks",
+      "postal-service-mail-carriers",
+      "light-truck-drivers",
+      "postal-service-mail-sorters-processors-and-processing-machine-operators",
+      "dispatchers-except-police-fire-and-ambulance",
+      "order-clerks",
+      "transportation-storage-and-distribution-managers",
+      "logistics-analysts",
+      "transportation-inspectors",
+      "couriers-and-messengers",
+      "railroad-conductors-and-yardmasters",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "heavy-and-tractor-trailer-truck-drivers"
+    ],
+    "training": []
+  },
+  {
+    "id": "fuel-cell-engineers",
+    "title": "Fuel Cell Engineers",
+    "soc": "17-2141",
+    "exposure": "Very High",
+    "summary": "Design, evaluate, modify, or construct fuel cell components or systems for transportation, stationary, or portable applications.",
+    "laborMarket": {
+      "medianWage": "$102,510",
+      "annualOpenings": "386",
+      "employment": "5,440",
+      "projectedGrowth": "1.37%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "mechatronics-engineers",
+      "industrial-engineers",
+      "electronics-engineers-except-computer",
+      "calibration-technologists-and-technicians",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "automotive-engineers",
+      "industrial-machinery-mechanics",
+      "engine-and-other-machine-assemblers",
+      "stationary-engineers-and-boiler-operators",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "industrial-engineering-technologists-and-technicians",
+      "aircraft-structure-surfaces-rigging-and-systems-assemblers",
+      "control-and-valve-installers-and-repairers-except-mechanical-door",
+      "electrical-and-electronic-equipment-assemblers",
+      "electromechanical-equipment-assemblers"
+    ],
+    "training": []
+  },
+  {
+    "id": "fundraisers",
+    "title": "Fundraisers",
+    "soc": "13-1131",
+    "exposure": "High",
+    "summary": "Organize activities to raise funds or otherwise solicit and gather monetary donations or other gifts for an organization. May design and produce promotional materials. May also raise awareness of the organization's work, goals, and financial needs.",
+    "laborMarket": {
+      "medianWage": "$62,010",
+      "annualOpenings": "273",
+      "employment": "1,460",
+      "projectedGrowth": "1.35%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "fundraising-managers",
+      "public-relations-specialists",
+      "advertising-and-promotions-managers",
+      "social-and-community-service-managers",
+      "meeting-convention-and-event-planners",
+      "public-relations-managers",
+      "personal-financial-advisors",
+      "market-research-analysts-and-marketing-specialists",
+      "marketing-managers",
+      "sales-managers",
+      "chief-executives",
+      "management-analysts",
+      "investment-fund-managers",
+      "education-administrators-postsecondary",
+      "advertising-sales-agents",
+      "credit-counselors",
+      "information-technology-project-managers",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "budget-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "fundraising-managers",
+    "title": "Fundraising Managers",
+    "soc": "11-2033",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate activities to solicit and maintain funds for special projects or nonprofit organizations.",
+    "laborMarket": {
+      "medianWage": "$103,650",
+      "annualOpenings": "76",
+      "employment": "430",
+      "projectedGrowth": "1.6%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "fundraisers",
+      "public-relations-managers",
+      "public-relations-specialists",
+      "advertising-and-promotions-managers",
+      "social-and-community-service-managers",
+      "financial-managers",
+      "meeting-convention-and-event-planners",
+      "marketing-managers",
+      "sales-managers",
+      "chief-executives",
+      "management-analysts",
+      "market-research-analysts-and-marketing-specialists",
+      "education-administrators-postsecondary",
+      "personal-financial-advisors",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "compensation-and-benefits-managers",
+      "project-management-specialists",
+      "eligibility-interviewers-government-programs"
+    ],
+    "training": []
+  },
+  {
+    "id": "funeral-attendants",
+    "title": "Funeral Attendants",
+    "soc": "39-4021",
+    "exposure": "Low",
+    "summary": "Perform a variety of tasks during funeral, such as placing casket in parlor or chapel prior to service, arranging floral offerings or lights around casket, directing or escorting mourners, closing casket, and issuing and storing funeral equipment.",
+    "laborMarket": {
+      "medianWage": "$34,060",
+      "annualOpenings": "48",
+      "employment": "270",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "funeral-home-managers",
+    "title": "Funeral Home Managers",
+    "soc": "11-9171",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate the services or resources of funeral homes. Includes activities such as determining prices for services or merchandise and managing the facilities of funeral homes.",
+    "laborMarket": {
+      "medianWage": "$52,150",
+      "annualOpenings": "76",
+      "employment": "240",
+      "projectedGrowth": "1.87%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "furnace-kiln-oven-drier-and-kettle-operators-and-tenders",
+    "title": "Furnace, Kiln, Oven, Drier, and Kettle Operators and Tenders",
+    "soc": "51-9051",
+    "exposure": "Low",
+    "summary": "Operate or tend heating equipment other than basic metal, plastic, or food processing equipment. Includes activities such as annealing glass, drying lumber, curing rubber, removing moisture from materials, or boiling soap.",
+    "laborMarket": {
+      "medianWage": "$40,490",
+      "annualOpenings": "28",
+      "employment": "230",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "furniture-finishers",
+    "title": "Furniture Finishers",
+    "soc": "51-7021",
+    "exposure": "Very Low",
+    "summary": "Shape, finish, and refinish damaged, worn, or used furniture or new high-grade furniture to specified color or finish.",
+    "laborMarket": {
+      "medianWage": "$38,110",
+      "annualOpenings": "59",
+      "employment": "530",
+      "projectedGrowth": "0.65%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gambling-cage-workers",
+    "title": "Gambling Cage Workers",
+    "soc": "43-3041",
+    "exposure": "Medium",
+    "summary": "In a gambling establishment, conduct financial transactions for patrons. Accept patron's credit application and verify credit references to provide check-cashing authorization or to establish house credit accounts. May reconcile daily summaries of transactions to balance books. May sell gambling chips, tokens, or tickets to patrons, or to other workers for resale to patrons. May convert gambling chips, tokens, or tickets to currency upon patron's request. May use a cash register or computer to record transaction.",
+    "laborMarket": {
+      "medianWage": "$46,000",
+      "annualOpenings": "87",
+      "employment": "640",
+      "projectedGrowth": "-0.18%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gambling-change-persons-and-booth-cashiers",
+    "title": "Gambling Change Persons and Booth Cashiers",
+    "soc": "41-2012",
+    "exposure": "Low",
+    "summary": "Exchange coins, tokens, and chips for patrons' money. May issue payoffs and obtain customer's signature on receipt. May operate a booth in the slot machine area and furnish change persons with money bank at the start of the shift, or count and audit money in drawers.",
+    "laborMarket": {
+      "medianWage": "$62,090",
+      "annualOpenings": "190",
+      "employment": "790",
+      "projectedGrowth": "-0.2%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gambling-dealers",
+    "title": "Gambling Dealers",
+    "soc": "39-3011",
+    "exposure": "Low",
+    "summary": "Operate table games. Stand or sit behind table and operate games of chance by dispensing the appropriate number of cards or blocks to players, or operating other gambling equipment. Distribute winnings or collect players' money or chips. May compare the house's hand against players' hands.",
+    "laborMarket": {
+      "medianWage": "$57,590",
+      "annualOpenings": "400",
+      "employment": "1,870",
+      "projectedGrowth": "0.5%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gambling-managers",
+    "title": "Gambling Managers",
+    "soc": "11-9071",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate gambling operations in a casino. May formulate house rules.",
+    "laborMarket": {
+      "medianWage": "$80,460",
+      "annualOpenings": "26",
+      "employment": "200",
+      "projectedGrowth": "0.74%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "first-line-supervisors-of-gambling-services-workers",
+      "gambling-and-sports-book-writers-and-runners",
+      "gambling-surveillance-officers-and-gambling-investigators",
+      "lodging-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "umpires-referees-and-other-sports-officials",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "general-and-operations-managers",
+      "financial-managers",
+      "food-service-managers",
+      "gambling-cage-workers",
+      "gambling-dealers",
+      "gambling-change-persons-and-booth-cashiers",
+      "amusement-and-recreation-attendants",
+      "cashiers",
+      "tellers",
+      "coin-vending-and-amusement-machine-servicers-and-repairers",
+      "athletes-and-sports-competitors",
+      "data-entry-keyers",
+      "hosts-and-hostesses-restaurant-lounge-and-coffee-shop"
+    ],
+    "training": []
+  },
+  {
+    "id": "gambling-surveillance-officers-and-gambling-investigators",
+    "title": "Gambling Surveillance Officers and Gambling Investigators",
+    "soc": "33-9031",
+    "exposure": "Medium",
+    "summary": "Observe gambling operation for irregular activities such as cheating or theft by either employees or patrons. Investigate potential threats to gambling assets such as money, chips, and gambling equipment. Act as oversight and security agent for management and customers.",
+    "laborMarket": {
+      "medianWage": "$49,520",
+      "annualOpenings": "61",
+      "employment": "370",
+      "projectedGrowth": "0.32%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gambling-and-sports-book-writers-and-runners",
+    "title": "Gambling and Sports Book Writers and Runners",
+    "soc": "39-3012",
+    "exposure": "Low",
+    "summary": "Post information enabling patrons to wager on various races and sporting events. Assist in the operation of games such as keno and bingo. May operate random number-generating equipment and announce the numbers for patrons. Receive, verify, and record patrons' wagers. Scan and process winning tickets presented by patrons and pay out winnings for those wagers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "51",
+      "employment": "nan",
+      "projectedGrowth": "0.33%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gas-compressor-and-gas-pumping-station-operators",
+    "title": "Gas Compressor and Gas Pumping Station Operators",
+    "soc": "53-7071",
+    "exposure": "Low",
+    "summary": "Operate steam-, gas-, electric motor-, or internal combustion-engine driven compressors. Transmit, compress, or recover gases, such as butane, nitrogen, hydrogen, and natural gas.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "-2.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gas-plant-operators",
+    "title": "Gas Plant Operators",
+    "soc": "51-8092",
+    "exposure": "Very Low",
+    "summary": "Distribute or process gas for utility companies and others by controlling compressors to maintain specified pressures on main pipelines.",
+    "laborMarket": {
+      "medianWage": "$94,900",
+      "annualOpenings": "13",
+      "employment": "0",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "gem-and-diamond-workers",
+    "title": "Gem and Diamond Workers",
+    "soc": "51-9071",
+    "exposure": "Low",
+    "summary": "Fabricate, finish, or evaluate the quality of gems and diamonds used in jewelry or industrial tools.",
+    "laborMarket": {
+      "medianWage": "$40,010",
+      "annualOpenings": "169",
+      "employment": "360",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "general-internal-medicine-physicians",
+    "title": "General Internal Medicine Physicians",
+    "soc": "29-1216",
+    "exposure": "High",
+    "summary": "Diagnose and provide nonsurgical treatment for a wide range of diseases and injuries of internal organ systems. Provide care mainly for adults and adolescents, and are based primarily in an outpatient care setting.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "54",
+      "employment": "1,700",
+      "projectedGrowth": "1.28%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "pediatric-surgeons",
+      "cardiologists",
+      "obstetricians-and-gynecologists",
+      "pediatricians-general",
+      "emergency-medicine-physicians",
+      "orthopedic-surgeons-except-pediatric",
+      "neurologists",
+      "family-medicine-physicians",
+      "urologists",
+      "nurse-practitioners",
+      "anesthesiologists",
+      "ophthalmologists-except-pediatric",
+      "naturopathic-physicians",
+      "dermatologists",
+      "psychiatrists",
+      "physician-assistants",
+      "clinical-nurse-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "general-and-operations-managers",
+    "title": "General and Operations Managers",
+    "soc": "11-1021",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate the operations of public or private sector organizations, overseeing multiple departments or locations. Duties and responsibilities include formulating policies, managing daily operations, and planning the use of materials and human resources, but are too diverse and general in nature to be classified in any one functional area of management or administration, such as personnel, purchasing, or administrative services. Usually manage through subordinate supervisors. Excludes First-Line Supervisors.",
+    "laborMarket": {
+      "medianWage": "$90,000",
+      "annualOpenings": "8,878",
+      "employment": "100,340",
+      "projectedGrowth": "0.81%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "chief-executives",
+      "administrative-services-managers",
+      "industrial-production-managers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "facilities-managers",
+      "transportation-storage-and-distribution-managers",
+      "project-management-specialists",
+      "construction-managers",
+      "information-technology-project-managers",
+      "sales-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "management-analysts",
+      "first-line-supervisors-of-construction-trades-and-extraction-workers",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "industrial-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "genetic-counselors",
+    "title": "Genetic Counselors",
+    "soc": "29-9092",
+    "exposure": "High",
+    "summary": "Assess individual or family risk for a variety of inherited conditions, such as genetic disorders and birth defects. Provide information to other healthcare providers or to individuals and families concerned with the risk of inherited conditions. Advise individuals and families to support informed decisionmaking and coping methods for those at risk. May help conduct research related to genetic conditions or genetic counseling.",
+    "laborMarket": {
+      "medianWage": "$99,270",
+      "annualOpenings": "6",
+      "employment": "40",
+      "projectedGrowth": "3.85%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "psychiatrists",
+      "family-medicine-physicians",
+      "advanced-practice-psychiatric-nurses",
+      "pediatricians-general",
+      "neurologists",
+      "cardiologists",
+      "pediatric-surgeons",
+      "clinical-neuropsychologists",
+      "preventive-medicine-physicians",
+      "emergency-medicine-physicians",
+      "psychiatric-technicians",
+      "clinical-and-counseling-psychologists",
+      "nurse-practitioners",
+      "obstetricians-and-gynecologists",
+      "general-internal-medicine-physicians",
+      "nurse-midwives",
+      "physician-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "geneticists",
+    "title": "Geneticists",
+    "soc": "19-1029",
+    "exposure": "Very High",
+    "summary": "Research and study the inheritance of traits at the molecular, organism or population level. May evaluate or treat patients with genetic disorders.",
+    "laborMarket": {
+      "medianWage": "$88,610",
+      "annualOpenings": "46",
+      "employment": "620",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "geodetic-surveyors",
+    "title": "Geodetic Surveyors",
+    "soc": "17-1022",
+    "exposure": "High",
+    "summary": "Measure large areas of the Earth's surface using satellite observations, global navigation satellite systems (GNSS), light detection and ranging (LIDAR), or related sources.",
+    "laborMarket": {
+      "medianWage": "$78,480",
+      "annualOpenings": "86",
+      "employment": "1,440",
+      "projectedGrowth": "0.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "geodetic-surveyors",
+      "surveying-and-mapping-technicians",
+      "civil-engineers",
+      "cartographers-and-photogrammetrists",
+      "civil-engineering-technologists-and-technicians",
+      "construction-and-building-inspectors",
+      "geological-technicians-except-hydrologic-technicians",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "architectural-and-civil-drafters",
+      "appraisers-and-assessors-of-real-estate",
+      "geoscientists-except-hydrologists-and-geographers",
+      "government-property-inspectors-and-investigators",
+      "cost-estimators",
+      "transportation-inspectors",
+      "architects-except-landscape-and-naval",
+      "hydrologists",
+      "conservation-scientists",
+      "construction-managers",
+      "forest-and-conservation-technicians",
+      "landscape-architects"
+    ],
+    "training": []
+  },
+  {
+    "id": "geographers",
+    "title": "Geographers",
+    "soc": "19-3092",
+    "exposure": "High",
+    "summary": "Study the nature and use of areas of the Earth's surface, relating and interpreting interactions of physical and cultural phenomena. Conduct research on physical aspects of a region, including land forms, climates, soils, plants, and animals, and conduct research on the spatial implications of human activities within a given area, including social characteristics, economic activities, and political organization, as well as researching interdependence between regions at scales ranging from local to global.",
+    "laborMarket": {
+      "medianWage": "$87,050",
+      "annualOpenings": "3",
+      "employment": "40",
+      "projectedGrowth": "1.11%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "geographic-information-systems-technologists-and-technicians",
+      "geography-teachers-postsecondary",
+      "geoscientists-except-hydrologists-and-geographers",
+      "data-scientists",
+      "cartographers-and-photogrammetrists",
+      "anthropologists-and-archeologists",
+      "geodetic-surveyors",
+      "atmospheric-and-space-scientists",
+      "remote-sensing-scientists-and-technologists",
+      "statisticians",
+      "surveying-and-mapping-technicians",
+      "hydrologic-technicians",
+      "historians",
+      "conservation-scientists",
+      "hydrologists",
+      "survey-researchers",
+      "sociologists",
+      "urban-and-regional-planners",
+      "environmental-economists",
+      "geological-technicians-except-hydrologic-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "geographic-information-systems-technologists-and-technicians",
+    "title": "Geographic Information Systems Technologists and Technicians",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Assist scientists or related professionals in building, maintaining, modifying, or using geographic information systems (GIS) databases. May also perform some custom application development or provide user support.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "geography-teachers-postsecondary",
+    "title": "Geography Teachers, Postsecondary",
+    "soc": "25-1064",
+    "exposure": "High",
+    "summary": "Teach courses in geography. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$77,200",
+      "annualOpenings": "4",
+      "employment": "50",
+      "projectedGrowth": "0.87%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "history-teachers-postsecondary",
+      "geographers",
+      "environmental-science-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "economics-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "elementary-school-teachers-except-special-education",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "geological-technicians-except-hydrologic-technicians",
+    "title": "Geological Technicians, Except Hydrologic Technicians",
+    "soc": "19-4043",
+    "exposure": "Medium",
+    "summary": "Assist scientists or engineers in the use of electronic, sonic, or nuclear measuring instruments in laboratory, exploration, and production activities to obtain data indicating resources such as metallic ore, minerals, gas, coal, or petroleum. Analyze mud and drill cuttings. Chart pressure, temperature, and other characteristics of wells or bore holes.",
+    "laborMarket": {
+      "medianWage": "$48,330",
+      "annualOpenings": "7",
+      "employment": "0",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "geoscientists-except-hydrologists-and-geographers",
+    "title": "Geoscientists, Except Hydrologists and Geographers",
+    "soc": "19-2042",
+    "exposure": "High",
+    "summary": "Study the composition, structure, and other physical aspects of the Earth. May use geological, physics, and mathematics knowledge in exploration for oil, gas, minerals, or underground water; or in waste disposal, land reclamation, or other environmental problems. May study the Earth's internal composition, atmospheres, and oceans, and its magnetic, electrical, and gravitational forces. Includes mineralogists, paleontologists, stratigraphers, geodesists, and seismologists.",
+    "laborMarket": {
+      "medianWage": "$83,630",
+      "annualOpenings": "50",
+      "employment": "510",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "hydrologists",
+      "industrial-ecologists",
+      "conservation-scientists",
+      "soil-and-plant-scientists",
+      "geographers",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "biologists",
+      "data-scientists",
+      "atmospheric-and-space-scientists",
+      "geological-technicians-except-hydrologic-technicians",
+      "hydrologic-technicians",
+      "geodetic-surveyors",
+      "surveying-and-mapping-technicians",
+      "petroleum-engineers",
+      "environmental-science-and-protection-technicians-including-health",
+      "water-resource-specialists",
+      "astronomers"
+    ],
+    "training": []
+  },
+  {
+    "id": "geothermal-production-managers",
+    "title": "Geothermal Production Managers",
+    "soc": "11-3051",
+    "exposure": "Medium",
+    "summary": "Manage operations at geothermal power generation facilities. Maintain and monitor geothermal plant equipment for efficient and safe plant operations.",
+    "laborMarket": {
+      "medianWage": "$128,870",
+      "annualOpenings": "247",
+      "employment": "3,670",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "geothermal-technicians",
+    "title": "Geothermal Technicians",
+    "soc": "49-9099",
+    "exposure": "Low",
+    "summary": "Perform technical activities at power plants or individual installations necessary for the generation of power from geothermal energy sources. Monitor and control operating activities at geothermal power generation facilities and perform maintenance and repairs as necessary. Install, test, and maintain residential and commercial geothermal heat pumps.",
+    "laborMarket": {
+      "medianWage": "$47,750",
+      "annualOpenings": "504",
+      "employment": "5,840",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "glass-blowers-molders-benders-and-finishers",
+    "title": "Glass Blowers, Molders, Benders, and Finishers",
+    "soc": "51-9195",
+    "exposure": "Very Low",
+    "summary": "Shape molten glass according to patterns.",
+    "laborMarket": {
+      "medianWage": "$47,170",
+      "annualOpenings": "138",
+      "employment": "370",
+      "projectedGrowth": "0.05%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "glaziers",
+    "title": "Glaziers",
+    "soc": "47-2121",
+    "exposure": "Very Low",
+    "summary": "Install glass in windows, skylights, store fronts, and display cases, or on surfaces, such as building fronts, interior walls, ceilings, and tabletops.",
+    "laborMarket": {
+      "medianWage": "$50,430",
+      "annualOpenings": "202",
+      "employment": "2,090",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "government-property-inspectors-and-investigators",
+    "title": "Government Property Inspectors and Investigators",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Investigate or inspect government property to ensure compliance with contract agreements and government regulations.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "graders-and-sorters-agricultural-products",
+    "title": "Graders and Sorters, Agricultural Products",
+    "soc": "45-2041",
+    "exposure": "Very Low",
+    "summary": "Grade, sort, or classify unprocessed food and other agricultural products by size, weight, color, or condition.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "66",
+      "employment": "nan",
+      "projectedGrowth": "-1.5%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "graphic-designers",
+    "title": "Graphic Designers",
+    "soc": "27-1024",
+    "exposure": "High",
+    "summary": "Design or create graphics to meet specific commercial or promotional needs, such as packaging, displays, or logos. May use a variety of mediums to achieve artistic or decorative effects.",
+    "laborMarket": {
+      "medianWage": "$52,240",
+      "annualOpenings": "466",
+      "employment": "4,330",
+      "projectedGrowth": "0.59%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "special-effects-artists-and-animators",
+      "art-directors",
+      "web-and-digital-interface-designers",
+      "fine-artists-including-painters-sculptors-and-illustrators",
+      "desktop-publishers",
+      "set-and-exhibit-designers",
+      "commercial-and-industrial-designers",
+      "interior-designers",
+      "software-developers",
+      "fashion-designers",
+      "craft-artists",
+      "prepress-technicians-and-workers",
+      "writers-and-authors",
+      "film-and-video-editors",
+      "merchandise-displayers-and-window-trimmers",
+      "photographers",
+      "web-developers",
+      "fabric-and-apparel-patternmakers",
+      "producers-and-directors"
+    ],
+    "training": []
+  },
+  {
+    "id": "grinding-and-polishing-workers-hand",
+    "title": "Grinding and Polishing Workers, Hand",
+    "soc": "51-9022",
+    "exposure": "Very Low",
+    "summary": "Grind, sand, or polish, using hand tools or hand-held power tools, a variety of metal, wood, stone, clay, plastic, or glass objects. Includes chippers, buffers, and finishers.",
+    "laborMarket": {
+      "medianWage": "$42,570",
+      "annualOpenings": "26",
+      "employment": "250",
+      "projectedGrowth": "-1.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "grinding-lapping-polishing-and-buffing-machine-tool-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Grinding, Lapping, Polishing, and Buffing Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4033",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend grinding and related tools that remove excess material or burrs from surfaces, sharpen edges or corners, or buff, hone, or polish metal or plastic work pieces.",
+    "laborMarket": {
+      "medianWage": "$44,120",
+      "annualOpenings": "87",
+      "employment": "820",
+      "projectedGrowth": "-0.8%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hairdressers-hairstylists-and-cosmetologists",
+    "title": "Hairdressers, Hairstylists, and Cosmetologists",
+    "soc": "39-5012",
+    "exposure": "Very Low",
+    "summary": "Provide beauty services, such as cutting, coloring, and styling hair, and massaging and treating scalp. May shampoo hair, apply makeup, dress wigs, remove hair, and provide nail and skincare services.",
+    "laborMarket": {
+      "medianWage": "$35,220",
+      "annualOpenings": "2,144",
+      "employment": "7,760",
+      "projectedGrowth": "1.64%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hazardous-materials-removal-workers",
+    "title": "Hazardous Materials Removal Workers",
+    "soc": "47-4041",
+    "exposure": "Very Low",
+    "summary": "Identify, remove, pack, transport, or dispose of hazardous materials, including asbestos, lead-based paint, waste oil, fuel, transmission fluid, radioactive materials, or contaminated soil. Specialized training and certification in hazardous materials handling or a confined entry permit are generally required. May operate earth-moving equipment or trucks.",
+    "laborMarket": {
+      "medianWage": "$47,360",
+      "annualOpenings": "71",
+      "employment": "560",
+      "projectedGrowth": "2.02%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "health-education-specialists",
+    "title": "Health Education Specialists",
+    "soc": "21-1091",
+    "exposure": "Very High",
+    "summary": "Provide and manage health education programs that help individuals, families, and their communities maximize and maintain healthy lifestyles. Use data to identify community needs prior to planning, implementing, monitoring, and evaluating programs designed to encourage healthy lifestyles, policies, and environments. May link health systems, health providers, insurers, and patients to address individual and population health needs. May serve as resource to assist individuals, other health professionals, or the community, and may administer fiscal resources for health education programs.",
+    "laborMarket": {
+      "medianWage": "$58,100",
+      "annualOpenings": "144",
+      "employment": "1,070",
+      "projectedGrowth": "1.82%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "community-health-workers",
+      "nursing-instructors-and-teachers-postsecondary",
+      "rehabilitation-counselors",
+      "health-informatics-specialists",
+      "healthcare-social-workers",
+      "health-specialties-teachers-postsecondary",
+      "child-family-and-school-social-workers",
+      "dietitians-and-nutritionists",
+      "social-and-human-service-assistants",
+      "social-and-community-service-managers",
+      "clinical-nurse-specialists",
+      "medical-and-health-services-managers",
+      "preventive-medicine-physicians",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "mental-health-counselors",
+      "mental-health-and-substance-abuse-social-workers",
+      "nurse-practitioners",
+      "instructional-coordinators",
+      "patient-representatives"
+    ],
+    "training": []
+  },
+  {
+    "id": "health-informatics-specialists",
+    "title": "Health Informatics Specialists",
+    "soc": "15-1211",
+    "exposure": "Very High",
+    "summary": "Apply knowledge of nursing and informatics to assist in the design, development, and ongoing modification of computerized health care systems. May educate staff and assist in problem solving to promote the implementation of the health care system.",
+    "laborMarket": {
+      "medianWage": "$101,730",
+      "annualOpenings": "782",
+      "employment": "10,010",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "software-developers",
+      "computer-systems-engineers-architects",
+      "database-administrators",
+      "computer-and-information-systems-managers",
+      "database-architects",
+      "network-and-computer-systems-administrators",
+      "information-security-analysts",
+      "software-quality-assurance-analysts-and-testers",
+      "health-informatics-specialists",
+      "computer-programmers",
+      "computer-network-architects",
+      "computer-network-support-specialists",
+      "computer-user-support-specialists",
+      "management-analysts",
+      "data-scientists"
+    ],
+    "training": []
+  },
+  {
+    "id": "health-information-technologists-and-medical-registrars",
+    "title": "Health Information Technologists and Medical Registrars",
+    "soc": "29-9021",
+    "exposure": "Very High",
+    "summary": "Apply knowledge of healthcare and information systems to assist in the design, development, and continued modification and analysis of computerized healthcare systems. Abstract, collect, and analyze treatment and followup information of patients. May educate staff and assist in problem solving to promote the implementation of the healthcare information system. May design, develop, test, and implement databases with complete history, diagnosis, treatment, and health status to help monitor diseases.",
+    "laborMarket": {
+      "medianWage": "$49,070",
+      "annualOpenings": "76",
+      "employment": "680",
+      "projectedGrowth": "3.66%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "medical-records-specialists",
+      "clinical-data-managers",
+      "health-informatics-specialists",
+      "patient-representatives",
+      "document-management-specialists",
+      "statistical-assistants",
+      "database-administrators",
+      "clinical-research-coordinators",
+      "administrative-services-managers",
+      "management-analysts",
+      "medical-and-health-services-managers",
+      "clinical-nurse-specialists",
+      "preventive-medicine-physicians",
+      "bioinformatics-technicians",
+      "regulatory-affairs-specialists",
+      "database-architects",
+      "operations-research-analysts",
+      "genetic-counselors",
+      "human-resources-assistants-except-payroll-and-timekeeping"
+    ],
+    "training": []
+  },
+  {
+    "id": "health-specialties-teachers-postsecondary",
+    "title": "Health Specialties Teachers, Postsecondary",
+    "soc": "25-1071",
+    "exposure": "High",
+    "summary": "Teach courses in health specialties, in fields such as dentistry, laboratory technology, medicine, pharmacy, public health, therapy, and veterinary medicine.",
+    "laborMarket": {
+      "medianWage": "$95,960",
+      "annualOpenings": "367",
+      "employment": "3,530",
+      "projectedGrowth": "2.74%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "nursing-instructors-and-teachers-postsecondary",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "clinical-nurse-specialists",
+      "health-education-specialists",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "career-technical-education-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "medical-and-health-services-managers",
+      "special-education-teachers-kindergarten",
+      "preventive-medicine-physicians",
+      "clinical-research-coordinators",
+      "health-informatics-specialists",
+      "teaching-assistants-postsecondary",
+      "special-education-teachers-secondary-school",
+      "special-education-teachers-elementary-school",
+      "teaching-assistants-special-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "health-technologists-and-technicians-all-other",
+    "title": "Health Technologists and Technicians, All Other",
+    "soc": "29-2099",
+    "exposure": "Medium",
+    "summary": "All health technologists and technicians not listed separately.",
+    "laborMarket": {
+      "medianWage": "$55,200",
+      "annualOpenings": "293",
+      "employment": "2,670",
+      "projectedGrowth": "2.53%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+    "title": "Health and Safety Engineers, Except Mining Safety Engineers and Inspectors",
+    "soc": "17-2111",
+    "exposure": "High",
+    "summary": "Promote worksite or product safety by applying knowledge of industrial processes, mechanics, chemistry, psychology, and industrial health and safety laws. Includes industrial product safety engineers.",
+    "laborMarket": {
+      "medianWage": "$109,790",
+      "annualOpenings": "12",
+      "employment": "180",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "occupational-health-and-safety-technicians",
+      "occupational-health-and-safety-specialists",
+      "environmental-compliance-inspectors",
+      "environmental-scientists-and-specialists-including-health",
+      "environmental-engineers",
+      "environmental-science-and-protection-technicians-including-health",
+      "fire-prevention-and-protection-engineers",
+      "industrial-engineers",
+      "environmental-engineering-technologists-and-technicians",
+      "security-management-specialists",
+      "construction-and-building-inspectors",
+      "agricultural-inspectors",
+      "aviation-inspectors",
+      "penetration-testers",
+      "quality-control-systems-managers",
+      "industrial-engineering-technologists-and-technicians",
+      "compliance-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "healthcare-diagnosing-or-treating-practitioners-all-other",
+    "title": "Healthcare Diagnosing or Treating Practitioners, All Other",
+    "soc": "29-1299",
+    "exposure": "High",
+    "summary": "All healthcare diagnosing or treating practitioners not listed separately.",
+    "laborMarket": {
+      "medianWage": "$79,990",
+      "annualOpenings": "36",
+      "employment": "540",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "healthcare-practitioners-and-technical-workers-all-other",
+    "title": "Healthcare Practitioners and Technical Workers, All Other",
+    "soc": "29-9099",
+    "exposure": "Medium",
+    "summary": "All healthcare practitioners and technical workers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$65,830",
+      "annualOpenings": "57",
+      "employment": "560",
+      "projectedGrowth": "1.13%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "healthcare-social-workers",
+    "title": "Healthcare Social Workers",
+    "soc": "21-1022",
+    "exposure": "Medium",
+    "summary": "Provide individuals, families, and groups with the psychosocial support needed to cope with chronic, acute, or terminal illnesses. Services include advising family caregivers. Provide patients with information and counseling, and make referrals for other services. May also provide case and care management or interventions designed to promote health, prevent disease, and address barriers to access to healthcare.",
+    "laborMarket": {
+      "medianWage": "$66,540",
+      "annualOpenings": "374",
+      "employment": "2,830",
+      "projectedGrowth": "2.83%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "healthcare-support-workers-all-other",
+    "title": "Healthcare Support Workers, All Other",
+    "soc": "31-9099",
+    "exposure": "Medium",
+    "summary": "All healthcare support workers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$46,530",
+      "annualOpenings": "556",
+      "employment": "3,390",
+      "projectedGrowth": "2.01%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hearing-aid-specialists",
+    "title": "Hearing Aid Specialists",
+    "soc": "29-2092",
+    "exposure": "Low",
+    "summary": "Select and fit hearing aids for customers. Administer and interpret tests of hearing. Assess hearing instrument efficacy. Take ear impressions and prepare, design, and modify ear molds.",
+    "laborMarket": {
+      "medianWage": "$71,470",
+      "annualOpenings": "17",
+      "employment": "170",
+      "projectedGrowth": "3.02%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "heat-treating-equipment-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Heat Treating Equipment Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4191",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend heating equipment, such as heat-treating furnaces, flame-hardening machines, induction machines, soaking pits, or vacuum equipment to temper, harden, anneal, or heat treat metal or plastic objects.",
+    "laborMarket": {
+      "medianWage": "$50,220",
+      "annualOpenings": "9",
+      "employment": "140",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "heating-air-conditioning-and-refrigeration-mechanics-and-installers",
+    "title": "Heating, Air Conditioning, and Refrigeration Mechanics and Installers",
+    "soc": "49-9021",
+    "exposure": "Very Low",
+    "summary": "Install or repair heating, central air conditioning, HVAC, or refrigeration systems, including oil burners, hot-air furnaces, and heating stoves.",
+    "laborMarket": {
+      "medianWage": "$56,580",
+      "annualOpenings": "1,295",
+      "employment": "10,850",
+      "projectedGrowth": "1.83%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "heavy-and-tractor-trailer-truck-drivers",
+    "title": "Heavy and Tractor-Trailer Truck Drivers",
+    "soc": "53-3032",
+    "exposure": "Low",
+    "summary": "Drive a tractor-trailer combination or a truck with a capacity of at least 26,001 pounds Gross Vehicle Weight (GVW). May be required to unload truck. Requires commercial drivers' license. Includes tow truck drivers.",
+    "laborMarket": {
+      "medianWage": "$53,690",
+      "annualOpenings": "4,449",
+      "employment": "42,270",
+      "projectedGrowth": "0.26%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-brickmasons-blockmasons-stonemasons-and-tile-and-marble-setters",
+    "title": "Helpers--Brickmasons, Blockmasons, Stonemasons, and Tile and Marble Setters",
+    "soc": "47-3011",
+    "exposure": "Very Low",
+    "summary": "Help brickmasons, blockmasons, stonemasons, or tile and marble setters by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "$33,370",
+      "annualOpenings": "40",
+      "employment": "480",
+      "projectedGrowth": "-0.14%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-carpenters",
+    "title": "Helpers--Carpenters",
+    "soc": "47-3012",
+    "exposure": "Very Low",
+    "summary": "Help carpenters by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "$40,500",
+      "annualOpenings": "24",
+      "employment": "610",
+      "projectedGrowth": "1.84%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-electricians",
+    "title": "Helpers--Electricians",
+    "soc": "47-3013",
+    "exposure": "Very Low",
+    "summary": "Help electricians by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "$45,410",
+      "annualOpenings": "105",
+      "employment": "840",
+      "projectedGrowth": "1.01%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-extraction-workers",
+    "title": "Helpers--Extraction Workers",
+    "soc": "47-5081",
+    "exposure": "Very Low",
+    "summary": "Help extraction craft workers, such as earth drillers, blasters and explosives workers, derrick operators, and mining machine operators, by performing duties requiring less skill. Duties include supplying equipment or cleaning work area.",
+    "laborMarket": {
+      "medianWage": "$52,760",
+      "annualOpenings": "84",
+      "employment": "400",
+      "projectedGrowth": "1.59%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-installation-maintenance-and-repair-workers",
+    "title": "Helpers--Installation, Maintenance, and Repair Workers",
+    "soc": "49-9098",
+    "exposure": "Very Low",
+    "summary": "Help installation, maintenance, and repair workers in maintenance, parts replacement, and repair of vehicles, industrial machinery, and electrical and electronic equipment. Perform duties such as furnishing tools, materials, and supplies to other workers; cleaning work area, machines, and tools; and holding materials or tools for other workers.",
+    "laborMarket": {
+      "medianWage": "$43,270",
+      "annualOpenings": "224",
+      "employment": "1,850",
+      "projectedGrowth": "1.1%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-painters-paperhangers-plasterers-and-stucco-masons",
+    "title": "Helpers--Painters, Paperhangers, Plasterers, and Stucco Masons",
+    "soc": "47-3014",
+    "exposure": "Very Low",
+    "summary": "Help painters, paperhangers, plasterers, or stucco masons by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "$37,250",
+      "annualOpenings": "16",
+      "employment": "230",
+      "projectedGrowth": "1.5%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-pipelayers-plumbers-pipefitters-and-steamfitters",
+    "title": "Helpers--Pipelayers, Plumbers, Pipefitters, and Steamfitters",
+    "soc": "47-3015",
+    "exposure": "Very Low",
+    "summary": "Help plumbers, pipefitters, steamfitters, or pipelayers by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "$41,790",
+      "annualOpenings": "126",
+      "employment": "840",
+      "projectedGrowth": "1.51%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-production-workers",
+    "title": "Helpers--Production Workers",
+    "soc": "51-9198",
+    "exposure": "Very Low",
+    "summary": "Help production workers by performing duties requiring less skill. Duties include supplying or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "$37,440",
+      "annualOpenings": "197",
+      "employment": "1,440",
+      "projectedGrowth": "-0.2%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "helpers-roofers",
+    "title": "Helpers--Roofers",
+    "soc": "47-3016",
+    "exposure": "Very Low",
+    "summary": "Help roofers by performing duties requiring less skill. Duties include using, supplying, or holding materials or tools, and cleaning work area and equipment.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "2.25%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "highway-maintenance-workers",
+    "title": "Highway Maintenance Workers",
+    "soc": "47-4051",
+    "exposure": "Very Low",
+    "summary": "Maintain highways, municipal and rural roads, airport runways, and rights-of-way. Duties include patching broken or eroded pavement and repairing guard rails, highway markers, and snow fences. May also mow or clear brush from along road, or plow snow from roadway.",
+    "laborMarket": {
+      "medianWage": "$47,770",
+      "annualOpenings": "124",
+      "employment": "1,570",
+      "projectedGrowth": "1.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "historians",
+    "title": "Historians",
+    "soc": "19-3093",
+    "exposure": "High",
+    "summary": "Research, analyze, record, and interpret the past as recorded in sources, such as government and institutional records, newspapers and other periodicals, photographs, interviews, films, electronic media, and unpublished manuscripts, such as personal diaries and letters.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "anthropologists-and-archeologists",
+      "archivists",
+      "curators",
+      "history-teachers-postsecondary",
+      "geographers",
+      "sociologists",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "news-analysts-reporters-and-journalists",
+      "librarians-and-media-collections-specialists",
+      "social-science-research-assistants",
+      "museum-technicians-and-conservators",
+      "english-language-and-literature-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "poets-lyricists-and-creative-writers",
+      "tour-guides-and-escorts",
+      "geography-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "architecture-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "editors"
+    ],
+    "training": []
+  },
+  {
+    "id": "history-teachers-postsecondary",
+    "title": "History Teachers, Postsecondary",
+    "soc": "25-1125",
+    "exposure": "High",
+    "summary": "Teach courses in human history and historiography. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$101,510",
+      "annualOpenings": "14",
+      "employment": "170",
+      "projectedGrowth": "0.93%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "foreign-language-and-literature-teachers-postsecondary",
+      "law-teachers-postsecondary",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "education-teachers-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "communications-teachers-postsecondary",
+      "historians",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "economics-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "art-drama-and-music-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "hoist-and-winch-operators",
+    "title": "Hoist and Winch Operators",
+    "soc": "53-7041",
+    "exposure": "Very Low",
+    "summary": "Operate or tend hoists or winches to lift and pull loads using power-operated cable equipment.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "7",
+      "employment": "nan",
+      "projectedGrowth": "1.29%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "home-appliance-repairers",
+    "title": "Home Appliance Repairers",
+    "soc": "49-9031",
+    "exposure": "Low",
+    "summary": "Repair, adjust, or install all types of electric or gas household appliances, such as refrigerators, washers, dryers, and ovens.",
+    "laborMarket": {
+      "medianWage": "$47,170",
+      "annualOpenings": "88",
+      "employment": "920",
+      "projectedGrowth": "0.56%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hospitalists",
+    "title": "Hospitalists",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "Provide inpatient care predominantly in settings such as medical wards, acute care units, intensive care units, rehabilitation centers, or emergency rooms. Manage and coordinate patient care throughout treatment.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hosts-and-hostesses-restaurant-lounge-and-coffee-shop",
+    "title": "Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",
+    "soc": "35-9031",
+    "exposure": "Low",
+    "summary": "Welcome patrons, seat them at tables or in lounge, and help ensure quality of facilities and service.",
+    "laborMarket": {
+      "medianWage": "$34,110",
+      "annualOpenings": "2,881",
+      "employment": "10,860",
+      "projectedGrowth": "0.11%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hotel-motel-and-resort-desk-clerks",
+    "title": "Hotel, Motel, and Resort Desk Clerks",
+    "soc": "43-4081",
+    "exposure": "High",
+    "summary": "Accommodate hotel, motel, and resort patrons by registering and assigning rooms to guests, issuing room keys or cards, transmitting and receiving messages, keeping records of occupied rooms and guests' accounts, making and confirming reservations, and presenting statements to and collecting payments from departing guests.",
+    "laborMarket": {
+      "medianWage": "$35,570",
+      "annualOpenings": "989",
+      "employment": "5,910",
+      "projectedGrowth": "1.1%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "lodging-managers",
+      "concierges",
+      "receptionists-and-information-clerks",
+      "locker-room-coatroom-and-dressing-room-attendants",
+      "counter-and-rental-clerks",
+      "baggage-porters-and-bellhops",
+      "hosts-and-hostesses-restaurant-lounge-and-coffee-shop",
+      "cashiers",
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "passenger-attendants",
+      "customer-service-representatives",
+      "medical-secretaries-and-administrative-assistants",
+      "food-servers-nonrestaurant",
+      "maids-and-housekeeping-cleaners",
+      "ushers-lobby-attendants-and-ticket-takers",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "parking-attendants",
+      "dining-room-and-cafeteria-attendants-and-bartender-helpers",
+      "waiters-and-waitresses",
+      "office-clerks-general"
+    ],
+    "training": []
+  },
+  {
+    "id": "human-factors-engineers-and-ergonomists",
+    "title": "Human Factors Engineers and Ergonomists",
+    "soc": "17-2112",
+    "exposure": "Very High",
+    "summary": "Design objects, facilities, and environments to optimize human well-being and overall system performance, applying theory, principles, and data regarding the relationship between humans and respective technology. Investigate and analyze characteristics of human behavior and performance as it relates to the use of technology.",
+    "laborMarket": {
+      "medianWage": "$110,100",
+      "annualOpenings": "525",
+      "employment": "7,320",
+      "projectedGrowth": "1.24%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "industrial-engineering-technologists-and-technicians",
+      "manufacturing-engineers",
+      "industrial-production-managers",
+      "mechanical-engineers",
+      "logistics-engineers",
+      "mechatronics-engineers",
+      "electrical-engineers",
+      "materials-engineers",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "project-management-specialists",
+      "electronics-engineers-except-computer",
+      "team-assemblers",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "architectural-and-engineering-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "human-resources-assistants-except-payroll-and-timekeeping",
+    "title": "Human Resources Assistants, Except Payroll and Timekeeping",
+    "soc": "43-4161",
+    "exposure": "Very High",
+    "summary": "Compile and keep personnel records. Record data for each employee, such as address, weekly earnings, absences, amount of sales or production, supervisory reports, and date of and reason for termination. May prepare reports for employment records, file employment records, or search employee files and furnish information to authorized persons.",
+    "laborMarket": {
+      "medianWage": "$48,720",
+      "annualOpenings": "197",
+      "employment": "1,560",
+      "projectedGrowth": "0.11%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "human-resources-specialists",
+      "human-resources-managers",
+      "eligibility-interviewers-government-programs",
+      "payroll-and-timekeeping-clerks",
+      "compensation-benefits-and-job-analysis-specialists",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "compensation-and-benefits-managers",
+      "administrative-services-managers",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "management-analysts",
+      "health-information-technologists-and-medical-registrars",
+      "office-clerks-general",
+      "social-and-community-service-managers",
+      "interviewers-except-eligibility-and-loan",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "medical-secretaries-and-administrative-assistants",
+      "medical-records-specialists",
+      "labor-relations-specialists",
+      "receptionists-and-information-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "human-resources-managers",
+    "title": "Human Resources Managers",
+    "soc": "11-3121",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate human resources activities and staff of an organization.",
+    "laborMarket": {
+      "medianWage": "$130,340",
+      "annualOpenings": "313",
+      "employment": "3,870",
+      "projectedGrowth": "0.83%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "human-resources-specialists",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "management-analysts",
+      "industrial-organizational-psychologists",
+      "labor-relations-specialists",
+      "training-and-development-managers",
+      "compensation-benefits-and-job-analysis-specialists",
+      "social-and-community-service-managers",
+      "compensation-and-benefits-managers",
+      "equal-opportunity-representatives-and-officers",
+      "project-management-specialists",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "chief-executives",
+      "administrative-services-managers",
+      "training-and-development-specialists",
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "public-relations-managers",
+      "medical-and-health-services-managers",
+      "payroll-and-timekeeping-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "human-resources-specialists",
+    "title": "Human Resources Specialists",
+    "soc": "13-1071",
+    "exposure": "Very High",
+    "summary": "Recruit, screen, interview, or place individuals within an organization. May perform other activities in multiple human resources areas.",
+    "laborMarket": {
+      "medianWage": "$65,410",
+      "annualOpenings": "1,856",
+      "employment": "19,840",
+      "projectedGrowth": "0.95%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "human-resources-managers",
+      "eligibility-interviewers-government-programs",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "compensation-benefits-and-job-analysis-specialists",
+      "industrial-organizational-psychologists",
+      "compensation-and-benefits-managers",
+      "training-and-development-managers",
+      "administrative-services-managers",
+      "training-and-development-specialists",
+      "management-analysts",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "labor-relations-specialists",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "project-management-specialists",
+      "social-and-community-service-managers",
+      "equal-opportunity-representatives-and-officers",
+      "payroll-and-timekeeping-clerks",
+      "first-line-supervisors-of-passenger-attendants"
+    ],
+    "training": []
+  },
+  {
+    "id": "hydroelectric-plant-technicians",
+    "title": "Hydroelectric Plant Technicians",
+    "soc": "51-8013",
+    "exposure": "Low",
+    "summary": "Monitor and control activities associated with hydropower generation. Operate plant equipment, such as turbines, pumps, valves, gates, fans, electric control boards, and battery banks. Monitor equipment operation and performance and make necessary adjustments to ensure optimal performance. Perform equipment maintenance and repair as necessary.",
+    "laborMarket": {
+      "medianWage": "$107,210",
+      "annualOpenings": "107",
+      "employment": "890",
+      "projectedGrowth": "-0.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hydroelectric-production-managers",
+    "title": "Hydroelectric Production Managers",
+    "soc": "11-3051",
+    "exposure": "Medium",
+    "summary": "Manage operations at hydroelectric power generation facilities. Maintain and monitor hydroelectric plant equipment for efficient and safe plant operations.",
+    "laborMarket": {
+      "medianWage": "$128,870",
+      "annualOpenings": "247",
+      "employment": "3,670",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "hydrologic-technicians",
+    "title": "Hydrologic Technicians",
+    "soc": "19-4044",
+    "exposure": "High",
+    "summary": "Collect and organize data concerning the distribution and circulation of ground and surface water, and data on its physical, chemical, and biological properties. Measure and report on flow rates and ground water levels, maintain field equipment, collect water samples, install and collect sampling equipment, and process samples for shipment to testing laboratories. May collect data on behalf of hydrologists, engineers, developers, government agencies, or agriculture.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "7",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "hydrologists",
+      "water-wastewater-engineers",
+      "geological-technicians-except-hydrologic-technicians",
+      "water-resource-specialists",
+      "conservation-scientists",
+      "environmental-scientists-and-specialists-including-health",
+      "surveying-and-mapping-technicians",
+      "environmental-science-and-protection-technicians-including-health",
+      "environmental-engineering-technologists-and-technicians",
+      "environmental-engineers",
+      "geodetic-surveyors",
+      "geoscientists-except-hydrologists-and-geographers",
+      "geographic-information-systems-technologists-and-technicians",
+      "atmospheric-and-space-scientists",
+      "geographers",
+      "remote-sensing-technicians",
+      "remote-sensing-scientists-and-technologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "hydrologists",
+    "title": "Hydrologists",
+    "soc": "19-2043",
+    "exposure": "High",
+    "summary": "Research the distribution, circulation, and physical properties of underground and surface waters; and study the form and intensity of precipitation and its rate of infiltration into the soil, movement through the earth, and return to the ocean and atmosphere.",
+    "laborMarket": {
+      "medianWage": "$76,420",
+      "annualOpenings": "26",
+      "employment": "320",
+      "projectedGrowth": "-0.15%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "geoscientists-except-hydrologists-and-geographers",
+      "hydrologic-technicians",
+      "industrial-ecologists",
+      "water-resource-specialists",
+      "conservation-scientists",
+      "water-wastewater-engineers",
+      "soil-and-plant-scientists",
+      "environmental-engineers",
+      "geological-technicians-except-hydrologic-technicians",
+      "atmospheric-and-space-scientists",
+      "environmental-science-and-protection-technicians-including-health",
+      "environmental-engineering-technologists-and-technicians",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "geodetic-surveyors",
+      "petroleum-engineers",
+      "biologists",
+      "mining-and-geological-engineers-including-mining-safety-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "industrial-ecologists",
+    "title": "Industrial Ecologists",
+    "soc": "19-2041",
+    "exposure": "High",
+    "summary": "Apply principles and processes of natural ecosystems to develop models for efficient industrial systems. Use knowledge from the physical and social sciences to maximize effective use of natural resources in the production and use of goods and services. Examine societal issues and their relationship with both technical systems and the environment.",
+    "laborMarket": {
+      "medianWage": "$78,870",
+      "annualOpenings": "124",
+      "employment": "1,590",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-compliance-inspectors",
+      "environmental-engineers",
+      "industrial-ecologists",
+      "environmental-science-and-protection-technicians-including-health",
+      "conservation-scientists",
+      "environmental-engineering-technologists-and-technicians",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologic-technicians",
+      "health-and-safety-engineers-except-mining-safety-engineers-and-inspectors",
+      "hydrologists",
+      "occupational-health-and-safety-specialists",
+      "water-resource-specialists",
+      "environmental-science-teachers-postsecondary",
+      "chief-sustainability-officers",
+      "soil-and-plant-scientists",
+      "occupational-health-and-safety-technicians",
+      "foresters"
+    ],
+    "training": []
+  },
+  {
+    "id": "industrial-engineering-technologists-and-technicians",
+    "title": "Industrial Engineering Technologists and Technicians",
+    "soc": "17-3026",
+    "exposure": "Medium",
+    "summary": "Apply engineering theory and principles to problems of industrial layout or manufacturing production, usually under the direction of engineering staff. May perform time and motion studies on worker operations in a variety of industries for purposes such as establishing standard production rates or improving efficiency.",
+    "laborMarket": {
+      "medianWage": "$69,900",
+      "annualOpenings": "205",
+      "employment": "1,810",
+      "projectedGrowth": "0.25%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "industrial-engineers",
+    "title": "Industrial Engineers",
+    "soc": "17-2112",
+    "exposure": "Very High",
+    "summary": "Design, develop, test, and evaluate integrated systems for managing industrial production processes, including human work factors, quality control, inventory control, logistics and material flow, cost analysis, and production coordination.",
+    "laborMarket": {
+      "medianWage": "$110,100",
+      "annualOpenings": "525",
+      "employment": "7,320",
+      "projectedGrowth": "1.24%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "industrial-engineering-technologists-and-technicians",
+      "manufacturing-engineers",
+      "industrial-production-managers",
+      "mechanical-engineers",
+      "logistics-engineers",
+      "mechatronics-engineers",
+      "electrical-engineers",
+      "materials-engineers",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "project-management-specialists",
+      "electronics-engineers-except-computer",
+      "team-assemblers",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "architectural-and-engineering-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "industrial-machinery-mechanics",
+    "title": "Industrial Machinery Mechanics",
+    "soc": "49-9041",
+    "exposure": "Low",
+    "summary": "Repair, install, adjust, or maintain industrial production and processing machinery or refinery and pipeline distribution systems. May also install, dismantle, or move machinery and heavy equipment according to plans.",
+    "laborMarket": {
+      "medianWage": "$64,840",
+      "annualOpenings": "524",
+      "employment": "4,450",
+      "projectedGrowth": "2.09%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "industrial-production-managers",
+    "title": "Industrial Production Managers",
+    "soc": "11-3051",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate the work activities and resources necessary for manufacturing products in accordance with cost, quality, and quantity specifications.",
+    "laborMarket": {
+      "medianWage": "$128,870",
+      "annualOpenings": "247",
+      "employment": "3,670",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "industrial-truck-and-tractor-operators",
+    "title": "Industrial Truck and Tractor Operators",
+    "soc": "53-7051",
+    "exposure": "Very Low",
+    "summary": "Operate industrial trucks or tractors equipped to move materials around a warehouse, storage yard, factory, construction site, or similar location.",
+    "laborMarket": {
+      "medianWage": "$47,250",
+      "annualOpenings": "1,712",
+      "employment": "14,760",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "industrial-organizational-psychologists",
+    "title": "Industrial-Organizational Psychologists",
+    "soc": "19-3032",
+    "exposure": "High",
+    "summary": "Apply principles of psychology to human resources, administration, management, sales, and marketing problems. Activities may include policy planning; employee testing and selection, training, and development; and organizational development and analysis. May work with management to organize the work setting to improve worker productivity.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "20",
+      "employment": "nan",
+      "projectedGrowth": "2.75%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "training-and-development-managers",
+      "training-and-development-specialists",
+      "management-analysts",
+      "human-resources-managers",
+      "human-resources-specialists",
+      "instructional-coordinators",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "social-and-community-service-managers",
+      "project-management-specialists",
+      "business-teachers-postsecondary",
+      "rehabilitation-counselors",
+      "clinical-and-counseling-psychologists",
+      "education-teachers-postsecondary",
+      "school-psychologists",
+      "social-work-teachers-postsecondary",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "psychology-teachers-postsecondary",
+      "data-scientists",
+      "education-administrators-postsecondary",
+      "medical-and-health-services-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "information-security-analysts",
+    "title": "Information Security Analysts",
+    "soc": "15-1212",
+    "exposure": "Very High",
+    "summary": "Plan, implement, upgrade, or monitor security measures for the protection of computer networks and information. Assess system vulnerabilities for security risks and propose and implement risk mitigation strategies. May ensure appropriate security controls are in place that will safeguard digital files and vital electronic infrastructure. May respond to computer security breaches and viruses.",
+    "laborMarket": {
+      "medianWage": "$125,320",
+      "annualOpenings": "304",
+      "employment": "4,170",
+      "projectedGrowth": "2.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "information-security-engineers",
+      "network-and-computer-systems-administrators",
+      "computer-systems-analysts",
+      "computer-network-support-specialists",
+      "database-administrators",
+      "computer-network-architects",
+      "security-management-specialists",
+      "security-managers",
+      "computer-and-information-systems-managers",
+      "software-developers",
+      "computer-user-support-specialists",
+      "database-architects",
+      "intelligence-analysts",
+      "software-quality-assurance-analysts-and-testers"
+    ],
+    "training": []
+  },
+  {
+    "id": "information-security-engineers",
+    "title": "Information Security Engineers",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Develop and oversee the implementation of information security procedures and policies. Build, maintain and upgrade security technology, such as firewalls, for the safe use of computer networks and the transmission and retrieval of information. Design and implement appropriate security controls to identify vulnerabilities and protect digital files and electronic infrastructures. Monitor and respond to computer security breaches, viruses, and intrusions, and perform forensic investigation. May oversee the assessment of information security systems.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "information-technology-project-managers",
+    "title": "Information Technology Project Managers",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Plan, initiate, and manage information technology (IT) projects. Lead and guide the work of technical staff. Serve as liaison between business and technical aspects of projects. Plan project stages and assess business implications for each stage. Monitor progress to assure deadlines, standards, and cost targets are met.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "inspectors-testers-sorters-samplers-and-weighers",
+    "title": "Inspectors, Testers, Sorters, Samplers, and Weighers",
+    "soc": "51-9061",
+    "exposure": "Medium",
+    "summary": "Inspect, test, sort, sample, or weigh nonagricultural raw materials or processed, machined, fabricated, or assembled parts or products for defects, wear, and deviations from specifications. May use precision measuring instruments and complex test equipment.",
+    "laborMarket": {
+      "medianWage": "$50,620",
+      "annualOpenings": "1,143",
+      "employment": "9,700",
+      "projectedGrowth": "-0.13%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "installation-maintenance-and-repair-workers-all-other",
+    "title": "Installation, Maintenance, and Repair Workers, All Other",
+    "soc": "49-9099",
+    "exposure": "Low",
+    "summary": "All installation, maintenance, and repair workers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$47,750",
+      "annualOpenings": "504",
+      "employment": "5,840",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "instructional-coordinators",
+    "title": "Instructional Coordinators",
+    "soc": "25-9031",
+    "exposure": "High",
+    "summary": "Develop instructional material, coordinate educational content, and incorporate current technology into instruction in order to provide guidelines to educators and instructors for developing curricula and conducting courses. May train and coach teachers. Includes educational consultants and specialists, and instructional material directors.",
+    "laborMarket": {
+      "medianWage": "$62,700",
+      "annualOpenings": "618",
+      "employment": "6,030",
+      "projectedGrowth": "0.89%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "training-and-development-specialists",
+      "education-teachers-postsecondary",
+      "training-and-development-managers",
+      "career-technical-education-teachers-middle-school",
+      "elementary-school-teachers-except-special-education",
+      "special-education-teachers-secondary-school",
+      "tutors",
+      "special-education-teachers-kindergarten",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "teaching-assistants-postsecondary",
+      "teaching-assistants-special-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education",
+      "special-education-teachers-middle-school",
+      "special-education-teachers-elementary-school",
+      "career-technical-education-teachers-secondary-school",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "education-administrators-kindergarten-through-secondary",
+      "career-technical-education-teachers-postsecondary",
+      "middle-school-teachers-except-special-and-career-technical-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "insulation-workers-floor-ceiling-and-wall",
+    "title": "Insulation Workers, Floor, Ceiling, and Wall",
+    "soc": "47-2131",
+    "exposure": "Very Low",
+    "summary": "Line and cover structures with insulating materials. May work with batt, roll, or blown insulation materials.",
+    "laborMarket": {
+      "medianWage": "$47,570",
+      "annualOpenings": "98",
+      "employment": "660",
+      "projectedGrowth": "1.11%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "insulation-workers-mechanical",
+    "title": "Insulation Workers, Mechanical",
+    "soc": "47-2132",
+    "exposure": "Very Low",
+    "summary": "Apply insulating materials to pipes or ductwork, or other mechanical systems in order to help control and maintain temperature.",
+    "laborMarket": {
+      "medianWage": "$78,390",
+      "annualOpenings": "34",
+      "employment": "0",
+      "projectedGrowth": "1.4%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "insurance-appraisers-auto-damage",
+    "title": "Insurance Appraisers, Auto Damage",
+    "soc": "13-1032",
+    "exposure": "High",
+    "summary": "Appraise automobile or other vehicle damage to determine repair costs for insurance claim settlement. Prepare insurance forms to indicate repair cost or cost estimates and recommendations. May seek agreement with automotive repair shop on repair costs.",
+    "laborMarket": {
+      "medianWage": "$72,830",
+      "annualOpenings": "11",
+      "employment": "100",
+      "projectedGrowth": "-0.51%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [
+      "transportation-vehicle-equipment-and-systems-inspectors-except-aviation",
+      "automotive-body-and-related-repairers",
+      "automotive-service-technicians-and-mechanics",
+      "appraisers-of-personal-and-business-property",
+      "automotive-engineering-technicians",
+      "cost-estimators",
+      "appraisers-and-assessors-of-real-estate",
+      "insurance-claims-and-policy-processing-clerks",
+      "claims-adjusters-examiners-and-investigators",
+      "credit-authorizers-checkers-and-clerks",
+      "motorcycle-mechanics",
+      "automotive-glass-installers-and-repairers",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "inspectors-testers-sorters-samplers-and-weighers",
+      "electric-motor-power-tool-and-related-repairers",
+      "electronic-equipment-installers-and-repairers-motor-vehicles",
+      "rail-car-repairers",
+      "parts-salespersons"
+    ],
+    "training": []
+  },
+  {
+    "id": "insurance-claims-and-policy-processing-clerks",
+    "title": "Insurance Claims and Policy Processing Clerks",
+    "soc": "43-9041",
+    "exposure": "Very High",
+    "summary": "Process new insurance policies, modifications to existing policies, and claims forms. Obtain information from policyholders to verify the accuracy and completeness of information on claims forms, applications and related documents, and company records. Update existing policies and company records to reflect changes requested by policyholders and insurance company representatives.",
+    "laborMarket": {
+      "medianWage": "$49,270",
+      "annualOpenings": "580",
+      "employment": "8,240",
+      "projectedGrowth": "0.06%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "customer-service-representatives",
+      "credit-authorizers-checkers-and-clerks",
+      "eligibility-interviewers-government-programs",
+      "billing-and-posting-clerks",
+      "loan-interviewers-and-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "correspondence-clerks",
+      "office-clerks-general",
+      "brokerage-clerks",
+      "new-accounts-clerks",
+      "claims-adjusters-examiners-and-investigators",
+      "insurance-sales-agents",
+      "insurance-underwriters",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "legal-secretaries-and-administrative-assistants",
+      "medical-records-specialists",
+      "bill-and-account-collectors",
+      "title-examiners-abstractors-and-searchers",
+      "compensation-benefits-and-job-analysis-specialists",
+      "tax-examiners-and-collectors-and-revenue-agents"
+    ],
+    "training": []
+  },
+  {
+    "id": "insurance-sales-agents",
+    "title": "Insurance Sales Agents",
+    "soc": "41-3021",
+    "exposure": "Very High",
+    "summary": "Sell life, property, casualty, health, automotive, or other types of insurance. May refer clients to independent brokers, work as an independent broker, or be employed by an insurance company.",
+    "laborMarket": {
+      "medianWage": "$59,400",
+      "annualOpenings": "1,112",
+      "employment": "9,910",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "insurance-claims-and-policy-processing-clerks",
+      "customer-service-representatives",
+      "personal-financial-advisors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "insurance-underwriters",
+      "loan-officers",
+      "credit-authorizers-checkers-and-clerks",
+      "credit-counselors",
+      "financial-and-investment-analysts",
+      "claims-adjusters-examiners-and-investigators",
+      "eligibility-interviewers-government-programs",
+      "compensation-benefits-and-job-analysis-specialists",
+      "new-accounts-clerks",
+      "loan-interviewers-and-clerks",
+      "real-estate-sales-agents",
+      "management-analysts",
+      "financial-risk-specialists",
+      "financial-managers",
+      "credit-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "insurance-underwriters",
+    "title": "Insurance Underwriters",
+    "soc": "13-2053",
+    "exposure": "Very High",
+    "summary": "Review individual applications for insurance to evaluate degree of risk involved and determine acceptance of applications.",
+    "laborMarket": {
+      "medianWage": "$73,740",
+      "annualOpenings": "174",
+      "employment": "3,300",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "financial-risk-specialists",
+      "credit-analysts",
+      "loan-officers",
+      "insurance-sales-agents",
+      "claims-adjusters-examiners-and-investigators",
+      "personal-financial-advisors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "loan-interviewers-and-clerks",
+      "financial-and-investment-analysts",
+      "credit-counselors",
+      "insurance-claims-and-policy-processing-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "brokerage-clerks",
+      "actuaries",
+      "title-examiners-abstractors-and-searchers",
+      "investment-fund-managers",
+      "financial-examiners",
+      "accountants-and-auditors",
+      "appraisers-and-assessors-of-real-estate"
+    ],
+    "training": []
+  },
+  {
+    "id": "intelligence-analysts",
+    "title": "Intelligence Analysts",
+    "soc": "33-3021",
+    "exposure": "Medium",
+    "summary": "Gather, analyze, or evaluate information from a variety of sources, such as law enforcement databases, surveillance, intelligence networks or geographic information systems. Use intelligence data to anticipate and prevent organized crime activities, such as terrorism.",
+    "laborMarket": {
+      "medianWage": "$103,270",
+      "annualOpenings": "310",
+      "employment": "5,220",
+      "projectedGrowth": "0.39%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "interior-designers",
+    "title": "Interior Designers",
+    "soc": "27-1025",
+    "exposure": "High",
+    "summary": "Plan, design, and furnish the internal space of rooms or buildings. Design interior environments or create physical layouts that are practical, aesthetic, and conducive to the intended purposes. May specialize in a particular field, style, or phase of interior design.",
+    "laborMarket": {
+      "medianWage": "$63,950",
+      "annualOpenings": "195",
+      "employment": "1,550",
+      "projectedGrowth": "0.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "commercial-and-industrial-designers",
+      "craft-artists",
+      "landscape-architects",
+      "fashion-designers",
+      "merchandise-displayers-and-window-trimmers",
+      "set-and-exhibit-designers",
+      "architectural-and-civil-drafters",
+      "graphic-designers",
+      "art-directors",
+      "mechanical-drafters",
+      "architects-except-landscape-and-naval",
+      "model-makers-wood",
+      "tile-and-stone-setters",
+      "carpenters",
+      "carpet-installers",
+      "plasterers-and-stucco-masons",
+      "layout-workers-metal-and-plastic",
+      "furniture-finishers",
+      "painting-coating-and-decorating-workers",
+      "lighting-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "interpreters-and-translators",
+    "title": "Interpreters and Translators",
+    "soc": "27-3091",
+    "exposure": "Very High",
+    "summary": "Interpret oral or sign language, or translate written text from one language into another.",
+    "laborMarket": {
+      "medianWage": "$48,200",
+      "annualOpenings": "238",
+      "employment": "2,040",
+      "projectedGrowth": "0.83%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "speech-language-pathologists",
+      "foreign-language-and-literature-teachers-postsecondary",
+      "speech-language-pathology-assistants",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "english-language-and-literature-teachers-postsecondary",
+      "tutors",
+      "proofreaders-and-copy-markers",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "social-science-research-assistants",
+      "technical-writers",
+      "word-processors-and-typists",
+      "librarians-and-media-collections-specialists",
+      "instructional-coordinators",
+      "library-technicians",
+      "medical-transcriptionists",
+      "elementary-school-teachers-except-special-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "file-clerks",
+      "library-assistants-clerical",
+      "special-education-teachers-middle-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "interviewers-except-eligibility-and-loan",
+    "title": "Interviewers, Except Eligibility and Loan",
+    "soc": "43-4111",
+    "exposure": "Very High",
+    "summary": "Interview persons by telephone, mail, in person, or by other means for the purpose of completing forms, applications, or questionnaires. Ask specific questions, record answers, and assist persons with completing form. May sort, classify, and file forms.",
+    "laborMarket": {
+      "medianWage": "$41,280",
+      "annualOpenings": "435",
+      "employment": "2,610",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "eligibility-interviewers-government-programs",
+      "patient-representatives",
+      "office-clerks-general",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "receptionists-and-information-clerks",
+      "medical-secretaries-and-administrative-assistants",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "customer-service-representatives",
+      "correspondence-clerks",
+      "health-information-technologists-and-medical-registrars",
+      "survey-researchers",
+      "social-science-research-assistants",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "human-resources-specialists",
+      "management-analysts",
+      "statistical-assistants",
+      "medical-records-specialists",
+      "file-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "payroll-and-timekeeping-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "investment-fund-managers",
+    "title": "Investment Fund Managers",
+    "soc": "11-3031",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate investment strategy or operations for a large pool of liquid assets supplied by institutional investors or individual investors.",
+    "laborMarket": {
+      "medianWage": "$132,290",
+      "annualOpenings": "1,331",
+      "employment": "14,570",
+      "projectedGrowth": "1.71%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "accountants-and-auditors",
+      "financial-and-investment-analysts",
+      "personal-financial-advisors",
+      "credit-analysts",
+      "loan-officers",
+      "financial-risk-specialists",
+      "securities-commodities-and-financial-services-sales-agents",
+      "treasurers-and-controllers",
+      "financial-examiners",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "management-analysts",
+      "credit-counselors",
+      "new-accounts-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "brokerage-clerks",
+      "budget-analysts",
+      "administrative-services-managers",
+      "tellers"
+    ],
+    "training": []
+  },
+  {
+    "id": "janitors-and-cleaners-except-maids-and-housekeeping-cleaners",
+    "title": "Janitors and Cleaners, Except Maids and Housekeeping Cleaners",
+    "soc": "37-2011",
+    "exposure": "Very Low",
+    "summary": "Keep buildings in clean and orderly condition. Perform heavy cleaning duties, such as cleaning floors, shampooing rugs, washing walls and glass, and removing rubbish. Duties may include tending furnace and boiler, performing routine maintenance activities, notifying management of need for repairs, and cleaning snow or debris from sidewalk.",
+    "laborMarket": {
+      "medianWage": "$36,140",
+      "annualOpenings": "5,817",
+      "employment": "37,100",
+      "projectedGrowth": "0.58%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "jewelers-and-precious-stone-and-metal-workers",
+    "title": "Jewelers and Precious Stone and Metal Workers",
+    "soc": "51-9071",
+    "exposure": "Low",
+    "summary": "Design, fabricate, adjust, repair, or appraise jewelry, gold, silver, other precious metals, or gems.",
+    "laborMarket": {
+      "medianWage": "$40,010",
+      "annualOpenings": "169",
+      "employment": "360",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "judges-magistrate-judges-and-magistrates",
+    "title": "Judges, Magistrate Judges, and Magistrates",
+    "soc": "23-1023",
+    "exposure": "Medium",
+    "summary": "Arbitrate, advise, adjudicate, or administer justice in a court of law. May sentence defendant in criminal cases according to government statutes or sentencing guidelines. May determine liability of defendant in civil cases. May perform wedding ceremonies.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "28",
+      "employment": "620",
+      "projectedGrowth": "1.01%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "judicial-law-clerks",
+    "title": "Judicial Law Clerks",
+    "soc": "23-1012",
+    "exposure": "High",
+    "summary": "Assist judges in court or by conducting research or preparing legal documents.",
+    "laborMarket": {
+      "medianWage": "$59,710",
+      "annualOpenings": "53",
+      "employment": "280",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "lawyers",
+      "judges-magistrate-judges-and-magistrates",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "paralegals-and-legal-assistants",
+      "legal-secretaries-and-administrative-assistants",
+      "court-reporters-and-simultaneous-captioners",
+      "arbitrators-mediators-and-conciliators",
+      "equal-opportunity-representatives-and-officers",
+      "law-teachers-postsecondary",
+      "fraud-examiners-investigators-and-analysts",
+      "court-municipal-and-license-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "bailiffs",
+      "private-detectives-and-investigators",
+      "detectives-and-criminal-investigators",
+      "probation-officers-and-correctional-treatment-specialists",
+      "eligibility-interviewers-government-programs",
+      "police-and-sheriff-s-patrol-officers",
+      "claims-adjusters-examiners-and-investigators"
+    ],
+    "training": []
+  },
+  {
+    "id": "kindergarten-teachers-except-special-education",
+    "title": "Kindergarten Teachers, Except Special Education",
+    "soc": "25-2012",
+    "exposure": "Low",
+    "summary": "Teach academic and social skills to kindergarten students.",
+    "laborMarket": {
+      "medianWage": "$51,780",
+      "annualOpenings": "309",
+      "employment": "2,540",
+      "projectedGrowth": "0.66%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "labor-relations-specialists",
+    "title": "Labor Relations Specialists",
+    "soc": "13-1075",
+    "exposure": "Very High",
+    "summary": "Resolve disputes between workers and managers, negotiate collective bargaining agreements, or coordinate grievance procedures to handle employee complaints.",
+    "laborMarket": {
+      "medianWage": "$76,820",
+      "annualOpenings": "52",
+      "employment": "470",
+      "projectedGrowth": "0.49%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "arbitrators-mediators-and-conciliators",
+      "equal-opportunity-representatives-and-officers",
+      "human-resources-managers",
+      "human-resources-specialists",
+      "compensation-benefits-and-job-analysis-specialists",
+      "compensation-and-benefits-managers",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "public-relations-managers",
+      "lawyers",
+      "compliance-managers",
+      "chief-executives",
+      "management-analysts",
+      "eligibility-interviewers-government-programs",
+      "social-and-community-service-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "administrative-services-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "public-relations-specialists",
+      "industrial-organizational-psychologists",
+      "executive-secretaries-and-executive-administrative-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "laborers-and-freight-stock-and-material-movers-hand",
+    "title": "Laborers and Freight, Stock, and Material Movers, Hand",
+    "soc": "53-7062",
+    "exposure": "Very Low",
+    "summary": "Manually move freight, stock, luggage, or other materials, or perform other general labor. Includes all manual laborers not elsewhere classified.",
+    "laborMarket": {
+      "medianWage": "$39,160",
+      "annualOpenings": "9,686",
+      "employment": "73,540",
+      "projectedGrowth": "0.68%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "landscape-architects",
+    "title": "Landscape Architects",
+    "soc": "17-1012",
+    "exposure": "Medium",
+    "summary": "Plan and design land areas for projects such as parks and other recreational facilities, airports, highways, hospitals, schools, land subdivisions, and commercial, industrial, and residential sites.",
+    "laborMarket": {
+      "medianWage": "$67,060",
+      "annualOpenings": "38",
+      "employment": "380",
+      "projectedGrowth": "0.53%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "landscaping-and-groundskeeping-workers",
+    "title": "Landscaping and Groundskeeping Workers",
+    "soc": "37-3011",
+    "exposure": "Very Low",
+    "summary": "Landscape or maintain grounds of property using hand or power tools or equipment. Workers typically perform a variety of tasks, which may include any combination of the following: sod laying, mowing, trimming, planting, watering, fertilizing, digging, raking, sprinkler installation, and installation of mortarless segmental concrete masonry wall units.",
+    "laborMarket": {
+      "medianWage": "$37,920",
+      "annualOpenings": "3,846",
+      "employment": "20,990",
+      "projectedGrowth": "0.91%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "lathe-and-turning-machine-tool-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Lathe and Turning Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4034",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend lathe and turning machines to turn, bore, thread, form, or face metal or plastic materials, such as wire, rod, or bar stock.",
+    "laborMarket": {
+      "medianWage": "$52,620",
+      "annualOpenings": "10",
+      "employment": "260",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "laundry-and-dry-cleaning-workers",
+    "title": "Laundry and Dry-Cleaning Workers",
+    "soc": "51-6011",
+    "exposure": "Very Low",
+    "summary": "Operate or tend washing or dry-cleaning machines to wash or dry-clean industrial or household articles, such as cloth garments, suede, leather, furs, blankets, draperies, linens, rugs, and carpets. Includes spotters and dyers of these articles.",
+    "laborMarket": {
+      "medianWage": "$35,120",
+      "annualOpenings": "506",
+      "employment": "3,900",
+      "projectedGrowth": "0.77%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "law-teachers-postsecondary",
+    "title": "Law Teachers, Postsecondary",
+    "soc": "25-1112",
+    "exposure": "High",
+    "summary": "Teach courses in law. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$106,510",
+      "annualOpenings": "24",
+      "employment": "220",
+      "projectedGrowth": "0.86%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "criminal-justice-and-law-enforcement-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "business-teachers-postsecondary",
+      "economics-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "history-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "education-administrators-postsecondary",
+      "political-scientists",
+      "lawyers",
+      "psychology-teachers-postsecondary",
+      "instructional-coordinators",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "lawyers",
+    "title": "Lawyers",
+    "soc": "23-1011",
+    "exposure": "Medium",
+    "summary": "Represent clients in criminal and civil litigation and other legal proceedings, draw up legal documents, or manage or advise clients on legal transactions. May specialize in a single area or may practice broadly in many areas of law.",
+    "laborMarket": {
+      "medianWage": "$133,360",
+      "annualOpenings": "533",
+      "employment": "12,130",
+      "projectedGrowth": "0.72%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "layout-workers-metal-and-plastic",
+    "title": "Layout Workers, Metal and Plastic",
+    "soc": "51-4192",
+    "exposure": "Low",
+    "summary": "Lay out reference points and dimensions on metal or plastic stock or workpieces, such as sheets, plates, tubes, structural shapes, castings, or machine parts, for further processing. Includes shipfitters.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "3",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "legal-secretaries-and-administrative-assistants",
+    "title": "Legal Secretaries and Administrative Assistants",
+    "soc": "43-6012",
+    "exposure": "Very High",
+    "summary": "Perform secretarial duties using legal terminology, procedures, and documents. Prepare legal papers and correspondence, such as summonses, complaints, motions, and subpoenas. May also assist with legal research.",
+    "laborMarket": {
+      "medianWage": "$47,990",
+      "annualOpenings": "486",
+      "employment": "3,320",
+      "projectedGrowth": "-1.26%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "paralegals-and-legal-assistants",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "court-municipal-and-license-clerks",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "court-reporters-and-simultaneous-captioners",
+      "correspondence-clerks",
+      "office-clerks-general",
+      "eligibility-interviewers-government-programs",
+      "receptionists-and-information-clerks",
+      "medical-records-specialists",
+      "lawyers",
+      "judicial-law-clerks",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "administrative-services-managers",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "medical-secretaries-and-administrative-assistants",
+      "insurance-claims-and-policy-processing-clerks",
+      "file-clerks",
+      "private-detectives-and-investigators",
+      "compliance-officers"
+    ],
+    "training": []
+  },
+  {
+    "id": "librarians-and-media-collections-specialists",
+    "title": "Librarians and Media Collections Specialists",
+    "soc": "25-4022",
+    "exposure": "Very High",
+    "summary": "Administer and maintain libraries or collections of information, for public or private access through reference or borrowing. Work in a variety of settings, such as educational institutions, museums, and corporations, and with various types of informational materials, such as books, periodicals, recordings, films, and databases. Tasks may include acquiring, cataloging, and circulating library materials, and user services such as locating and organizing information, providing instruction on how to access information, and setting up and operating a library's media equipment.",
+    "laborMarket": {
+      "medianWage": "$58,760",
+      "annualOpenings": "169",
+      "employment": "1,880",
+      "projectedGrowth": "0.88%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "library-technicians",
+      "library-assistants-clerical",
+      "archivists",
+      "library-science-teachers-postsecondary",
+      "instructional-coordinators",
+      "social-science-research-assistants",
+      "document-management-specialists",
+      "computer-user-support-specialists",
+      "database-administrators",
+      "management-analysts",
+      "computer-science-teachers-postsecondary",
+      "file-clerks",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "curators",
+      "education-administrators-postsecondary",
+      "media-programming-directors",
+      "office-clerks-general",
+      "education-teachers-postsecondary",
+      "administrative-services-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "library-assistants-clerical",
+    "title": "Library Assistants, Clerical",
+    "soc": "43-4121",
+    "exposure": "Very High",
+    "summary": "Compile records, and sort, shelve, issue, and receive library materials such as books, electronic media, pictures, cards, slides and microfilm. Locate library materials for loan and replace material in shelving area, stacks, or files according to identification number and title. Register patrons to permit them to borrow books, periodicals, and other library materials.",
+    "laborMarket": {
+      "medianWage": "$37,040",
+      "annualOpenings": "208",
+      "employment": "1,650",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "library-technicians",
+      "file-clerks",
+      "office-clerks-general",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "document-management-specialists",
+      "stockers-and-order-fillers",
+      "receptionists-and-information-clerks",
+      "office-machine-operators-except-computer",
+      "correspondence-clerks",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "librarians-and-media-collections-specialists",
+      "library-science-teachers-postsecondary",
+      "archivists",
+      "curators",
+      "management-analysts",
+      "social-science-research-assistants",
+      "proofreaders-and-copy-markers",
+      "instructional-coordinators",
+      "editors",
+      "elementary-school-teachers-except-special-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "library-science-teachers-postsecondary",
+    "title": "Library Science Teachers, Postsecondary",
+    "soc": "25-1082",
+    "exposure": "High",
+    "summary": "Teach courses in library science. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "education-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "instructional-coordinators",
+      "sociology-teachers-postsecondary",
+      "librarians-and-media-collections-specialists",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "computer-science-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "library-technicians",
+      "elementary-school-teachers-except-special-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "library-assistants-clerical",
+      "law-teachers-postsecondary",
+      "education-administrators-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "english-language-and-literature-teachers-postsecondary",
+      "tutors",
+      "family-and-consumer-sciences-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "library-technicians",
+    "title": "Library Technicians",
+    "soc": "25-4031",
+    "exposure": "Very High",
+    "summary": "Assist librarians by helping readers in the use of library catalogs, databases, and indexes to locate books and other materials; and by answering questions that require only brief consultation of standard reference. Compile records; sort and shelve books or other media; remove or repair damaged books or other media; register patrons; and check materials in and out of the circulation process. Replace materials in shelving area (stacks) or files. Includes bookmobile drivers who assist with providing services in mobile libraries.",
+    "laborMarket": {
+      "medianWage": "$40,330",
+      "annualOpenings": "118",
+      "employment": "770",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [
+      "library-assistants-clerical",
+      "file-clerks",
+      "office-clerks-general",
+      "document-management-specialists",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "stockers-and-order-fillers",
+      "receptionists-and-information-clerks",
+      "teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education",
+      "database-administrators",
+      "computer-user-support-specialists",
+      "librarians-and-media-collections-specialists",
+      "library-science-teachers-postsecondary",
+      "archivists",
+      "instructional-coordinators",
+      "social-science-research-assistants",
+      "management-analysts",
+      "proofreaders-and-copy-markers",
+      "computer-science-teachers-postsecondary",
+      "statistical-assistants",
+      "office-machine-operators-except-computer"
+    ],
+    "training": []
+  },
+  {
+    "id": "licensed-practical-and-licensed-vocational-nurses",
+    "title": "Licensed Practical and Licensed Vocational Nurses",
+    "soc": "29-2061",
+    "exposure": "Low",
+    "summary": "Care for ill, injured, or convalescing patients or persons with disabilities in hospitals, nursing homes, clinics, private homes, group homes, and similar institutions. May work under the supervision of a registered nurse. Licensing required.",
+    "laborMarket": {
+      "medianWage": "$74,020",
+      "annualOpenings": "555",
+      "employment": "5,200",
+      "projectedGrowth": "1.8%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "life-physical-and-social-science-technicians-all-other",
+    "title": "Life, Physical, and Social Science Technicians, All Other",
+    "soc": "19-4099",
+    "exposure": "Very High",
+    "summary": "All life, physical, and social science technicians not listed separately.",
+    "laborMarket": {
+      "medianWage": "$47,330",
+      "annualOpenings": "93",
+      "employment": "400",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "lifeguards-ski-patrol-and-other-recreational-protective-service-workers",
+    "title": "Lifeguards, Ski Patrol, and Other Recreational Protective Service Workers",
+    "soc": "33-9092",
+    "exposure": "Very Low",
+    "summary": "Monitor recreational areas, such as pools, beaches, or ski slopes, to provide assistance and protection to participants.",
+    "laborMarket": {
+      "medianWage": "$35,360",
+      "annualOpenings": "791",
+      "employment": "3,380",
+      "projectedGrowth": "1.49%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "light-truck-drivers",
+    "title": "Light Truck Drivers",
+    "soc": "53-3033",
+    "exposure": "Medium",
+    "summary": "Drive a light vehicle, such as a truck or van, with a capacity of less than 26,001 pounds Gross Vehicle Weight (GVW), primarily to pick up merchandise or packages from a distribution center and deliver. May load and unload vehicle.",
+    "laborMarket": {
+      "medianWage": "$47,910",
+      "annualOpenings": "2,572",
+      "employment": "18,100",
+      "projectedGrowth": "1.4%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "loading-and-moving-machine-operators-underground-mining",
+    "title": "Loading and Moving Machine Operators, Underground Mining",
+    "soc": "47-5044",
+    "exposure": "Very Low",
+    "summary": "Operate underground loading or moving machine to load or move coal, ore, or rock using shuttle or mine car or conveyors. Equipment may include power shovels, hoisting engines equipped with cable-drawn scraper or scoop, or machines equipped with gathering arms and conveyor.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "6",
+      "employment": "nan",
+      "projectedGrowth": "-1.03%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "loan-interviewers-and-clerks",
+    "title": "Loan Interviewers and Clerks",
+    "soc": "43-4131",
+    "exposure": "Very High",
+    "summary": "Interview loan applicants to elicit information; investigate applicants' backgrounds and verify references; prepare loan request papers; and forward findings, reports, and documents to appraisal department. Review loan papers to ensure completeness, and complete transactions between loan establishment, borrowers, and sellers upon approval of loan.",
+    "laborMarket": {
+      "medianWage": "$48,910",
+      "annualOpenings": "600",
+      "employment": "5,340",
+      "projectedGrowth": "-0.37%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "loan-officers",
+      "credit-authorizers-checkers-and-clerks",
+      "credit-analysts",
+      "credit-counselors",
+      "bill-and-account-collectors",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "new-accounts-clerks",
+      "brokerage-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "securities-commodities-and-financial-services-sales-agents",
+      "personal-financial-advisors",
+      "tellers",
+      "eligibility-interviewers-government-programs",
+      "financial-managers",
+      "billing-and-posting-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "insurance-underwriters",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "tax-preparers",
+      "financial-examiners"
+    ],
+    "training": []
+  },
+  {
+    "id": "loan-officers",
+    "title": "Loan Officers",
+    "soc": "13-2072",
+    "exposure": "Very High",
+    "summary": "Evaluate, authorize, or recommend approval of commercial, real estate, or credit loans. Advise borrowers on financial status and payment methods. Includes mortgage loan officers and agents, collection analysts, loan servicing officers, loan underwriters, and payday loan officers.",
+    "laborMarket": {
+      "medianWage": "$53,760",
+      "annualOpenings": "752",
+      "employment": "11,420",
+      "projectedGrowth": "-0.13%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "loan-interviewers-and-clerks",
+      "credit-counselors",
+      "credit-analysts",
+      "credit-authorizers-checkers-and-clerks",
+      "personal-financial-advisors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "financial-managers",
+      "financial-and-investment-analysts",
+      "new-accounts-clerks",
+      "bill-and-account-collectors",
+      "brokerage-clerks",
+      "insurance-underwriters",
+      "tellers",
+      "insurance-sales-agents",
+      "financial-examiners",
+      "real-estate-brokers",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "accountants-and-auditors",
+      "insurance-claims-and-policy-processing-clerks",
+      "tax-preparers"
+    ],
+    "training": []
+  },
+  {
+    "id": "locker-room-coatroom-and-dressing-room-attendants",
+    "title": "Locker Room, Coatroom, and Dressing Room Attendants",
+    "soc": "39-3093",
+    "exposure": "Very Low",
+    "summary": "Provide personal items to patrons or customers in locker rooms, dressing rooms, or coatrooms.",
+    "laborMarket": {
+      "medianWage": "$37,210",
+      "annualOpenings": "165",
+      "employment": "430",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "locksmiths-and-safe-repairers",
+    "title": "Locksmiths and Safe Repairers",
+    "soc": "49-9094",
+    "exposure": "Very Low",
+    "summary": "Repair and open locks, make keys, change locks and safe combinations, and install and repair safes.",
+    "laborMarket": {
+      "medianWage": "$43,320",
+      "annualOpenings": "35",
+      "employment": "360",
+      "projectedGrowth": "-0.46%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "locomotive-engineers",
+    "title": "Locomotive Engineers",
+    "soc": "53-4011",
+    "exposure": "Low",
+    "summary": "Drive electric, diesel-electric, steam, or gas-turbine-electric locomotives to transport passengers or freight. Interpret train orders, electronic or manual signals, and railroad rules and regulations.",
+    "laborMarket": {
+      "medianWage": "$81,170",
+      "annualOpenings": "31",
+      "employment": "380",
+      "projectedGrowth": "-1.06%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "lodging-managers",
+    "title": "Lodging Managers",
+    "soc": "11-9081",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate activities of an organization or department that provides lodging and other accommodations.",
+    "laborMarket": {
+      "medianWage": "$74,990",
+      "annualOpenings": "142",
+      "employment": "790",
+      "projectedGrowth": "1.79%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "hotel-motel-and-resort-desk-clerks",
+      "concierges",
+      "property-real-estate-and-community-association-managers",
+      "facilities-managers",
+      "spa-managers",
+      "first-line-supervisors-of-personal-service-workers",
+      "entertainment-and-recreation-managers-except-gambling",
+      "general-and-operations-managers",
+      "administrative-services-managers",
+      "meeting-convention-and-event-planners",
+      "locker-room-coatroom-and-dressing-room-attendants",
+      "first-line-supervisors-of-housekeeping-and-janitorial-workers",
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "counter-and-rental-clerks",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "food-service-managers",
+      "receptionists-and-information-clerks",
+      "hosts-and-hostesses-restaurant-lounge-and-coffee-shop",
+      "ushers-lobby-attendants-and-ticket-takers",
+      "first-line-supervisors-of-office-and-administrative-support-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "log-graders-and-scalers",
+    "title": "Log Graders and Scalers",
+    "soc": "45-4023",
+    "exposure": "Low",
+    "summary": "Grade logs or estimate the marketable content or value of logs or pulpwood in sorting yards, millpond, log deck, or similar locations. Inspect logs for defects or measure logs to determine volume.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "6",
+      "employment": "nan",
+      "projectedGrowth": "1.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "logging-equipment-operators",
+    "title": "Logging Equipment Operators",
+    "soc": "45-4022",
+    "exposure": "Low",
+    "summary": "Drive logging tractor or wheeled vehicle equipped with one or more accessories, such as bulldozer blade, frontal shear, grapple, logging arch, cable winches, hoisting rack, or crane boom, to fell tree; to skid, load, unload, or stack logs; or to pull stumps or clear brush. Includes operating stand-alone logging machines, such as log chippers.",
+    "laborMarket": {
+      "medianWage": "$50,870",
+      "annualOpenings": "55",
+      "employment": "40",
+      "projectedGrowth": "1.6%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "logisticians",
+    "title": "Logisticians",
+    "soc": "13-1081",
+    "exposure": "Very High",
+    "summary": "Analyze and coordinate the ongoing logistical functions of a firm or organization. Responsible for the entire life cycle of a product, including acquisition, distribution, internal allocation, delivery, and final disposal of resources.",
+    "laborMarket": {
+      "medianWage": "$81,680",
+      "annualOpenings": "334",
+      "employment": "3,530",
+      "projectedGrowth": "2.1%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "logistics-analysts",
+      "supply-chain-managers",
+      "project-management-specialists",
+      "purchasing-managers",
+      "management-analysts",
+      "production-planning-and-expediting-clerks",
+      "industrial-production-managers",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "procurement-clerks",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "general-and-operations-managers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "information-technology-project-managers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "cargo-and-freight-agents",
+      "sales-managers",
+      "software-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "logistics-analysts",
+    "title": "Logistics Analysts",
+    "soc": "13-1081",
+    "exposure": "Very High",
+    "summary": "Analyze product delivery or supply chain processes to identify or recommend changes. May manage route activity including invoicing, electronic bills, and shipment tracing.",
+    "laborMarket": {
+      "medianWage": "$81,680",
+      "annualOpenings": "334",
+      "employment": "3,530",
+      "projectedGrowth": "2.1%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "logistics-analysts",
+      "supply-chain-managers",
+      "project-management-specialists",
+      "purchasing-managers",
+      "management-analysts",
+      "production-planning-and-expediting-clerks",
+      "industrial-production-managers",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "procurement-clerks",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "general-and-operations-managers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "information-technology-project-managers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "cargo-and-freight-agents",
+      "sales-managers",
+      "software-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "logistics-engineers",
+    "title": "Logistics Engineers",
+    "soc": "13-1081",
+    "exposure": "Very High",
+    "summary": "Design or analyze operational solutions for projects such as transportation optimization, network modeling, process and methods analysis, cost containment, capacity enhancement, routing and shipment optimization, or information management.",
+    "laborMarket": {
+      "medianWage": "$81,680",
+      "annualOpenings": "334",
+      "employment": "3,530",
+      "projectedGrowth": "2.1%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "logistics-analysts",
+      "supply-chain-managers",
+      "project-management-specialists",
+      "purchasing-managers",
+      "management-analysts",
+      "production-planning-and-expediting-clerks",
+      "industrial-production-managers",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "procurement-clerks",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "general-and-operations-managers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "information-technology-project-managers",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "cargo-and-freight-agents",
+      "sales-managers",
+      "software-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "loss-prevention-managers",
+    "title": "Loss Prevention Managers",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "Plan and direct policies, procedures, or systems to prevent the loss of assets. Determine risk exposure or potential liability, and develop risk control measures.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "low-vision-therapists-orientation-and-mobility-specialists-and-vision-rehabilitation-therapists",
+    "title": "Low Vision Therapists, Orientation and Mobility Specialists, and Vision Rehabilitation Therapists",
+    "soc": "29-1122",
+    "exposure": "Medium",
+    "summary": "Provide therapy to patients with visual impairments to improve their functioning in daily life activities. May train patients in activities such as computer use, communication skills, or home management skills.",
+    "laborMarket": {
+      "medianWage": "$102,220",
+      "annualOpenings": "231",
+      "employment": "2,390",
+      "projectedGrowth": "2.81%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "machine-feeders-and-offbearers",
+    "title": "Machine Feeders and Offbearers",
+    "soc": "53-7063",
+    "exposure": "Very Low",
+    "summary": "Feed materials into or remove materials from machines or equipment that is automatic or tended by other workers.",
+    "laborMarket": {
+      "medianWage": "$39,870",
+      "annualOpenings": "14",
+      "employment": "210",
+      "projectedGrowth": "-1.28%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "machinists",
+    "title": "Machinists",
+    "soc": "51-4041",
+    "exposure": "Low",
+    "summary": "Set up and operate a variety of machine tools to produce precision parts and instruments out of metal. Includes precision instrument makers who fabricate, modify, or repair mechanical instruments. May also fabricate and modify parts to make or repair machine tools or maintain industrial machines, applying knowledge of mechanics, mathematics, metal properties, layout, and machining procedures.",
+    "laborMarket": {
+      "medianWage": "$59,020",
+      "annualOpenings": "583",
+      "employment": "5,280",
+      "projectedGrowth": "0.56%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "magnetic-resonance-imaging-technologists",
+    "title": "Magnetic Resonance Imaging Technologists",
+    "soc": "29-2035",
+    "exposure": "Medium",
+    "summary": "Operate Magnetic Resonance Imaging (MRI) scanners. Monitor patient safety and comfort, and view images of area being scanned to ensure quality of pictures. May administer gadolinium contrast dosage intravenously. May interview patient, explain MRI procedures, and position patient on examining table. May enter into the computer data such as patient history, anatomical area to be scanned, orientation specified, and position of entry.",
+    "laborMarket": {
+      "medianWage": "$97,160",
+      "annualOpenings": "73",
+      "employment": "710",
+      "projectedGrowth": "2.94%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "maids-and-housekeeping-cleaners",
+    "title": "Maids and Housekeeping Cleaners",
+    "soc": "37-2012",
+    "exposure": "Very Low",
+    "summary": "Perform any combination of light cleaning duties to maintain private households or commercial establishments, such as hotels and hospitals, in a clean and orderly manner. Duties may include making beds, replenishing linens, cleaning rooms and halls, and vacuuming.",
+    "laborMarket": {
+      "medianWage": "$35,400",
+      "annualOpenings": "4,381",
+      "employment": "23,560",
+      "projectedGrowth": "1.03%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mail-clerks-and-mail-machine-operators-except-postal-service",
+    "title": "Mail Clerks and Mail Machine Operators, Except Postal Service",
+    "soc": "43-9051",
+    "exposure": "Low",
+    "summary": "Prepare incoming and outgoing mail for distribution. Time-stamp, open, read, sort, and route incoming mail; and address, seal, stamp, fold, stuff, and affix postage to outgoing mail or packages. Duties may also include keeping necessary records and completed forms.",
+    "laborMarket": {
+      "medianWage": "$35,560",
+      "annualOpenings": "175",
+      "employment": "910",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "maintenance-workers-machinery",
+    "title": "Maintenance Workers, Machinery",
+    "soc": "49-9043",
+    "exposure": "Low",
+    "summary": "Lubricate machinery, change parts, or perform other routine machinery maintenance.",
+    "laborMarket": {
+      "medianWage": "$55,860",
+      "annualOpenings": "52",
+      "employment": "480",
+      "projectedGrowth": "1.16%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "maintenance-and-repair-workers-general",
+    "title": "Maintenance and Repair Workers, General",
+    "soc": "49-9071",
+    "exposure": "Low",
+    "summary": "Perform work involving the skills of two or more maintenance or craft occupations to keep machines, mechanical equipment, or the structure of a building in repair. Duties may involve pipe fitting; HVAC maintenance; insulating; welding; machining; carpentry; repairing electrical or mechanical equipment; installing, aligning, and balancing new equipment; and repairing buildings, floors, or stairs.",
+    "laborMarket": {
+      "medianWage": "$47,260",
+      "annualOpenings": "3,588",
+      "employment": "39,150",
+      "projectedGrowth": "0.93%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "makeup-artists-theatrical-and-performance",
+    "title": "Makeup Artists, Theatrical and Performance",
+    "soc": "39-5091",
+    "exposure": "Medium",
+    "summary": "Apply makeup to performers to reflect period, setting, and situation of their role.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "16",
+      "employment": "nan",
+      "projectedGrowth": "3.32%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "management-analysts",
+    "title": "Management Analysts",
+    "soc": "13-1111",
+    "exposure": "Medium",
+    "summary": "Conduct organizational studies and evaluations, design systems and procedures, conduct work simplification and measurement studies, and prepare operations and procedures manuals to assist management in operating more efficiently and effectively. Includes program analysts and management consultants.",
+    "laborMarket": {
+      "medianWage": "$89,520",
+      "annualOpenings": "1,896",
+      "employment": "18,110",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "managers-all-other",
+    "title": "Managers, All Other",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "All managers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "manicurists-and-pedicurists",
+    "title": "Manicurists and Pedicurists",
+    "soc": "39-5092",
+    "exposure": "Very Low",
+    "summary": "Clean and shape customers' fingernails and toenails. May polish or decorate nails.",
+    "laborMarket": {
+      "medianWage": "$34,820",
+      "annualOpenings": "665",
+      "employment": "2,710",
+      "projectedGrowth": "1.76%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "manufactured-building-and-mobile-home-installers",
+    "title": "Manufactured Building and Mobile Home Installers",
+    "soc": "49-9095",
+    "exposure": "Very Low",
+    "summary": "Move or install mobile homes or prefabricated buildings.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "manufacturing-engineers",
+    "title": "Manufacturing Engineers",
+    "soc": "17-2112",
+    "exposure": "Very High",
+    "summary": "Design, integrate, or improve manufacturing systems or related processes. May work with commercial or industrial designers to refine product designs to increase producibility and decrease costs.",
+    "laborMarket": {
+      "medianWage": "$110,100",
+      "annualOpenings": "525",
+      "employment": "7,320",
+      "projectedGrowth": "1.24%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "industrial-engineering-technologists-and-technicians",
+      "manufacturing-engineers",
+      "industrial-production-managers",
+      "mechanical-engineers",
+      "logistics-engineers",
+      "mechatronics-engineers",
+      "electrical-engineers",
+      "materials-engineers",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "project-management-specialists",
+      "electronics-engineers-except-computer",
+      "team-assemblers",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "architectural-and-engineering-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "market-research-analysts-and-marketing-specialists",
+    "title": "Market Research Analysts and Marketing Specialists",
+    "soc": "13-1161",
+    "exposure": "High",
+    "summary": "Research conditions in local, regional, national, or online markets. Gather information to determine potential sales of a product or service, or plan a marketing or advertising campaign. May gather information on competitors, prices, sales, and methods of marketing and distribution. May employ search marketing tactics, analyze web metrics, and develop recommendations to increase search engine ranking and visibility to target markets.",
+    "laborMarket": {
+      "medianWage": "$66,750",
+      "annualOpenings": "1,717",
+      "employment": "18,020",
+      "projectedGrowth": "0.86%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "marketing-managers",
+      "advertising-and-promotions-managers",
+      "search-marketing-strategists",
+      "business-intelligence-analysts",
+      "management-analysts",
+      "sales-managers",
+      "public-relations-managers",
+      "advertising-sales-agents",
+      "financial-and-investment-analysts",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "public-relations-specialists",
+      "survey-researchers",
+      "securities-commodities-and-financial-services-sales-agents",
+      "business-teachers-postsecondary",
+      "financial-risk-specialists",
+      "writers-and-authors",
+      "online-merchants",
+      "personal-financial-advisors",
+      "wholesale-and-retail-buyers-except-farm-products"
+    ],
+    "training": []
+  },
+  {
+    "id": "marketing-managers",
+    "title": "Marketing Managers",
+    "soc": "11-2021",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate marketing policies and programs, such as determining the demand for products and services offered by a firm and its competitors, and identify potential customers. Develop pricing strategies with the goal of maximizing the firm's profits or share of the market while ensuring the firm's customers are satisfied. Oversee product development or monitor trends that indicate the need for new products and services.",
+    "laborMarket": {
+      "medianWage": "$135,920",
+      "annualOpenings": "468",
+      "employment": "4,350",
+      "projectedGrowth": "0.82%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "market-research-analysts-and-marketing-specialists",
+      "sales-managers",
+      "advertising-and-promotions-managers",
+      "advertising-sales-agents",
+      "business-intelligence-analysts",
+      "public-relations-managers",
+      "public-relations-specialists",
+      "purchasing-managers",
+      "online-merchants",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "management-analysts",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "information-technology-project-managers",
+      "financial-and-investment-analysts",
+      "securities-commodities-and-financial-services-sales-agents",
+      "project-management-specialists",
+      "logisticians",
+      "general-and-operations-managers",
+      "writers-and-authors"
+    ],
+    "training": []
+  },
+  {
+    "id": "marriage-and-family-therapists",
+    "title": "Marriage and Family Therapists",
+    "soc": "21-1013",
+    "exposure": "Low",
+    "summary": "Diagnose and treat mental and emotional disorders, whether cognitive, affective, or behavioral, within the context of marriage and family systems. Apply psychotherapeutic and family systems theories and techniques in the delivery of services to individuals, couples, and families for the purpose of treating such diagnosed nervous and mental disorders.",
+    "laborMarket": {
+      "medianWage": "$52,420",
+      "annualOpenings": "77",
+      "employment": "0",
+      "projectedGrowth": "3.32%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "massage-therapists",
+    "title": "Massage Therapists",
+    "soc": "31-9011",
+    "exposure": "Very Low",
+    "summary": "Perform therapeutic massages of soft tissues and joints. May assist in the assessment of range of motion and muscle strength, or propose client therapy plans.",
+    "laborMarket": {
+      "medianWage": "$59,550",
+      "annualOpenings": "709",
+      "employment": "2,840",
+      "projectedGrowth": "2.69%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "materials-engineers",
+    "title": "Materials Engineers",
+    "soc": "17-2131",
+    "exposure": "High",
+    "summary": "Evaluate materials and develop machinery and processes to manufacture materials for use in products that must meet specialized design and performance specifications. Develop new uses for known materials. Includes those engineers working with composite materials or specializing in one type of material, such as graphite, metal and metal alloys, ceramics and glass, plastics and polymers, and naturally occurring materials. Includes metallurgists and metallurgical engineers, ceramic engineers, and welding engineers.",
+    "laborMarket": {
+      "medianWage": "$108,260",
+      "annualOpenings": "79",
+      "employment": "380",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "materials-scientists",
+      "chemical-engineers",
+      "manufacturing-engineers",
+      "mechanical-engineers",
+      "nanosystems-engineers",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "commercial-and-industrial-designers",
+      "electrical-engineers",
+      "bioengineers-and-biomedical-engineers",
+      "chemical-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "chemists",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "electronics-engineers-except-computer",
+      "architectural-and-engineering-managers",
+      "photonics-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "materials-scientists",
+    "title": "Materials Scientists",
+    "soc": "19-2032",
+    "exposure": "High",
+    "summary": "Research and study the structures and chemical properties of various natural and synthetic or composite materials, including metals, alloys, rubber, ceramics, semiconductors, polymers, and glass. Determine ways to strengthen or combine materials or develop new materials with new or specific properties for use in a variety of products and applications. Includes glass scientists, ceramic scientists, metallurgical scientists, and polymer scientists.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "1.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "materials-engineers",
+      "nanosystems-engineers",
+      "chemical-engineers",
+      "manufacturing-engineers",
+      "mechanical-engineers",
+      "chemists",
+      "photonics-technicians",
+      "electrical-engineers",
+      "mechanical-engineering-technologists-and-technicians",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "chemical-technicians",
+      "electronics-engineers-except-computer",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "bioengineers-and-biomedical-engineers",
+      "calibration-technologists-and-technicians",
+      "engineering-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "mathematical-science-occupations-all-other",
+    "title": "Mathematical Science Occupations, All Other",
+    "soc": "15-2099",
+    "exposure": "Very High",
+    "summary": "All mathematical scientists not listed separately.",
+    "laborMarket": {
+      "medianWage": "$92,500",
+      "annualOpenings": "2",
+      "employment": "30",
+      "projectedGrowth": "3.39%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mathematical-science-teachers-postsecondary",
+    "title": "Mathematical Science Teachers, Postsecondary",
+    "soc": "25-1022",
+    "exposure": "Very High",
+    "summary": "Teach courses pertaining to mathematical concepts, statistics, and actuarial science and to the application of original and standardized mathematical techniques in solving specific problems and situations. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,350",
+      "annualOpenings": "67",
+      "employment": "830",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "physics-teachers-postsecondary",
+      "atmospheric-earth-marine-and-space-sciences-teachers-postsecondary",
+      "economics-teachers-postsecondary",
+      "computer-science-teachers-postsecondary",
+      "chemistry-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "tutors",
+      "teaching-assistants-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "elementary-school-teachers-except-special-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "career-technical-education-teachers-middle-school",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "instructional-coordinators",
+      "library-science-teachers-postsecondary",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "mathematicians",
+    "title": "Mathematicians",
+    "soc": "15-2021",
+    "exposure": "Very High",
+    "summary": "Conduct research in fundamental mathematics or in application of mathematical techniques to science, management, and other fields. Solve problems in various fields using mathematical methods.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "physicists",
+      "statisticians",
+      "computer-and-information-research-scientists",
+      "mathematical-science-teachers-postsecondary",
+      "bioinformatics-scientists",
+      "astronomers",
+      "bioinformatics-technicians",
+      "operations-research-analysts",
+      "physics-teachers-postsecondary",
+      "biochemists-and-biophysicists",
+      "financial-quantitative-analysts",
+      "geoscientists-except-hydrologists-and-geographers",
+      "bioengineers-and-biomedical-engineers",
+      "statistical-assistants",
+      "software-developers",
+      "nanosystems-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "meat-poultry-and-fish-cutters-and-trimmers",
+    "title": "Meat, Poultry, and Fish Cutters and Trimmers",
+    "soc": "51-3022",
+    "exposure": "Very Low",
+    "summary": "Use hands or hand tools to perform routine cutting and trimming of meat, poultry, and seafood.",
+    "laborMarket": {
+      "medianWage": "$46,940",
+      "annualOpenings": "91",
+      "employment": "730",
+      "projectedGrowth": "0.7%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mechanical-door-repairers",
+    "title": "Mechanical Door Repairers",
+    "soc": "49-9011",
+    "exposure": "Low",
+    "summary": "Install, service, or repair automatic door mechanisms and hydraulic doors. Includes garage door mechanics.",
+    "laborMarket": {
+      "medianWage": "$58,070",
+      "annualOpenings": "127",
+      "employment": "1,260",
+      "projectedGrowth": "2.29%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mechanical-drafters",
+    "title": "Mechanical Drafters",
+    "soc": "17-3013",
+    "exposure": "High",
+    "summary": "Prepare detailed working diagrams of machinery and mechanical devices, including dimensions, fastening methods, and other engineering information.",
+    "laborMarket": {
+      "medianWage": "$80,270",
+      "annualOpenings": "100",
+      "employment": "720",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "electrical-and-electronics-drafters",
+      "architectural-and-civil-drafters",
+      "mechanical-engineering-technologists-and-technicians",
+      "model-makers-metal-and-plastic",
+      "commercial-and-industrial-designers",
+      "layout-workers-metal-and-plastic",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "computer-numerically-controlled-tool-programmers",
+      "patternmakers-metal-and-plastic",
+      "machinists",
+      "mechanical-engineers",
+      "mechatronics-engineers",
+      "industrial-engineers",
+      "civil-engineering-technologists-and-technicians",
+      "robotics-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "electronics-engineers-except-computer",
+      "calibration-technologists-and-technicians",
+      "electrical-engineers",
+      "software-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "mechanical-engineering-technologists-and-technicians",
+    "title": "Mechanical Engineering Technologists and Technicians",
+    "soc": "17-3027",
+    "exposure": "Medium",
+    "summary": "Apply theory and principles of mechanical engineering to modify, develop, test, or adjust machinery and equipment under direction of engineering staff or physical scientists.",
+    "laborMarket": {
+      "medianWage": "$68,280",
+      "annualOpenings": "42",
+      "employment": "630",
+      "projectedGrowth": "0.1%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mechanical-engineers",
+    "title": "Mechanical Engineers",
+    "soc": "17-2141",
+    "exposure": "Very High",
+    "summary": "Perform engineering duties in planning and designing tools, engines, machines, and other mechanically functioning equipment. Oversee installation, operation, maintenance, and repair of equipment such as centralized heat, gas, water, and steam systems.",
+    "laborMarket": {
+      "medianWage": "$102,510",
+      "annualOpenings": "386",
+      "employment": "5,440",
+      "projectedGrowth": "1.37%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-engineers",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "mechatronics-engineers",
+      "industrial-engineers",
+      "electronics-engineers-except-computer",
+      "calibration-technologists-and-technicians",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "automotive-engineers",
+      "industrial-machinery-mechanics",
+      "engine-and-other-machine-assemblers",
+      "stationary-engineers-and-boiler-operators",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "industrial-engineering-technologists-and-technicians",
+      "aircraft-structure-surfaces-rigging-and-systems-assemblers",
+      "control-and-valve-installers-and-repairers-except-mechanical-door",
+      "electrical-and-electronic-equipment-assemblers",
+      "electromechanical-equipment-assemblers"
+    ],
+    "training": []
+  },
+  {
+    "id": "mechatronics-engineers",
+    "title": "Mechatronics Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Research, design, develop, or test automation, intelligent systems, smart devices, or industrial systems control.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "media-programming-directors",
+    "title": "Media Programming Directors",
+    "soc": "27-2012",
+    "exposure": "High",
+    "summary": "Direct and coordinate activities of personnel engaged in preparation of radio or television station program schedules and programs, such as sports or news.",
+    "laborMarket": {
+      "medianWage": "$60,260",
+      "annualOpenings": "113",
+      "employment": "1,290",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "media-technical-directors-managers",
+      "film-and-video-editors",
+      "art-directors",
+      "broadcast-announcers-and-radio-disc-jockeys",
+      "writers-and-authors",
+      "music-directors-and-composers",
+      "news-analysts-reporters-and-journalists",
+      "editors",
+      "special-effects-artists-and-animators",
+      "audio-and-video-technicians",
+      "camera-operators-television-video-and-film",
+      "public-relations-specialists",
+      "actors",
+      "graphic-designers",
+      "video-game-designers",
+      "project-management-specialists",
+      "sound-engineering-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "media-technical-directors-managers",
+    "title": "Media Technical Directors/Managers",
+    "soc": "27-2012",
+    "exposure": "High",
+    "summary": "Coordinate activities of technical departments, such as taping, editing, engineering, and maintenance, to produce radio or television programs.",
+    "laborMarket": {
+      "medianWage": "$60,260",
+      "annualOpenings": "113",
+      "employment": "1,290",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "media-technical-directors-managers",
+      "film-and-video-editors",
+      "art-directors",
+      "broadcast-announcers-and-radio-disc-jockeys",
+      "writers-and-authors",
+      "music-directors-and-composers",
+      "news-analysts-reporters-and-journalists",
+      "editors",
+      "special-effects-artists-and-animators",
+      "audio-and-video-technicians",
+      "camera-operators-television-video-and-film",
+      "public-relations-specialists",
+      "actors",
+      "graphic-designers",
+      "video-game-designers",
+      "project-management-specialists",
+      "sound-engineering-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "medical-appliance-technicians",
+    "title": "Medical Appliance Technicians",
+    "soc": "51-9082",
+    "exposure": "Low",
+    "summary": "Construct, maintain, or repair medical supportive devices such as braces, orthotics and prosthetic devices, joints, arch supports, and other surgical and medical appliances.",
+    "laborMarket": {
+      "medianWage": "$65,040",
+      "annualOpenings": "45",
+      "employment": "410",
+      "projectedGrowth": "-0.24%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "medical-assistants",
+    "title": "Medical Assistants",
+    "soc": "31-9092",
+    "exposure": "Medium",
+    "summary": "Perform administrative and certain clinical duties under the direction of a physician. Administrative duties may include scheduling appointments, maintaining medical records, billing, and coding information for insurance purposes. Clinical duties may include taking and recording vital signs and medical histories, preparing patients for examination, drawing blood, and administering medications as directed by physician.",
+    "laborMarket": {
+      "medianWage": "$45,440",
+      "annualOpenings": "3,821",
+      "employment": "23,300",
+      "projectedGrowth": "2.81%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "medical-dosimetrists",
+    "title": "Medical Dosimetrists",
+    "soc": "29-2036",
+    "exposure": "High",
+    "summary": "Generate radiation treatment plans, develop radiation dose calculations, communicate and supervise the treatment plan implementation, and consult with members of radiation oncology team.",
+    "laborMarket": {
+      "medianWage": "$127,980",
+      "annualOpenings": "7",
+      "employment": "50",
+      "projectedGrowth": "2.74%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "radiation-therapists",
+      "nuclear-medicine-technologists",
+      "radiologists",
+      "radiologic-technologists-and-technicians",
+      "nuclear-monitoring-technicians",
+      "cardiovascular-technologists-and-technicians",
+      "medical-and-clinical-laboratory-technologists",
+      "magnetic-resonance-imaging-technologists",
+      "diagnostic-medical-sonographers",
+      "neurodiagnostic-technologists",
+      "cardiologists",
+      "pediatric-surgeons",
+      "paramedics",
+      "emergency-medical-technicians",
+      "orthopedic-surgeons-except-pediatric",
+      "medical-and-clinical-laboratory-technicians",
+      "respiratory-therapists",
+      "anesthesiologist-assistants",
+      "nurse-anesthetists",
+      "bioengineers-and-biomedical-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "medical-equipment-preparers",
+    "title": "Medical Equipment Preparers",
+    "soc": "31-9093",
+    "exposure": "Low",
+    "summary": "Prepare, sterilize, install, or clean laboratory or healthcare equipment. May perform routine laboratory tasks and operate or inspect equipment.",
+    "laborMarket": {
+      "medianWage": "$46,060",
+      "annualOpenings": "307",
+      "employment": "2,180",
+      "projectedGrowth": "3.06%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "medical-equipment-repairers",
+    "title": "Medical Equipment Repairers",
+    "soc": "49-9062",
+    "exposure": "Medium",
+    "summary": "Test, adjust, or repair biomedical or electromedical equipment.",
+    "laborMarket": {
+      "medianWage": "$64,040",
+      "annualOpenings": "130",
+      "employment": "1,300",
+      "projectedGrowth": "3.05%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "medical-records-specialists",
+    "title": "Medical Records Specialists",
+    "soc": "29-2072",
+    "exposure": "Very High",
+    "summary": "Compile, process, and maintain medical records of hospital and clinic patients in a manner consistent with medical, administrative, ethical, legal, and regulatory requirements of the healthcare system. Classify medical and healthcare concepts, including diagnosis, procedures, medical services, and equipment, into the healthcare industry's numerical coding system. Includes medical coders.",
+    "laborMarket": {
+      "medianWage": "$49,790",
+      "annualOpenings": "338",
+      "employment": "3,370",
+      "projectedGrowth": "1.94%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [
+      "medical-transcriptionists",
+      "health-information-technologists-and-medical-registrars",
+      "medical-secretaries-and-administrative-assistants",
+      "medical-assistants",
+      "file-clerks",
+      "patient-representatives",
+      "document-management-specialists",
+      "health-informatics-specialists",
+      "statistical-assistants",
+      "pharmacy-technicians",
+      "physician-assistants",
+      "emergency-medicine-physicians",
+      "management-analysts",
+      "family-medicine-physicians",
+      "nurse-practitioners",
+      "registered-nurses",
+      "office-clerks-general",
+      "phlebotomists",
+      "cardiovascular-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "medical-scientists-except-epidemiologists",
+    "title": "Medical Scientists, Except Epidemiologists",
+    "soc": "19-1042",
+    "exposure": "High",
+    "summary": "Conduct research dealing with the understanding of human diseases and the improvement of human health. Engage in clinical investigation, research and development, or other related activities.",
+    "laborMarket": {
+      "medianWage": "$102,250",
+      "annualOpenings": "97",
+      "employment": "1,220",
+      "projectedGrowth": "1.55%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "geneticists",
+      "biochemists-and-biophysicists",
+      "physicians-pathologists",
+      "microbiologists",
+      "medical-and-clinical-laboratory-technologists",
+      "epidemiologists",
+      "clinical-neuropsychologists",
+      "medical-and-clinical-laboratory-technicians",
+      "cardiologists",
+      "preventive-medicine-physicians",
+      "radiologists",
+      "clinical-research-coordinators",
+      "bioengineers-and-biomedical-engineers",
+      "biological-technicians",
+      "pediatric-surgeons"
+    ],
+    "training": []
+  },
+  {
+    "id": "medical-secretaries-and-administrative-assistants",
+    "title": "Medical Secretaries and Administrative Assistants",
+    "soc": "43-6013",
+    "exposure": "Very High",
+    "summary": "Perform secretarial duties using specific knowledge of medical terminology and hospital, clinic, or laboratory procedures. Duties may include scheduling appointments, billing patients, and compiling and recording medical charts, reports, and correspondence.",
+    "laborMarket": {
+      "medianWage": "$46,510",
+      "annualOpenings": "2,248",
+      "employment": "16,650",
+      "projectedGrowth": "2.05%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "receptionists-and-information-clerks",
+      "medical-records-specialists",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "office-clerks-general",
+      "medical-assistants",
+      "patient-representatives",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "medical-transcriptionists",
+      "customer-service-representatives",
+      "insurance-claims-and-policy-processing-clerks",
+      "medical-and-health-services-managers",
+      "administrative-services-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "interviewers-except-eligibility-and-loan",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "pharmacy-technicians",
+      "eligibility-interviewers-government-programs",
+      "health-information-technologists-and-medical-registrars",
+      "billing-and-posting-clerks",
+      "emergency-medicine-physicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "medical-transcriptionists",
+    "title": "Medical Transcriptionists",
+    "soc": "31-9094",
+    "exposure": "Very High",
+    "summary": "Transcribe medical reports recorded by physicians and other healthcare practitioners using various electronic devices, covering office visits, emergency room visits, diagnostic imaging studies, operations, chart reviews, and final summaries. Transcribe dictated reports and translate abbreviations into fully understandable form. Edit as necessary and return reports in either printed or electronic form for review and signature, or correction.",
+    "laborMarket": {
+      "medianWage": "$36,360",
+      "annualOpenings": "362",
+      "employment": "920",
+      "projectedGrowth": "0.26%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [
+      "medical-records-specialists",
+      "word-processors-and-typists",
+      "medical-assistants",
+      "emergency-medical-technicians",
+      "medical-secretaries-and-administrative-assistants",
+      "health-information-technologists-and-medical-registrars",
+      "file-clerks",
+      "court-reporters-and-simultaneous-captioners",
+      "receptionists-and-information-clerks",
+      "pharmacy-technicians",
+      "paramedics",
+      "pediatric-surgeons",
+      "cardiovascular-technologists-and-technicians",
+      "cardiologists",
+      "orthopedic-surgeons-except-pediatric",
+      "radiologic-technologists-and-technicians",
+      "phlebotomists",
+      "neurodiagnostic-technologists",
+      "diagnostic-medical-sonographers",
+      "emergency-medicine-physicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "medical-and-health-services-managers",
+    "title": "Medical and Health Services Managers",
+    "soc": "11-9111",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate medical and health services in hospitals, clinics, managed care organizations, public health agencies, or similar organizations.",
+    "laborMarket": {
+      "medianWage": "$122,740",
+      "annualOpenings": "1,396",
+      "employment": "11,410",
+      "projectedGrowth": "4.3%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "meeting-convention-and-event-planners",
+    "title": "Meeting, Convention, and Event Planners",
+    "soc": "13-1121",
+    "exposure": "High",
+    "summary": "Coordinate activities of staff, convention personnel, or clients to make arrangements for group meetings, events, or conventions.",
+    "laborMarket": {
+      "medianWage": "$59,480",
+      "annualOpenings": "320",
+      "employment": "2,870",
+      "projectedGrowth": "1.18%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "fundraisers",
+      "public-relations-specialists",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "project-management-specialists",
+      "social-and-community-service-managers",
+      "media-programming-directors",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "recreation-workers",
+      "fundraising-managers",
+      "management-analysts",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "information-technology-project-managers",
+      "public-relations-managers",
+      "administrative-services-managers",
+      "business-continuity-planners",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "logisticians",
+      "agents-and-business-managers-of-artists-performers-and-athletes"
+    ],
+    "training": []
+  },
+  {
+    "id": "mental-health-and-substance-abuse-social-workers",
+    "title": "Mental Health and Substance Abuse Social Workers",
+    "soc": "21-1023",
+    "exposure": "Low",
+    "summary": "Assess and treat individuals with mental, emotional, or substance abuse problems, including abuse of alcohol, tobacco, and/or other drugs. Activities may include individual and group therapy, crisis intervention, case management, client advocacy, prevention, and education.",
+    "laborMarket": {
+      "medianWage": "$46,650",
+      "annualOpenings": "330",
+      "employment": "3,610",
+      "projectedGrowth": "2.65%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "merchandise-displayers-and-window-trimmers",
+    "title": "Merchandise Displayers and Window Trimmers",
+    "soc": "27-1026",
+    "exposure": "Medium",
+    "summary": "Plan and erect commercial displays, such as those in windows and interiors of retail stores and at trade exhibitions.",
+    "laborMarket": {
+      "medianWage": "$35,540",
+      "annualOpenings": "511",
+      "employment": "4,700",
+      "projectedGrowth": "-0.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "metal-refining-furnace-operators-and-tenders",
+    "title": "Metal-Refining Furnace Operators and Tenders",
+    "soc": "51-4051",
+    "exposure": "Very Low",
+    "summary": "Operate or tend furnaces, such as gas, oil, coal, electric-arc or electric induction, open-hearth, or oxygen furnaces, to melt and refine metal before casting or to produce specified types of steel.",
+    "laborMarket": {
+      "medianWage": "$54,550",
+      "annualOpenings": "37",
+      "employment": "490",
+      "projectedGrowth": "-0.25%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "meter-readers-utilities",
+    "title": "Meter Readers, Utilities",
+    "soc": "43-5041",
+    "exposure": "Medium",
+    "summary": "Read meter and record consumption of electricity, gas, water, or steam.",
+    "laborMarket": {
+      "medianWage": "$47,980",
+      "annualOpenings": "38",
+      "employment": "530",
+      "projectedGrowth": "-0.3%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "microbiologists",
+    "title": "Microbiologists",
+    "soc": "19-1022",
+    "exposure": "Medium",
+    "summary": "Investigate the growth, structure, development, and other characteristics of microscopic organisms, such as bacteria, algae, or fungi. Includes medical microbiologists who study the relationship between organisms and disease or the effects of antibiotics on microorganisms.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "9",
+      "employment": "90",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "microsystems-engineers",
+    "title": "Microsystems Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Research, design, develop, or test microelectromechanical systems (MEMS) devices.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "middle-school-teachers-except-special-and-career-technical-education",
+    "title": "Middle School Teachers, Except Special and Career/Technical Education",
+    "soc": "25-2022",
+    "exposure": "Medium",
+    "summary": "Teach one or more subjects to students at the middle, intermediate, or junior high school level.",
+    "laborMarket": {
+      "medianWage": "$59,060",
+      "annualOpenings": "656",
+      "employment": "8,930",
+      "projectedGrowth": "0.66%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "midwives",
+    "title": "Midwives",
+    "soc": "29-9099",
+    "exposure": "Medium",
+    "summary": "Provide prenatal care and childbirth assistance.",
+    "laborMarket": {
+      "medianWage": "$65,830",
+      "annualOpenings": "57",
+      "employment": "560",
+      "projectedGrowth": "1.13%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "milling-and-planing-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Milling and Planing Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4035",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend milling or planing machines to mill, plane, shape, groove, or profile metal or plastic work pieces.",
+    "laborMarket": {
+      "medianWage": "$60,210",
+      "annualOpenings": "30",
+      "employment": "130",
+      "projectedGrowth": "-0.18%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "millwrights",
+    "title": "Millwrights",
+    "soc": "49-9044",
+    "exposure": "Very Low",
+    "summary": "Install, dismantle, or move machinery and heavy equipment according to layout plans, blueprints, or other drawings.",
+    "laborMarket": {
+      "medianWage": "$58,080",
+      "annualOpenings": "61",
+      "employment": "890",
+      "projectedGrowth": "2.35%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mining-and-geological-engineers-including-mining-safety-engineers",
+    "title": "Mining and Geological Engineers, Including Mining Safety Engineers",
+    "soc": "17-2151",
+    "exposure": "High",
+    "summary": "Conduct subsurface surveys to identify the characteristics of potential land or mining development sites. May specify the ground support systems, processes, and equipment for safe, economical, and environmentally sound extraction or underground construction activities. May inspect areas for unsafe geological conditions, equipment, and working conditions. May design, implement, and coordinate mine safety programs.",
+    "laborMarket": {
+      "medianWage": "$102,780",
+      "annualOpenings": "38",
+      "employment": "680",
+      "projectedGrowth": "1.45%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "petroleum-engineers",
+      "civil-engineers",
+      "geological-technicians-except-hydrologic-technicians",
+      "industrial-engineers",
+      "geothermal-production-managers",
+      "chemical-engineers",
+      "environmental-engineers",
+      "geoscientists-except-hydrologists-and-geographers",
+      "civil-engineering-technologists-and-technicians",
+      "materials-engineers",
+      "nuclear-engineers",
+      "earth-drillers-except-oil-and-gas",
+      "industrial-engineering-technologists-and-technicians",
+      "environmental-engineering-technologists-and-technicians",
+      "continuous-mining-machine-operators",
+      "explosives-workers-ordnance-handling-experts-and-blasters",
+      "construction-managers",
+      "hydroelectric-plant-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "mixing-and-blending-machine-setters-operators-and-tenders",
+    "title": "Mixing and Blending Machine Setters, Operators, and Tenders",
+    "soc": "51-9023",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend machines to mix or blend materials, such as chemicals, tobacco, liquids, color pigments, or explosive ingredients.",
+    "laborMarket": {
+      "medianWage": "$46,370",
+      "annualOpenings": "104",
+      "employment": "1,380",
+      "projectedGrowth": "-0.19%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "mobile-heavy-equipment-mechanics-except-engines",
+    "title": "Mobile Heavy Equipment Mechanics, Except Engines",
+    "soc": "49-3042",
+    "exposure": "Very Low",
+    "summary": "Diagnose, adjust, repair, or overhaul mobile mechanical, hydraulic, and pneumatic equipment, such as cranes, bulldozers, graders, and conveyors, used in construction, logging, and mining.",
+    "laborMarket": {
+      "medianWage": "$62,880",
+      "annualOpenings": "909",
+      "employment": "7,840",
+      "projectedGrowth": "1.7%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "model-makers-metal-and-plastic",
+    "title": "Model Makers, Metal and Plastic",
+    "soc": "51-4061",
+    "exposure": "Low",
+    "summary": "Set up and operate machines, such as lathes, milling and engraving machines, and jig borers to make working models of metal or plastic objects. Includes template makers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "model-makers-wood",
+    "title": "Model Makers, Wood",
+    "soc": "51-7031",
+    "exposure": "Low",
+    "summary": "Construct full-size and scale wooden precision models of products. Includes wood jig builders and loft workers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "models",
+    "title": "Models",
+    "soc": "41-9012",
+    "exposure": "Low",
+    "summary": "Model garments or other apparel and accessories for prospective buyers at fashion shows, private showings, or retail establishments. May pose for photos to be used in magazines or advertisements. May pose as subject for paintings, sculptures, and other types of artistic expression.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "6.9%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "molders-shapers-and-casters-except-metal-and-plastic",
+    "title": "Molders, Shapers, and Casters, Except Metal and Plastic",
+    "soc": "51-9195",
+    "exposure": "Very Low",
+    "summary": "Mold, shape, form, cast, or carve products such as food products, figurines, tile, pipes, and candles consisting of clay, glass, plaster, concrete, stone, or combinations of materials.",
+    "laborMarket": {
+      "medianWage": "$47,170",
+      "annualOpenings": "138",
+      "employment": "370",
+      "projectedGrowth": "0.05%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "molding-coremaking-and-casting-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Molding, Coremaking, and Casting Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4072",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend metal or plastic molding, casting, or coremaking machines to mold or cast metal or thermoplastic parts or products.",
+    "laborMarket": {
+      "medianWage": "$43,180",
+      "annualOpenings": "164",
+      "employment": "1,410",
+      "projectedGrowth": "0.09%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "molecular-and-cellular-biologists",
+    "title": "Molecular and Cellular Biologists",
+    "soc": "19-1029",
+    "exposure": "Very High",
+    "summary": "Research and study cellular molecules and organelles to understand cell function and organization.",
+    "laborMarket": {
+      "medianWage": "$88,610",
+      "annualOpenings": "46",
+      "employment": "620",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "morticians-undertakers-and-funeral-arrangers",
+    "title": "Morticians, Undertakers, and Funeral Arrangers",
+    "soc": "39-4031",
+    "exposure": "Low",
+    "summary": "Perform various tasks to arrange and direct individual funeral services, such as coordinating transportation of body to mortuary, interviewing family or other authorized person to arrange details, selecting pallbearers, aiding with the selection of officials for religious rites, and providing transportation for mourners.",
+    "laborMarket": {
+      "medianWage": "$37,970",
+      "annualOpenings": "40",
+      "employment": "420",
+      "projectedGrowth": "0.14%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "motion-picture-projectionists",
+    "title": "Motion Picture Projectionists",
+    "soc": "39-3021",
+    "exposure": "Low",
+    "summary": "Set up and operate motion picture projection and related sound reproduction equipment.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "motorboat-mechanics-and-service-technicians",
+    "title": "Motorboat Mechanics and Service Technicians",
+    "soc": "49-3051",
+    "exposure": "Very Low",
+    "summary": "Repair and adjust electrical and mechanical equipment of inboard or inboard-outboard boat engines.",
+    "laborMarket": {
+      "medianWage": "$46,420",
+      "annualOpenings": "36",
+      "employment": "310",
+      "projectedGrowth": "1.29%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "motorboat-operators",
+    "title": "Motorboat Operators",
+    "soc": "53-5022",
+    "exposure": "Very Low",
+    "summary": "Operate small motor-driven boats. May assist in navigational activities.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "3",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "motorcycle-mechanics",
+    "title": "Motorcycle Mechanics",
+    "soc": "49-3052",
+    "exposure": "Very Low",
+    "summary": "Diagnose, adjust, repair, or overhaul motorcycles, scooters, mopeds, dirt bikes, or similar motorized vehicles.",
+    "laborMarket": {
+      "medianWage": "$43,640",
+      "annualOpenings": "64",
+      "employment": "490",
+      "projectedGrowth": "-0.61%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "multiple-machine-tool-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Multiple Machine Tool Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4081",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend more than one type of cutting or forming machine tool or robot.",
+    "laborMarket": {
+      "medianWage": "$39,580",
+      "annualOpenings": "143",
+      "employment": "1,430",
+      "projectedGrowth": "0.7%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "museum-technicians-and-conservators",
+    "title": "Museum Technicians and Conservators",
+    "soc": "25-4013",
+    "exposure": "Low",
+    "summary": "Restore, maintain, or prepare objects in museum collections for storage, research, or exhibit. May work with specimens such as fossils, skeletal parts, or botanicals; or artifacts, textiles, or art. May identify and record objects or install and arrange them in exhibits. Includes book or document conservators.",
+    "laborMarket": {
+      "medianWage": "$44,460",
+      "annualOpenings": "23",
+      "employment": "120",
+      "projectedGrowth": "2.03%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "music-directors-and-composers",
+    "title": "Music Directors and Composers",
+    "soc": "27-2041",
+    "exposure": "Very High",
+    "summary": "Conduct, direct, plan, and lead instrumental or vocal performances by musical artists or groups, such as orchestras, bands, choirs, and glee clubs; or create original works of music.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "59",
+      "employment": "nan",
+      "projectedGrowth": "2.29%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "musicians-and-singers",
+      "choreographers",
+      "art-drama-and-music-teachers-postsecondary",
+      "producers-and-directors",
+      "music-therapists",
+      "poets-lyricists-and-creative-writers",
+      "art-directors",
+      "film-and-video-editors",
+      "actors",
+      "sound-engineering-technicians",
+      "dancers",
+      "musical-instrument-repairers-and-tuners",
+      "directors-religious-activities-and-education",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "fine-artists-including-painters-sculptors-and-illustrators",
+      "broadcast-announcers-and-radio-disc-jockeys"
+    ],
+    "training": []
+  },
+  {
+    "id": "musical-instrument-repairers-and-tuners",
+    "title": "Musical Instrument Repairers and Tuners",
+    "soc": "49-9063",
+    "exposure": "Very Low",
+    "summary": "Repair percussion, stringed, reed, or wind instruments. May specialize in one area, such as piano tuning.",
+    "laborMarket": {
+      "medianWage": "$38,110",
+      "annualOpenings": "21",
+      "employment": "170",
+      "projectedGrowth": "0.43%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "musicians-and-singers",
+    "title": "Musicians and Singers",
+    "soc": "27-2042",
+    "exposure": "Medium",
+    "summary": "Play one or more musical instruments or sing. May perform on stage, for broadcasting, or for sound or video recording.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "405",
+      "employment": "0",
+      "projectedGrowth": "2.1%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nannies",
+    "title": "Nannies",
+    "soc": "39-9011",
+    "exposure": "Low",
+    "summary": "Care for children in private households and provide support and expertise to parents in satisfying children's physical, emotional, intellectual, and social needs. Duties may include meal planning and preparation, laundry and clothing care, organization of play activities and outings, discipline, intellectual stimulation, language activities, and transportation.",
+    "laborMarket": {
+      "medianWage": "$35,140",
+      "annualOpenings": "2,250",
+      "employment": "6,190",
+      "projectedGrowth": "1.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nanosystems-engineers",
+    "title": "Nanosystems Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Design, develop, or supervise the production of materials, devices, or systems of unique molecular or macromolecular composition, applying principles of nanoscale physics and electrical, chemical, or biological engineering.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nanotechnology-engineering-technologists-and-technicians",
+    "title": "Nanotechnology Engineering Technologists and Technicians",
+    "soc": "17-3026",
+    "exposure": "Medium",
+    "summary": "Implement production processes and operate commercial-scale production equipment to produce, test, or modify materials, devices, or systems of unique molecular or macromolecular composition. Operate advanced microscopy equipment to manipulate nanoscale objects. Work under the supervision of nanoengineering staff.",
+    "laborMarket": {
+      "medianWage": "$69,900",
+      "annualOpenings": "205",
+      "employment": "1,810",
+      "projectedGrowth": "0.25%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "natural-sciences-managers",
+    "title": "Natural Sciences Managers",
+    "soc": "11-9121",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate activities in such fields as life sciences, physical sciences, mathematics, statistics, and research and development in these fields.",
+    "laborMarket": {
+      "medianWage": "$126,320",
+      "annualOpenings": "61",
+      "employment": "770",
+      "projectedGrowth": "0.45%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "project-management-specialists",
+      "bioengineers-and-biomedical-engineers",
+      "data-scientists",
+      "biological-technicians",
+      "molecular-and-cellular-biologists",
+      "environmental-science-teachers-postsecondary",
+      "clinical-research-coordinators",
+      "architectural-and-engineering-managers",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "chemists",
+      "chemical-technicians",
+      "computer-and-information-research-scientists",
+      "management-analysts",
+      "bioinformatics-technicians",
+      "environmental-scientists-and-specialists-including-health",
+      "industrial-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "naturopathic-physicians",
+    "title": "Naturopathic Physicians",
+    "soc": "29-1299",
+    "exposure": "High",
+    "summary": "Diagnose, treat, and help prevent diseases using a system of practice that is based on the natural healing capacity of individuals. May use physiological, psychological or mechanical methods. May also use natural medicines, prescription or legend drugs, foods, herbs, or other natural remedies.",
+    "laborMarket": {
+      "medianWage": "$79,990",
+      "annualOpenings": "36",
+      "employment": "540",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "network-and-computer-systems-administrators",
+    "title": "Network and Computer Systems Administrators",
+    "soc": "15-1244",
+    "exposure": "Very High",
+    "summary": "Install, configure, and maintain an organization's local area network (LAN), wide area network (WAN), data communications network, operating systems, and physical and virtual servers. Perform system monitoring and verify the integrity and availability of hardware, network, and server resources and systems. Review system and application logs and verify completion of scheduled jobs, including system backups. Analyze network and server resource consumption and control user access. Install and upgrade software and maintain software licenses. May assist in network modeling, analysis, planning, and coordination between network and data communications hardware and software.",
+    "laborMarket": {
+      "medianWage": "$87,090",
+      "annualOpenings": "294",
+      "employment": "5,840",
+      "projectedGrowth": "-0.36%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "computer-network-support-specialists",
+      "database-administrators",
+      "computer-network-architects",
+      "computer-systems-engineers-architects",
+      "computer-systems-analysts",
+      "information-security-analysts",
+      "computer-user-support-specialists",
+      "software-developers",
+      "database-architects",
+      "computer-and-information-systems-managers",
+      "software-quality-assurance-analysts-and-testers",
+      "computer-programmers",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "web-developers"
+    ],
+    "training": []
+  },
+  {
+    "id": "neurodiagnostic-technologists",
+    "title": "Neurodiagnostic Technologists",
+    "soc": "29-2099",
+    "exposure": "Medium",
+    "summary": "Conduct electroneurodiagnostic (END) tests such as electroencephalograms, evoked potentials, polysomnograms, or electronystagmograms. May perform nerve conduction studies.",
+    "laborMarket": {
+      "medianWage": "$55,200",
+      "annualOpenings": "293",
+      "employment": "2,670",
+      "projectedGrowth": "2.53%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "neurologists",
+    "title": "Neurologists",
+    "soc": "29-1217",
+    "exposure": "High",
+    "summary": "Diagnose, manage, and treat disorders and diseases of the brain, spinal cord, and peripheral nerves, with a primarily nonsurgical focus.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "8",
+      "employment": "110",
+      "projectedGrowth": "1.69%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "pediatric-surgeons",
+      "cardiologists",
+      "orthopedic-surgeons-except-pediatric",
+      "general-internal-medicine-physicians",
+      "pediatricians-general",
+      "psychiatrists",
+      "physical-medicine-and-rehabilitation-physicians",
+      "emergency-medicine-physicians",
+      "clinical-neuropsychologists",
+      "obstetricians-and-gynecologists",
+      "family-medicine-physicians",
+      "ophthalmologists-except-pediatric",
+      "chiropractors",
+      "nurse-practitioners",
+      "anesthesiologists",
+      "dermatologists",
+      "physician-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "neuropsychologists",
+    "title": "Neuropsychologists",
+    "soc": "19-3039",
+    "exposure": "High",
+    "summary": "Apply theories and principles of neuropsychology to evaluate and diagnose disorders of higher cerebral functioning, often in research and medical settings. Study the human brain and the effect of physiological states on human cognition and behavior. May formulate and administer programs of treatment.",
+    "laborMarket": {
+      "medianWage": "$128,040",
+      "annualOpenings": "115",
+      "employment": "270",
+      "projectedGrowth": "2.36%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "new-accounts-clerks",
+    "title": "New Accounts Clerks",
+    "soc": "43-4141",
+    "exposure": "Very High",
+    "summary": "Interview persons desiring to open accounts in financial institutions. Explain account services available to prospective customers and assist them in preparing applications.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "5",
+      "employment": "nan",
+      "projectedGrowth": "-1.55%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "tellers",
+      "brokerage-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "customer-service-representatives",
+      "securities-commodities-and-financial-services-sales-agents",
+      "credit-authorizers-checkers-and-clerks",
+      "loan-officers",
+      "bill-and-account-collectors",
+      "loan-interviewers-and-clerks",
+      "personal-financial-advisors",
+      "financial-managers",
+      "credit-counselors",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "financial-and-investment-analysts",
+      "credit-analysts",
+      "telemarketers",
+      "office-clerks-general",
+      "insurance-claims-and-policy-processing-clerks",
+      "insurance-sales-agents",
+      "billing-and-posting-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "news-analysts-reporters-and-journalists",
+    "title": "News Analysts, Reporters, and Journalists",
+    "soc": "27-3023",
+    "exposure": "Very High",
+    "summary": "Narrate or write news stories, reviews, or commentary for print, broadcast, or other communications media such as newspapers, magazines, radio, or television. May collect and analyze information through interview, investigation, or observation.",
+    "laborMarket": {
+      "medianWage": "$49,140",
+      "annualOpenings": "61",
+      "employment": "570",
+      "projectedGrowth": "0.84%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "broadcast-announcers-and-radio-disc-jockeys",
+      "editors",
+      "poets-lyricists-and-creative-writers",
+      "producers-and-directors",
+      "film-and-video-editors",
+      "public-relations-specialists",
+      "proofreaders-and-copy-markers",
+      "intelligence-analysts",
+      "technical-writers",
+      "historians",
+      "court-reporters-and-simultaneous-captioners",
+      "political-scientists",
+      "social-science-research-assistants",
+      "sociologists",
+      "communications-teachers-postsecondary",
+      "correspondence-clerks",
+      "business-intelligence-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "non-destructive-testing-specialists",
+    "title": "Non-Destructive Testing Specialists",
+    "soc": "17-3029",
+    "exposure": "Low",
+    "summary": "Test the safety of structures, vehicles, or vessels using x-ray, ultrasound, fiber optic or related equipment.",
+    "laborMarket": {
+      "medianWage": "$63,570",
+      "annualOpenings": "96",
+      "employment": "0",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nuclear-engineers",
+    "title": "Nuclear Engineers",
+    "soc": "17-2161",
+    "exposure": "Very High",
+    "summary": "Conduct research on nuclear engineering projects or apply principles and theory of nuclear science to problems concerned with release, control, and use of nuclear energy and nuclear waste disposal.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "5",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "nuclear-power-reactor-operators",
+      "nuclear-technicians",
+      "chemical-engineers",
+      "geothermal-production-managers",
+      "environmental-engineers",
+      "biofuels-biodiesel-technology-and-product-development-managers",
+      "environmental-engineering-technologists-and-technicians",
+      "fuel-cell-engineers",
+      "power-plant-operators",
+      "environmental-science-and-protection-technicians-including-health",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "energy-engineers-except-wind-and-solar",
+      "industrial-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "nuclear-medicine-technologists",
+    "title": "Nuclear Medicine Technologists",
+    "soc": "29-2033",
+    "exposure": "Medium",
+    "summary": "Prepare, administer, and measure radioactive isotopes in therapeutic, diagnostic, and tracer studies using a variety of radioisotope equipment. Prepare stock solutions of radioactive materials and calculate doses to be administered by radiologists. Subject patients to radiation. Execute blood volume, red cell survival, and fat absorption studies following standard laboratory techniques.",
+    "laborMarket": {
+      "medianWage": "$98,720",
+      "annualOpenings": "27",
+      "employment": "510",
+      "projectedGrowth": "2.39%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nuclear-monitoring-technicians",
+    "title": "Nuclear Monitoring Technicians",
+    "soc": "19-4051",
+    "exposure": "Low",
+    "summary": "Collect and test samples to monitor results of nuclear experiments and contamination of humans, facilities, and environment.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "14",
+      "employment": "nan",
+      "projectedGrowth": "-0.38%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nuclear-power-reactor-operators",
+    "title": "Nuclear Power Reactor Operators",
+    "soc": "51-8011",
+    "exposure": "Medium",
+    "summary": "Operate or control nuclear reactors. Move control rods, start and stop equipment, monitor and adjust controls, and record data in logs. Implement emergency procedures when needed. May respond to abnormalities, determine cause, and recommend corrective action.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "11",
+      "employment": "nan",
+      "projectedGrowth": "-0.41%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nuclear-technicians",
+    "title": "Nuclear Technicians",
+    "soc": "19-4051",
+    "exposure": "Low",
+    "summary": "Assist nuclear physicists, nuclear engineers, or other scientists in laboratory, power generation, or electricity production activities. May operate, maintain, or provide quality control for nuclear testing and research equipment. May monitor radiation.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "14",
+      "employment": "nan",
+      "projectedGrowth": "-0.38%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nurse-anesthetists",
+    "title": "Nurse Anesthetists",
+    "soc": "29-1151",
+    "exposure": "Low",
+    "summary": "Administer anesthesia, monitor patient's vital signs, and oversee patient recovery from anesthesia. May assist anesthesiologists, surgeons, other physicians, or dentists. Must be registered nurses who have specialized graduate education.",
+    "laborMarket": {
+      "medianWage": "$228,690",
+      "annualOpenings": "50",
+      "employment": "0",
+      "projectedGrowth": "2.15%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nurse-midwives",
+    "title": "Nurse Midwives",
+    "soc": "29-1161",
+    "exposure": "Medium",
+    "summary": "Diagnose and coordinate all aspects of the birthing process, either independently or as part of a healthcare team. May provide well-woman gynecological care. Must have specialized, graduate nursing education.",
+    "laborMarket": {
+      "medianWage": "$135,590",
+      "annualOpenings": "7",
+      "employment": "80",
+      "projectedGrowth": "1.89%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nurse-practitioners",
+    "title": "Nurse Practitioners",
+    "soc": "29-1171",
+    "exposure": "High",
+    "summary": "Diagnose and treat acute, episodic, or chronic illness, independently or as part of a healthcare team. May focus on health promotion and disease prevention. May order, perform, or interpret diagnostic tests such as lab work and x rays. May prescribe medication. Must be registered nurses who have specialized graduate education.",
+    "laborMarket": {
+      "medianWage": "$133,790",
+      "annualOpenings": "758",
+      "employment": "7,540",
+      "projectedGrowth": "5.62%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "registered-nurses",
+      "family-medicine-physicians",
+      "emergency-medicine-physicians",
+      "nurse-midwives",
+      "general-internal-medicine-physicians",
+      "physician-assistants",
+      "obstetricians-and-gynecologists",
+      "pediatricians-general",
+      "paramedics",
+      "pediatric-surgeons",
+      "cardiologists",
+      "anesthesiologists",
+      "nurse-anesthetists",
+      "licensed-practical-and-licensed-vocational-nurses",
+      "neurologists",
+      "psychiatrists"
+    ],
+    "training": []
+  },
+  {
+    "id": "nursing-assistants",
+    "title": "Nursing Assistants",
+    "soc": "31-1131",
+    "exposure": "Very Low",
+    "summary": "Provide or assist with basic care or support under the direction of onsite licensed nursing staff. Perform duties such as monitoring of health status, feeding, bathing, dressing, grooming, toileting, or ambulation of patients in a health or nursing facility. May include medication administration and other health-related tasks. Includes nursing care attendants, nursing aides, and nursing attendants.",
+    "laborMarket": {
+      "medianWage": "$41,980",
+      "annualOpenings": "2,994",
+      "employment": "17,350",
+      "projectedGrowth": "2.75%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "nursing-instructors-and-teachers-postsecondary",
+    "title": "Nursing Instructors and Teachers, Postsecondary",
+    "soc": "25-1072",
+    "exposure": "Medium",
+    "summary": "Demonstrate and teach patient care in classroom and clinical units to nursing students. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$68,360",
+      "annualOpenings": "157",
+      "employment": "1,920",
+      "projectedGrowth": "2.48%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "obstetricians-and-gynecologists",
+    "title": "Obstetricians and Gynecologists",
+    "soc": "29-1218",
+    "exposure": "Medium",
+    "summary": "Provide medical care related to pregnancy or childbirth. Diagnose, treat, and help prevent diseases of women, particularly those affecting the reproductive system. May also provide general care to women. May perform both medical and gynecological surgery functions.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "15",
+      "employment": "0",
+      "projectedGrowth": "1.81%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "occupational-health-and-safety-specialists",
+    "title": "Occupational Health and Safety Specialists",
+    "soc": "19-5011",
+    "exposure": "Medium",
+    "summary": "Review, evaluate, and analyze work environments and design programs and procedures to control, eliminate, and prevent disease or injury caused by chemical, physical, and biological agents or ergonomic factors. May conduct inspections and enforce adherence to laws and regulations governing the health and safety of individuals. May be employed in the public or private sector.",
+    "laborMarket": {
+      "medianWage": "$80,180",
+      "annualOpenings": "360",
+      "employment": "3,020",
+      "projectedGrowth": "2.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "occupational-health-and-safety-technicians",
+    "title": "Occupational Health and Safety Technicians",
+    "soc": "19-5012",
+    "exposure": "Medium",
+    "summary": "Collect data on work environments for analysis by occupational health and safety specialists. Implement and conduct evaluation of programs designed to limit chemical, physical, biological, and ergonomic risks to workers.",
+    "laborMarket": {
+      "medianWage": "$62,620",
+      "annualOpenings": "36",
+      "employment": "390",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "occupational-therapists",
+    "title": "Occupational Therapists",
+    "soc": "29-1122",
+    "exposure": "Medium",
+    "summary": "Assess, plan, and organize rehabilitative programs that help build or restore vocational, homemaking, and daily living skills, as well as general independence, to persons with disabilities or developmental delays. Use therapeutic techniques, adapt the individual's environment, teach skills, and modify specific tasks that present barriers to the individual.",
+    "laborMarket": {
+      "medianWage": "$102,220",
+      "annualOpenings": "231",
+      "employment": "2,390",
+      "projectedGrowth": "2.81%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "occupational-therapy-aides",
+    "title": "Occupational Therapy Aides",
+    "soc": "31-2012",
+    "exposure": "Low",
+    "summary": "Under close supervision of an occupational therapist or occupational therapy assistant, perform only delegated, selected, or routine tasks in specific situations. These duties include preparing patient and treatment room.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "3",
+      "employment": "nan",
+      "projectedGrowth": "5.41%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "occupational-therapy-assistants",
+    "title": "Occupational Therapy Assistants",
+    "soc": "31-2011",
+    "exposure": "Low",
+    "summary": "Assist occupational therapists in providing occupational therapy treatments and procedures. May, in accordance with state laws, assist in development of treatment plans, carry out routine functions, direct activity programs, and document the progress of treatments. Generally requires formal training.",
+    "laborMarket": {
+      "medianWage": "$75,020",
+      "annualOpenings": "154",
+      "employment": "930",
+      "projectedGrowth": "3.57%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "office-clerks-general",
+    "title": "Office Clerks, General",
+    "soc": "43-9061",
+    "exposure": "Very High",
+    "summary": "Perform duties too varied and diverse to be classified in any specific office clerical occupation, requiring knowledge of office systems and procedures. Clerical duties may be assigned in accordance with the office procedures of individual establishments and may include a combination of answering telephones, bookkeeping, typing or word processing, office machine operation, and filing.",
+    "laborMarket": {
+      "medianWage": "$46,290",
+      "annualOpenings": "5,904",
+      "employment": "53,120",
+      "projectedGrowth": "-0.15%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "file-clerks",
+      "receptionists-and-information-clerks",
+      "administrative-services-managers",
+      "medical-secretaries-and-administrative-assistants",
+      "correspondence-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "switchboard-operators-including-answering-service",
+      "billing-and-posting-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "management-analysts",
+      "medical-records-specialists",
+      "customer-service-representatives",
+      "legal-secretaries-and-administrative-assistants",
+      "document-management-specialists",
+      "brokerage-clerks",
+      "interviewers-except-eligibility-and-loan",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "word-processors-and-typists"
+    ],
+    "training": []
+  },
+  {
+    "id": "office-machine-operators-except-computer",
+    "title": "Office Machine Operators, Except Computer",
+    "soc": "43-9071",
+    "exposure": "Medium",
+    "summary": "Operate one or more of a variety of office machines, such as photocopying, photographic, and duplicating machines, or other office machines.",
+    "laborMarket": {
+      "medianWage": "$30,940",
+      "annualOpenings": "40",
+      "employment": "0",
+      "projectedGrowth": "-1.57%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "online-merchants",
+    "title": "Online Merchants",
+    "soc": "13-1199",
+    "exposure": "Very High",
+    "summary": "Conduct retail activities of businesses operating exclusively online. May perform duties such as preparing business strategies, buying merchandise, managing inventory, implementing marketing activities, fulfilling and shipping online orders, and balancing financial records.",
+    "laborMarket": {
+      "medianWage": "$85,390",
+      "annualOpenings": "1,329",
+      "employment": "14,700",
+      "projectedGrowth": "0.63%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "operating-engineers-and-other-construction-equipment-operators",
+    "title": "Operating Engineers and Other Construction Equipment Operators",
+    "soc": "47-2073",
+    "exposure": "Very Low",
+    "summary": "Operate one or several types of power construction equipment, such as motor graders, bulldozers, scrapers, compressors, pumps, derricks, shovels, tractors, or front-end loaders to excavate, move, and grade earth, erect structures, or pour concrete or other hard surface pavement. May repair and maintain equipment in addition to other duties.",
+    "laborMarket": {
+      "medianWage": "$59,900",
+      "annualOpenings": "1,379",
+      "employment": "13,520",
+      "projectedGrowth": "1.51%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "operations-research-analysts",
+    "title": "Operations Research Analysts",
+    "soc": "15-2031",
+    "exposure": "Very High",
+    "summary": "Formulate and apply mathematical modeling and other optimizing methods to develop and interpret information that assists management with decisionmaking, policy formulation, or other managerial functions. May collect and analyze data and develop decision support software, services, or products. May develop and supply optimal time, cost, or logistics networks for program evaluation, review, or implementation.",
+    "laborMarket": {
+      "medianWage": "$83,500",
+      "annualOpenings": "207",
+      "employment": "2,170",
+      "projectedGrowth": "1.86%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "management-analysts",
+      "software-developers",
+      "database-architects",
+      "computer-systems-analysts",
+      "statisticians",
+      "computer-and-information-research-scientists",
+      "computer-systems-engineers-architects",
+      "mathematicians",
+      "project-management-specialists",
+      "industrial-engineers",
+      "logistics-engineers",
+      "financial-quantitative-analysts",
+      "health-information-technologists-and-medical-registrars",
+      "financial-risk-specialists",
+      "statistical-assistants",
+      "database-administrators",
+      "software-quality-assurance-analysts-and-testers"
+    ],
+    "training": []
+  },
+  {
+    "id": "ophthalmic-laboratory-technicians",
+    "title": "Ophthalmic Laboratory Technicians",
+    "soc": "51-9083",
+    "exposure": "Very Low",
+    "summary": "Cut, grind, and polish eyeglasses, contact lenses, or other precision optical elements. Assemble and mount lenses into frames or process other optical elements. Includes precision lens polishers or grinders, centerer-edgers, and lens mounters.",
+    "laborMarket": {
+      "medianWage": "$43,090",
+      "annualOpenings": "33",
+      "employment": "240",
+      "projectedGrowth": "0.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "ophthalmic-medical-technicians",
+    "title": "Ophthalmic Medical Technicians",
+    "soc": "29-2057",
+    "exposure": "Medium",
+    "summary": "Assist ophthalmologists by performing ophthalmic clinical functions. May administer eye exams, administer eye medications, and instruct the patient in care and use of corrective lenses.",
+    "laborMarket": {
+      "medianWage": "$41,790",
+      "annualOpenings": "281",
+      "employment": "2,080",
+      "projectedGrowth": "2.5%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "ophthalmic-medical-technologists",
+    "title": "Ophthalmic Medical Technologists",
+    "soc": "29-2099",
+    "exposure": "Medium",
+    "summary": "Assist ophthalmologists by performing ophthalmic clinical functions and ophthalmic photography. Provide instruction and supervision to other ophthalmic personnel. Assist with minor surgical procedures, applying aseptic techniques and preparing instruments. May perform eye exams, administer eye medications, and instruct patients in care and use of corrective lenses.",
+    "laborMarket": {
+      "medianWage": "$55,200",
+      "annualOpenings": "293",
+      "employment": "2,670",
+      "projectedGrowth": "2.53%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "ophthalmologists-except-pediatric",
+    "title": "Ophthalmologists, Except Pediatric",
+    "soc": "29-1241",
+    "exposure": "Medium",
+    "summary": "Diagnose and perform surgery to treat and help prevent disorders and diseases of the eye. May also provide vision services for treatment including glasses and contacts.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "1.6%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "opticians-dispensing",
+    "title": "Opticians, Dispensing",
+    "soc": "29-2081",
+    "exposure": "Low",
+    "summary": "Design, measure, fit, and adapt lenses and frames for client according to written optical prescription or specification. Assist client with inserting, removing, and caring for contact lenses. Assist client with selecting frames. Measure customer for size of eyeglasses and coordinate frames with facial and eye measurements and optical prescription. Prepare work order for optical laboratory containing instructions for grinding and mounting lenses in frames. Verify exactness of finished lens spectacles. Adjust frame and lens position to fit client. May shape or reshape frames. Includes contact lens opticians.",
+    "laborMarket": {
+      "medianWage": "$46,520",
+      "annualOpenings": "184",
+      "employment": "1,670",
+      "projectedGrowth": "1.25%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "optometrists",
+    "title": "Optometrists",
+    "soc": "29-1041",
+    "exposure": "Medium",
+    "summary": "Diagnose, manage, and treat conditions and diseases of the human eye and visual system. Examine eyes and visual system, diagnose problems or impairments, prescribe corrective lenses, and provide treatment. May prescribe therapeutic drugs to treat specific eye conditions.",
+    "laborMarket": {
+      "medianWage": "$134,430",
+      "annualOpenings": "54",
+      "employment": "960",
+      "projectedGrowth": "2.04%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "oral-and-maxillofacial-surgeons",
+    "title": "Oral and Maxillofacial Surgeons",
+    "soc": "29-1022",
+    "exposure": "Very Low",
+    "summary": "Perform surgery and related procedures on the hard and soft tissues of the oral and maxillofacial regions to treat diseases, injuries, or defects. May diagnose problems of the oral and maxillofacial regions. May perform surgery to improve function or appearance.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.84%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "order-clerks",
+    "title": "Order Clerks",
+    "soc": "43-4151",
+    "exposure": "Very High",
+    "summary": "Receive and process incoming orders for materials, merchandise, classified ads, or services such as repairs, installations, or rental of facilities. Generally receives orders via mail, phone, fax, or other electronic means. Duties include informing customers of receipt, prices, shipping dates, and delays; preparing contracts; and handling complaints.",
+    "laborMarket": {
+      "medianWage": "$46,210",
+      "annualOpenings": "178",
+      "employment": "1,020",
+      "projectedGrowth": "-1.13%",
+      "typicalEducation": "Some college, no degree"
+    },
+    "relatedOccupationIds": [
+      "shipping-receiving-and-inventory-clerks",
+      "postal-service-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "customer-service-representatives",
+      "production-planning-and-expediting-clerks",
+      "procurement-clerks",
+      "counter-and-rental-clerks",
+      "stockers-and-order-fillers",
+      "billing-and-posting-clerks",
+      "office-clerks-general",
+      "postmasters-and-mail-superintendents",
+      "cashiers",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "advertising-sales-agents",
+      "mail-clerks-and-mail-machine-operators-except-postal-service",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "driver-sales-workers",
+      "purchasing-managers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "correspondence-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "orderlies",
+    "title": "Orderlies",
+    "soc": "31-1132",
+    "exposure": "Very Low",
+    "summary": "Transport patients to areas such as operating rooms or x-ray rooms using wheelchairs, stretchers, or moveable beds. May maintain stocks of supplies or clean and transport equipment. Psychiatric orderlies are included in Psychiatric Aides.",
+    "laborMarket": {
+      "medianWage": "$36,910",
+      "annualOpenings": "157",
+      "employment": "940",
+      "projectedGrowth": "3.34%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "orthodontists",
+    "title": "Orthodontists",
+    "soc": "29-1023",
+    "exposure": "Medium",
+    "summary": "Examine, diagnose, and treat dental malocclusions and oral cavity anomalies. Design and fabricate appliances to realign teeth and jaws to produce and maintain normal function and to improve appearance.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "0.71%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "orthopedic-surgeons-except-pediatric",
+    "title": "Orthopedic Surgeons, Except Pediatric",
+    "soc": "29-1242",
+    "exposure": "Medium",
+    "summary": "Diagnose and perform surgery to treat and prevent rheumatic and other diseases in the musculoskeletal system.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "8",
+      "employment": "160",
+      "projectedGrowth": "1.87%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "orthoptists",
+    "title": "Orthoptists",
+    "soc": "29-1299",
+    "exposure": "High",
+    "summary": "Diagnose and treat visual system disorders such as binocular vision and eye movement impairments.",
+    "laborMarket": {
+      "medianWage": "$79,990",
+      "annualOpenings": "36",
+      "employment": "540",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "orthotists-and-prosthetists",
+    "title": "Orthotists and Prosthetists",
+    "soc": "29-2091",
+    "exposure": "Low",
+    "summary": "Design, measure, fit, and adapt orthopedic braces, appliances or prostheses, such as limbs or facial parts for patients with disabling conditions.",
+    "laborMarket": {
+      "medianWage": "$64,790",
+      "annualOpenings": "5",
+      "employment": "120",
+      "projectedGrowth": "1.71%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "outdoor-power-equipment-and-other-small-engine-mechanics",
+    "title": "Outdoor Power Equipment and Other Small Engine Mechanics",
+    "soc": "49-3053",
+    "exposure": "Low",
+    "summary": "Diagnose, adjust, repair, or overhaul small engines used to power lawn mowers, chain saws, recreational sporting equipment, and related equipment.",
+    "laborMarket": {
+      "medianWage": "$43,780",
+      "annualOpenings": "66",
+      "employment": "680",
+      "projectedGrowth": "0.93%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "packaging-and-filling-machine-operators-and-tenders",
+    "title": "Packaging and Filling Machine Operators and Tenders",
+    "soc": "51-9111",
+    "exposure": "Very Low",
+    "summary": "Operate or tend machines to prepare industrial or consumer products for storage or shipment. Includes cannery workers who pack food products.",
+    "laborMarket": {
+      "medianWage": "$39,720",
+      "annualOpenings": "600",
+      "employment": "4,970",
+      "projectedGrowth": "0.37%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "packers-and-packagers-hand",
+    "title": "Packers and Packagers, Hand",
+    "soc": "53-7064",
+    "exposure": "Very Low",
+    "summary": "Pack or package by hand a wide variety of products and materials.",
+    "laborMarket": {
+      "medianWage": "$37,380",
+      "annualOpenings": "1,148",
+      "employment": "7,890",
+      "projectedGrowth": "0.26%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "painters-construction-and-maintenance",
+    "title": "Painters, Construction and Maintenance",
+    "soc": "47-2141",
+    "exposure": "Very Low",
+    "summary": "Paint walls, equipment, buildings, bridges, and other structural surfaces, using brushes, rollers, and spray guns. May remove old paint to prepare surface prior to painting. May mix colors or oils to obtain desired color or consistency.",
+    "laborMarket": {
+      "medianWage": "$47,290",
+      "annualOpenings": "932",
+      "employment": "6,780",
+      "projectedGrowth": "1.68%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "painting-coating-and-decorating-workers",
+    "title": "Painting, Coating, and Decorating Workers",
+    "soc": "51-9123",
+    "exposure": "Very Low",
+    "summary": "Paint, coat, or decorate articles, such as furniture, glass, plateware, pottery, jewelry, toys, books, or leather.",
+    "laborMarket": {
+      "medianWage": "$35,790",
+      "annualOpenings": "3",
+      "employment": "0",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "paper-goods-machine-setters-operators-and-tenders",
+    "title": "Paper Goods Machine Setters, Operators, and Tenders",
+    "soc": "51-9196",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend paper goods machines that perform a variety of functions, such as converting, sawing, corrugating, banding, wrapping, boxing, stitching, forming, or sealing paper or paperboard sheets into products.",
+    "laborMarket": {
+      "medianWage": "$47,620",
+      "annualOpenings": "90",
+      "employment": "980",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "paperhangers",
+    "title": "Paperhangers",
+    "soc": "47-2142",
+    "exposure": "Very Low",
+    "summary": "Cover interior walls or ceilings of rooms with decorative wallpaper or fabric, or attach advertising posters on surfaces such as walls and billboards. May remove old materials or prepare surfaces to be papered.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "3.39%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "paralegals-and-legal-assistants",
+    "title": "Paralegals and Legal Assistants",
+    "soc": "23-2011",
+    "exposure": "High",
+    "summary": "Assist lawyers by investigating facts, preparing legal documents, or researching legal precedent. Conduct research to support a legal proceeding, to formulate a defense, or to initiate legal action.",
+    "laborMarket": {
+      "medianWage": "$61,220",
+      "annualOpenings": "706",
+      "employment": "6,780",
+      "projectedGrowth": "-0.47%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [
+      "legal-secretaries-and-administrative-assistants",
+      "title-examiners-abstractors-and-searchers",
+      "court-reporters-and-simultaneous-captioners",
+      "court-municipal-and-license-clerks",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "eligibility-interviewers-government-programs",
+      "correspondence-clerks",
+      "office-clerks-general",
+      "medical-records-specialists",
+      "lawyers",
+      "judicial-law-clerks",
+      "arbitrators-mediators-and-conciliators",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "private-detectives-and-investigators",
+      "compliance-officers",
+      "accountants-and-auditors",
+      "claims-adjusters-examiners-and-investigators",
+      "social-science-research-assistants",
+      "file-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "paramedics",
+    "title": "Paramedics",
+    "soc": "29-2043",
+    "exposure": "Low",
+    "summary": "Administer basic or advanced emergency medical care and assess injuries and illnesses. May administer medication intravenously, use equipment such as EKGs, or administer advanced life support to sick or injured individuals.",
+    "laborMarket": {
+      "medianWage": "$50,860",
+      "annualOpenings": "130",
+      "employment": "1,820",
+      "projectedGrowth": "1.92%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "park-naturalists",
+    "title": "Park Naturalists",
+    "soc": "19-1031",
+    "exposure": "High",
+    "summary": "Plan, develop, and conduct programs to inform public of historical, natural, and scientific features of national, state, or local park.",
+    "laborMarket": {
+      "medianWage": "$76,100",
+      "annualOpenings": "30",
+      "employment": "360",
+      "projectedGrowth": "1.52%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-restoration-planners",
+      "range-managers",
+      "soil-and-plant-scientists",
+      "water-resource-specialists",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologists",
+      "foresters",
+      "hydrologic-technicians",
+      "forest-and-conservation-technicians",
+      "environmental-engineers",
+      "agricultural-engineers",
+      "geoscientists-except-hydrologists-and-geographers",
+      "water-wastewater-engineers",
+      "environmental-science-and-protection-technicians-including-health",
+      "biologists",
+      "environmental-compliance-inspectors",
+      "zoologists-and-wildlife-biologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "parking-attendants",
+    "title": "Parking Attendants",
+    "soc": "53-6021",
+    "exposure": "Very Low",
+    "summary": "Park vehicles or issue tickets for customers in a parking lot or garage. May park or tend vehicles in environments such as a car dealership or rental car facility. May collect fee.",
+    "laborMarket": {
+      "medianWage": "$33,020",
+      "annualOpenings": "428",
+      "employment": "3,330",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "parking-enforcement-workers",
+    "title": "Parking Enforcement Workers",
+    "soc": "33-3041",
+    "exposure": "Medium",
+    "summary": "Patrol assigned area, such as public parking lot or city streets to issue tickets to overtime parking violators and illegally parked vehicles.",
+    "laborMarket": {
+      "medianWage": "$40,510",
+      "annualOpenings": "4",
+      "employment": "30",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "parts-salespersons",
+    "title": "Parts Salespersons",
+    "soc": "41-2022",
+    "exposure": "Medium",
+    "summary": "Sell spare and replacement parts and equipment in repair shop or parts store.",
+    "laborMarket": {
+      "medianWage": "$43,000",
+      "annualOpenings": "573",
+      "employment": "4,220",
+      "projectedGrowth": "-0.52%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "passenger-attendants",
+    "title": "Passenger Attendants",
+    "soc": "53-6061",
+    "exposure": "Low",
+    "summary": "Provide services to ensure the safety of passengers aboard ships, buses, trains, or within the station or terminal. Perform duties such as explaining the use of safety equipment, serving meals or beverages, or answering questions related to travel.",
+    "laborMarket": {
+      "medianWage": "$35,880",
+      "annualOpenings": "72",
+      "employment": "360",
+      "projectedGrowth": "3.56%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "patient-representatives",
+    "title": "Patient Representatives",
+    "soc": "29-2099",
+    "exposure": "Medium",
+    "summary": "Assist patients in obtaining services, understanding policies and making health care decisions.",
+    "laborMarket": {
+      "medianWage": "$55,200",
+      "annualOpenings": "293",
+      "employment": "2,670",
+      "projectedGrowth": "2.53%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "patternmakers-metal-and-plastic",
+    "title": "Patternmakers, Metal and Plastic",
+    "soc": "51-4062",
+    "exposure": "Low",
+    "summary": "Lay out, machine, fit, and assemble castings and parts to metal or plastic foundry patterns, core boxes, or match plates.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "patternmakers-wood",
+    "title": "Patternmakers, Wood",
+    "soc": "51-7032",
+    "exposure": "Low",
+    "summary": "Plan, lay out, and construct wooden unit or sectional patterns used in forming sand molds for castings.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "paving-surfacing-and-tamping-equipment-operators",
+    "title": "Paving, Surfacing, and Tamping Equipment Operators",
+    "soc": "47-2071",
+    "exposure": "Very Low",
+    "summary": "Operate equipment used for applying concrete, asphalt, or other materials to road beds, parking lots, or airport runways and taxiways or for tamping gravel, dirt, or other materials. Includes concrete and asphalt paving machine operators, form tampers, tamping machine operators, and stone spreader operators.",
+    "laborMarket": {
+      "medianWage": "$60,450",
+      "annualOpenings": "51",
+      "employment": "210",
+      "projectedGrowth": "1.97%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "payroll-and-timekeeping-clerks",
+    "title": "Payroll and Timekeeping Clerks",
+    "soc": "43-3051",
+    "exposure": "Very High",
+    "summary": "Compile and record employee time and payroll data. May compute employees' time worked, production, and commission. May compute and post wages and deductions, or prepare paychecks.",
+    "laborMarket": {
+      "medianWage": "$50,600",
+      "annualOpenings": "327",
+      "employment": "3,670",
+      "projectedGrowth": "-1.42%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "billing-and-posting-clerks",
+      "office-clerks-general",
+      "eligibility-interviewers-government-programs",
+      "administrative-services-managers",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "credit-authorizers-checkers-and-clerks",
+      "file-clerks",
+      "accountants-and-auditors",
+      "compensation-and-benefits-managers",
+      "compensation-benefits-and-job-analysis-specialists",
+      "human-resources-specialists",
+      "financial-managers",
+      "budget-analysts",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "tax-preparers",
+      "executive-secretaries-and-executive-administrative-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "pediatric-surgeons",
+    "title": "Pediatric Surgeons",
+    "soc": "29-1243",
+    "exposure": "Medium",
+    "summary": "Diagnose and perform surgery to treat fetal abnormalities and birth defects, diseases, and injuries in fetuses, premature and newborn infants, children, and adolescents. Includes all pediatric surgical specialties and subspecialties.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "2.6%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pediatricians-general",
+    "title": "Pediatricians, General",
+    "soc": "29-1221",
+    "exposure": "High",
+    "summary": "Diagnose, treat, and help prevent diseases and injuries in children. May refer patients to specialists for further diagnosis or treatment, as needed.",
+    "laborMarket": {
+      "medianWage": "$227,410",
+      "annualOpenings": "71",
+      "employment": "910",
+      "projectedGrowth": "2.72%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "pediatric-surgeons",
+      "general-internal-medicine-physicians",
+      "family-medicine-physicians",
+      "emergency-medicine-physicians",
+      "obstetricians-and-gynecologists",
+      "neurologists",
+      "psychiatrists",
+      "cardiologists",
+      "nurse-practitioners",
+      "allergists-and-immunologists",
+      "orthopedic-surgeons-except-pediatric",
+      "physician-assistants",
+      "dermatologists",
+      "advanced-practice-psychiatric-nurses",
+      "nurse-midwives",
+      "naturopathic-physicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "penetration-testers",
+    "title": "Penetration Testers",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Evaluate network system security by conducting simulated internal and external cyberattacks using adversary tools and techniques. Attempt to breach and exploit critical systems and gain access to sensitive information to assess system security.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "personal-financial-advisors",
+    "title": "Personal Financial Advisors",
+    "soc": "13-2052",
+    "exposure": "High",
+    "summary": "Advise clients on financial plans using knowledge of tax and investment strategies, securities, insurance, pension plans, and real estate. Duties include assessing clients' assets, liabilities, cash flow, insurance coverage, tax status, and financial objectives. May also buy and sell financial assets for clients.",
+    "laborMarket": {
+      "medianWage": "$85,150",
+      "annualOpenings": "619",
+      "employment": "7,190",
+      "projectedGrowth": "1.47%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "financial-and-investment-analysts",
+      "credit-counselors",
+      "securities-commodities-and-financial-services-sales-agents",
+      "investment-fund-managers",
+      "financial-risk-specialists",
+      "loan-officers",
+      "accountants-and-auditors",
+      "insurance-sales-agents",
+      "financial-examiners",
+      "credit-analysts",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "tax-preparers",
+      "credit-authorizers-checkers-and-clerks",
+      "brokerage-clerks",
+      "new-accounts-clerks",
+      "loan-interviewers-and-clerks",
+      "management-analysts",
+      "budget-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "personal-service-managers-all-other",
+    "title": "Personal Service Managers, All Other",
+    "soc": "11-9179",
+    "exposure": "High",
+    "summary": "All personal service managers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$71,390",
+      "annualOpenings": "48",
+      "employment": "0",
+      "projectedGrowth": "2.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pest-control-workers",
+    "title": "Pest Control Workers",
+    "soc": "37-2021",
+    "exposure": "Low",
+    "summary": "Apply or release chemical solutions or toxic gases and set traps to kill or remove pests and vermin that infest buildings and surrounding areas.",
+    "laborMarket": {
+      "medianWage": "$38,960",
+      "annualOpenings": "383",
+      "employment": "3,370",
+      "projectedGrowth": "0.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pesticide-handlers-sprayers-and-applicators-vegetation",
+    "title": "Pesticide Handlers, Sprayers, and Applicators, Vegetation",
+    "soc": "37-3012",
+    "exposure": "Very Low",
+    "summary": "Mix or apply pesticides, herbicides, fungicides, or insecticides through sprays, dusts, vapors, soil incorporation, or chemical application on trees, shrubs, lawns, or crops. Usually requires specific training and state or federal certification.",
+    "laborMarket": {
+      "medianWage": "$45,880",
+      "annualOpenings": "76",
+      "employment": "180",
+      "projectedGrowth": "1.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "petroleum-engineers",
+    "title": "Petroleum Engineers",
+    "soc": "17-2171",
+    "exposure": "Very High",
+    "summary": "Devise methods to improve oil and gas extraction and production and determine the need for new or modified tool designs. Oversee drilling and offer technical advice.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "chemical-engineers",
+      "geothermal-production-managers",
+      "water-wastewater-engineers",
+      "industrial-engineers",
+      "mechanical-engineers",
+      "electrical-engineers",
+      "environmental-engineers",
+      "petroleum-pump-system-operators-refinery-operators-and-gaugers",
+      "geological-technicians-except-hydrologic-technicians",
+      "gas-plant-operators",
+      "wellhead-pumpers",
+      "service-unit-operators-oil-and-gas",
+      "industrial-engineering-technologists-and-technicians",
+      "geothermal-technicians",
+      "water-and-wastewater-treatment-plant-and-system-operators",
+      "energy-engineers-except-wind-and-solar",
+      "biofuels-biodiesel-technology-and-product-development-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "petroleum-pump-system-operators-refinery-operators-and-gaugers",
+    "title": "Petroleum Pump System Operators, Refinery Operators, and Gaugers",
+    "soc": "51-8093",
+    "exposure": "Low",
+    "summary": "Operate or control petroleum refining or processing units. May specialize in controlling manifold and pumping systems, gauging or testing oil in storage tanks, or regulating the flow of oil into pipelines.",
+    "laborMarket": {
+      "medianWage": "$73,230",
+      "annualOpenings": "16",
+      "employment": "180",
+      "projectedGrowth": "1.02%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pharmacists",
+    "title": "Pharmacists",
+    "soc": "29-1051",
+    "exposure": "Medium",
+    "summary": "Dispense drugs prescribed by physicians and other health practitioners and provide information to patients about medications and their use. May advise physicians and other health practitioners on the selection, dosage, interactions, and side effects of medications.",
+    "laborMarket": {
+      "medianWage": "$138,080",
+      "annualOpenings": "399",
+      "employment": "7,690",
+      "projectedGrowth": "1.53%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pharmacy-aides",
+    "title": "Pharmacy Aides",
+    "soc": "31-9095",
+    "exposure": "Medium",
+    "summary": "Record drugs delivered to the pharmacy, store incoming merchandise, and inform the supervisor of stock needs. May operate cash register and accept prescriptions for filling.",
+    "laborMarket": {
+      "medianWage": "$38,800",
+      "annualOpenings": "109",
+      "employment": "280",
+      "projectedGrowth": "0.41%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pharmacy-technicians",
+    "title": "Pharmacy Technicians",
+    "soc": "29-2052",
+    "exposure": "Medium",
+    "summary": "Prepare medications under the direction of a pharmacist. May measure, mix, count out, label, and record amounts and dosages of medications according to prescription orders.",
+    "laborMarket": {
+      "medianWage": "$47,620",
+      "annualOpenings": "1,215",
+      "employment": "11,260",
+      "projectedGrowth": "1.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "philosophy-and-religion-teachers-postsecondary",
+    "title": "Philosophy and Religion Teachers, Postsecondary",
+    "soc": "25-1126",
+    "exposure": "High",
+    "summary": "Teach courses in philosophy, religion, and theology. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$80,180",
+      "annualOpenings": "38",
+      "employment": "490",
+      "projectedGrowth": "1.01%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "sociology-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "history-teachers-postsecondary",
+      "english-language-and-literature-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "political-science-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "law-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "social-work-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "library-science-teachers-postsecondary",
+      "foreign-language-and-literature-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "geography-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "phlebotomists",
+    "title": "Phlebotomists",
+    "soc": "31-9097",
+    "exposure": "Low",
+    "summary": "Draw blood for tests, transfusions, donations, or research. May explain the procedure to patients and assist in the recovery of patients with adverse reactions.",
+    "laborMarket": {
+      "medianWage": "$42,830",
+      "annualOpenings": "718",
+      "employment": "3,660",
+      "projectedGrowth": "2.11%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "photographers",
+    "title": "Photographers",
+    "soc": "27-4021",
+    "exposure": "Medium",
+    "summary": "Photograph people, landscapes, merchandise, or other subjects. May use lighting equipment to enhance a subject's appearance. May use editing software to produce finished images and prints. Includes commercial and industrial photographers, scientific photographers, and photojournalists.",
+    "laborMarket": {
+      "medianWage": "$38,210",
+      "annualOpenings": "391",
+      "employment": "1,090",
+      "projectedGrowth": "1.78%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "photographic-process-workers-and-processing-machine-operators",
+    "title": "Photographic Process Workers and Processing Machine Operators",
+    "soc": "51-9151",
+    "exposure": "Medium",
+    "summary": "Perform work involved in developing and processing photographic images from film or digital media. May perform precision tasks such as editing photographic negatives and prints.",
+    "laborMarket": {
+      "medianWage": "$35,520",
+      "annualOpenings": "27",
+      "employment": "0",
+      "projectedGrowth": "1.8%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "photonics-engineers",
+    "title": "Photonics Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Design technologies specializing in light information or light energy, such as laser or fiber optics technology.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "photonics-technicians",
+    "title": "Photonics Technicians",
+    "soc": "17-3029",
+    "exposure": "Low",
+    "summary": "Build, install, test, or maintain optical or fiber optic equipment, such as lasers, lenses, or mirrors, using spectrometers, interferometers, or related equipment.",
+    "laborMarket": {
+      "medianWage": "$63,570",
+      "annualOpenings": "96",
+      "employment": "0",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physical-medicine-and-rehabilitation-physicians",
+    "title": "Physical Medicine and Rehabilitation Physicians",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "Diagnose and treat disorders requiring physiotherapy to provide physical, mental, and occupational rehabilitation.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physical-scientists-all-other",
+    "title": "Physical Scientists, All Other",
+    "soc": "19-2099",
+    "exposure": "High",
+    "summary": "All physical scientists not listed separately.",
+    "laborMarket": {
+      "medianWage": "$119,920",
+      "annualOpenings": "43",
+      "employment": "170",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physical-therapist-aides",
+    "title": "Physical Therapist Aides",
+    "soc": "31-2022",
+    "exposure": "Low",
+    "summary": "Under close supervision of a physical therapist or physical therapy assistant, perform only delegated, selected, or routine tasks in specific situations. These duties include preparing the patient and the treatment area.",
+    "laborMarket": {
+      "medianWage": "$34,910",
+      "annualOpenings": "256",
+      "employment": "1,840",
+      "projectedGrowth": "1.8%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physical-therapist-assistants",
+    "title": "Physical Therapist Assistants",
+    "soc": "31-2021",
+    "exposure": "Low",
+    "summary": "Assist physical therapists in providing physical therapy treatments and procedures. May, in accordance with state laws, assist in the development of treatment plans, carry out routine functions, document the progress of treatment, and modify specific treatments in accordance with patient status and within the scope of treatment plans established by a physical therapist. Generally requires formal training.",
+    "laborMarket": {
+      "medianWage": "$66,110",
+      "annualOpenings": "350",
+      "employment": "1,680",
+      "projectedGrowth": "4.01%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physical-therapists",
+    "title": "Physical Therapists",
+    "soc": "29-1123",
+    "exposure": "Low",
+    "summary": "Assess, plan, organize, and participate in rehabilitative programs that improve mobility, relieve pain, increase strength, and improve or correct disabling conditions resulting from disease or injury.",
+    "laborMarket": {
+      "medianWage": "$101,660",
+      "annualOpenings": "360",
+      "employment": "4,540",
+      "projectedGrowth": "3.17%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physician-assistants",
+    "title": "Physician Assistants",
+    "soc": "29-1071",
+    "exposure": "Low",
+    "summary": "Provide healthcare services typically performed by a physician, under the supervision of a physician. Conduct complete physicals, provide treatment, and counsel patients. May, in some cases, prescribe medication. Must graduate from an accredited educational program for physician assistants.",
+    "laborMarket": {
+      "medianWage": "$135,240",
+      "annualOpenings": "351",
+      "employment": "3,540",
+      "projectedGrowth": "4.01%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physicians-all-other",
+    "title": "Physicians, All Other",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "All physicians not listed separately.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "physicians-pathologists",
+    "title": "Physicians, Pathologists",
+    "soc": "29-1222",
+    "exposure": "High",
+    "summary": "Diagnose diseases and conduct lab tests using organs, body tissues, and fluids. Includes medical examiners.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "28",
+      "employment": "440",
+      "projectedGrowth": "1.63%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "pediatric-surgeons",
+      "cardiologists",
+      "radiologists",
+      "medical-and-clinical-laboratory-technologists",
+      "allergists-and-immunologists",
+      "orthopedic-surgeons-except-pediatric",
+      "emergency-medicine-physicians",
+      "clinical-neuropsychologists",
+      "medical-and-clinical-laboratory-technicians",
+      "ophthalmologists-except-pediatric",
+      "medical-scientists-except-epidemiologists",
+      "dermatologists",
+      "neurologists",
+      "general-internal-medicine-physicians",
+      "anesthesiologists",
+      "cardiovascular-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "physicists",
+    "title": "Physicists",
+    "soc": "19-2012",
+    "exposure": "Very High",
+    "summary": "Conduct research into physical phenomena, develop theories on the basis of observation and experiments, and devise methods to apply physical laws and theories.",
+    "laborMarket": {
+      "medianWage": "$190,960",
+      "annualOpenings": "16",
+      "employment": "70",
+      "projectedGrowth": "1.73%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "mathematicians",
+      "astronomers",
+      "physics-teachers-postsecondary",
+      "data-scientists",
+      "biochemists-and-biophysicists",
+      "chemists",
+      "nanosystems-engineers",
+      "materials-scientists",
+      "geoscientists-except-hydrologists-and-geographers",
+      "molecular-and-cellular-biologists",
+      "computer-and-information-research-scientists",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "statisticians",
+      "bioengineers-and-biomedical-engineers",
+      "nuclear-engineers",
+      "aerospace-engineers",
+      "hydrologists",
+      "chemical-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "physics-teachers-postsecondary",
+    "title": "Physics Teachers, Postsecondary",
+    "soc": "25-1054",
+    "exposure": "Medium",
+    "summary": "Teach courses pertaining to the laws of matter and energy. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$122,160",
+      "annualOpenings": "14",
+      "employment": "170",
+      "projectedGrowth": "1.18%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pile-driver-operators",
+    "title": "Pile Driver Operators",
+    "soc": "47-2072",
+    "exposure": "Very Low",
+    "summary": "Operate pile drivers mounted on skids, barges, crawler treads, or locomotive cranes to drive pilings for retaining walls, bulkheads, and foundations of structures such as buildings, bridges, and piers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pipelayers",
+    "title": "Pipelayers",
+    "soc": "47-2151",
+    "exposure": "Very Low",
+    "summary": "Lay pipe for storm or sanitation sewers, drains, and water mains. Perform any combination of the following tasks: grade trenches or culverts, position pipe, or seal joints.",
+    "laborMarket": {
+      "medianWage": "$61,810",
+      "annualOpenings": "94",
+      "employment": "700",
+      "projectedGrowth": "0.52%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "plant-and-system-operators-all-other",
+    "title": "Plant and System Operators, All Other",
+    "soc": "51-8099",
+    "exposure": "Very Low",
+    "summary": "All plant and system operators not listed separately.",
+    "laborMarket": {
+      "medianWage": "$66,540",
+      "annualOpenings": "8",
+      "employment": "170",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "plasterers-and-stucco-masons",
+    "title": "Plasterers and Stucco Masons",
+    "soc": "47-2161",
+    "exposure": "Very Low",
+    "summary": "Apply interior or exterior plaster, cement, stucco, or similar materials. May also set ornamental plaster.",
+    "laborMarket": {
+      "medianWage": "$55,260",
+      "annualOpenings": "167",
+      "employment": "1,570",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "plating-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Plating Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4193",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend plating machines to coat metal or plastic products with chromium, zinc, copper, cadmium, nickel, or other metal to protect or decorate surfaces. Typically, the product being coated is immersed in molten metal or an electrolytic solution.",
+    "laborMarket": {
+      "medianWage": "$40,550",
+      "annualOpenings": "48",
+      "employment": "620",
+      "projectedGrowth": "-0.85%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "plumbers-pipefitters-and-steamfitters",
+    "title": "Plumbers, Pipefitters, and Steamfitters",
+    "soc": "47-2152",
+    "exposure": "Very Low",
+    "summary": "Assemble, install, alter, and repair pipelines or pipe systems that carry water, steam, air, or other liquids or gases. May install heating and cooling equipment and mechanical control systems. Includes sprinkler fitters.",
+    "laborMarket": {
+      "medianWage": "$61,940",
+      "annualOpenings": "1,134",
+      "employment": "12,330",
+      "projectedGrowth": "1.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "podiatrists",
+    "title": "Podiatrists",
+    "soc": "29-1081",
+    "exposure": "Low",
+    "summary": "Diagnose and treat diseases and deformities of the human foot.",
+    "laborMarket": {
+      "medianWage": "$149,990",
+      "annualOpenings": "7",
+      "employment": "250",
+      "projectedGrowth": "1.34%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "poets-lyricists-and-creative-writers",
+    "title": "Poets, Lyricists and Creative Writers",
+    "soc": "27-3043",
+    "exposure": "Very High",
+    "summary": "Create original written works, such as scripts, essays, prose, poetry or song lyrics, for publication or performance.",
+    "laborMarket": {
+      "medianWage": "$62,640",
+      "annualOpenings": "378",
+      "employment": "580",
+      "projectedGrowth": "2.2%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "poets-lyricists-and-creative-writers",
+      "public-relations-specialists",
+      "advertising-sales-agents",
+      "search-marketing-strategists",
+      "editors",
+      "advertising-and-promotions-managers",
+      "art-directors",
+      "producers-and-directors",
+      "news-analysts-reporters-and-journalists",
+      "technical-writers",
+      "graphic-designers",
+      "marketing-managers",
+      "proofreaders-and-copy-markers",
+      "web-and-digital-interface-designers",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "special-effects-artists-and-animators",
+      "public-relations-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "police-identification-and-records-officers",
+    "title": "Police Identification and Records Officers",
+    "soc": "33-3021",
+    "exposure": "Medium",
+    "summary": "Collect evidence at crime scene, classify and identify fingerprints, and photograph evidence for use in criminal and civil cases.",
+    "laborMarket": {
+      "medianWage": "$103,270",
+      "annualOpenings": "310",
+      "employment": "5,220",
+      "projectedGrowth": "0.39%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "police-and-sheriff-s-patrol-officers",
+    "title": "Police and Sheriff's Patrol Officers",
+    "soc": "33-3051",
+    "exposure": "Medium",
+    "summary": "Maintain order and protect life and property by enforcing local, tribal, state, or federal laws and ordinances. Perform a combination of the following duties: patrol a specific area; direct traffic; issue traffic summonses; investigate accidents; apprehend and arrest suspects, or serve legal processes of courts. Includes police officers working at educational institutions.",
+    "laborMarket": {
+      "medianWage": "$79,370",
+      "annualOpenings": "832",
+      "employment": "12,430",
+      "projectedGrowth": "1.04%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "political-science-teachers-postsecondary",
+    "title": "Political Science Teachers, Postsecondary",
+    "soc": "25-1065",
+    "exposure": "High",
+    "summary": "Teach courses in political science, international affairs, and international relations. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$98,760",
+      "annualOpenings": "14",
+      "employment": "210",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "sociology-teachers-postsecondary",
+      "law-teachers-postsecondary",
+      "political-scientists",
+      "history-teachers-postsecondary",
+      "economics-teachers-postsecondary",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "criminal-justice-and-law-enforcement-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "geography-teachers-postsecondary",
+      "library-science-teachers-postsecondary",
+      "business-teachers-postsecondary",
+      "sociologists",
+      "english-language-and-literature-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "political-scientists",
+    "title": "Political Scientists",
+    "soc": "19-3094",
+    "exposure": "High",
+    "summary": "Study the origin, development, and operation of political systems. May study topics, such as public opinion, political decisionmaking, and ideology. May analyze the structure and operation of governments, as well as various political entities. May conduct public opinion surveys, analyze election results, or analyze public documents.",
+    "laborMarket": {
+      "medianWage": "$104,100",
+      "annualOpenings": "9",
+      "employment": "40",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "political-science-teachers-postsecondary",
+      "sociologists",
+      "economists",
+      "law-teachers-postsecondary",
+      "legislators",
+      "sociology-teachers-postsecondary",
+      "climate-change-policy-analysts",
+      "economics-teachers-postsecondary",
+      "survey-researchers",
+      "public-relations-managers",
+      "business-teachers-postsecondary",
+      "management-analysts",
+      "chief-executives",
+      "labor-relations-specialists",
+      "urban-and-regional-planners",
+      "intelligence-analysts",
+      "equal-opportunity-representatives-and-officers",
+      "history-teachers-postsecondary",
+      "criminal-justice-and-law-enforcement-teachers-postsecondary"
+    ],
+    "training": []
+  },
+  {
+    "id": "postal-service-clerks",
+    "title": "Postal Service Clerks",
+    "soc": "43-5051",
+    "exposure": "Medium",
+    "summary": "Perform any combination of tasks in a United States Postal Service (USPS) post office, such as receive letters and parcels; sell postage and revenue stamps, postal cards, and stamped envelopes; fill out and sell money orders; place mail in pigeon holes of mail rack or in bags; and examine mail for correct postage. Includes postal service clerks employed by USPS contractors.",
+    "laborMarket": {
+      "medianWage": "$61,630",
+      "annualOpenings": "117",
+      "employment": "1,230",
+      "projectedGrowth": "1.56%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "postal-service-mail-carriers",
+    "title": "Postal Service Mail Carriers",
+    "soc": "43-5052",
+    "exposure": "Low",
+    "summary": "Sort and deliver mail for the United States Postal Service (USPS). Deliver mail on established route by vehicle or on foot. Includes postal service mail carriers employed by USPS contractors.",
+    "laborMarket": {
+      "medianWage": "$58,570",
+      "annualOpenings": "493",
+      "employment": "5,470",
+      "projectedGrowth": "1.58%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "postal-service-mail-sorters-processors-and-processing-machine-operators",
+    "title": "Postal Service Mail Sorters, Processors, and Processing Machine Operators",
+    "soc": "43-5053",
+    "exposure": "Very Low",
+    "summary": "Prepare incoming and outgoing mail for distribution for the United States Postal Service (USPS). Examine, sort, and route mail. Load, operate, and occasionally adjust and repair mail processing, sorting, and canceling machinery. Keep records of shipments, pouches, and sacks, and perform other duties related to mail handling within the postal service. Includes postal service mail sorters and processors employed by USPS contractors.",
+    "laborMarket": {
+      "medianWage": "$56,450",
+      "annualOpenings": "190",
+      "employment": "1,940",
+      "projectedGrowth": "1.1%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "postmasters-and-mail-superintendents",
+    "title": "Postmasters and Mail Superintendents",
+    "soc": "11-9131",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate operational, administrative, management, and support services of a U.S. post office; or coordinate activities of workers engaged in postal and related work in assigned post office.",
+    "laborMarket": {
+      "medianWage": "$94,410",
+      "annualOpenings": "14",
+      "employment": "160",
+      "projectedGrowth": "1.59%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "postal-service-clerks",
+      "transportation-storage-and-distribution-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "administrative-services-managers",
+      "general-and-operations-managers",
+      "postal-service-mail-sorters-processors-and-processing-machine-operators",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "dispatchers-except-police-fire-and-ambulance",
+      "shipping-receiving-and-inventory-clerks",
+      "production-planning-and-expediting-clerks",
+      "logisticians",
+      "order-clerks",
+      "postal-service-mail-carriers",
+      "mail-clerks-and-mail-machine-operators-except-postal-service",
+      "management-analysts",
+      "customer-service-representatives",
+      "office-clerks-general"
+    ],
+    "training": []
+  },
+  {
+    "id": "potters-manufacturing",
+    "title": "Potters, Manufacturing",
+    "soc": "51-9195",
+    "exposure": "Very Low",
+    "summary": "Operate production machines such as pug mill, jigger machine, or potter's wheel to process clay in manufacture of ceramic, pottery and stoneware products.",
+    "laborMarket": {
+      "medianWage": "$47,170",
+      "annualOpenings": "138",
+      "employment": "370",
+      "projectedGrowth": "0.05%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pourers-and-casters-metal",
+    "title": "Pourers and Casters, Metal",
+    "soc": "51-4052",
+    "exposure": "Very Low",
+    "summary": "Operate hand-controlled mechanisms to pour and regulate the flow of molten metal into molds to produce castings or ingots.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "6",
+      "employment": "nan",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "power-distributors-and-dispatchers",
+    "title": "Power Distributors and Dispatchers",
+    "soc": "51-8012",
+    "exposure": "Medium",
+    "summary": "Coordinate, regulate, or distribute electricity or steam.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "26",
+      "employment": "190",
+      "projectedGrowth": "0.57%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "power-plant-operators",
+    "title": "Power Plant Operators",
+    "soc": "51-8013",
+    "exposure": "Low",
+    "summary": "Control, operate, or maintain machinery to generate electric power. Includes auxiliary equipment operators.",
+    "laborMarket": {
+      "medianWage": "$107,210",
+      "annualOpenings": "107",
+      "employment": "890",
+      "projectedGrowth": "-0.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "precision-agriculture-technicians",
+    "title": "Precision Agriculture Technicians",
+    "soc": "19-4012",
+    "exposure": "Medium",
+    "summary": "Apply geospatial technologies, including geographic information systems (GIS) and Global Positioning System (GPS), to agricultural production or management activities, such as pest scouting, site-specific pesticide application, yield mapping, or variable-rate irrigation. May use computers to develop or analyze maps or remote sensing images to compare physical topography with data on soils, fertilizer, pests, or weather.",
+    "laborMarket": {
+      "medianWage": "$63,340",
+      "annualOpenings": "44",
+      "employment": "0",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "prepress-technicians-and-workers",
+    "title": "Prepress Technicians and Workers",
+    "soc": "51-5111",
+    "exposure": "Medium",
+    "summary": "Format and proof text and images submitted by designers and clients into finished pages that can be printed. Includes digital and photo typesetting. May produce printing plates.",
+    "laborMarket": {
+      "medianWage": "$47,840",
+      "annualOpenings": "24",
+      "employment": "130",
+      "projectedGrowth": "-1.16%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "preschool-teachers-except-special-education",
+    "title": "Preschool Teachers, Except Special Education",
+    "soc": "25-2011",
+    "exposure": "Low",
+    "summary": "Instruct preschool-aged students, following curricula or lesson plans, in activities designed to promote social, physical, and intellectual growth.",
+    "laborMarket": {
+      "medianWage": "$35,240",
+      "annualOpenings": "1,279",
+      "employment": "9,500",
+      "projectedGrowth": "1.52%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "pressers-textile-garment-and-related-materials",
+    "title": "Pressers, Textile, Garment, and Related Materials",
+    "soc": "51-6021",
+    "exposure": "Very Low",
+    "summary": "Press or shape articles by hand or machine.",
+    "laborMarket": {
+      "medianWage": "$35,090",
+      "annualOpenings": "60",
+      "employment": "400",
+      "projectedGrowth": "-1.39%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "preventive-medicine-physicians",
+    "title": "Preventive Medicine Physicians",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "Apply knowledge of general preventive medicine and public health issues to promote health care to groups or individuals, and aid in the prevention or reduction of risk of disease, injury, disability, or death. May practice population-based medicine or diagnose and treat patients in the context of clinical health promotion and disease prevention.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "print-binding-and-finishing-workers",
+    "title": "Print Binding and Finishing Workers",
+    "soc": "51-5113",
+    "exposure": "Very Low",
+    "summary": "Bind books and other publications or finish printed products by hand or machine. May set up binding and finishing machines.",
+    "laborMarket": {
+      "medianWage": "$38,590",
+      "annualOpenings": "54",
+      "employment": "390",
+      "projectedGrowth": "-0.98%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "printing-press-operators",
+    "title": "Printing Press Operators",
+    "soc": "51-5112",
+    "exposure": "Low",
+    "summary": "Set up and operate digital, letterpress, lithographic, flexographic, gravure, or other printing machines. Includes short-run offset printing presses.",
+    "laborMarket": {
+      "medianWage": "$41,900",
+      "annualOpenings": "230",
+      "employment": "2,890",
+      "projectedGrowth": "0.05%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "private-detectives-and-investigators",
+    "title": "Private Detectives and Investigators",
+    "soc": "33-9021",
+    "exposure": "Medium",
+    "summary": "Gather, analyze, compile, and report information regarding individuals or organizations to clients, or detect occurrences of unlawful acts or infractions of rules in private establishment.",
+    "laborMarket": {
+      "medianWage": "$64,960",
+      "annualOpenings": "96",
+      "employment": "980",
+      "projectedGrowth": "0.95%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "probation-officers-and-correctional-treatment-specialists",
+    "title": "Probation Officers and Correctional Treatment Specialists",
+    "soc": "21-1092",
+    "exposure": "Medium",
+    "summary": "Provide social services to assist in rehabilitation of law offenders in custody or on probation or parole. Make recommendations for actions involving formulation of rehabilitation plan and treatment of offender, including conditional release and education and employment stipulations.",
+    "laborMarket": {
+      "medianWage": "$60,250",
+      "annualOpenings": "155",
+      "employment": "1,230",
+      "projectedGrowth": "1.02%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "procurement-clerks",
+    "title": "Procurement Clerks",
+    "soc": "43-3061",
+    "exposure": "Very High",
+    "summary": "Compile information and records to draw up purchase orders for procurement of materials and services.",
+    "laborMarket": {
+      "medianWage": "$46,820",
+      "annualOpenings": "89",
+      "employment": "1,140",
+      "projectedGrowth": "-0.2%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "wholesale-and-retail-buyers-except-farm-products",
+      "shipping-receiving-and-inventory-clerks",
+      "production-planning-and-expediting-clerks",
+      "stockers-and-order-fillers",
+      "buyers-and-purchasing-agents-farm-products",
+      "order-clerks",
+      "customer-service-representatives",
+      "billing-and-posting-clerks",
+      "counter-and-rental-clerks",
+      "office-clerks-general",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "purchasing-managers",
+      "logistics-analysts",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "supply-chain-managers",
+      "brokerage-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "postal-service-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "producers-and-directors",
+    "title": "Producers and Directors",
+    "soc": "27-2012",
+    "exposure": "High",
+    "summary": "Produce or direct stage, television, radio, video, or film productions for entertainment, information, or instruction. Responsible for creative decisions, such as interpretation of script, choice of actors or guests, set design, sound, special effects, and choreography.",
+    "laborMarket": {
+      "medianWage": "$60,260",
+      "annualOpenings": "113",
+      "employment": "1,290",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "media-technical-directors-managers",
+      "film-and-video-editors",
+      "art-directors",
+      "broadcast-announcers-and-radio-disc-jockeys",
+      "writers-and-authors",
+      "music-directors-and-composers",
+      "news-analysts-reporters-and-journalists",
+      "editors",
+      "special-effects-artists-and-animators",
+      "audio-and-video-technicians",
+      "camera-operators-television-video-and-film",
+      "public-relations-specialists",
+      "actors",
+      "graphic-designers",
+      "video-game-designers",
+      "project-management-specialists",
+      "sound-engineering-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "production-planning-and-expediting-clerks",
+    "title": "Production, Planning, and Expediting Clerks",
+    "soc": "43-5061",
+    "exposure": "Very High",
+    "summary": "Coordinate and expedite the flow of work and materials within or between departments of an establishment according to production schedule. Duties include reviewing and distributing production, work, and shipment schedules; conferring with department supervisors to determine progress of work and completion dates; and compiling reports on progress of work, inventory levels, costs, and production problems.",
+    "laborMarket": {
+      "medianWage": "$56,270",
+      "annualOpenings": "1,210",
+      "employment": "10,900",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "project-management-specialists",
+      "shipping-receiving-and-inventory-clerks",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "first-line-supervisors-of-production-and-operating-workers",
+      "weighers-measurers-checkers-and-samplers-recordkeeping",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "first-line-supervisors-of-mechanics-installers-and-repairers",
+      "procurement-clerks",
+      "industrial-engineering-technologists-and-technicians",
+      "stockers-and-order-fillers",
+      "industrial-production-managers",
+      "industrial-engineers",
+      "logisticians",
+      "supply-chain-managers",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "dispatchers-except-police-fire-and-ambulance",
+      "team-assemblers",
+      "laborers-and-freight-stock-and-material-movers-hand"
+    ],
+    "training": []
+  },
+  {
+    "id": "project-management-specialists",
+    "title": "Project Management Specialists",
+    "soc": "13-1082",
+    "exposure": "Very High",
+    "summary": "Analyze and coordinate the schedule, timeline, procurement, staffing, and budget of a product or service on a per project basis. Lead and guide the work of technical staff. May serve as a point of contact for the client or customer.",
+    "laborMarket": {
+      "medianWage": "$98,400",
+      "annualOpenings": "1,919",
+      "employment": "23,260",
+      "projectedGrowth": "0.89%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "information-technology-project-managers",
+      "management-analysts",
+      "computer-and-information-systems-managers",
+      "logisticians",
+      "administrative-services-managers",
+      "general-and-operations-managers",
+      "training-and-development-managers",
+      "construction-managers",
+      "operations-research-analysts",
+      "architectural-and-engineering-managers",
+      "software-developers",
+      "industrial-engineers",
+      "production-planning-and-expediting-clerks",
+      "solar-energy-installation-managers",
+      "computer-systems-analysts",
+      "natural-sciences-managers",
+      "first-line-supervisors-of-office-and-administrative-support-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "proofreaders-and-copy-markers",
+    "title": "Proofreaders and Copy Markers",
+    "soc": "43-9081",
+    "exposure": "Very High",
+    "summary": "Read transcript or proof type setup to detect and mark for correction any grammatical, typographical, or compositional errors. Excludes workers whose primary duty is editing copy. Includes proofreaders of braille.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "-1.74%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "editors",
+      "desktop-publishers",
+      "technical-writers",
+      "word-processors-and-typists",
+      "file-clerks",
+      "writers-and-authors",
+      "data-entry-keyers",
+      "document-management-specialists",
+      "film-and-video-editors",
+      "library-technicians",
+      "news-analysts-reporters-and-journalists",
+      "court-reporters-and-simultaneous-captioners",
+      "statistical-assistants",
+      "librarians-and-media-collections-specialists",
+      "social-science-research-assistants",
+      "archivists",
+      "medical-transcriptionists",
+      "office-machine-operators-except-computer",
+      "correspondence-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "property-real-estate-and-community-association-managers",
+    "title": "Property, Real Estate, and Community Association Managers",
+    "soc": "11-9141",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate the selling, buying, leasing, or governance activities of commercial, industrial, or residential real estate properties. Includes managers of homeowner and condominium associations, rented or leased housing units, buildings, or land (including rights-of-way).",
+    "laborMarket": {
+      "medianWage": "$62,440",
+      "annualOpenings": "1,044",
+      "employment": "8,610",
+      "projectedGrowth": "1.19%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "real-estate-sales-agents",
+      "real-estate-brokers",
+      "facilities-managers",
+      "appraisers-and-assessors-of-real-estate",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "general-and-operations-managers",
+      "government-property-inspectors-and-investigators",
+      "sales-managers",
+      "lodging-managers",
+      "appraisers-of-personal-and-business-property",
+      "administrative-services-managers",
+      "construction-managers",
+      "chief-executives",
+      "brokerage-clerks",
+      "loan-officers",
+      "securities-commodities-and-financial-services-sales-agents",
+      "purchasing-managers",
+      "financial-managers",
+      "counter-and-rental-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "prosthodontists",
+    "title": "Prosthodontists",
+    "soc": "29-1024",
+    "exposure": "Very Low",
+    "summary": "Diagnose, treat, rehabilitate, design, and fit prostheses that maintain oral function, health, and appearance for patients with clinical conditions associated with teeth, oral and maxillofacial tissues, or the jaw.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "protective-service-workers-all-other",
+    "title": "Protective Service Workers, All Other",
+    "soc": "33-9099",
+    "exposure": "Medium",
+    "summary": "All protective service workers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$49,590",
+      "annualOpenings": "347",
+      "employment": "1,430",
+      "projectedGrowth": "0.91%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "psychiatric-aides",
+    "title": "Psychiatric Aides",
+    "soc": "31-1133",
+    "exposure": "Low",
+    "summary": "Assist mentally impaired or emotionally disturbed patients, working under direction of nursing and medical staff. May assist with daily living activities, lead patients in educational and recreational activities, or accompany patients to and from examinations and treatments. May restrain violent patients. Includes psychiatric orderlies.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "11",
+      "employment": "nan",
+      "projectedGrowth": "2.69%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "psychiatric-technicians",
+    "title": "Psychiatric Technicians",
+    "soc": "29-2053",
+    "exposure": "Low",
+    "summary": "Care for individuals with mental or emotional conditions or disabilities, following the instructions of physicians or other health practitioners. Monitor patients' physical and emotional well-being and report to medical staff. May participate in rehabilitation and treatment programs, help with personal hygiene, and administer oral or injectable medications.",
+    "laborMarket": {
+      "medianWage": "$43,010",
+      "annualOpenings": "916",
+      "employment": "7,510",
+      "projectedGrowth": "3.7%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "psychiatrists",
+    "title": "Psychiatrists",
+    "soc": "29-1223",
+    "exposure": "High",
+    "summary": "Diagnose, treat, and help prevent mental disorders.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "22",
+      "employment": "450",
+      "projectedGrowth": "2.09%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "pediatricians-general",
+      "neurologists",
+      "advanced-practice-psychiatric-nurses",
+      "family-medicine-physicians",
+      "general-internal-medicine-physicians",
+      "pediatric-surgeons",
+      "clinical-neuropsychologists",
+      "clinical-and-counseling-psychologists",
+      "emergency-medicine-physicians",
+      "nurse-practitioners",
+      "psychiatric-technicians",
+      "physical-medicine-and-rehabilitation-physicians",
+      "cardiologists",
+      "obstetricians-and-gynecologists",
+      "orthopedic-surgeons-except-pediatric",
+      "genetic-counselors",
+      "naturopathic-physicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "psychologists-all-other",
+    "title": "Psychologists, All Other",
+    "soc": "19-3039",
+    "exposure": "High",
+    "summary": "All psychologists not listed separately.",
+    "laborMarket": {
+      "medianWage": "$128,040",
+      "annualOpenings": "115",
+      "employment": "270",
+      "projectedGrowth": "2.36%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "psychology-teachers-postsecondary",
+    "title": "Psychology Teachers, Postsecondary",
+    "soc": "25-1066",
+    "exposure": "High",
+    "summary": "Teach courses in psychology, such as child, clinical, and developmental psychology, and psychological counseling. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$76,460",
+      "annualOpenings": "85",
+      "employment": "960",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "sociology-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "teaching-assistants-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "health-specialties-teachers-postsecondary",
+      "recreation-and-fitness-studies-teachers-postsecondary",
+      "mathematical-science-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "philosophy-and-religion-teachers-postsecondary",
+      "school-psychologists",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "nursing-instructors-and-teachers-postsecondary",
+      "tutors",
+      "biological-science-teachers-postsecondary",
+      "special-education-teachers-kindergarten",
+      "economics-teachers-postsecondary",
+      "elementary-school-teachers-except-special-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "special-education-teachers-elementary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "public-relations-managers",
+    "title": "Public Relations Managers",
+    "soc": "11-2032",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate activities designed to create or maintain a favorable public image or raise issue awareness for their organization or client.",
+    "laborMarket": {
+      "medianWage": "$105,360",
+      "annualOpenings": "92",
+      "employment": "1,190",
+      "projectedGrowth": "1.13%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "public-relations-specialists",
+      "advertising-and-promotions-managers",
+      "market-research-analysts-and-marketing-specialists",
+      "management-analysts",
+      "marketing-managers",
+      "fundraising-managers",
+      "social-and-community-service-managers",
+      "human-resources-managers",
+      "general-and-operations-managers",
+      "chief-executives",
+      "communications-teachers-postsecondary",
+      "administrative-services-managers",
+      "media-programming-directors",
+      "business-teachers-postsecondary",
+      "labor-relations-specialists",
+      "human-resources-specialists",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "advertising-sales-agents",
+      "business-intelligence-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "public-relations-specialists",
+    "title": "Public Relations Specialists",
+    "soc": "27-3031",
+    "exposure": "Very High",
+    "summary": "Promote or create an intended public image for individuals, groups, or organizations. May write or select material for release to various communications media. May specialize in using social media.",
+    "laborMarket": {
+      "medianWage": "$64,800",
+      "annualOpenings": "524",
+      "employment": "5,960",
+      "projectedGrowth": "1.18%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "public-relations-managers",
+      "advertising-and-promotions-managers",
+      "market-research-analysts-and-marketing-specialists",
+      "writers-and-authors",
+      "marketing-managers",
+      "advertising-sales-agents",
+      "media-programming-directors",
+      "fundraisers",
+      "fundraising-managers",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "management-analysts",
+      "chief-executives",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "sales-managers",
+      "telemarketers",
+      "business-teachers-postsecondary",
+      "communications-teachers-postsecondary",
+      "meeting-convention-and-event-planners"
+    ],
+    "training": []
+  },
+  {
+    "id": "public-safety-telecommunicators",
+    "title": "Public Safety Telecommunicators",
+    "soc": "43-5031",
+    "exposure": "Very High",
+    "summary": "Operate telephone, radio, or other communication systems to receive and communicate requests for emergency assistance at 9-1-1 public safety answering points and emergency operations centers. Take information from the public and other sources regarding crimes, threats, disturbances, acts of terrorism, fires, medical emergencies, and other public safety matters. May coordinate and provide information to law enforcement and emergency response personnel. May access sensitive databases and other information sources as needed. May provide additional instructions to callers based on knowledge of and certification in law enforcement, fire, or emergency medical procedures.",
+    "laborMarket": {
+      "medianWage": "$54,270",
+      "annualOpenings": "163",
+      "employment": "1,630",
+      "projectedGrowth": "1.13%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "dispatchers-except-police-fire-and-ambulance",
+      "emergency-medical-technicians",
+      "switchboard-operators-including-answering-service",
+      "paramedics",
+      "first-line-supervisors-of-security-workers",
+      "police-and-sheriff-s-patrol-officers",
+      "transit-and-railroad-police",
+      "ambulance-drivers-and-attendants-except-emergency-medical-technicians",
+      "airfield-operations-specialists",
+      "telephone-operators",
+      "emergency-management-directors",
+      "security-guards",
+      "first-line-supervisors-of-passenger-attendants",
+      "security-managers",
+      "first-line-supervisors-of-police-and-detectives",
+      "air-traffic-controllers",
+      "first-line-supervisors-of-firefighting-and-prevention-workers",
+      "security-management-specialists",
+      "railroad-conductors-and-yardmasters",
+      "forest-fire-inspectors-and-prevention-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "pump-operators-except-wellhead-pumpers",
+    "title": "Pump Operators, Except Wellhead Pumpers",
+    "soc": "53-7072",
+    "exposure": "Low",
+    "summary": "Tend, control, or operate power-driven, stationary, or portable pumps and manifold systems to transfer gases, oil, other liquids, slurries, or powdered materials to and from various vessels and processes.",
+    "laborMarket": {
+      "medianWage": "$81,430",
+      "annualOpenings": "6",
+      "employment": "0",
+      "projectedGrowth": "1.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "purchasing-managers",
+    "title": "Purchasing Managers",
+    "soc": "11-3061",
+    "exposure": "Very High",
+    "summary": "Plan, direct, or coordinate the activities of buyers, purchasing officers, and related workers involved in purchasing materials, products, and services. Includes wholesale or retail trade merchandising managers and procurement managers.",
+    "laborMarket": {
+      "medianWage": "$139,370",
+      "annualOpenings": "168",
+      "employment": "1,840",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "procurement-clerks",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "logistics-analysts",
+      "supply-chain-managers",
+      "sales-managers",
+      "marketing-managers",
+      "management-analysts",
+      "general-and-operations-managers",
+      "buyers-and-purchasing-agents-farm-products",
+      "industrial-production-managers",
+      "production-planning-and-expediting-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "administrative-services-managers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "business-intelligence-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "quality-control-analysts",
+    "title": "Quality Control Analysts",
+    "soc": "19-4099",
+    "exposure": "Very High",
+    "summary": "Conduct tests to determine quality of raw materials, bulk intermediate and finished products. May conduct stability sample tests.",
+    "laborMarket": {
+      "medianWage": "$47,330",
+      "annualOpenings": "93",
+      "employment": "400",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "quality-control-systems-managers",
+    "title": "Quality Control Systems Managers",
+    "soc": "11-3051",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate quality assurance programs. Formulate quality control policies and control quality of laboratory and production efforts.",
+    "laborMarket": {
+      "medianWage": "$128,870",
+      "annualOpenings": "247",
+      "employment": "3,670",
+      "projectedGrowth": "0.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "radiation-therapists",
+    "title": "Radiation Therapists",
+    "soc": "29-1124",
+    "exposure": "Low",
+    "summary": "Provide radiation therapy to patients as prescribed by a radiation oncologist according to established practices and standards. Duties may include reviewing prescription and diagnosis; acting as liaison with physician and supportive care personnel; preparing equipment, such as immobilization, treatment, and protection devices; and maintaining records, reports, and files. May assist in dosimetry procedures and tumor localization.",
+    "laborMarket": {
+      "medianWage": "$102,270",
+      "annualOpenings": "45",
+      "employment": "420",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "radio-frequency-identification-device-specialists",
+    "title": "Radio Frequency Identification Device Specialists",
+    "soc": "17-2072",
+    "exposure": "Very High",
+    "summary": "Design and implement radio frequency identification device (RFID) systems used to track shipments or goods.",
+    "laborMarket": {
+      "medianWage": "$135,200",
+      "annualOpenings": "206",
+      "employment": "2,360",
+      "projectedGrowth": "0.43%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment",
+      "electrical-engineers",
+      "microsystems-engineers",
+      "radio-frequency-identification-device-specialists",
+      "mechanical-engineers",
+      "industrial-engineers",
+      "computer-hardware-engineers",
+      "calibration-technologists-and-technicians",
+      "robotics-technicians",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronics-drafters",
+      "electromechanical-equipment-assemblers",
+      "electrical-and-electronic-equipment-assemblers",
+      "electrical-and-electronics-repairers-powerhouse-substation-and-relay",
+      "aerospace-engineering-and-operations-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "radio-cellular-and-tower-equipment-installers-and-repairers",
+    "title": "Radio, Cellular, and Tower Equipment Installers and Repairers",
+    "soc": "49-2021",
+    "exposure": "Very Low",
+    "summary": "Repair, install, or maintain mobile or stationary radio transmitting, broadcasting, and receiving equipment, and two-way radio communications systems used in cellular telecommunications, mobile broadband, ship-to-shore, aircraft-to-ground communications, and radio equipment in service and emergency vehicles. May test and analyze network coverage.",
+    "laborMarket": {
+      "medianWage": "$95,350",
+      "annualOpenings": "6",
+      "employment": "140",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "radiologic-technologists-and-technicians",
+    "title": "Radiologic Technologists and Technicians",
+    "soc": "29-2034",
+    "exposure": "Medium",
+    "summary": "Take x-rays and CAT scans or administer nonradioactive materials into patient's bloodstream for diagnostic or research purposes. Includes radiologic technologists and technicians who specialize in other scanning modalities.",
+    "laborMarket": {
+      "medianWage": "$84,480",
+      "annualOpenings": "423",
+      "employment": "4,680",
+      "projectedGrowth": "2.51%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "radiologists",
+    "title": "Radiologists",
+    "soc": "29-1224",
+    "exposure": "High",
+    "summary": "Diagnose and treat diseases and injuries using medical imaging techniques, such as x rays, magnetic resonance imaging (MRI), nuclear medicine, and ultrasounds. May perform minimally invasive medical procedures and tests.",
+    "laborMarket": {
+      "medianWage": "$nan",
+      "annualOpenings": "18",
+      "employment": "190",
+      "projectedGrowth": "1.68%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "cardiologists",
+      "pediatric-surgeons",
+      "orthopedic-surgeons-except-pediatric",
+      "radiologic-technologists-and-technicians",
+      "physicians-pathologists",
+      "radiation-therapists",
+      "general-internal-medicine-physicians",
+      "emergency-medicine-physicians",
+      "urologists",
+      "neurologists",
+      "cardiovascular-technologists-and-technicians",
+      "anesthesiologists",
+      "nuclear-medicine-technologists",
+      "diagnostic-medical-sonographers",
+      "ophthalmologists-except-pediatric",
+      "obstetricians-and-gynecologists",
+      "neurodiagnostic-technologists",
+      "anesthesiologist-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "rail-car-repairers",
+    "title": "Rail Car Repairers",
+    "soc": "49-3043",
+    "exposure": "Very Low",
+    "summary": "Diagnose, adjust, repair, or overhaul railroad rolling stock, mine cars, or mass transit rail cars.",
+    "laborMarket": {
+      "medianWage": "$64,790",
+      "annualOpenings": "19",
+      "employment": "170",
+      "projectedGrowth": "-1.11%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "rail-yard-engineers-dinkey-operators-and-hostlers",
+    "title": "Rail Yard Engineers, Dinkey Operators, and Hostlers",
+    "soc": "53-4013",
+    "exposure": "Low",
+    "summary": "Drive switching or other locomotive or dinkey engines within railroad yard, industrial plant, quarry, construction project, or similar location.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "rail-track-laying-and-maintenance-equipment-operators",
+    "title": "Rail-Track Laying and Maintenance Equipment Operators",
+    "soc": "47-4061",
+    "exposure": "Very Low",
+    "summary": "Lay, repair, and maintain track for standard or narrow-gauge railroad equipment used in regular railroad service or in plant yards, quarries, sand and gravel pits, and mines. Includes ballast cleaning machine operators and railroad bed tamping machine operators.",
+    "laborMarket": {
+      "medianWage": "$75,770",
+      "annualOpenings": "9",
+      "employment": "180",
+      "projectedGrowth": "0.4%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "railroad-brake-signal-and-switch-operators-and-locomotive-firers",
+    "title": "Railroad Brake, Signal, and Switch Operators and Locomotive Firers",
+    "soc": "53-4022",
+    "exposure": "Low",
+    "summary": "Operate or monitor railroad track switches or locomotive instruments. May couple or uncouple rolling stock to make up or break up trains. Watch for and relay traffic signals. May inspect couplings, air hoses, journal boxes, and hand brakes. May watch for dragging equipment or obstacles on rights-of-way.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "25",
+      "employment": "nan",
+      "projectedGrowth": "-1.14%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "railroad-conductors-and-yardmasters",
+    "title": "Railroad Conductors and Yardmasters",
+    "soc": "53-4031",
+    "exposure": "Low",
+    "summary": "Coordinate activities of switch-engine crew within railroad yard, industrial plant, or similar location. Conductors coordinate activities of train crew on passenger or freight trains. Yardmasters review train schedules and switching orders and coordinate activities of workers engaged in railroad traffic operations, such as the makeup or breakup of trains and yard switching.",
+    "laborMarket": {
+      "medianWage": "$74,160",
+      "annualOpenings": "37",
+      "employment": "400",
+      "projectedGrowth": "-1.03%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "range-managers",
+    "title": "Range Managers",
+    "soc": "19-1031",
+    "exposure": "High",
+    "summary": "Research or study range land management practices to provide sustained production of forage, livestock, and wildlife.",
+    "laborMarket": {
+      "medianWage": "$76,100",
+      "annualOpenings": "30",
+      "employment": "360",
+      "projectedGrowth": "1.52%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "environmental-restoration-planners",
+      "range-managers",
+      "soil-and-plant-scientists",
+      "water-resource-specialists",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "hydrologists",
+      "foresters",
+      "hydrologic-technicians",
+      "forest-and-conservation-technicians",
+      "environmental-engineers",
+      "agricultural-engineers",
+      "geoscientists-except-hydrologists-and-geographers",
+      "water-wastewater-engineers",
+      "environmental-science-and-protection-technicians-including-health",
+      "biologists",
+      "environmental-compliance-inspectors",
+      "zoologists-and-wildlife-biologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "real-estate-brokers",
+    "title": "Real Estate Brokers",
+    "soc": "41-9021",
+    "exposure": "High",
+    "summary": "Operate real estate office, or work for commercial real estate firm, overseeing real estate transactions. Other duties usually include selling real estate or renting properties and arranging loans.",
+    "laborMarket": {
+      "medianWage": "$54,460",
+      "annualOpenings": "374",
+      "employment": "0",
+      "projectedGrowth": "1.1%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "real-estate-sales-agents",
+      "property-real-estate-and-community-association-managers",
+      "appraisers-and-assessors-of-real-estate",
+      "securities-commodities-and-financial-services-sales-agents",
+      "financial-and-investment-analysts",
+      "appraisers-of-personal-and-business-property",
+      "loan-officers",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "sales-managers",
+      "insurance-sales-agents",
+      "brokerage-clerks",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "loan-interviewers-and-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "personal-financial-advisors",
+      "new-accounts-clerks",
+      "counter-and-rental-clerks",
+      "credit-counselors",
+      "credit-analysts",
+      "credit-authorizers-checkers-and-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "real-estate-sales-agents",
+    "title": "Real Estate Sales Agents",
+    "soc": "41-9022",
+    "exposure": "Medium",
+    "summary": "Rent, buy, or sell property for clients. Perform duties such as study property listings, interview prospective clients, accompany clients to property site, discuss conditions of sale, and draw up real estate contracts. Includes agents who represent buyer.",
+    "laborMarket": {
+      "medianWage": "$53,370",
+      "annualOpenings": "1,318",
+      "employment": "8,240",
+      "projectedGrowth": "1.17%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "receptionists-and-information-clerks",
+    "title": "Receptionists and Information Clerks",
+    "soc": "43-4171",
+    "exposure": "Very High",
+    "summary": "Answer inquiries and provide information to the general public, customers, visitors, and other interested parties regarding activities conducted at establishment and location of departments, offices, and employees within the organization.",
+    "laborMarket": {
+      "medianWage": "$38,150",
+      "annualOpenings": "3,869",
+      "employment": "25,160",
+      "projectedGrowth": "0.67%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "medical-secretaries-and-administrative-assistants",
+      "office-clerks-general",
+      "customer-service-representatives",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "switchboard-operators-including-answering-service",
+      "interviewers-except-eligibility-and-loan",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "counter-and-rental-clerks",
+      "patient-representatives",
+      "correspondence-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "hotel-motel-and-resort-desk-clerks",
+      "administrative-services-managers",
+      "telemarketers",
+      "medical-records-specialists",
+      "file-clerks",
+      "cashiers",
+      "billing-and-posting-clerks",
+      "legal-secretaries-and-administrative-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "recreation-workers",
+    "title": "Recreation Workers",
+    "soc": "39-9032",
+    "exposure": "Low",
+    "summary": "Conduct recreation activities with groups in public, private, or volunteer agencies or recreation facilities. Organize and promote activities, such as arts and crafts, sports, games, music, dramatics, social recreation, camping, and hobbies, taking into account the needs and interests of individual members.",
+    "laborMarket": {
+      "medianWage": "$35,340",
+      "annualOpenings": "1,996",
+      "employment": "11,820",
+      "projectedGrowth": "1.42%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "recreation-and-fitness-studies-teachers-postsecondary",
+    "title": "Recreation and Fitness Studies Teachers, Postsecondary",
+    "soc": "25-1193",
+    "exposure": "Very High",
+    "summary": "Teach courses pertaining to recreation, leisure, and fitness studies, including exercise physiology and facilities management. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$94,660",
+      "annualOpenings": "6",
+      "employment": "90",
+      "projectedGrowth": "0.65%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [
+      "health-specialties-teachers-postsecondary",
+      "family-and-consumer-sciences-teachers-postsecondary",
+      "education-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "environmental-science-teachers-postsecondary",
+      "fitness-and-wellness-coordinators",
+      "biological-science-teachers-postsecondary",
+      "social-work-teachers-postsecondary",
+      "career-technical-education-teachers-postsecondary",
+      "nursing-instructors-and-teachers-postsecondary",
+      "special-education-teachers-kindergarten",
+      "teaching-assistants-postsecondary",
+      "special-education-teachers-secondary-school",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "self-enrichment-teachers",
+      "career-technical-education-teachers-middle-school",
+      "instructional-coordinators",
+      "adapted-physical-education-specialists",
+      "career-technical-education-teachers-secondary-school",
+      "elementary-school-teachers-except-special-education"
+    ],
+    "training": []
+  },
+  {
+    "id": "recreational-therapists",
+    "title": "Recreational Therapists",
+    "soc": "29-1125",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate medically-approved recreation programs for patients in hospitals, nursing homes, or other institutions. Activities include sports, trips, dramatics, social activities, and crafts. May assess a patient condition and recommend appropriate recreational activity.",
+    "laborMarket": {
+      "medianWage": "$61,110",
+      "annualOpenings": "20",
+      "employment": "150",
+      "projectedGrowth": "2.42%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "recreational-vehicle-service-technicians",
+    "title": "Recreational Vehicle Service Technicians",
+    "soc": "49-3092",
+    "exposure": "Very Low",
+    "summary": "Diagnose, inspect, adjust, repair, or overhaul recreational vehicles including travel trailers. May specialize in maintaining gas, electrical, hydraulic, plumbing, or chassis/towing systems as well as repairing generators, appliances, and interior components. Includes workers who perform customized van conversions.",
+    "laborMarket": {
+      "medianWage": "$50,480",
+      "annualOpenings": "162",
+      "employment": "1,280",
+      "projectedGrowth": "0.4%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "recycling-and-reclamation-workers",
+    "title": "Recycling and Reclamation Workers",
+    "soc": "53-7062",
+    "exposure": "Very Low",
+    "summary": "Prepare and sort materials or products for recycling. Identify and remove hazardous substances. Dismantle components of products such as appliances.",
+    "laborMarket": {
+      "medianWage": "$39,160",
+      "annualOpenings": "9,686",
+      "employment": "73,540",
+      "projectedGrowth": "0.68%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "refuse-and-recyclable-material-collectors",
+    "title": "Refuse and Recyclable Material Collectors",
+    "soc": "53-7081",
+    "exposure": "Low",
+    "summary": "Collect and dump refuse or recyclable materials from containers into truck. May drive truck.",
+    "laborMarket": {
+      "medianWage": "$39,650",
+      "annualOpenings": "312",
+      "employment": "2,020",
+      "projectedGrowth": "2.07%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "registered-nurses",
+    "title": "Registered Nurses",
+    "soc": "29-1141",
+    "exposure": "Medium",
+    "summary": "Assess patient health problems and needs, develop and implement nursing care plans, and maintain medical records. Administer nursing care to ill, injured, convalescent, or disabled patients. May advise patients on health maintenance and disease prevention or provide case management. Licensing or registration required.",
+    "laborMarket": {
+      "medianWage": "$96,890",
+      "annualOpenings": "5,662",
+      "employment": "64,430",
+      "projectedGrowth": "2.79%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "regulatory-affairs-managers",
+    "title": "Regulatory Affairs Managers",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate production activities of an organization to ensure compliance with regulations and standard operating procedures.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "regulatory-affairs-specialists",
+    "title": "Regulatory Affairs Specialists",
+    "soc": "13-1041",
+    "exposure": "High",
+    "summary": "Coordinate and document internal regulatory processes, such as internal audits, inspections, license renewals, or registrations. May compile and prepare materials for submission to regulatory agencies.",
+    "laborMarket": {
+      "medianWage": "$73,070",
+      "annualOpenings": "1,027",
+      "employment": "11,590",
+      "projectedGrowth": "0.9%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "compliance-managers",
+      "eligibility-interviewers-government-programs",
+      "government-property-inspectors-and-investigators",
+      "paralegals-and-legal-assistants",
+      "claims-adjusters-examiners-and-investigators",
+      "court-municipal-and-license-clerks",
+      "administrative-law-judges-adjudicators-and-hearing-officers",
+      "management-analysts",
+      "private-detectives-and-investigators",
+      "legal-secretaries-and-administrative-assistants",
+      "judicial-law-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "administrative-services-managers",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "lawyers"
+    ],
+    "training": []
+  },
+  {
+    "id": "rehabilitation-counselors",
+    "title": "Rehabilitation Counselors",
+    "soc": "21-1015",
+    "exposure": "Medium",
+    "summary": "Counsel individuals to maximize the independence and employability of persons coping with personal, social, and vocational difficulties that result from birth defects, illness, disease, accidents, aging, or the stress of daily life. Coordinate activities for residents of care and treatment facilities. Assess client needs and design and implement rehabilitation programs that may include personal and vocational counseling, training, and job placement.",
+    "laborMarket": {
+      "medianWage": "$45,970",
+      "annualOpenings": "204",
+      "employment": "1,880",
+      "projectedGrowth": "1.59%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "reinforcing-iron-and-rebar-workers",
+    "title": "Reinforcing Iron and Rebar Workers",
+    "soc": "47-2171",
+    "exposure": "Very Low",
+    "summary": "Position and secure steel bars or mesh in concrete forms in order to reinforce concrete. Use a variety of fasteners, rod-bending machines, blowtorches, and hand tools. Includes rod busters.",
+    "laborMarket": {
+      "medianWage": "$67,010",
+      "annualOpenings": "56",
+      "employment": "0",
+      "projectedGrowth": "1.61%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "remote-sensing-scientists-and-technologists",
+    "title": "Remote Sensing Scientists and Technologists",
+    "soc": "19-2099",
+    "exposure": "High",
+    "summary": "Apply remote sensing principles and methods to analyze data and solve problems in areas such as natural resource management, urban planning, or homeland security. May develop new sensor systems, analytical techniques, or new applications for existing systems.",
+    "laborMarket": {
+      "medianWage": "$119,920",
+      "annualOpenings": "43",
+      "employment": "170",
+      "projectedGrowth": "1.48%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "remote-sensing-technicians",
+    "title": "Remote Sensing Technicians",
+    "soc": "19-4099",
+    "exposure": "Very High",
+    "summary": "Apply remote sensing technologies to assist scientists in areas such as natural resources, urban planning, or homeland security. May prepare flight plans or sensor configurations for flight trips.",
+    "laborMarket": {
+      "medianWage": "$47,330",
+      "annualOpenings": "93",
+      "employment": "400",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "reservation-and-transportation-ticket-agents-and-travel-clerks",
+    "title": "Reservation and Transportation Ticket Agents and Travel Clerks",
+    "soc": "43-4181",
+    "exposure": "High",
+    "summary": "Make and confirm reservations for transportation or lodging, or sell transportation tickets. May check baggage and direct passengers to designated concourse, pier, or track; deliver tickets and contact individuals and groups to inform them of package tours; or provide tourists with travel or transportation information.",
+    "laborMarket": {
+      "medianWage": "$41,320",
+      "annualOpenings": "340",
+      "employment": "3,020",
+      "projectedGrowth": "0.65%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "travel-agents",
+      "flight-attendants",
+      "passenger-attendants",
+      "baggage-porters-and-bellhops",
+      "counter-and-rental-clerks",
+      "hotel-motel-and-resort-desk-clerks",
+      "bus-drivers-transit-and-intercity",
+      "dispatchers-except-police-fire-and-ambulance",
+      "travel-guides",
+      "cargo-and-freight-agents",
+      "concierges",
+      "airfield-operations-specialists",
+      "transportation-security-screeners",
+      "first-line-supervisors-of-passenger-attendants",
+      "receptionists-and-information-clerks",
+      "shuttle-drivers-and-chauffeurs",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "customer-service-representatives",
+      "ushers-lobby-attendants-and-ticket-takers"
+    ],
+    "training": []
+  },
+  {
+    "id": "residential-advisors",
+    "title": "Residential Advisors",
+    "soc": "39-9041",
+    "exposure": "Low",
+    "summary": "Coordinate activities in resident facilities in secondary school and college dormitories, group homes, or similar establishments. Order supplies and determine need for maintenance, repairs, and furnishings. May maintain household records and assign rooms. May assist residents with problem solving or refer them to counseling resources.",
+    "laborMarket": {
+      "medianWage": "$36,180",
+      "annualOpenings": "416",
+      "employment": "1,580",
+      "projectedGrowth": "2.23%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "respiratory-therapists",
+    "title": "Respiratory Therapists",
+    "soc": "29-1126",
+    "exposure": "Low",
+    "summary": "Assess, treat, and care for patients with breathing disorders. Assume primary responsibility for all respiratory care modalities, including the supervision of respiratory therapy technicians. Initiate and conduct therapeutic procedures; maintain patient records; and select, assemble, check, and operate equipment.",
+    "laborMarket": {
+      "medianWage": "$79,290",
+      "annualOpenings": "311",
+      "employment": "3,070",
+      "projectedGrowth": "4.01%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "retail-loss-prevention-specialists",
+    "title": "Retail Loss Prevention Specialists",
+    "soc": "33-9099",
+    "exposure": "Medium",
+    "summary": "Implement procedures and systems to prevent merchandise loss. Conduct audits and investigations of employee activity. May assist in developing policies, procedures, and systems for safeguarding assets.",
+    "laborMarket": {
+      "medianWage": "$49,590",
+      "annualOpenings": "347",
+      "employment": "1,430",
+      "projectedGrowth": "0.91%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "retail-salespersons",
+    "title": "Retail Salespersons",
+    "soc": "41-2031",
+    "exposure": "Medium",
+    "summary": "Sell merchandise, such as furniture, motor vehicles, appliances, or apparel to consumers.",
+    "laborMarket": {
+      "medianWage": "$35,320",
+      "annualOpenings": "12,242",
+      "employment": "88,490",
+      "projectedGrowth": "0.12%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "riggers",
+    "title": "Riggers",
+    "soc": "49-9096",
+    "exposure": "Very Low",
+    "summary": "Set up or repair rigging for construction projects, manufacturing plants, logging yards, ships and shipyards, or for the entertainment industry.",
+    "laborMarket": {
+      "medianWage": "$50,340",
+      "annualOpenings": "28",
+      "employment": "270",
+      "projectedGrowth": "1.5%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "robotics-engineers",
+    "title": "Robotics Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Research, design, develop, or test robotic applications.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "robotics-technicians",
+    "title": "Robotics Technicians",
+    "soc": "17-3024",
+    "exposure": "Medium",
+    "summary": "Build, install, test, or maintain robotic equipment or related automated production systems.",
+    "laborMarket": {
+      "medianWage": "$78,360",
+      "annualOpenings": "14",
+      "employment": "150",
+      "projectedGrowth": "0.64%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "rock-splitters-quarry",
+    "title": "Rock Splitters, Quarry",
+    "soc": "47-5051",
+    "exposure": "Very Low",
+    "summary": "Separate blocks of rough dimension stone from quarry mass using jackhammers, wedges, or chop saws.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "rolling-machine-setters-operators-and-tenders-metal-and-plastic",
+    "title": "Rolling Machine Setters, Operators, and Tenders, Metal and Plastic",
+    "soc": "51-4023",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend machines to roll steel or plastic forming bends, beads, knurls, rolls, or plate, or to flatten, temper, or reduce gauge of material.",
+    "laborMarket": {
+      "medianWage": "$47,150",
+      "annualOpenings": "30",
+      "employment": "190",
+      "projectedGrowth": "-0.34%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "roofers",
+    "title": "Roofers",
+    "soc": "47-2181",
+    "exposure": "Very Low",
+    "summary": "Cover roofs of structures with shingles, slate, asphalt, aluminum, wood, or related materials. May spray roofs, sidings, and walls with material to bind, seal, insulate, or soundproof sections of structures.",
+    "laborMarket": {
+      "medianWage": "$46,210",
+      "annualOpenings": "385",
+      "employment": "3,760",
+      "projectedGrowth": "1.63%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "rotary-drill-operators-oil-and-gas",
+    "title": "Rotary Drill Operators, Oil and Gas",
+    "soc": "47-5012",
+    "exposure": "Very Low",
+    "summary": "Set up or operate a variety of drills to remove underground oil and gas, or remove core samples for testing during oil and gas exploration.",
+    "laborMarket": {
+      "medianWage": "$75,540",
+      "annualOpenings": "8",
+      "employment": "60",
+      "projectedGrowth": "1.53%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "roustabouts-oil-and-gas",
+    "title": "Roustabouts, Oil and Gas",
+    "soc": "47-5071",
+    "exposure": "Very Low",
+    "summary": "Assemble or repair oil field equipment using hand and power tools. Perform other tasks as needed.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sailors-and-marine-oilers",
+    "title": "Sailors and Marine Oilers",
+    "soc": "53-5011",
+    "exposure": "Very Low",
+    "summary": "Stand watch to look for obstructions in path of vessel, measure water depth, turn wheel on bridge, or use emergency equipment as directed by captain, mate, or pilot. Break out, rig, overhaul, and store cargo-handling gear, stationary rigging, and running gear. Perform a variety of maintenance tasks to preserve the painted surface of the ship and to maintain line and ship equipment. Must hold government-issued certification and tankerman certification when working aboard liquid-carrying vessels. Includes able seamen and ordinary seamen.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "4.45%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sales-engineers",
+    "title": "Sales Engineers",
+    "soc": "41-9031",
+    "exposure": "High",
+    "summary": "Sell business goods or services, the selling of which requires a technical background equivalent to a baccalaureate degree in engineering.",
+    "laborMarket": {
+      "medianWage": "$169,470",
+      "annualOpenings": "75",
+      "employment": "1,220",
+      "projectedGrowth": "0.3%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "architectural-and-engineering-managers",
+      "logistics-engineers",
+      "industrial-engineers",
+      "electronics-engineers-except-computer",
+      "computer-systems-analysts",
+      "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "industrial-engineering-technologists-and-technicians",
+      "mechanical-engineers",
+      "computer-systems-engineers-architects",
+      "software-developers",
+      "project-management-specialists",
+      "electrical-engineers",
+      "commercial-and-industrial-designers"
+    ],
+    "training": []
+  },
+  {
+    "id": "sales-managers",
+    "title": "Sales Managers",
+    "soc": "11-2022",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate the actual distribution or movement of a product or service to the customer. Coordinate sales distribution by establishing sales territories, quotas, and goals and establish training programs for sales representatives. Analyze sales statistics gathered by staff to determine sales potential and inventory requirements and monitor the preferences of customers.",
+    "laborMarket": {
+      "medianWage": "$129,690",
+      "annualOpenings": "1,014",
+      "employment": "13,390",
+      "projectedGrowth": "0.44%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "marketing-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "market-research-analysts-and-marketing-specialists",
+      "advertising-and-promotions-managers",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "purchasing-managers",
+      "first-line-supervisors-of-retail-sales-workers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "general-and-operations-managers",
+      "advertising-sales-agents",
+      "management-analysts",
+      "online-merchants",
+      "customer-service-representatives",
+      "securities-commodities-and-financial-services-sales-agents",
+      "chief-executives",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "logisticians",
+      "financial-and-investment-analysts",
+      "brokerage-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+    "title": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",
+    "soc": "41-3091",
+    "exposure": "Very High",
+    "summary": "Sell services to individuals or businesses. May describe options or resolve client problems.",
+    "laborMarket": {
+      "medianWage": "$65,240",
+      "annualOpenings": "2,656",
+      "employment": "26,210",
+      "projectedGrowth": "0.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "customer-service-representatives",
+      "telemarketers",
+      "sales-managers",
+      "advertising-sales-agents",
+      "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+      "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+      "marketing-managers",
+      "new-accounts-clerks",
+      "insurance-sales-agents",
+      "demonstrators-and-product-promoters",
+      "securities-commodities-and-financial-services-sales-agents",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "sales-engineers",
+      "market-research-analysts-and-marketing-specialists",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "counter-and-rental-clerks",
+      "personal-financial-advisors",
+      "public-relations-specialists",
+      "brokerage-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+    "title": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+    "soc": "41-4012",
+    "exposure": "Very High",
+    "summary": "Sell goods for wholesalers or manufacturers to businesses or groups of individuals. Work requires substantial knowledge of items sold.",
+    "laborMarket": {
+      "medianWage": "$65,500",
+      "annualOpenings": "2,172",
+      "employment": "18,240",
+      "projectedGrowth": "0.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "buyers-and-purchasing-agents-farm-products",
+      "advertising-sales-agents",
+      "sales-engineers",
+      "sales-managers",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "purchasing-managers",
+      "procurement-clerks",
+      "retail-salespersons",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers",
+      "counter-and-rental-clerks",
+      "demonstrators-and-product-promoters",
+      "customer-service-representatives",
+      "stockers-and-order-fillers",
+      "logisticians",
+      "supply-chain-managers",
+      "telemarketers",
+      "shipping-receiving-and-inventory-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+    "title": "Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",
+    "soc": "41-4011",
+    "exposure": "High",
+    "summary": "Sell goods for wholesalers or manufacturers where technical or scientific knowledge is required in such areas as biology, engineering, chemistry, and electronics, normally obtained from at least 2 years of postsecondary education.",
+    "laborMarket": {
+      "medianWage": "$83,220",
+      "annualOpenings": "860",
+      "employment": "10,670",
+      "projectedGrowth": "0.93%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+      "sales-engineers",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "industrial-production-managers",
+      "solar-sales-representatives-and-assessors",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "sales-managers",
+      "advertising-sales-agents",
+      "purchasing-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "retail-salespersons",
+      "counter-and-rental-clerks",
+      "logisticians",
+      "customer-service-representatives",
+      "industrial-engineers",
+      "parts-salespersons",
+      "production-planning-and-expediting-clerks",
+      "supply-chain-managers",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "sawing-machine-setters-operators-and-tenders-wood",
+    "title": "Sawing Machine Setters, Operators, and Tenders, Wood",
+    "soc": "51-7041",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend wood sawing machines. May operate computer numerically controlled (CNC) equipment. Includes lead sawyers.",
+    "laborMarket": {
+      "medianWage": "$42,810",
+      "annualOpenings": "44",
+      "employment": "300",
+      "projectedGrowth": "0.25%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "school-bus-monitors",
+    "title": "School Bus Monitors",
+    "soc": "33-9094",
+    "exposure": "Low",
+    "summary": "Maintain order among students on a school bus. Duties include helping students safely board and exit and communicating behavioral problems. May perform pretrip and posttrip inspections and prepare for and assist in emergency evacuations.",
+    "laborMarket": {
+      "medianWage": "$34,190",
+      "annualOpenings": "230",
+      "employment": "1,520",
+      "projectedGrowth": "-0.29%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "school-psychologists",
+    "title": "School Psychologists",
+    "soc": "19-3034",
+    "exposure": "Medium",
+    "summary": "Diagnose and implement individual or schoolwide interventions or strategies to address educational, behavioral, or developmental issues that adversely impact educational functioning in a school. May address student learning and behavioral problems and counsel students or families. May design and implement performance plans, and evaluate performance. May consult with other school-based personnel.",
+    "laborMarket": {
+      "medianWage": "$82,250",
+      "annualOpenings": "70",
+      "employment": "1,050",
+      "projectedGrowth": "0.8%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "search-marketing-strategists",
+    "title": "Search Marketing Strategists",
+    "soc": "13-1161",
+    "exposure": "High",
+    "summary": "Employ search marketing tactics to increase visibility and engagement with content, products, or services in Internet-enabled devices or interfaces. Examine search query behaviors on general or specialty search engines or other Internet-based content. Analyze research, data, or technology to understand user intent and measure outcomes for ongoing optimization.",
+    "laborMarket": {
+      "medianWage": "$66,750",
+      "annualOpenings": "1,717",
+      "employment": "18,020",
+      "projectedGrowth": "0.86%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "marketing-managers",
+      "advertising-and-promotions-managers",
+      "search-marketing-strategists",
+      "business-intelligence-analysts",
+      "management-analysts",
+      "sales-managers",
+      "public-relations-managers",
+      "advertising-sales-agents",
+      "financial-and-investment-analysts",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "public-relations-specialists",
+      "survey-researchers",
+      "securities-commodities-and-financial-services-sales-agents",
+      "business-teachers-postsecondary",
+      "financial-risk-specialists",
+      "writers-and-authors",
+      "online-merchants",
+      "personal-financial-advisors",
+      "wholesale-and-retail-buyers-except-farm-products"
+    ],
+    "training": []
+  },
+  {
+    "id": "secondary-school-teachers-except-special-and-career-technical-education",
+    "title": "Secondary School Teachers, Except Special and Career/Technical Education",
+    "soc": "25-2031",
+    "exposure": "Medium",
+    "summary": "Teach one or more subjects to students at the secondary school level.",
+    "laborMarket": {
+      "medianWage": "$59,900",
+      "annualOpenings": "1,481",
+      "employment": "24,100",
+      "projectedGrowth": "0.66%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+    "title": "Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",
+    "soc": "43-6014",
+    "exposure": "Very High",
+    "summary": "Perform routine administrative functions such as drafting correspondence, scheduling appointments, organizing and maintaining paper and electronic files, or providing information to callers.",
+    "laborMarket": {
+      "medianWage": "$46,020",
+      "annualOpenings": "3,965",
+      "employment": "31,620",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "executive-secretaries-and-executive-administrative-assistants",
+      "office-clerks-general",
+      "administrative-services-managers",
+      "legal-secretaries-and-administrative-assistants",
+      "medical-secretaries-and-administrative-assistants",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "receptionists-and-information-clerks",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "correspondence-clerks",
+      "eligibility-interviewers-government-programs",
+      "management-analysts",
+      "chief-executives",
+      "social-science-research-assistants",
+      "customer-service-representatives",
+      "court-municipal-and-license-clerks",
+      "file-clerks",
+      "human-resources-specialists",
+      "switchboard-operators-including-answering-service",
+      "interviewers-except-eligibility-and-loan",
+      "first-line-supervisors-of-non-retail-sales-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "securities-commodities-and-financial-services-sales-agents",
+    "title": "Securities, Commodities, and Financial Services Sales Agents",
+    "soc": "41-3031",
+    "exposure": "Very High",
+    "summary": "Buy and sell securities or commodities in investment and trading firms, or provide financial services to businesses and individuals. May advise customers about stocks, bonds, mutual funds, commodities, and market conditions.",
+    "laborMarket": {
+      "medianWage": "$61,240",
+      "annualOpenings": "932",
+      "employment": "14,170",
+      "projectedGrowth": "0.33%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "financial-and-investment-analysts",
+      "personal-financial-advisors",
+      "investment-fund-managers",
+      "brokerage-clerks",
+      "financial-risk-specialists",
+      "loan-officers",
+      "new-accounts-clerks",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "credit-analysts",
+      "real-estate-brokers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "tellers",
+      "credit-counselors",
+      "credit-authorizers-checkers-and-clerks",
+      "real-estate-sales-agents",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "market-research-analysts-and-marketing-specialists",
+      "insurance-sales-agents",
+      "business-intelligence-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "security-guards",
+    "title": "Security Guards",
+    "soc": "33-9032",
+    "exposure": "Low",
+    "summary": "Guard, patrol, or monitor premises to prevent theft, violence, or infractions of rules. May operate x-ray and metal detector equipment.",
+    "laborMarket": {
+      "medianWage": "$38,560",
+      "annualOpenings": "3,348",
+      "employment": "26,720",
+      "projectedGrowth": "0.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "security-management-specialists",
+    "title": "Security Management Specialists",
+    "soc": "13-1199",
+    "exposure": "Very High",
+    "summary": "Conduct security assessments for organizations, and design security systems and processes. May specialize in areas such as physical security or the safety of employees and facilities.",
+    "laborMarket": {
+      "medianWage": "$85,390",
+      "annualOpenings": "1,329",
+      "employment": "14,700",
+      "projectedGrowth": "0.63%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "security-managers",
+    "title": "Security Managers",
+    "soc": "11-3013",
+    "exposure": "Medium",
+    "summary": "Direct an organization's security functions, including physical security and safety of employees and facilities.",
+    "laborMarket": {
+      "medianWage": "$92,700",
+      "annualOpenings": "307",
+      "employment": "3,180",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "security-and-fire-alarm-systems-installers",
+    "title": "Security and Fire Alarm Systems Installers",
+    "soc": "49-2098",
+    "exposure": "Low",
+    "summary": "Install, program, maintain, and repair security and fire alarm wiring and equipment. Ensure that work is in accordance with relevant codes.",
+    "laborMarket": {
+      "medianWage": "$53,490",
+      "annualOpenings": "325",
+      "employment": "2,100",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "self-enrichment-teachers",
+    "title": "Self-Enrichment Teachers",
+    "soc": "25-3021",
+    "exposure": "Medium",
+    "summary": "Teach or instruct individuals or groups for the primary purpose of self-enrichment or recreation, rather than for an occupational objective, educational attainment, competition, or fitness.",
+    "laborMarket": {
+      "medianWage": "$43,700",
+      "annualOpenings": "487",
+      "employment": "1,450",
+      "projectedGrowth": "1.66%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "semiconductor-processing-technicians",
+    "title": "Semiconductor Processing Technicians",
+    "soc": "51-9141",
+    "exposure": "Low",
+    "summary": "Perform any or all of the following functions in the manufacture of electronic semiconductors: load semiconductor material into furnace; saw formed ingots into segments; load individual segment into crystal growing chamber and monitor controls; locate crystal axis in ingot using x-ray equipment and saw ingots into wafers; and clean, polish, and load wafers into series of special purpose furnaces, chemical baths, and equipment used to form circuitry and change conductive properties.",
+    "laborMarket": {
+      "medianWage": "$78,050",
+      "annualOpenings": "242",
+      "employment": "3,730",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "separating-filtering-clarifying-precipitating-and-still-machine-setters-operators-and-tenders",
+    "title": "Separating, Filtering, Clarifying, Precipitating, and Still Machine Setters, Operators, and Tenders",
+    "soc": "51-9012",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend continuous flow or vat-type equipment; filter presses; shaker screens; centrifuges; condenser tubes; precipitating, fermenting, or evaporating tanks; scrubbing towers; or batch stills. These machines extract, sort, or separate liquids, gases, or solids from other materials to recover a refined product. Includes dairy processing equipment operators.",
+    "laborMarket": {
+      "medianWage": "$52,220",
+      "annualOpenings": "48",
+      "employment": "620",
+      "projectedGrowth": "-0.1%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "septic-tank-servicers-and-sewer-pipe-cleaners",
+    "title": "Septic Tank Servicers and Sewer Pipe Cleaners",
+    "soc": "47-4071",
+    "exposure": "Very Low",
+    "summary": "Clean and repair septic tanks, sewer lines, or drains. May patch walls and partitions of tank, replace damaged drain tile, or repair breaks in underground piping.",
+    "laborMarket": {
+      "medianWage": "$46,450",
+      "annualOpenings": "50",
+      "employment": "300",
+      "projectedGrowth": "3.14%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "service-unit-operators-oil-and-gas",
+    "title": "Service Unit Operators, Oil and Gas",
+    "soc": "47-5013",
+    "exposure": "Very Low",
+    "summary": "Operate equipment to increase oil flow from producing wells or to remove stuck pipe, casing, tools, or other obstructions from drilling wells. Includes fishing-tool technicians.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "-2.2%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "set-and-exhibit-designers",
+    "title": "Set and Exhibit Designers",
+    "soc": "27-1027",
+    "exposure": "Medium",
+    "summary": "Design special exhibits and sets for film, video, television, and theater productions. May study scripts, confer with directors, and conduct research to determine appropriate architectural styles.",
+    "laborMarket": {
+      "medianWage": "$51,120",
+      "annualOpenings": "55",
+      "employment": "50",
+      "projectedGrowth": "2.39%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sewers-hand",
+    "title": "Sewers, Hand",
+    "soc": "51-6051",
+    "exposure": "Very Low",
+    "summary": "Sew, join, reinforce, or finish, usually with needle and thread, a variety of manufactured items. Includes weavers and stitchers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "15",
+      "employment": "nan",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sewing-machine-operators",
+    "title": "Sewing Machine Operators",
+    "soc": "51-6031",
+    "exposure": "Very Low",
+    "summary": "Operate or tend sewing machines to join, reinforce, decorate, or perform related sewing operations in the manufacture of garment or nongarment products.",
+    "laborMarket": {
+      "medianWage": "$39,240",
+      "annualOpenings": "203",
+      "employment": "1,340",
+      "projectedGrowth": "-0.06%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "shampooers",
+    "title": "Shampooers",
+    "soc": "39-5093",
+    "exposure": "Low",
+    "summary": "Shampoo and rinse customers' hair.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "29",
+      "employment": "nan",
+      "projectedGrowth": "3.12%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sheet-metal-workers",
+    "title": "Sheet Metal Workers",
+    "soc": "47-2211",
+    "exposure": "Very Low",
+    "summary": "Fabricate, assemble, install, and repair sheet metal products and equipment, such as ducts, control boxes, drainpipes, and furnace casings. Work may involve any of the following: setting up and operating fabricating machines to cut, bend, and straighten sheet metal; shaping metal over anvils, blocks, or forms using hammer; operating soldering and welding equipment to join sheet metal parts; or inspecting, assembling, and smoothing seams and joints of burred surfaces. Includes sheet metal duct installers who install prefabricated sheet metal ducts used for heating, air conditioning, or other purposes.",
+    "laborMarket": {
+      "medianWage": "$51,440",
+      "annualOpenings": "370",
+      "employment": "2,990",
+      "projectedGrowth": "0.95%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "shipping-receiving-and-inventory-clerks",
+    "title": "Shipping, Receiving, and Inventory Clerks",
+    "soc": "43-5071",
+    "exposure": "High",
+    "summary": "Verify and maintain records on incoming and outgoing shipments involving inventory. Duties include verifying and recording incoming merchandise or material and arranging for the transportation of products. May prepare items for shipment.",
+    "laborMarket": {
+      "medianWage": "$42,740",
+      "annualOpenings": "1,681",
+      "employment": "18,100",
+      "projectedGrowth": "-0.51%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "postal-service-clerks",
+      "stockers-and-order-fillers",
+      "cargo-and-freight-agents",
+      "weighers-measurers-checkers-and-samplers-recordkeeping",
+      "postal-service-mail-sorters-processors-and-processing-machine-operators",
+      "production-planning-and-expediting-clerks",
+      "mail-clerks-and-mail-machine-operators-except-postal-service",
+      "laborers-and-freight-stock-and-material-movers-hand",
+      "order-clerks",
+      "procurement-clerks",
+      "logistics-analysts",
+      "packers-and-packagers-hand",
+      "transportation-storage-and-distribution-managers",
+      "tank-car-truck-and-ship-loaders",
+      "dispatchers-except-police-fire-and-ambulance",
+      "postal-service-mail-carriers",
+      "packaging-and-filling-machine-operators-and-tenders",
+      "couriers-and-messengers",
+      "machine-feeders-and-offbearers"
+    ],
+    "training": []
+  },
+  {
+    "id": "shoe-machine-operators-and-tenders",
+    "title": "Shoe Machine Operators and Tenders",
+    "soc": "51-6042",
+    "exposure": "Very Low",
+    "summary": "Operate or tend a variety of machines to join, decorate, reinforce, or finish shoes and shoe parts.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "-1.23%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "shoe-and-leather-workers-and-repairers",
+    "title": "Shoe and Leather Workers and Repairers",
+    "soc": "51-6041",
+    "exposure": "Very Low",
+    "summary": "Construct, decorate, or repair leather and leather-like products, such as luggage, shoes, and saddles. May use hand tools.",
+    "laborMarket": {
+      "medianWage": "$40,260",
+      "annualOpenings": "8",
+      "employment": "0",
+      "projectedGrowth": "-1.64%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "shuttle-drivers-and-chauffeurs",
+    "title": "Shuttle Drivers and Chauffeurs",
+    "soc": "53-3053",
+    "exposure": "Low",
+    "summary": "Drive a motor vehicle to transport passengers on a planned or scheduled basis. May collect a fare. Includes nonemergency medical transporters and hearse drivers.",
+    "laborMarket": {
+      "medianWage": "$36,540",
+      "annualOpenings": "887",
+      "employment": "5,000",
+      "projectedGrowth": "1.39%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "signal-and-track-switch-repairers",
+    "title": "Signal and Track Switch Repairers",
+    "soc": "49-9097",
+    "exposure": "Very Low",
+    "summary": "Install, inspect, test, maintain, or repair electric gate crossings, signals, signal equipment, track switches, section lines, or intercommunications systems within a railroad system.",
+    "laborMarket": {
+      "medianWage": "$76,830",
+      "annualOpenings": "10",
+      "employment": "80",
+      "projectedGrowth": "0.51%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "skincare-specialists",
+    "title": "Skincare Specialists",
+    "soc": "39-5094",
+    "exposure": "Low",
+    "summary": "Provide skincare treatments to face and body to enhance an individual's appearance. Includes electrologists and laser hair removal specialists.",
+    "laborMarket": {
+      "medianWage": "$46,550",
+      "annualOpenings": "457",
+      "employment": "1,630",
+      "projectedGrowth": "1.4%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "slaughterers-and-meat-packers",
+    "title": "Slaughterers and Meat Packers",
+    "soc": "51-3023",
+    "exposure": "Very Low",
+    "summary": "Perform nonroutine or precision functions involving the preparation of large portions of meat. Work may include specialized slaughtering tasks, cutting standard or premium cuts of meat for marketing, making sausage, or wrapping meats. Work typically occurs in slaughtering, meat packing, or wholesale establishments.",
+    "laborMarket": {
+      "medianWage": "$47,470",
+      "annualOpenings": "34",
+      "employment": "0",
+      "projectedGrowth": "0.73%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "social-science-research-assistants",
+    "title": "Social Science Research Assistants",
+    "soc": "19-4061",
+    "exposure": "Very High",
+    "summary": "Assist social scientists in laboratory, survey, and other social science research. May help prepare findings for publication and assist in laboratory analysis, quality control, or data management.",
+    "laborMarket": {
+      "medianWage": "$59,130",
+      "annualOpenings": "178",
+      "employment": "670",
+      "projectedGrowth": "1.06%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "survey-researchers",
+      "clinical-research-coordinators",
+      "statisticians",
+      "statistical-assistants",
+      "teaching-assistants-postsecondary",
+      "health-informatics-specialists",
+      "bioinformatics-technicians",
+      "management-analysts",
+      "education-administrators-postsecondary",
+      "sociologists",
+      "interviewers-except-eligibility-and-loan",
+      "instructional-coordinators",
+      "health-information-technologists-and-medical-registrars",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "education-teachers-postsecondary",
+      "technical-writers"
+    ],
+    "training": []
+  },
+  {
+    "id": "social-scientists-and-related-workers-all-other",
+    "title": "Social Scientists and Related Workers, All Other",
+    "soc": "19-3099",
+    "exposure": "High",
+    "summary": "All social scientists and related workers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$97,360",
+      "annualOpenings": "52",
+      "employment": "700",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "social-work-teachers-postsecondary",
+    "title": "Social Work Teachers, Postsecondary",
+    "soc": "25-1113",
+    "exposure": "Medium",
+    "summary": "Teach courses in social work. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$73,770",
+      "annualOpenings": "27",
+      "employment": "380",
+      "projectedGrowth": "1.13%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "social-and-community-service-managers",
+    "title": "Social and Community Service Managers",
+    "soc": "11-9151",
+    "exposure": "Medium",
+    "summary": "Plan, direct, or coordinate the activities of a social service program or community outreach organization. Oversee the program or organization's budget and policies regarding participant involvement, program requirements, and benefits. Work may involve directing social workers, counselors, or probation officers.",
+    "laborMarket": {
+      "medianWage": "$75,070",
+      "annualOpenings": "345",
+      "employment": "2,870",
+      "projectedGrowth": "2.17%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "social-and-human-service-assistants",
+    "title": "Social and Human Service Assistants",
+    "soc": "21-1093",
+    "exposure": "Medium",
+    "summary": "Assist other social and human service providers in providing client services in a wide variety of fields, such as psychology, rehabilitation, or social work, including support for families. May assist clients in identifying and obtaining available benefits and social and community services. May assist social workers with developing, organizing, and conducting programs to prevent and resolve problems relevant to substance abuse, human relationships, rehabilitation, or dependent care.",
+    "laborMarket": {
+      "medianWage": "$41,150",
+      "annualOpenings": "849",
+      "employment": "6,900",
+      "projectedGrowth": "2.21%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sociologists",
+    "title": "Sociologists",
+    "soc": "19-3041",
+    "exposure": "Very High",
+    "summary": "Study human society and social behavior by examining the groups and social institutions that people form, as well as various social, religious, political, and business organizations. May study the behavior and interaction of groups, trace their origin and growth, and analyze the influence of group activities on individual members.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "2",
+      "employment": "nan",
+      "projectedGrowth": "1.38%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "sociology-teachers-postsecondary",
+      "anthropologists-and-archeologists",
+      "political-scientists",
+      "social-work-teachers-postsecondary",
+      "survey-researchers",
+      "political-science-teachers-postsecondary",
+      "social-science-research-assistants",
+      "data-scientists",
+      "area-ethnic-and-cultural-studies-teachers-postsecondary",
+      "psychology-teachers-postsecondary",
+      "anthropology-and-archeology-teachers-postsecondary",
+      "economists",
+      "education-teachers-postsecondary",
+      "economics-teachers-postsecondary",
+      "industrial-organizational-psychologists",
+      "historians",
+      "school-psychologists",
+      "epidemiologists",
+      "neuropsychologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "sociology-teachers-postsecondary",
+    "title": "Sociology Teachers, Postsecondary",
+    "soc": "25-1067",
+    "exposure": "Medium",
+    "summary": "Teach courses in sociology. Includes both teachers primarily engaged in teaching and those who do a combination of teaching and research.",
+    "laborMarket": {
+      "medianWage": "$106,460",
+      "annualOpenings": "13",
+      "employment": "120",
+      "projectedGrowth": "1.07%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "software-developers",
+    "title": "Software Developers",
+    "soc": "15-1252",
+    "exposure": "Very High",
+    "summary": "Research, design, and develop computer and network software or specialized utility programs. Analyze user needs and develop software solutions, applying principles and techniques of computer science, engineering, and mathematical analysis. Update software or enhance existing software capabilities. May work with computer hardware engineers to integrate hardware and software systems, and develop specifications and performance requirements. May maintain databases within an application area, working individually or coordinating database development as part of a team.",
+    "laborMarket": {
+      "medianWage": "$128,690",
+      "annualOpenings": "2,466",
+      "employment": "35,650",
+      "projectedGrowth": "1.05%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "computer-systems-engineers-architects",
+      "computer-systems-analysts",
+      "software-quality-assurance-analysts-and-testers",
+      "computer-programmers",
+      "database-administrators",
+      "database-architects",
+      "computer-hardware-engineers",
+      "computer-network-architects",
+      "web-developers",
+      "web-and-digital-interface-designers",
+      "computer-and-information-systems-managers",
+      "project-management-specialists",
+      "network-and-computer-systems-administrators",
+      "data-scientists",
+      "electronics-engineers-except-computer"
+    ],
+    "training": []
+  },
+  {
+    "id": "soil-and-plant-scientists",
+    "title": "Soil and Plant Scientists",
+    "soc": "19-1013",
+    "exposure": "High",
+    "summary": "Conduct research in breeding, physiology, production, yield, and management of crops and agricultural plants or trees, shrubs, and nursery stock, their growth in soils, and control of pests; or study the chemical, physical, biological, and mineralogical composition of soils as they relate to plant or crop growth. May classify and map soils and investigate effects of alternative practices on soil and crop productivity.",
+    "laborMarket": {
+      "medianWage": "$52,830",
+      "annualOpenings": "46",
+      "employment": "340",
+      "projectedGrowth": "0.08%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "conservation-scientists",
+      "precision-agriculture-technicians",
+      "industrial-ecologists",
+      "microbiologists",
+      "agricultural-engineers",
+      "biologists",
+      "geoscientists-except-hydrologists-and-geographers",
+      "hydrologists",
+      "animal-scientists",
+      "farmworkers-and-laborers-crop-nursery-and-greenhouse",
+      "forest-and-conservation-technicians",
+      "farmers-ranchers-and-other-agricultural-managers",
+      "biological-technicians",
+      "environmental-science-and-protection-technicians-including-health",
+      "food-scientists-and-technologists",
+      "foresters"
+    ],
+    "training": []
+  },
+  {
+    "id": "solar-energy-installation-managers",
+    "title": "Solar Energy Installation Managers",
+    "soc": "47-1011",
+    "exposure": "Medium",
+    "summary": "Direct work crews installing residential or commercial solar photovoltaic or thermal systems.",
+    "laborMarket": {
+      "medianWage": "$78,350",
+      "annualOpenings": "2,274",
+      "employment": "21,250",
+      "projectedGrowth": "1.89%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "solar-energy-systems-engineers",
+    "title": "Solar Energy Systems Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Perform site-specific engineering analysis or evaluation of energy efficiency and solar projects involving residential, commercial, or industrial customers. Design solar domestic hot water and space heating systems for new and existing structures, applying knowledge of structural energy requirements, local climates, solar technology, and thermodynamics.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "solar-photovoltaic-installers",
+    "title": "Solar Photovoltaic Installers",
+    "soc": "47-2231",
+    "exposure": "Low",
+    "summary": "Assemble, install, or maintain solar photovoltaic (PV) systems on roofs or other structures in compliance with site assessment and schematics. May include measuring, cutting, assembling, and bolting structural framing and solar modules. May perform minor electrical work such as current checks.",
+    "laborMarket": {
+      "medianWage": "$50,310",
+      "annualOpenings": "232",
+      "employment": "1,360",
+      "projectedGrowth": "4.37%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "solar-sales-representatives-and-assessors",
+    "title": "Solar Sales Representatives and Assessors",
+    "soc": "41-4011",
+    "exposure": "High",
+    "summary": "Contact new or existing customers to determine their solar equipment needs, suggest systems or equipment, or estimate costs.",
+    "laborMarket": {
+      "medianWage": "$83,220",
+      "annualOpenings": "860",
+      "employment": "10,670",
+      "projectedGrowth": "0.93%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-wholesale-and-manufacturing-except-technical-and-scientific-products",
+      "sales-engineers",
+      "wholesale-and-retail-buyers-except-farm-products",
+      "industrial-production-managers",
+      "solar-sales-representatives-and-assessors",
+      "purchasing-agents-except-wholesale-retail-and-farm-products",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "sales-managers",
+      "advertising-sales-agents",
+      "purchasing-managers",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "retail-salespersons",
+      "counter-and-rental-clerks",
+      "logisticians",
+      "customer-service-representatives",
+      "industrial-engineers",
+      "parts-salespersons",
+      "production-planning-and-expediting-clerks",
+      "supply-chain-managers",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers"
+    ],
+    "training": []
+  },
+  {
+    "id": "solar-thermal-installers-and-technicians",
+    "title": "Solar Thermal Installers and Technicians",
+    "soc": "47-2152",
+    "exposure": "Very Low",
+    "summary": "Install or repair solar energy systems designed to collect, store, and circulate solar-heated water for residential, commercial or industrial use.",
+    "laborMarket": {
+      "medianWage": "$61,940",
+      "annualOpenings": "1,134",
+      "employment": "12,330",
+      "projectedGrowth": "1.53%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sound-engineering-technicians",
+    "title": "Sound Engineering Technicians",
+    "soc": "27-4014",
+    "exposure": "Medium",
+    "summary": "Assemble and operate equipment to record, synchronize, mix, edit, or reproduce sound, including music, voices, or sound effects, for theater, video, film, television, podcasts, sporting events, and other productions.",
+    "laborMarket": {
+      "medianWage": "$97,380",
+      "annualOpenings": "10",
+      "employment": "250",
+      "projectedGrowth": "0.95%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "spa-managers",
+    "title": "Spa Managers",
+    "soc": "11-9179",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate activities of a spa facility. Coordinate programs, schedule and direct staff, and oversee financial activities.",
+    "laborMarket": {
+      "medianWage": "$71,390",
+      "annualOpenings": "48",
+      "employment": "0",
+      "projectedGrowth": "2.54%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "special-education-teachers-all-other",
+    "title": "Special Education Teachers, All Other",
+    "soc": "25-2059",
+    "exposure": "High",
+    "summary": "All special education teachers not listed separately.",
+    "laborMarket": {
+      "medianWage": "$59,880",
+      "annualOpenings": "11",
+      "employment": "80",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "special-education-teachers-middle-school",
+    "title": "Special Education Teachers, Middle School",
+    "soc": "25-2057",
+    "exposure": "Medium",
+    "summary": "Teach academic, social, and life skills to middle school students with learning, emotional, or physical disabilities. Includes teachers who specialize and work with students who are blind or have visual impairments; students who are deaf or have hearing impairments; and students with intellectual disabilities.",
+    "laborMarket": {
+      "medianWage": "$59,610",
+      "annualOpenings": "48",
+      "employment": "600",
+      "projectedGrowth": "0.68%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "special-education-teachers-preschool",
+    "title": "Special Education Teachers, Preschool",
+    "soc": "25-2051",
+    "exposure": "Low",
+    "summary": "Teach academic, social, and life skills to preschool-aged students with learning, emotional, or physical disabilities. Includes teachers who specialize and work with students who are blind or have visual impairments; students who are deaf or have hearing impairments; and students with intellectual disabilities.",
+    "laborMarket": {
+      "medianWage": "$60,660",
+      "annualOpenings": "24",
+      "employment": "320",
+      "projectedGrowth": "1.18%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "special-education-teachers-secondary-school",
+    "title": "Special Education Teachers, Secondary School",
+    "soc": "25-2058",
+    "exposure": "Medium",
+    "summary": "Teach academic, social, and life skills to secondary school students with learning, emotional, or physical disabilities. Includes teachers who specialize and work with students who are blind or have visual impairments; students who are deaf or have hearing impairments; and students with intellectual disabilities.",
+    "laborMarket": {
+      "medianWage": "$61,890",
+      "annualOpenings": "172",
+      "employment": "2,290",
+      "projectedGrowth": "0.65%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "special-effects-artists-and-animators",
+    "title": "Special Effects Artists and Animators",
+    "soc": "27-1014",
+    "exposure": "High",
+    "summary": "Create special effects or animations using film, video, computers, or other electronic tools and media for use in products, such as computer games, movies, music videos, and commercials.",
+    "laborMarket": {
+      "medianWage": "$67,510",
+      "annualOpenings": "148",
+      "employment": "0",
+      "projectedGrowth": "1.86%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "graphic-designers",
+      "film-and-video-editors",
+      "art-directors",
+      "video-game-designers",
+      "producers-and-directors",
+      "desktop-publishers",
+      "photographers",
+      "commercial-and-industrial-designers",
+      "fine-artists-including-painters-sculptors-and-illustrators",
+      "prepress-technicians-and-workers",
+      "craft-artists",
+      "audio-and-video-technicians",
+      "photographic-process-workers-and-processing-machine-operators",
+      "sound-engineering-technicians",
+      "computer-programmers",
+      "web-developers",
+      "camera-operators-television-video-and-film",
+      "writers-and-authors"
+    ],
+    "training": []
+  },
+  {
+    "id": "speech-language-pathologists",
+    "title": "Speech-Language Pathologists",
+    "soc": "29-1127",
+    "exposure": "High",
+    "summary": "Assess and treat persons with speech, language, voice, and fluency disorders. May select alternative communication systems and teach their use. May perform research related to speech and language problems.",
+    "laborMarket": {
+      "medianWage": "$95,990",
+      "annualOpenings": "312",
+      "employment": "2,830",
+      "projectedGrowth": "3.23%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "speech-language-pathology-assistants",
+      "occupational-therapists",
+      "occupational-therapy-assistants",
+      "audiologists",
+      "occupational-therapy-aides",
+      "recreational-therapists",
+      "clinical-and-counseling-psychologists",
+      "advanced-practice-psychiatric-nurses",
+      "physical-therapists",
+      "psychiatric-technicians",
+      "physical-therapist-assistants",
+      "psychiatrists",
+      "mental-health-and-substance-abuse-social-workers",
+      "marriage-and-family-therapists",
+      "mental-health-counselors",
+      "family-medicine-physicians",
+      "nurse-practitioners",
+      "clinical-neuropsychologists"
+    ],
+    "training": []
+  },
+  {
+    "id": "speech-language-pathology-assistants",
+    "title": "Speech-Language Pathology Assistants",
+    "soc": "31-9099",
+    "exposure": "Medium",
+    "summary": "Assist speech-language pathologists in the assessment and treatment of speech, language, voice, and fluency disorders. Implement speech and language programs or activities as planned and directed by speech-language pathologists. Monitor the use of alternative communication devices and systems.",
+    "laborMarket": {
+      "medianWage": "$46,530",
+      "annualOpenings": "556",
+      "employment": "3,390",
+      "projectedGrowth": "2.01%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "sports-medicine-physicians",
+    "title": "Sports Medicine Physicians",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "Diagnose, treat, and help prevent injuries that occur during sporting events, athletic training, and physical activities.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "stationary-engineers-and-boiler-operators",
+    "title": "Stationary Engineers and Boiler Operators",
+    "soc": "51-8021",
+    "exposure": "Low",
+    "summary": "Operate or maintain stationary engines, boilers, or other mechanical equipment to provide utilities for buildings or industrial processes. Operate equipment such as steam engines, generators, motors, turbines, and steam boilers.",
+    "laborMarket": {
+      "medianWage": "$72,820",
+      "annualOpenings": "17",
+      "employment": "110",
+      "projectedGrowth": "1.4%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "statistical-assistants",
+    "title": "Statistical Assistants",
+    "soc": "43-9111",
+    "exposure": "Very High",
+    "summary": "Compile and compute data according to statistical formulas for use in statistical studies. May perform actuarial computations and compile charts and graphs for use by actuaries. Includes actuarial clerks.",
+    "laborMarket": {
+      "medianWage": "$55,000",
+      "annualOpenings": "27",
+      "employment": "160",
+      "projectedGrowth": "-0.39%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "statisticians",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "document-management-specialists",
+      "health-information-technologists-and-medical-registrars",
+      "social-science-research-assistants",
+      "bioinformatics-technicians",
+      "database-architects",
+      "management-analysts",
+      "file-clerks",
+      "data-entry-keyers",
+      "survey-researchers",
+      "financial-quantitative-analysts",
+      "medical-records-specialists",
+      "computer-systems-analysts",
+      "operations-research-analysts",
+      "database-administrators"
+    ],
+    "training": []
+  },
+  {
+    "id": "statisticians",
+    "title": "Statisticians",
+    "soc": "15-2041",
+    "exposure": "Very High",
+    "summary": "Develop or apply mathematical or statistical theory and methods to collect, organize, interpret, and summarize numerical data to provide usable information. May specialize in fields such as biostatistics, agricultural statistics, business statistics, or economic statistics. Includes mathematical and survey statisticians.",
+    "laborMarket": {
+      "medianWage": "$91,320",
+      "annualOpenings": "33",
+      "employment": "360",
+      "projectedGrowth": "1.15%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "biostatisticians",
+      "mathematicians",
+      "bioinformatics-scientists",
+      "financial-quantitative-analysts",
+      "survey-researchers",
+      "operations-research-analysts",
+      "computer-and-information-research-scientists",
+      "environmental-economists",
+      "statistical-assistants",
+      "bioinformatics-technicians",
+      "social-science-research-assistants",
+      "geographic-information-systems-technologists-and-technicians",
+      "health-information-technologists-and-medical-registrars",
+      "bioengineers-and-biomedical-engineers",
+      "management-analysts",
+      "database-architects"
+    ],
+    "training": []
+  },
+  {
+    "id": "stockers-and-order-fillers",
+    "title": "Stockers and Order Fillers",
+    "soc": "53-7065",
+    "exposure": "Low",
+    "summary": "Receive, store, and issue merchandise, materials, equipment, and other items from stockroom, warehouse, or storage yard to fill shelves, racks, tables, or customers' orders. May operate power equipment to fill orders. May mark prices on merchandise and set up sales displays.",
+    "laborMarket": {
+      "medianWage": "$37,400",
+      "annualOpenings": "9,365",
+      "employment": "49,430",
+      "projectedGrowth": "1.22%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "stone-cutters-and-carvers-manufacturing",
+    "title": "Stone Cutters and Carvers, Manufacturing",
+    "soc": "51-9195",
+    "exposure": "Very Low",
+    "summary": "Cut or carve stone according to diagrams and patterns.",
+    "laborMarket": {
+      "medianWage": "$47,170",
+      "annualOpenings": "138",
+      "employment": "370",
+      "projectedGrowth": "0.05%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "stonemasons",
+    "title": "Stonemasons",
+    "soc": "47-2022",
+    "exposure": "Very Low",
+    "summary": "Build stone structures, such as piers, walls, and abutments. Lay walks, curbstones, or special types of masonry for vats, tanks, and floors.",
+    "laborMarket": {
+      "medianWage": "$34,120",
+      "annualOpenings": "18",
+      "employment": "340",
+      "projectedGrowth": "2.13%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "structural-iron-and-steel-workers",
+    "title": "Structural Iron and Steel Workers",
+    "soc": "47-2221",
+    "exposure": "Very Low",
+    "summary": "Raise, place, and unite iron or steel girders, columns, and other structural members to form completed structures or structural frameworks. May erect metal storage tanks and assemble prefabricated metal buildings.",
+    "laborMarket": {
+      "medianWage": "$60,030",
+      "annualOpenings": "262",
+      "employment": "3,110",
+      "projectedGrowth": "1.36%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "structural-metal-fabricators-and-fitters",
+    "title": "Structural Metal Fabricators and Fitters",
+    "soc": "51-2041",
+    "exposure": "Very Low",
+    "summary": "Fabricate, position, align, and fit parts of structural metal products.",
+    "laborMarket": {
+      "medianWage": "$46,590",
+      "annualOpenings": "50",
+      "employment": "0",
+      "projectedGrowth": "-1.2%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "substitute-teachers-short-term",
+    "title": "Substitute Teachers, Short-Term",
+    "soc": "25-3031",
+    "exposure": "Medium",
+    "summary": "Teach students on a short-term basis as a temporary replacement for a regular classroom teacher, typically using the regular teacher's lesson plan.",
+    "laborMarket": {
+      "medianWage": "$36,330",
+      "annualOpenings": "698",
+      "employment": "4,850",
+      "projectedGrowth": "0.89%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "subway-and-streetcar-operators",
+    "title": "Subway and Streetcar Operators",
+    "soc": "53-4041",
+    "exposure": "Medium",
+    "summary": "Operate subway or elevated suburban trains with no separate locomotive, or electric-powered streetcar, to transport passengers. May handle fares.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "30",
+      "employment": "nan",
+      "projectedGrowth": "0.68%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "supply-chain-managers",
+    "title": "Supply Chain Managers",
+    "soc": "11-3071",
+    "exposure": "High",
+    "summary": "Direct or coordinate production, purchasing, warehousing, distribution, or financial forecasting services or activities to limit costs and improve accuracy, customer service, or safety. Examine existing procedures or opportunities for streamlining activities to meet product distribution needs. Direct the movement, storage, or processing of inventory.",
+    "laborMarket": {
+      "medianWage": "$94,470",
+      "annualOpenings": "354",
+      "employment": "3,100",
+      "projectedGrowth": "1.57%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "logisticians",
+      "supply-chain-managers",
+      "general-and-operations-managers",
+      "industrial-production-managers",
+      "facilities-managers",
+      "transportation-planners",
+      "purchasing-managers",
+      "project-management-specialists",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "freight-forwarders",
+      "dispatchers-except-police-fire-and-ambulance",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "shipping-receiving-and-inventory-clerks",
+      "aircraft-cargo-handling-supervisors",
+      "first-line-supervisors-of-passenger-attendants",
+      "management-analysts",
+      "production-planning-and-expediting-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "surgical-assistants",
+    "title": "Surgical Assistants",
+    "soc": "29-9093",
+    "exposure": "Very Low",
+    "summary": "Assist in operations, under the supervision of surgeons. May, in accordance with state laws, help surgeons to make incisions and close surgical sites, manipulate or remove tissues, implant surgical devices or drains, suction the surgical site, place catheters, clamp or cauterize vessels or tissue, and apply dressings to surgical site.",
+    "laborMarket": {
+      "medianWage": "$107,500",
+      "annualOpenings": "38",
+      "employment": "0",
+      "projectedGrowth": "2.33%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "surgical-technologists",
+    "title": "Surgical Technologists",
+    "soc": "29-2055",
+    "exposure": "Very Low",
+    "summary": "Assist in operations, under the supervision of surgeons, registered nurses, or other surgical personnel. May help set up operating room, prepare and transport patients for surgery, adjust lights and equipment, pass instruments and other supplies to surgeons and surgeons' assistants, hold retractors, cut sutures, and help count sponges, needles, supplies, and instruments.",
+    "laborMarket": {
+      "medianWage": "$67,530",
+      "annualOpenings": "230",
+      "employment": "2,220",
+      "projectedGrowth": "3.12%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "survey-researchers",
+    "title": "Survey Researchers",
+    "soc": "19-3022",
+    "exposure": "Very High",
+    "summary": "Plan, develop, or conduct surveys. May analyze and interpret the meaning of survey data, determine survey objectives, or suggest or test question wording. Includes social scientists who primarily design questionnaires or supervise survey teams.",
+    "laborMarket": {
+      "medianWage": "$58,460",
+      "annualOpenings": "7",
+      "employment": "0",
+      "projectedGrowth": "1.42%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "data-scientists",
+      "social-science-research-assistants",
+      "management-analysts",
+      "statistical-assistants",
+      "statisticians",
+      "market-research-analysts-and-marketing-specialists",
+      "sociologists",
+      "industrial-organizational-psychologists",
+      "interviewers-except-eligibility-and-loan",
+      "health-information-technologists-and-medical-registrars",
+      "clinical-research-coordinators",
+      "eligibility-interviewers-government-programs",
+      "operations-research-analysts",
+      "instructional-coordinators",
+      "geodetic-surveyors",
+      "financial-quantitative-analysts",
+      "intelligence-analysts"
+    ],
+    "training": []
+  },
+  {
+    "id": "surveying-and-mapping-technicians",
+    "title": "Surveying and Mapping Technicians",
+    "soc": "17-3031",
+    "exposure": "High",
+    "summary": "Perform surveying and mapping duties, usually under the direction of an engineer, surveyor, cartographer, or photogrammetrist, to obtain data used for construction, mapmaking, boundary location, mining, or other purposes. May calculate mapmaking information and create maps from source data, such as surveying notes, aerial photography, satellite data, or other maps to show topographical features, political boundaries, and other features. May verify accuracy and completeness of maps.",
+    "laborMarket": {
+      "medianWage": "$54,410",
+      "annualOpenings": "109",
+      "employment": "740",
+      "projectedGrowth": "0.35%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "cartographers-and-photogrammetrists",
+      "geodetic-surveyors",
+      "geographic-information-systems-technologists-and-technicians",
+      "geological-technicians-except-hydrologic-technicians",
+      "architectural-and-civil-drafters",
+      "civil-engineering-technologists-and-technicians",
+      "remote-sensing-technicians",
+      "remote-sensing-scientists-and-technologists",
+      "geographers",
+      "hydrologic-technicians",
+      "geoscientists-except-hydrologists-and-geographers",
+      "electrical-and-electronics-drafters",
+      "data-scientists",
+      "civil-engineers",
+      "statistical-assistants",
+      "traffic-technicians",
+      "calibration-technologists-and-technicians",
+      "hydrologists",
+      "mining-and-geological-engineers-including-mining-safety-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "surveyors",
+    "title": "Surveyors",
+    "soc": "17-1022",
+    "exposure": "High",
+    "summary": "Make exact measurements and determine property boundaries. Provide data relevant to the shape, contour, gravitation, location, elevation, or dimension of land or land features on or near the earth's surface for engineering, mapmaking, mining, land evaluation, construction, and other purposes.",
+    "laborMarket": {
+      "medianWage": "$78,480",
+      "annualOpenings": "86",
+      "employment": "1,440",
+      "projectedGrowth": "0.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "geodetic-surveyors",
+      "surveying-and-mapping-technicians",
+      "civil-engineers",
+      "cartographers-and-photogrammetrists",
+      "civil-engineering-technologists-and-technicians",
+      "construction-and-building-inspectors",
+      "geological-technicians-except-hydrologic-technicians",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "architectural-and-civil-drafters",
+      "appraisers-and-assessors-of-real-estate",
+      "geoscientists-except-hydrologists-and-geographers",
+      "government-property-inspectors-and-investigators",
+      "cost-estimators",
+      "transportation-inspectors",
+      "architects-except-landscape-and-naval",
+      "hydrologists",
+      "conservation-scientists",
+      "construction-managers",
+      "forest-and-conservation-technicians",
+      "landscape-architects"
+    ],
+    "training": []
+  },
+  {
+    "id": "sustainability-specialists",
+    "title": "Sustainability Specialists",
+    "soc": "13-1199",
+    "exposure": "Very High",
+    "summary": "Address organizational sustainability issues, such as waste stream management, green building practices, and green procurement plans.",
+    "laborMarket": {
+      "medianWage": "$85,390",
+      "annualOpenings": "1,329",
+      "employment": "14,700",
+      "projectedGrowth": "0.63%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "switchboard-operators-including-answering-service",
+    "title": "Switchboard Operators, Including Answering Service",
+    "soc": "43-2011",
+    "exposure": "Very High",
+    "summary": "Operate telephone business systems equipment or switchboards to relay incoming, outgoing, and interoffice calls. May supply information to callers and record messages.",
+    "laborMarket": {
+      "medianWage": "$39,030",
+      "annualOpenings": "34",
+      "employment": "560",
+      "projectedGrowth": "-1.16%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "receptionists-and-information-clerks",
+      "office-clerks-general",
+      "telephone-operators",
+      "customer-service-representatives",
+      "public-safety-telecommunicators",
+      "telemarketers",
+      "dispatchers-except-police-fire-and-ambulance",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "medical-secretaries-and-administrative-assistants",
+      "executive-secretaries-and-executive-administrative-assistants",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "administrative-services-managers",
+      "brokerage-clerks",
+      "data-entry-keyers",
+      "postal-service-clerks",
+      "word-processors-and-typists",
+      "telecommunications-engineering-specialists",
+      "mail-clerks-and-mail-machine-operators-except-postal-service",
+      "billing-and-posting-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "tailors-dressmakers-and-custom-sewers",
+    "title": "Tailors, Dressmakers, and Custom Sewers",
+    "soc": "51-6052",
+    "exposure": "Very Low",
+    "summary": "Design, make, alter, repair, or fit garments.",
+    "laborMarket": {
+      "medianWage": "$44,890",
+      "annualOpenings": "42",
+      "employment": "40",
+      "projectedGrowth": "0.51%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "talent-directors",
+    "title": "Talent Directors",
+    "soc": "27-2012",
+    "exposure": "High",
+    "summary": "Audition and interview performers to select most appropriate talent for parts in stage, television, radio, or motion picture productions.",
+    "laborMarket": {
+      "medianWage": "$60,260",
+      "annualOpenings": "113",
+      "employment": "1,290",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "media-technical-directors-managers",
+      "film-and-video-editors",
+      "art-directors",
+      "broadcast-announcers-and-radio-disc-jockeys",
+      "writers-and-authors",
+      "music-directors-and-composers",
+      "news-analysts-reporters-and-journalists",
+      "editors",
+      "special-effects-artists-and-animators",
+      "audio-and-video-technicians",
+      "camera-operators-television-video-and-film",
+      "public-relations-specialists",
+      "actors",
+      "graphic-designers",
+      "video-game-designers",
+      "project-management-specialists",
+      "sound-engineering-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "tank-car-truck-and-ship-loaders",
+    "title": "Tank Car, Truck, and Ship Loaders",
+    "soc": "53-7121",
+    "exposure": "Very Low",
+    "summary": "Load and unload chemicals and bulk solids, such as coal, sand, and grain, into or from tank cars, trucks, or ships, using material moving equipment. May perform a variety of other tasks relating to shipment of products. May gauge or sample shipping tanks and test them for leaks.",
+    "laborMarket": {
+      "medianWage": "$35,110",
+      "annualOpenings": "10",
+      "employment": "0",
+      "projectedGrowth": "2.01%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tapers",
+    "title": "Tapers",
+    "soc": "47-2082",
+    "exposure": "Very Low",
+    "summary": "Seal joints between plasterboard or other wallboard to prepare wall surface for painting or papering.",
+    "laborMarket": {
+      "medianWage": "$48,170",
+      "annualOpenings": "113",
+      "employment": "1,020",
+      "projectedGrowth": "0.89%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tax-examiners-and-collectors-and-revenue-agents",
+    "title": "Tax Examiners and Collectors, and Revenue Agents",
+    "soc": "13-2081",
+    "exposure": "Very High",
+    "summary": "Determine tax liability or collect taxes from individuals or business firms according to prescribed laws and regulations.",
+    "laborMarket": {
+      "medianWage": "$88,520",
+      "annualOpenings": "16",
+      "employment": "230",
+      "projectedGrowth": "0.85%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "tax-preparers",
+      "accountants-and-auditors",
+      "bill-and-account-collectors",
+      "credit-authorizers-checkers-and-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "eligibility-interviewers-government-programs",
+      "billing-and-posting-clerks",
+      "payroll-and-timekeeping-clerks",
+      "financial-examiners",
+      "budget-analysts",
+      "credit-analysts",
+      "court-municipal-and-license-clerks",
+      "claims-adjusters-examiners-and-investigators",
+      "credit-counselors",
+      "insurance-claims-and-policy-processing-clerks",
+      "loan-officers",
+      "compliance-officers",
+      "correspondence-clerks",
+      "personal-financial-advisors",
+      "customer-service-representatives"
+    ],
+    "training": []
+  },
+  {
+    "id": "tax-preparers",
+    "title": "Tax Preparers",
+    "soc": "13-2082",
+    "exposure": "Very High",
+    "summary": "Prepare tax returns for individuals or small businesses.",
+    "laborMarket": {
+      "medianWage": "$43,710",
+      "annualOpenings": "326",
+      "employment": "2,480",
+      "projectedGrowth": "-0.08%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "accountants-and-auditors",
+      "personal-financial-advisors",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "credit-counselors",
+      "budget-analysts",
+      "credit-analysts",
+      "financial-examiners",
+      "compensation-benefits-and-job-analysis-specialists",
+      "brokerage-clerks",
+      "payroll-and-timekeeping-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "eligibility-interviewers-government-programs",
+      "loan-officers",
+      "billing-and-posting-clerks",
+      "financial-managers",
+      "legal-secretaries-and-administrative-assistants",
+      "paralegals-and-legal-assistants",
+      "loan-interviewers-and-clerks",
+      "insurance-claims-and-policy-processing-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "taxi-drivers",
+    "title": "Taxi Drivers",
+    "soc": "53-3054",
+    "exposure": "Low",
+    "summary": "Drive a motor vehicle to transport passengers on an unplanned basis and charge a fare, usually based on a meter.",
+    "laborMarket": {
+      "medianWage": "$31,340",
+      "annualOpenings": "599",
+      "employment": "730",
+      "projectedGrowth": "3.3%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "teaching-assistants-postsecondary",
+    "title": "Teaching Assistants, Postsecondary",
+    "soc": "25-9044",
+    "exposure": "Very High",
+    "summary": "Assist faculty or other instructional staff in postsecondary institutions by performing instructional support activities, such as developing teaching materials, leading discussion groups, preparing and giving examinations, and grading examinations or papers.",
+    "laborMarket": {
+      "medianWage": "$39,570",
+      "annualOpenings": "420",
+      "employment": "6,630",
+      "projectedGrowth": "1.12%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "tutors",
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "education-teachers-postsecondary",
+      "career-technical-education-teachers-middle-school",
+      "elementary-school-teachers-except-special-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "instructional-coordinators",
+      "teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education",
+      "teaching-assistants-special-education",
+      "mathematical-science-teachers-postsecondary",
+      "sociology-teachers-postsecondary",
+      "special-education-teachers-secondary-school",
+      "psychology-teachers-postsecondary",
+      "special-education-teachers-kindergarten",
+      "library-science-teachers-postsecondary",
+      "biological-science-teachers-postsecondary",
+      "special-education-teachers-elementary-school",
+      "special-education-teachers-middle-school",
+      "career-technical-education-teachers-secondary-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "technical-writers",
+    "title": "Technical Writers",
+    "soc": "27-3042",
+    "exposure": "Very High",
+    "summary": "Write technical materials, such as equipment manuals, appendices, or operating and maintenance instructions. May assist in layout work.",
+    "laborMarket": {
+      "medianWage": "$82,100",
+      "annualOpenings": "138",
+      "employment": "710",
+      "projectedGrowth": "-0.14%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "document-management-specialists",
+      "project-management-specialists",
+      "editors",
+      "management-analysts",
+      "proofreaders-and-copy-markers",
+      "data-scientists",
+      "social-science-research-assistants",
+      "writers-and-authors",
+      "electrical-and-electronics-drafters",
+      "industrial-engineers",
+      "web-and-digital-interface-designers",
+      "statistical-assistants",
+      "computer-systems-analysts",
+      "software-developers",
+      "correspondence-clerks",
+      "database-administrators",
+      "computer-programmers"
+    ],
+    "training": []
+  },
+  {
+    "id": "telecommunications-engineering-specialists",
+    "title": "Telecommunications Engineering Specialists",
+    "soc": "15-1241",
+    "exposure": "Very High",
+    "summary": "Design or configure wired, wireless, and satellite communications systems for voice, video, and data services. Supervise installation, service, and maintenance.",
+    "laborMarket": {
+      "medianWage": "$124,700",
+      "annualOpenings": "263",
+      "employment": "4,340",
+      "projectedGrowth": "0.68%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "computer-network-support-specialists",
+      "network-and-computer-systems-administrators",
+      "computer-systems-engineers-architects",
+      "telecommunications-engineering-specialists",
+      "computer-systems-analysts",
+      "software-developers",
+      "database-administrators",
+      "database-architects",
+      "computer-hardware-engineers",
+      "information-security-analysts",
+      "computer-user-support-specialists",
+      "computer-and-information-systems-managers",
+      "electronics-engineers-except-computer",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "broadcast-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians"
+    ],
+    "training": []
+  },
+  {
+    "id": "telecommunications-equipment-installers-and-repairers-except-line-installers",
+    "title": "Telecommunications Equipment Installers and Repairers, Except Line Installers",
+    "soc": "49-2022",
+    "exposure": "Low",
+    "summary": "Install, set up, rearrange, or remove switching, distribution, routing, and dialing equipment used in central offices or headends. Service or repair telephone, cable television, Internet, and other communications equipment on customers' property. May install communications equipment or communications wiring in buildings.",
+    "laborMarket": {
+      "medianWage": "$61,790",
+      "annualOpenings": "171",
+      "employment": "2,430",
+      "projectedGrowth": "-1.52%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "telecommunications-line-installers-and-repairers",
+    "title": "Telecommunications Line Installers and Repairers",
+    "soc": "49-9052",
+    "exposure": "Very Low",
+    "summary": "Install and repair telecommunications cable, including fiber optics.",
+    "laborMarket": {
+      "medianWage": "$60,100",
+      "annualOpenings": "214",
+      "employment": "1,680",
+      "projectedGrowth": "-0.23%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "telemarketers",
+    "title": "Telemarketers",
+    "soc": "41-9041",
+    "exposure": "Very High",
+    "summary": "Solicit donations or orders for goods or services over the telephone.",
+    "laborMarket": {
+      "medianWage": "$34,330",
+      "annualOpenings": "303",
+      "employment": "1,870",
+      "projectedGrowth": "-2.52%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "customer-service-representatives",
+      "advertising-sales-agents",
+      "counter-and-rental-clerks",
+      "receptionists-and-information-clerks",
+      "new-accounts-clerks",
+      "demonstrators-and-product-promoters",
+      "retail-salespersons",
+      "order-clerks",
+      "telephone-operators",
+      "switchboard-operators-including-answering-service",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers",
+      "first-line-supervisors-of-non-retail-sales-workers",
+      "cashiers",
+      "public-relations-specialists",
+      "sales-representatives-wholesale-and-manufacturing-technical-and-scientific-products",
+      "securities-commodities-and-financial-services-sales-agents",
+      "sales-managers",
+      "real-estate-sales-agents",
+      "market-research-analysts-and-marketing-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "telephone-operators",
+    "title": "Telephone Operators",
+    "soc": "43-2021",
+    "exposure": "Very High",
+    "summary": "Provide information by accessing alphabetical, geographical, or other directories. Assist customers with special billing requests, such as charges to a third party and credits or refunds for incorrectly dialed numbers or bad connections. May handle emergency calls and assist children or people with physical disabilities to make telephone calls.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "3",
+      "employment": "nan",
+      "projectedGrowth": "-2.67%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "switchboard-operators-including-answering-service",
+      "receptionists-and-information-clerks",
+      "telemarketers",
+      "office-clerks-general",
+      "customer-service-representatives",
+      "telecommunications-equipment-installers-and-repairers-except-line-installers",
+      "public-safety-telecommunicators",
+      "dispatchers-except-police-fire-and-ambulance",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "file-clerks",
+      "medical-secretaries-and-administrative-assistants",
+      "data-entry-keyers",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "interviewers-except-eligibility-and-loan",
+      "billing-and-posting-clerks",
+      "cashiers",
+      "computer-network-support-specialists",
+      "insurance-claims-and-policy-processing-clerks",
+      "word-processors-and-typists"
+    ],
+    "training": []
+  },
+  {
+    "id": "tellers",
+    "title": "Tellers",
+    "soc": "43-3071",
+    "exposure": "Very High",
+    "summary": "Receive and pay out money. Keep records of money and negotiable instruments involved in a financial institution's various transactions.",
+    "laborMarket": {
+      "medianWage": "$43,830",
+      "annualOpenings": "412",
+      "employment": "4,260",
+      "projectedGrowth": "-1.41%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "new-accounts-clerks",
+      "cashiers",
+      "credit-authorizers-checkers-and-clerks",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "brokerage-clerks",
+      "securities-commodities-and-financial-services-sales-agents",
+      "bill-and-account-collectors",
+      "billing-and-posting-clerks",
+      "loan-interviewers-and-clerks",
+      "gambling-change-persons-and-booth-cashiers",
+      "customer-service-representatives",
+      "credit-analysts",
+      "loan-officers",
+      "financial-managers",
+      "gambling-cage-workers",
+      "accountants-and-auditors",
+      "office-clerks-general",
+      "counter-and-rental-clerks",
+      "payroll-and-timekeeping-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel"
+    ],
+    "training": []
+  },
+  {
+    "id": "textile-bleaching-and-dyeing-machine-operators-and-tenders",
+    "title": "Textile Bleaching and Dyeing Machine Operators and Tenders",
+    "soc": "51-6061",
+    "exposure": "Low",
+    "summary": "Operate or tend machines to bleach, shrink, wash, dye, or finish textiles or synthetic or glass fibers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "textile-cutting-machine-setters-operators-and-tenders",
+    "title": "Textile Cutting Machine Setters, Operators, and Tenders",
+    "soc": "51-6062",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend machines that cut textiles.",
+    "laborMarket": {
+      "medianWage": "$37,660",
+      "annualOpenings": "11",
+      "employment": "50",
+      "projectedGrowth": "1.26%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "textile-knitting-and-weaving-machine-setters-operators-and-tenders",
+    "title": "Textile Knitting and Weaving Machine Setters, Operators, and Tenders",
+    "soc": "51-6063",
+    "exposure": "Low",
+    "summary": "Set up, operate, or tend machines that knit, loop, weave, or draw in textiles.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "4",
+      "employment": "nan",
+      "projectedGrowth": "1.6%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "textile-winding-twisting-and-drawing-out-machine-setters-operators-and-tenders",
+    "title": "Textile Winding, Twisting, and Drawing Out Machine Setters, Operators, and Tenders",
+    "soc": "51-6064",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend machines that wind or twist textiles; or draw out and combine sliver, such as wool, hemp, or synthetic fibers. Includes slubber machine and drawing frame operators.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "50",
+      "employment": "nan",
+      "projectedGrowth": "-0.12%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tile-and-stone-setters",
+    "title": "Tile and Stone Setters",
+    "soc": "47-2044",
+    "exposure": "Very Low",
+    "summary": "Apply hard tile, stone, and comparable materials to walls, floors, ceilings, countertops, and roof decks.",
+    "laborMarket": {
+      "medianWage": "$48,160",
+      "annualOpenings": "181",
+      "employment": "1,710",
+      "projectedGrowth": "2.31%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tire-builders",
+    "title": "Tire Builders",
+    "soc": "51-9197",
+    "exposure": "Very Low",
+    "summary": "Operate machines to build tires.",
+    "laborMarket": {
+      "medianWage": "$57,380",
+      "annualOpenings": "12",
+      "employment": "0",
+      "projectedGrowth": "1.06%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tire-repairers-and-changers",
+    "title": "Tire Repairers and Changers",
+    "soc": "49-3093",
+    "exposure": "Very Low",
+    "summary": "Repair and replace tires.",
+    "laborMarket": {
+      "medianWage": "$37,240",
+      "annualOpenings": "444",
+      "employment": "3,750",
+      "projectedGrowth": "-0.11%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "title-examiners-abstractors-and-searchers",
+    "title": "Title Examiners, Abstractors, and Searchers",
+    "soc": "23-2093",
+    "exposure": "Very High",
+    "summary": "Search real estate records, examine titles, or summarize pertinent legal or insurance documents or details for a variety of purposes. May compile lists of mortgages, contracts, and other instruments pertaining to titles by searching public and private records for law firms, real estate agencies, or title insurance companies.",
+    "laborMarket": {
+      "medianWage": "$59,710",
+      "annualOpenings": "176",
+      "employment": "1,490",
+      "projectedGrowth": "0.32%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "file-clerks",
+      "paralegals-and-legal-assistants",
+      "appraisers-and-assessors-of-real-estate",
+      "court-municipal-and-license-clerks",
+      "insurance-claims-and-policy-processing-clerks",
+      "appraisers-of-personal-and-business-property",
+      "court-reporters-and-simultaneous-captioners",
+      "legal-secretaries-and-administrative-assistants",
+      "credit-authorizers-checkers-and-clerks",
+      "government-property-inspectors-and-investigators",
+      "document-management-specialists",
+      "correspondence-clerks",
+      "judicial-law-clerks",
+      "loan-interviewers-and-clerks",
+      "statistical-assistants",
+      "tax-examiners-and-collectors-and-revenue-agents",
+      "medical-records-specialists",
+      "lawyers",
+      "bookkeeping-accounting-and-auditing-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "tool-grinders-filers-and-sharpeners",
+    "title": "Tool Grinders, Filers, and Sharpeners",
+    "soc": "51-4194",
+    "exposure": "Very Low",
+    "summary": "Perform precision smoothing, sharpening, polishing, or grinding of metal objects.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "1",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tool-and-die-makers",
+    "title": "Tool and Die Makers",
+    "soc": "51-4111",
+    "exposure": "Low",
+    "summary": "Analyze specifications, lay out metal stock, set up and operate machine tools, and fit and assemble parts to make and repair dies, cutting tools, jigs, fixtures, gauges, and machinists' hand tools.",
+    "laborMarket": {
+      "medianWage": "$67,580",
+      "annualOpenings": "31",
+      "employment": "260",
+      "projectedGrowth": "-0.31%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "traffic-technicians",
+    "title": "Traffic Technicians",
+    "soc": "53-6041",
+    "exposure": "High",
+    "summary": "Conduct field studies to determine traffic volume, speed, effectiveness of signals, adequacy of lighting, and other factors influencing traffic conditions, under direction of traffic engineer.",
+    "laborMarket": {
+      "medianWage": "$59,870",
+      "annualOpenings": "21",
+      "employment": "280",
+      "projectedGrowth": "1.28%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "civil-engineering-technologists-and-technicians",
+      "construction-and-building-inspectors",
+      "air-traffic-controllers",
+      "railroad-conductors-and-yardmasters",
+      "highway-maintenance-workers",
+      "transportation-vehicle-equipment-and-systems-inspectors-except-aviation",
+      "locomotive-engineers",
+      "surveying-and-mapping-technicians",
+      "power-distributors-and-dispatchers",
+      "transportation-engineers",
+      "transportation-planners",
+      "logistics-engineers",
+      "transportation-storage-and-distribution-managers",
+      "geodetic-surveyors",
+      "signal-and-track-switch-repairers",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "electrical-and-electronics-repairers-commercial-and-industrial-equipment"
+    ],
+    "training": []
+  },
+  {
+    "id": "training-and-development-managers",
+    "title": "Training and Development Managers",
+    "soc": "11-3131",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate the training and development activities and staff of an organization.",
+    "laborMarket": {
+      "medianWage": "$115,020",
+      "annualOpenings": "85",
+      "employment": "1,170",
+      "projectedGrowth": "0.81%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "training-and-development-specialists",
+      "instructional-coordinators",
+      "industrial-organizational-psychologists",
+      "management-analysts",
+      "project-management-specialists",
+      "human-resources-specialists",
+      "human-resources-managers",
+      "education-administrators-kindergarten-through-secondary",
+      "education-and-childcare-administrators-preschool-and-daycare",
+      "social-and-community-service-managers",
+      "special-education-teachers-kindergarten",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "education-administrators-postsecondary",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "education-teachers-postsecondary",
+      "medical-and-health-services-managers",
+      "career-technical-education-teachers-postsecondary",
+      "rehabilitation-counselors",
+      "human-resources-assistants-except-payroll-and-timekeeping",
+      "career-technical-education-teachers-middle-school"
+    ],
+    "training": []
+  },
+  {
+    "id": "training-and-development-specialists",
+    "title": "Training and Development Specialists",
+    "soc": "13-1151",
+    "exposure": "Very High",
+    "summary": "Design or conduct work-related training and development programs to improve individual skills or organizational performance. May analyze organizational training needs or evaluate training effectiveness.",
+    "laborMarket": {
+      "medianWage": "$66,000",
+      "annualOpenings": "1,068",
+      "employment": "10,980",
+      "projectedGrowth": "1.36%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "training-and-development-managers",
+      "instructional-coordinators",
+      "management-analysts",
+      "industrial-organizational-psychologists",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "career-technical-education-teachers-postsecondary",
+      "career-technical-education-teachers-secondary-school",
+      "human-resources-specialists",
+      "education-teachers-postsecondary",
+      "fitness-and-wellness-coordinators",
+      "first-line-supervisors-of-entertainment-and-recreation-workers-except-gambling-services",
+      "rehabilitation-counselors",
+      "career-technical-education-teachers-middle-school",
+      "exercise-trainers-and-group-fitness-instructors",
+      "education-administrators-kindergarten-through-secondary",
+      "education-and-childcare-administrators-preschool-and-daycare",
+      "tutors",
+      "project-management-specialists",
+      "health-education-specialists",
+      "human-resources-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "transit-and-railroad-police",
+    "title": "Transit and Railroad Police",
+    "soc": "33-3052",
+    "exposure": "Low",
+    "summary": "Protect and police railroad and transit property, employees, or passengers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "transportation-engineers",
+    "title": "Transportation Engineers",
+    "soc": "17-2051",
+    "exposure": "High",
+    "summary": "Develop plans for surface transportation projects, according to established engineering standards and state or federal construction policy. Prepare designs, specifications, or estimates for transportation facilities. Plan modifications of existing streets, highways, or freeways to improve traffic flow.",
+    "laborMarket": {
+      "medianWage": "$93,500",
+      "annualOpenings": "430",
+      "employment": "6,270",
+      "projectedGrowth": "0.77%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "civil-engineering-technologists-and-technicians",
+      "transportation-engineers",
+      "construction-managers",
+      "construction-and-building-inspectors",
+      "environmental-engineers",
+      "architectural-and-civil-drafters",
+      "architectural-and-engineering-managers",
+      "architects-except-landscape-and-naval",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "industrial-engineers",
+      "solar-energy-installation-managers",
+      "wind-energy-engineers",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "electrical-engineers",
+      "maintenance-and-repair-workers-general",
+      "marine-engineers-and-naval-architects",
+      "mechanical-engineering-technologists-and-technicians",
+      "facilities-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "transportation-inspectors",
+    "title": "Transportation Inspectors",
+    "soc": "53-6051",
+    "exposure": "Medium",
+    "summary": "Inspect equipment or goods in connection with the safe transport of cargo or people. Includes rail transportation inspectors, such as freight inspectors, rail inspectors, and other inspectors of transportation vehicles not elsewhere classified.",
+    "laborMarket": {
+      "medianWage": "$45,950",
+      "annualOpenings": "74",
+      "employment": "930",
+      "projectedGrowth": "0.46%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "transportation-planners",
+    "title": "Transportation Planners",
+    "soc": "19-3099",
+    "exposure": "High",
+    "summary": "Prepare studies for proposed transportation projects. Gather, compile, and analyze data. Study the use and operation of transportation systems. Develop transportation models or simulations.",
+    "laborMarket": {
+      "medianWage": "$97,360",
+      "annualOpenings": "52",
+      "employment": "700",
+      "projectedGrowth": "0.69%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "transportation-security-screeners",
+    "title": "Transportation Security Screeners",
+    "soc": "33-9093",
+    "exposure": "Low",
+    "summary": "Conduct screening of passengers, baggage, or cargo to ensure compliance with Transportation Security Administration (TSA) regulations. May operate basic security equipment such as x-ray machines and hand wands at screening checkpoints.",
+    "laborMarket": {
+      "medianWage": "$61,030",
+      "annualOpenings": "91",
+      "employment": "1,460",
+      "projectedGrowth": "0.22%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "transportation-vehicle-equipment-and-systems-inspectors-except-aviation",
+    "title": "Transportation Vehicle, Equipment and Systems Inspectors, Except Aviation",
+    "soc": "53-6051",
+    "exposure": "Medium",
+    "summary": "Inspect and monitor transportation equipment, vehicles, or systems to ensure compliance with regulations and safety standards.",
+    "laborMarket": {
+      "medianWage": "$45,950",
+      "annualOpenings": "74",
+      "employment": "930",
+      "projectedGrowth": "0.46%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "transportation-storage-and-distribution-managers",
+    "title": "Transportation, Storage, and Distribution Managers",
+    "soc": "11-3071",
+    "exposure": "High",
+    "summary": "Plan, direct, or coordinate transportation, storage, or distribution activities in accordance with organizational policies and applicable government laws or regulations. Includes logistics managers.",
+    "laborMarket": {
+      "medianWage": "$94,470",
+      "annualOpenings": "354",
+      "employment": "3,100",
+      "projectedGrowth": "1.57%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "logisticians",
+      "supply-chain-managers",
+      "general-and-operations-managers",
+      "industrial-production-managers",
+      "facilities-managers",
+      "transportation-planners",
+      "purchasing-managers",
+      "project-management-specialists",
+      "first-line-supervisors-of-material-moving-machine-and-vehicle-operators",
+      "freight-forwarders",
+      "dispatchers-except-police-fire-and-ambulance",
+      "first-line-supervisors-of-helpers-laborers-and-material-movers-hand",
+      "shipping-receiving-and-inventory-clerks",
+      "aircraft-cargo-handling-supervisors",
+      "first-line-supervisors-of-passenger-attendants",
+      "management-analysts",
+      "production-planning-and-expediting-clerks"
+    ],
+    "training": []
+  },
+  {
+    "id": "travel-agents",
+    "title": "Travel Agents",
+    "soc": "41-3041",
+    "exposure": "Very High",
+    "summary": "Plan and sell transportation and accommodations for customers. Determine destination, modes of transportation, travel dates, costs, and accommodations required. May also describe, plan, and arrange itineraries and sell tour packages. May assist in resolving clients' travel problems.",
+    "laborMarket": {
+      "medianWage": "$49,260",
+      "annualOpenings": "159",
+      "employment": "2,020",
+      "projectedGrowth": "0.37%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "reservation-and-transportation-ticket-agents-and-travel-clerks",
+      "travel-guides",
+      "counter-and-rental-clerks",
+      "sales-representatives-of-services-except-advertising-insurance-financial-services-and-travel",
+      "customer-service-representatives",
+      "telemarketers",
+      "concierges",
+      "tour-guides-and-escorts",
+      "retail-salespersons",
+      "receptionists-and-information-clerks",
+      "insurance-sales-agents",
+      "freight-forwarders",
+      "advertising-sales-agents",
+      "meeting-convention-and-event-planners",
+      "hotel-motel-and-resort-desk-clerks",
+      "door-to-door-sales-workers-news-and-street-vendors-and-related-workers",
+      "customs-brokers",
+      "real-estate-sales-agents",
+      "telephone-operators"
+    ],
+    "training": []
+  },
+  {
+    "id": "treasurers-and-controllers",
+    "title": "Treasurers and Controllers",
+    "soc": "11-3031",
+    "exposure": "High",
+    "summary": "Direct financial activities, such as planning, procurement, and investments for all or part of an organization.",
+    "laborMarket": {
+      "medianWage": "$132,290",
+      "annualOpenings": "1,331",
+      "employment": "14,570",
+      "projectedGrowth": "1.71%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "accountants-and-auditors",
+      "financial-and-investment-analysts",
+      "personal-financial-advisors",
+      "credit-analysts",
+      "loan-officers",
+      "financial-risk-specialists",
+      "securities-commodities-and-financial-services-sales-agents",
+      "treasurers-and-controllers",
+      "financial-examiners",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "credit-authorizers-checkers-and-clerks",
+      "management-analysts",
+      "credit-counselors",
+      "new-accounts-clerks",
+      "first-line-supervisors-of-office-and-administrative-support-workers",
+      "brokerage-clerks",
+      "budget-analysts",
+      "administrative-services-managers",
+      "tellers"
+    ],
+    "training": []
+  },
+  {
+    "id": "tree-trimmers-and-pruners",
+    "title": "Tree Trimmers and Pruners",
+    "soc": "37-3013",
+    "exposure": "Very Low",
+    "summary": "Using sophisticated climbing and rigging techniques, cut away dead or excess branches from trees or shrubs to maintain right-of-way for roads, sidewalks, or utilities, or to improve appearance, health, and value of tree. Prune or treat trees or shrubs using handsaws, hand pruners, clippers, and power pruners. Works off the ground in the tree canopy and may use truck-mounted lifts.",
+    "laborMarket": {
+      "medianWage": "$46,650",
+      "annualOpenings": "128",
+      "employment": "500",
+      "projectedGrowth": "0.99%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "tutors",
+    "title": "Tutors",
+    "soc": "25-3041",
+    "exposure": "Very High",
+    "summary": "Instruct individual students or small groups of students in academic subjects to support formal class instruction or to prepare students for standardized or admissions tests.",
+    "laborMarket": {
+      "medianWage": "$44,220",
+      "annualOpenings": "532",
+      "employment": "3,110",
+      "projectedGrowth": "1.04%",
+      "typicalEducation": "Some college, no degree"
+    },
+    "relatedOccupationIds": [
+      "secondary-school-teachers-except-special-and-career-technical-education",
+      "adult-basic-education-adult-secondary-education-and-english-as-a-second-language-instructors",
+      "elementary-school-teachers-except-special-education",
+      "middle-school-teachers-except-special-and-career-technical-education",
+      "teaching-assistants-postsecondary",
+      "special-education-teachers-kindergarten",
+      "special-education-teachers-elementary-school",
+      "special-education-teachers-secondary-school",
+      "teaching-assistants-preschool-elementary-middle-and-secondary-school-except-special-education",
+      "teaching-assistants-special-education",
+      "special-education-teachers-middle-school",
+      "kindergarten-teachers-except-special-education",
+      "mathematical-science-teachers-postsecondary",
+      "instructional-coordinators",
+      "self-enrichment-teachers",
+      "career-technical-education-teachers-middle-school",
+      "education-teachers-postsecondary",
+      "educational-guidance-and-career-counselors-and-advisors",
+      "career-technical-education-teachers-secondary-school",
+      "special-education-teachers-preschool"
+    ],
+    "training": []
+  },
+  {
+    "id": "umpires-referees-and-other-sports-officials",
+    "title": "Umpires, Referees, and Other Sports Officials",
+    "soc": "27-2023",
+    "exposure": "Medium",
+    "summary": "Officiate at competitive athletic or sporting events. Detect infractions of rules and decide penalties according to established regulations. Includes all sporting officials, referees, and competition judges.",
+    "laborMarket": {
+      "medianWage": "$45,240",
+      "annualOpenings": "76",
+      "employment": "180",
+      "projectedGrowth": "3.13%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "upholsterers",
+    "title": "Upholsterers",
+    "soc": "51-6093",
+    "exposure": "Low",
+    "summary": "Make, repair, or replace upholstery for household furniture or transportation vehicles.",
+    "laborMarket": {
+      "medianWage": "$44,620",
+      "annualOpenings": "59",
+      "employment": "370",
+      "projectedGrowth": "0.82%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "urban-and-regional-planners",
+    "title": "Urban and Regional Planners",
+    "soc": "19-3051",
+    "exposure": "High",
+    "summary": "Develop comprehensive plans and programs for use of land and physical facilities of jurisdictions, such as towns, cities, counties, and metropolitan areas.",
+    "laborMarket": {
+      "medianWage": "$78,200",
+      "annualOpenings": "72",
+      "employment": "1,110",
+      "projectedGrowth": "0.98%",
+      "typicalEducation": "Master's degree"
+    },
+    "relatedOccupationIds": [
+      "transportation-planners",
+      "project-management-specialists",
+      "chief-sustainability-officers",
+      "sustainability-specialists",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "climate-change-policy-analysts",
+      "landscape-architects",
+      "conservation-scientists",
+      "management-analysts",
+      "government-property-inspectors-and-investigators",
+      "information-technology-project-managers",
+      "emergency-management-directors",
+      "geographers",
+      "hydrologic-technicians",
+      "water-resource-specialists"
+    ],
+    "training": []
+  },
+  {
+    "id": "urologists",
+    "title": "Urologists",
+    "soc": "29-1229",
+    "exposure": "Medium",
+    "summary": "Diagnose, treat, and help prevent benign and malignant medical and surgical disorders of the genitourinary system and the renal glands.",
+    "laborMarket": {
+      "medianWage": "$223,680",
+      "annualOpenings": "269",
+      "employment": "5,150",
+      "projectedGrowth": "2.3%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "ushers-lobby-attendants-and-ticket-takers",
+    "title": "Ushers, Lobby Attendants, and Ticket Takers",
+    "soc": "39-3031",
+    "exposure": "Low",
+    "summary": "Assist patrons at entertainment events by performing duties, such as collecting admission tickets and passes from patrons, assisting in finding seats, searching for lost articles, and helping patrons locate such facilities as restrooms and telephones.",
+    "laborMarket": {
+      "medianWage": "$31,090",
+      "annualOpenings": "770",
+      "employment": "3,690",
+      "projectedGrowth": "0.25%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "validation-engineers",
+    "title": "Validation Engineers",
+    "soc": "17-2112",
+    "exposure": "Very High",
+    "summary": "Design or plan protocols for equipment or processes to produce products meeting internal and external purity, safety, and quality requirements.",
+    "laborMarket": {
+      "medianWage": "$110,100",
+      "annualOpenings": "525",
+      "employment": "7,320",
+      "projectedGrowth": "1.24%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "industrial-engineering-technologists-and-technicians",
+      "manufacturing-engineers",
+      "industrial-production-managers",
+      "mechanical-engineers",
+      "logistics-engineers",
+      "mechatronics-engineers",
+      "electrical-engineers",
+      "materials-engineers",
+      "mechanical-engineering-technologists-and-technicians",
+      "electrical-and-electronic-engineering-technologists-and-technicians",
+      "calibration-technologists-and-technicians",
+      "project-management-specialists",
+      "electronics-engineers-except-computer",
+      "team-assemblers",
+      "aerospace-engineering-and-operations-technologists-and-technicians",
+      "architectural-and-engineering-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "veterinarians",
+    "title": "Veterinarians",
+    "soc": "29-1131",
+    "exposure": "Low",
+    "summary": "Diagnose, treat, or research diseases and injuries of animals. Includes veterinarians who conduct research and development, inspect livestock, or care for pets and companion animals.",
+    "laborMarket": {
+      "medianWage": "$132,810",
+      "annualOpenings": "69",
+      "employment": "1,430",
+      "projectedGrowth": "1.24%",
+      "typicalEducation": "Doctoral or professional degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "veterinary-assistants-and-laboratory-animal-caretakers",
+    "title": "Veterinary Assistants and Laboratory Animal Caretakers",
+    "soc": "31-9096",
+    "exposure": "Low",
+    "summary": "Feed, water, and examine pets and other nonfarm animals for signs of illness, disease, or injury in laboratories and animal hospitals and clinics. Clean and disinfect cages and work areas, and sterilize laboratory and surgical equipment. May provide routine postoperative care, administer medication orally or topically, or prepare samples for laboratory examination under the supervision of veterinary or laboratory animal technologists or technicians, veterinarians, or scientists.",
+    "laborMarket": {
+      "medianWage": "$38,240",
+      "annualOpenings": "469",
+      "employment": "2,210",
+      "projectedGrowth": "0.83%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "veterinary-technologists-and-technicians",
+    "title": "Veterinary Technologists and Technicians",
+    "soc": "29-2056",
+    "exposure": "Low",
+    "summary": "Perform medical tests in a laboratory environment for use in the treatment and diagnosis of diseases in animals. Prepare vaccines and serums for prevention of diseases. Prepare tissue samples, take blood samples, and execute laboratory tests, such as urinalysis and blood counts. Clean and sterilize instruments and materials and maintain equipment and machines. May assist a veterinarian during surgery.",
+    "laborMarket": {
+      "medianWage": "$45,110",
+      "annualOpenings": "355",
+      "employment": "3,390",
+      "projectedGrowth": "0.94%",
+      "typicalEducation": "Associate's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "video-game-designers",
+    "title": "Video Game Designers",
+    "soc": "15-1255",
+    "exposure": "Very High",
+    "summary": "Design core features of video games. Specify innovative game and role-play mechanics, story lines, and character biographies. Create and maintain design documentation. Guide and collaborate with production staff to produce games as designed.",
+    "laborMarket": {
+      "medianWage": "$78,330",
+      "annualOpenings": "124",
+      "employment": "1,430",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "web-developers",
+      "web-administrators",
+      "software-developers",
+      "computer-programmers",
+      "database-administrators",
+      "database-architects",
+      "graphic-designers",
+      "computer-systems-analysts",
+      "video-game-designers",
+      "search-marketing-strategists",
+      "software-quality-assurance-analysts-and-testers",
+      "network-and-computer-systems-administrators",
+      "computer-user-support-specialists",
+      "computer-hardware-engineers",
+      "desktop-publishers",
+      "computer-network-architects"
+    ],
+    "training": []
+  },
+  {
+    "id": "waiters-and-waitresses",
+    "title": "Waiters and Waitresses",
+    "soc": "35-3031",
+    "exposure": "Low",
+    "summary": "Take orders and serve food and beverages to patrons at tables in dining establishment.",
+    "laborMarket": {
+      "medianWage": "$36,730",
+      "annualOpenings": "10,730",
+      "employment": "55,010",
+      "projectedGrowth": "0.25%",
+      "typicalEducation": "No formal education"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "watch-and-clock-repairers",
+    "title": "Watch and Clock Repairers",
+    "soc": "49-9064",
+    "exposure": "Low",
+    "summary": "Repair, clean, and adjust mechanisms of timing instruments, such as watches and clocks. Includes watchmakers, watch technicians, and mechanical timepiece repairers.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "0.0%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "water-resource-specialists",
+    "title": "Water Resource Specialists",
+    "soc": "11-9121",
+    "exposure": "Very High",
+    "summary": "Design or implement programs and strategies related to water resource issues such as supply, quality, and regulatory compliance issues.",
+    "laborMarket": {
+      "medianWage": "$126,320",
+      "annualOpenings": "61",
+      "employment": "770",
+      "projectedGrowth": "0.45%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "project-management-specialists",
+      "bioengineers-and-biomedical-engineers",
+      "data-scientists",
+      "biological-technicians",
+      "molecular-and-cellular-biologists",
+      "environmental-science-teachers-postsecondary",
+      "clinical-research-coordinators",
+      "architectural-and-engineering-managers",
+      "nanotechnology-engineering-technologists-and-technicians",
+      "chemists",
+      "chemical-technicians",
+      "computer-and-information-research-scientists",
+      "management-analysts",
+      "bioinformatics-technicians",
+      "environmental-scientists-and-specialists-including-health",
+      "industrial-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "water-and-wastewater-treatment-plant-and-system-operators",
+    "title": "Water and Wastewater Treatment Plant and System Operators",
+    "soc": "51-8031",
+    "exposure": "Low",
+    "summary": "Operate or control an entire process or system of machines, often through the use of control boards, to transfer or treat water or wastewater.",
+    "laborMarket": {
+      "medianWage": "$61,480",
+      "annualOpenings": "354",
+      "employment": "3,470",
+      "projectedGrowth": "0.13%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "water-wastewater-engineers",
+    "title": "Water/Wastewater Engineers",
+    "soc": "17-2051",
+    "exposure": "High",
+    "summary": "Design or oversee projects involving provision of potable water, disposal of wastewater and sewage, or prevention of flood-related damage. Prepare environmental documentation for water resources, regulatory program compliance, data management and analysis, and field work. Perform hydraulic modeling and pipeline design.",
+    "laborMarket": {
+      "medianWage": "$93,500",
+      "annualOpenings": "430",
+      "employment": "6,270",
+      "projectedGrowth": "0.77%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "civil-engineering-technologists-and-technicians",
+      "transportation-engineers",
+      "construction-managers",
+      "construction-and-building-inspectors",
+      "environmental-engineers",
+      "architectural-and-civil-drafters",
+      "architectural-and-engineering-managers",
+      "architects-except-landscape-and-naval",
+      "mining-and-geological-engineers-including-mining-safety-engineers",
+      "industrial-engineers",
+      "solar-energy-installation-managers",
+      "wind-energy-engineers",
+      "brownfield-redevelopment-specialists-and-site-managers",
+      "electrical-engineers",
+      "maintenance-and-repair-workers-general",
+      "marine-engineers-and-naval-architects",
+      "mechanical-engineering-technologists-and-technicians",
+      "facilities-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "web-administrators",
+    "title": "Web Administrators",
+    "soc": "15-1299",
+    "exposure": "Very High",
+    "summary": "Manage web environment design, deployment, development and maintenance activities. Perform testing and quality assurance of web sites and web applications.",
+    "laborMarket": {
+      "medianWage": "$112,010",
+      "annualOpenings": "411",
+      "employment": "5,740",
+      "projectedGrowth": "0.97%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "web-developers",
+    "title": "Web Developers",
+    "soc": "15-1254",
+    "exposure": "Very High",
+    "summary": "Develop and implement websites, web applications, application databases, and interactive web interfaces. Evaluate code to ensure that it is properly structured, meets industry standards, and is compatible with browsers and devices. Optimize website performance, scalability, and server-side code and processes. May develop website infrastructure and integrate websites with other computer applications.",
+    "laborMarket": {
+      "medianWage": "$87,070",
+      "annualOpenings": "124",
+      "employment": "1,510",
+      "projectedGrowth": "0.32%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "web-and-digital-interface-designers",
+      "web-administrators",
+      "software-developers",
+      "computer-programmers",
+      "database-administrators",
+      "database-architects",
+      "search-marketing-strategists",
+      "computer-systems-analysts",
+      "software-quality-assurance-analysts-and-testers",
+      "network-and-computer-systems-administrators",
+      "computer-network-architects",
+      "computer-network-support-specialists",
+      "desktop-publishers",
+      "computer-user-support-specialists",
+      "computer-hardware-engineers"
+    ],
+    "training": []
+  },
+  {
+    "id": "web-and-digital-interface-designers",
+    "title": "Web and Digital Interface Designers",
+    "soc": "15-1255",
+    "exposure": "Very High",
+    "summary": "Design digital user interfaces or websites. Develop and test layouts, interfaces, functionality, and navigation menus to ensure compatibility and usability across browsers or devices. May use web framework applications as well as client-side code and processes. May evaluate web design following web and accessibility standards, and may analyze web use metrics and optimize websites for marketability and search engine ranking. May design and test interfaces that facilitate the human-computer interaction and maximize the usability of digital devices, websites, and software with a focus on aesthetics and design. May create graphics used in websites and manage website content and links.",
+    "laborMarket": {
+      "medianWage": "$78,330",
+      "annualOpenings": "124",
+      "employment": "1,430",
+      "projectedGrowth": "0.75%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "web-developers",
+      "web-administrators",
+      "software-developers",
+      "computer-programmers",
+      "database-administrators",
+      "database-architects",
+      "graphic-designers",
+      "computer-systems-analysts",
+      "video-game-designers",
+      "search-marketing-strategists",
+      "software-quality-assurance-analysts-and-testers",
+      "network-and-computer-systems-administrators",
+      "computer-user-support-specialists",
+      "computer-hardware-engineers",
+      "desktop-publishers",
+      "computer-network-architects"
+    ],
+    "training": []
+  },
+  {
+    "id": "weighers-measurers-checkers-and-samplers-recordkeeping",
+    "title": "Weighers, Measurers, Checkers, and Samplers, Recordkeeping",
+    "soc": "43-5111",
+    "exposure": "Medium",
+    "summary": "Weigh, measure, and check materials, supplies, and equipment for the purpose of keeping relevant records. Duties are primarily clerical by nature. Includes workers who collect and keep record of samples of products or materials.",
+    "laborMarket": {
+      "medianWage": "$43,870",
+      "annualOpenings": "66",
+      "employment": "460",
+      "projectedGrowth": "0.47%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "welders-cutters-solderers-and-brazers",
+    "title": "Welders, Cutters, Solderers, and Brazers",
+    "soc": "51-4121",
+    "exposure": "Very Low",
+    "summary": "Use hand-welding, flame-cutting, hand-soldering, or brazing equipment to weld or join metal components or to fill holes, indentations, or seams of fabricated metal products.",
+    "laborMarket": {
+      "medianWage": "$53,770",
+      "annualOpenings": "790",
+      "employment": "7,630",
+      "projectedGrowth": "0.98%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "welding-soldering-and-brazing-machine-setters-operators-and-tenders",
+    "title": "Welding, Soldering, and Brazing Machine Setters, Operators, and Tenders",
+    "soc": "51-4122",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend welding, soldering, or brazing machines or robots that weld, braze, solder, or heat treat metal products, components, or assemblies. Includes workers who operate laser cutters or laser-beam machines.",
+    "laborMarket": {
+      "medianWage": "$48,010",
+      "annualOpenings": "28",
+      "employment": "300",
+      "projectedGrowth": "-0.48%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "wellhead-pumpers",
+    "title": "Wellhead Pumpers",
+    "soc": "53-7073",
+    "exposure": "Very Low",
+    "summary": "Operate power pumps and auxiliary equipment to produce flow of oil or gas from wells in oil field.",
+    "laborMarket": {
+      "medianWage": "nan",
+      "annualOpenings": "0",
+      "employment": "nan",
+      "projectedGrowth": "15.47%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "wind-energy-development-managers",
+    "title": "Wind Energy Development Managers",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "Lead or manage the development and evaluation of potential wind energy business opportunities, including environmental studies, permitting, and proposals. May also manage construction of projects.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "wind-energy-engineers",
+    "title": "Wind Energy Engineers",
+    "soc": "17-2199",
+    "exposure": "High",
+    "summary": "Design underground or overhead wind farm collector systems and prepare and develop site specifications.",
+    "laborMarket": {
+      "medianWage": "$110,160",
+      "annualOpenings": "168",
+      "employment": "2,660",
+      "projectedGrowth": "0.61%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "wind-energy-operations-managers",
+    "title": "Wind Energy Operations Managers",
+    "soc": "11-9199",
+    "exposure": "High",
+    "summary": "Manage wind field operations, including personnel, maintenance activities, financial activities, and planning.",
+    "laborMarket": {
+      "medianWage": "$132,040",
+      "annualOpenings": "2,667",
+      "employment": "9,280",
+      "projectedGrowth": "2.0%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "wind-turbine-service-technicians",
+    "title": "Wind Turbine Service Technicians",
+    "soc": "49-9081",
+    "exposure": "Very Low",
+    "summary": "Inspect, diagnose, adjust, or repair wind turbines. Perform maintenance on wind turbine equipment including resolving electrical, mechanical, and hydraulic malfunctions.",
+    "laborMarket": {
+      "medianWage": "$66,710",
+      "annualOpenings": "56",
+      "employment": "230",
+      "projectedGrowth": "3.26%",
+      "typicalEducation": "Postsecondary non-degree"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "woodworking-machine-setters-operators-and-tenders-except-sawing",
+    "title": "Woodworking Machine Setters, Operators, and Tenders, Except Sawing",
+    "soc": "51-7042",
+    "exposure": "Very Low",
+    "summary": "Set up, operate, or tend woodworking machines, such as drill presses, lathes, shapers, routers, sanders, planers, and wood nailing machines. May operate computer numerically controlled (CNC) equipment.",
+    "laborMarket": {
+      "medianWage": "$39,870",
+      "annualOpenings": "74",
+      "employment": "0",
+      "projectedGrowth": "-0.21%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [],
+    "training": []
+  },
+  {
+    "id": "word-processors-and-typists",
+    "title": "Word Processors and Typists",
+    "soc": "43-9022",
+    "exposure": "Very High",
+    "summary": "Use word processor, computer, or typewriter to type letters, reports, forms, or other material from rough draft, corrected copy, or voice recording. May perform other clerical duties as assigned.",
+    "laborMarket": {
+      "medianWage": "$48,210",
+      "annualOpenings": "12",
+      "employment": "70",
+      "projectedGrowth": "-3.11%",
+      "typicalEducation": "High school diploma"
+    },
+    "relatedOccupationIds": [
+      "data-entry-keyers",
+      "file-clerks",
+      "medical-transcriptionists",
+      "office-clerks-general",
+      "court-reporters-and-simultaneous-captioners",
+      "proofreaders-and-copy-markers",
+      "bookkeeping-accounting-and-auditing-clerks",
+      "office-machine-operators-except-computer",
+      "document-management-specialists",
+      "receptionists-and-information-clerks",
+      "medical-records-specialists",
+      "secretaries-and-administrative-assistants-except-legal-medical-and-executive",
+      "correspondence-clerks",
+      "legal-secretaries-and-administrative-assistants",
+      "statistical-assistants",
+      "switchboard-operators-including-answering-service",
+      "medical-secretaries-and-administrative-assistants",
+      "billing-and-posting-clerks",
+      "title-examiners-abstractors-and-searchers",
+      "executive-secretaries-and-executive-administrative-assistants"
+    ],
+    "training": []
+  },
+  {
+    "id": "writers-and-authors",
+    "title": "Writers and Authors",
+    "soc": "27-3043",
+    "exposure": "Very High",
+    "summary": "Originate and prepare written material, such as scripts, stories, advertisements, and other material.",
+    "laborMarket": {
+      "medianWage": "$62,640",
+      "annualOpenings": "378",
+      "employment": "580",
+      "projectedGrowth": "2.2%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "poets-lyricists-and-creative-writers",
+      "public-relations-specialists",
+      "advertising-sales-agents",
+      "search-marketing-strategists",
+      "editors",
+      "advertising-and-promotions-managers",
+      "art-directors",
+      "producers-and-directors",
+      "news-analysts-reporters-and-journalists",
+      "technical-writers",
+      "graphic-designers",
+      "marketing-managers",
+      "proofreaders-and-copy-markers",
+      "web-and-digital-interface-designers",
+      "agents-and-business-managers-of-artists-performers-and-athletes",
+      "special-effects-artists-and-animators",
+      "public-relations-managers"
+    ],
+    "training": []
+  },
+  {
+    "id": "zoologists-and-wildlife-biologists",
+    "title": "Zoologists and Wildlife Biologists",
+    "soc": "19-1023",
+    "exposure": "High",
+    "summary": "Study the origins, behavior, diseases, genetics, and life processes of animals and wildlife. May specialize in wildlife research and management. May collect and analyze biological data to determine the environmental effects of present and potential use of land and water habitats.",
+    "laborMarket": {
+      "medianWage": "$70,370",
+      "annualOpenings": "31",
+      "employment": "410",
+      "projectedGrowth": "0.52%",
+      "typicalEducation": "Bachelor's degree"
+    },
+    "relatedOccupationIds": [
+      "biologists",
+      "conservation-scientists",
+      "environmental-restoration-planners",
+      "fish-and-game-wardens",
+      "soil-and-plant-scientists",
+      "geoscientists-except-hydrologists-and-geographers",
+      "animal-scientists",
+      "foresters",
+      "biological-technicians",
+      "forestry-and-conservation-science-teachers-postsecondary",
+      "forest-and-conservation-technicians",
+      "microbiologists",
+      "environmental-science-teachers-postsecondary",
+      "agricultural-sciences-teachers-postsecondary",
+      "forest-and-conservation-workers",
+      "hydrologists",
+      "agricultural-technicians"
+    ],
+    "training": []
   }
 ];

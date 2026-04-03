@@ -117,8 +117,8 @@ function renderOccupationCards() {
   });
 }
 
-function renderRelatedOccupations(occupation, limit = null, includeLinks = false) {
-  if (occupation.exposure !== 'High') {
+  function renderRelatedOccupations(occupation, limit = null, includeLinks = false) {
+  if (!["High", "Very High"].includes(occupation.exposure)) {
     return `
       <div class="subsection">
         <h3>Related lower-exposure occupations</h3>
