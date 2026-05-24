@@ -472,37 +472,14 @@ function renderOccupationPage() {
 
   [searchInput, globalSearchInput].filter(Boolean).forEach(input => {
     input.addEventListener("input", () => {
-    syncSearchInputs(input);
-    updateUrlQuery();
-    if (clearBtn) {
-      clearBtn.addEventListener("click", () => {
-        setSearchValue("");
-        activeFilter = "ALL";
-        activeOccupationId = null;
-        chips.forEach(chip => {
-          chip.addEventListener("click", () => {
-            activeFilter = chip.dataset.filter || "ALL";
-            visibleOccupationLimit = OCCUPATION_INCREMENT;
+      syncSearchInputs(input);
+      updateUrlQuery();
+      visibleOccupationLimit = OCCUPATION_INCREMENT;
 
-            chips.forEach(c => {
-              c.classList.toggle("active", c === chip);
-            });
-
-            renderOccupationCards();
-
-        chips.forEach(chip => {
-          chip.classList.toggle("active", chip.dataset.filter === "ALL");
-        });
-
-        renderOccupationCards();
-        emptyDetailPanel();
-        window.history.replaceState({}, "", "index.html");
-      });
-    }
-
-    if (occupationList) {
-      rerenderExplorer();
-    }
+      if (occupationList) {
+        rerenderExplorer();
+      }
+    });
   });
 
   if (clearBtn) {
@@ -510,6 +487,7 @@ function renderOccupationPage() {
       setSearchValue("");
       activeFilter = "ALL";
       activeOccupationId = null;
+      visibleOccupationLimit = OCCUPATION_INCREMENT;
 
       chips.forEach(chip => {
         chip.classList.toggle("active", chip.dataset.filter === "ALL");
@@ -524,6 +502,7 @@ function renderOccupationPage() {
   chips.forEach(chip => {
     chip.addEventListener("click", () => {
       activeFilter = chip.dataset.filter || "ALL";
+      visibleOccupationLimit = OCCUPATION_INCREMENT;
 
       chips.forEach(c => {
         c.classList.toggle("active", c === chip);
