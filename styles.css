@@ -285,6 +285,26 @@ h1 {
   flex-wrap: wrap;
   margin-top: 10px;
 }
+
+.show-more-row {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.text-link.show-more-occupations {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--blue);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-link.show-more-occupations:hover {
+  text-decoration-thickness: 2px;
+}
 .related-toggle-row {
   margin-top: 0.75rem;
 }

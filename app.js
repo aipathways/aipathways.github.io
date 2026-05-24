@@ -7,12 +7,16 @@ function initApp(rawData) {
   const globalSearchForm = document.getElementById("globalSearchForm");
   const clearBtn = document.getElementById("clearBtn");
   const resultCount = document.getElementById("resultCount");
+  const showMoreOccupationsBtn = document.getElementById("showMoreOccupationsBtn");
   const chips = Array.from(document.querySelectorAll(".chip"));
 
   let activeFilter = "ALL";
   let activeOccupationId = null;
   let occupationPageRelatedExpanded = false;
-  const MAX_VISIBLE_OCCUPATIONS = 6;
+  let visibleOccupationLimit = 20;
+
+  const OCCUPATION_INCREMENT = 20;
+  const MAX_VISIBLE_OCCUPATIONS = 100;
 
   const occupations = normalizeData(rawData);
   const occupationsById = new Map(occupations.map(o => [o.id, o]));
@@ -166,13 +170,32 @@ function initApp(rawData) {
     if (!occupationList) return;
 
     const filtered = getFilteredOccupations();
-    const visible = filtered.slice(0, MAX_VISIBLE_OCCUPATIONS);
+    const visible = filtered.slice(0, visibleOccupationLimit);
 
     if (resultCount) {
       resultCount.textContent =
-        filtered.length > MAX_VISIBLE_OCCUPATIONS
+        filtered.length > visible.length
           ? `Showing ${visible.length} of ${filtered.length} occupations`
           : `${filtered.length} occupation${filtered.length === 1 ? "" : "s"}`;
+    }
+
+    if (showMoreOccupationsBtn) {
+      const canShowMore =
+        filtered.length > visible.length &&
+        visibleOccupationLimit < MAX_VISIBLE_OCCUPATIONS;
+
+      showMoreOccupationsBtn.hidden = !canShowMore;
+
+      const remainingBeforeCap = Math.min(
+        OCCUPATION_INCREMENT,
+        MAX_VISIBLE_OCCUPATIONS - visibleOccupationLimit,
+        filtered.length - visible.length
+      );
+
+      showMoreOccupationsBtn.textContent =
+        remainingBeforeCap > 0
+          ? `Show ${remainingBeforeCap} more occupations`
+          : "Show more occupations";
     }
 
     if (!filtered.length) {
@@ -449,12 +472,37 @@ function renderOccupationPage() {
 
   [searchInput, globalSearchInput].filter(Boolean).forEach(input => {
     input.addEventListener("input", () => {
-      syncSearchInputs(input);
-      updateUrlQuery();
-      if (occupationList) {
-        rerenderExplorer();
-      }
-    });
+    syncSearchInputs(input);
+    updateUrlQuery();
+    if (clearBtn) {
+      clearBtn.addEventListener("click", () => {
+        setSearchValue("");
+        activeFilter = "ALL";
+        activeOccupationId = null;
+        chips.forEach(chip => {
+          chip.addEventListener("click", () => {
+            activeFilter = chip.dataset.filter || "ALL";
+            visibleOccupationLimit = OCCUPATION_INCREMENT;
+
+            chips.forEach(c => {
+              c.classList.toggle("active", c === chip);
+            });
+
+            renderOccupationCards();
+
+        chips.forEach(chip => {
+          chip.classList.toggle("active", chip.dataset.filter === "ALL");
+        });
+
+        renderOccupationCards();
+        emptyDetailPanel();
+        window.history.replaceState({}, "", "index.html");
+      });
+    }
+
+    if (occupationList) {
+      rerenderExplorer();
+    }
   });
 
   if (clearBtn) {
@@ -494,6 +542,17 @@ function renderOccupationPage() {
       }
     });
   });
+
+  if (showMoreOccupationsBtn) {
+    showMoreOccupationsBtn.addEventListener("click", () => {
+      visibleOccupationLimit = Math.min(
+        visibleOccupationLimit + OCCUPATION_INCREMENT,
+        MAX_VISIBLE_OCCUPATIONS
+      );
+
+      renderOccupationCards();
+    });
+  }
 
   initSearchFromUrl();
 
