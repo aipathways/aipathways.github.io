@@ -213,7 +213,7 @@ function renderRelatedOccupations(
   includeLinks = false,
   options = {}
 ) {
-  const { showToggle = false, expanded = false } = options;
+  const { showToggle = false, expanded = false, showViewHere = true } = options;
 
   if (!["High", "Very High"].includes(occupation.exposure)) {
     return `
@@ -262,6 +262,7 @@ function renderRelatedOccupations(
             <p class="muted">${escapeHtml(item.summary || "No summary available.")}</p>
             <p><strong>Median wage:</strong> ${escapeHtml(item.laborMarket?.medianWage)} · <strong>Openings:</strong> ${escapeHtml(item.laborMarket?.annualOpenings)}</p>
             <div class="button-row">
+              ${showViewHere ? `<button class="action-btn" type="button" data-related-id="${escapeHtml(item.id)}">View here</button>` : ""}
               ${includeLinks ? `<a class="action-btn action-link" href="${fullOccupationLink(item.id)}">Open full page</a>` : ""}
             </div>
           </div>
@@ -369,11 +370,11 @@ function renderRelatedOccupations(
       ${renderRelatedOccupations(occupation, 2, true)}
     `;
 
-    // detailPanel.querySelectorAll("[data-related-id]").forEach(btn => {
-    //   btn.addEventListener("click", () => {
-    //     renderDetail(btn.dataset.relatedId);
-    //   });
-    // });
+    detailPanel.querySelectorAll("[data-related-id]").forEach(btn => {
+      btn.addEventListener("click", () => {
+        renderDetail(btn.dataset.relatedId);
+      });
+    });
   }
 
 function renderOccupationPage() {
@@ -401,7 +402,8 @@ function renderOccupationPage() {
       ${detailMarkup(occupation)}
       ${renderRelatedOccupations(occupation, null, true, {
         showToggle: true,
-        expanded: occupationPageRelatedExpanded
+        expanded: occupationPageRelatedExpanded,
+        showViewHere: false
       })}
       ${renderTraining(occupation)}
     </div>
