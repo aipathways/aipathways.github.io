@@ -285,6 +285,24 @@ h1 {
   flex-wrap: wrap;
   margin-top: 10px;
 }
+.related-toggle-row {
+  margin-top: 0.75rem;
+}
+
+.text-link.related-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--link-color, #1a5fb4);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.text-link.related-toggle:hover {
+  text-decoration-thickness: 2px;
+}
 .action-link,
 .full-page-link {
   display: inline-flex;

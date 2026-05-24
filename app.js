@@ -11,6 +11,7 @@ function initApp(rawData) {
 
   let activeFilter = "ALL";
   let activeOccupationId = null;
+  let occupationPageRelatedExpanded = false;
   const MAX_VISIBLE_OCCUPATIONS = 6;
 
   const occupations = normalizeData(rawData);
@@ -206,56 +207,82 @@ function initApp(rawData) {
     });
   }
 
-  function renderRelatedOccupations(occupation, limit = null, includeLinks = false) {
-    if (!["High", "Very High"].includes(occupation.exposure)) {
-      return `
-        <div class="subsection">
-          <h3>Related lower-exposure occupations</h3>
-          <p class="muted">Lower-exposure transition options are highlighted when a high-exposure occupation is selected.</p>
-        </div>
-      `;
-    }
+function renderRelatedOccupations(
+  occupation,
+  limit = null,
+  includeLinks = false,
+  options = {}
+) {
+  const { showToggle = false, expanded = false } = options;
 
-    let related = (occupation.relatedOccupationIds || [])
-      .map(getOccupationById)
-      .filter(Boolean);
-
-    if (typeof limit === "number") {
-      related = related.slice(0, limit);
-    }
-
-    if (!related.length) {
-      return `
-        <div class="subsection">
-          <h3>Related lower-exposure occupations</h3>
-          <p class="muted">No related lower-exposure occupations are currently mapped for this role.</p>
-        </div>
-      `;
-    }
-
+  if (!["High", "Very High"].includes(occupation.exposure)) {
     return `
       <div class="subsection">
         <h3>Related lower-exposure occupations</h3>
-        <div class="related-list">
-          ${related.map(item => `
-            <div class="mini-card">
-              <div class="inline-row">
-                <span class="badge ${escapeHtml(cssExposureClass(item.exposure))}">${escapeHtml(item.exposure)} Exposure</span>
-                <span class="badge Blue">SOC ${escapeHtml(item.soc || "N/A")}</span>
-              </div>
-              <h4>${escapeHtml(item.title)}</h4>
-              <p class="muted">${escapeHtml(item.summary || "No summary available.")}</p>
-              <p><strong>Median wage:</strong> ${escapeHtml(item.laborMarket?.medianWage)} · <strong>Openings:</strong> ${escapeHtml(item.laborMarket?.annualOpenings)}</p>
-              <div class="button-row">
-                <button class="action-btn" type="button" data-related-id="${escapeHtml(item.id)}">View here</button>
-                ${includeLinks ? `<a class="action-btn action-link" href="${fullOccupationLink(item.id)}">Open full page</a>` : ""}
-              </div>
-            </div>
-          `).join("")}
-        </div>
+        <p class="muted">Lower-exposure transition options are highlighted when a high-exposure occupation is selected.</p>
       </div>
     `;
   }
+
+  const allRelated = (occupation.relatedOccupationIds || [])
+    .map(getOccupationById)
+    .filter(Boolean);
+
+  const toggleLimit = 3;
+  const shouldShowToggle = showToggle && allRelated.length > toggleLimit;
+
+  let related = allRelated;
+
+  if (shouldShowToggle && !expanded) {
+    related = allRelated.slice(0, toggleLimit);
+  } else if (typeof limit === "number") {
+    related = allRelated.slice(0, limit);
+  }
+
+  if (!related.length) {
+    return `
+      <div class="subsection">
+        <h3>Related lower-exposure occupations</h3>
+        <p class="muted">No related lower-exposure occupations are currently mapped for this role.</p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="subsection">
+      <h3>Related lower-exposure occupations</h3>
+      <div class="related-list">
+        ${related.map(item => `
+          <div class="mini-card">
+            <div class="inline-row">
+              <span class="badge ${escapeHtml(cssExposureClass(item.exposure))}">${escapeHtml(item.exposure)} Exposure</span>
+              <span class="badge Blue">SOC ${escapeHtml(item.soc || "N/A")}</span>
+            </div>
+            <h4>${escapeHtml(item.title)}</h4>
+            <p class="muted">${escapeHtml(item.summary || "No summary available.")}</p>
+            <p><strong>Median wage:</strong> ${escapeHtml(item.laborMarket?.medianWage)} · <strong>Openings:</strong> ${escapeHtml(item.laborMarket?.annualOpenings)}</p>
+            <div class="button-row">
+              <button class="action-btn" type="button" data-related-id="${escapeHtml(item.id)}">View here</button>
+              ${includeLinks ? `<a class="action-btn action-link" href="${fullOccupationLink(item.id)}">Open full page</a>` : ""}
+            </div>
+          </div>
+        `).join("")}
+      </div>
+
+      ${shouldShowToggle ? `
+        <div class="related-toggle-row">
+          <button
+            class="text-link related-toggle"
+            type="button"
+            data-related-toggle="${expanded ? "less" : "more"}"
+          >
+            ${expanded ? "Show less" : `Show more (${allRelated.length - toggleLimit} more)`}
+          </button>
+        </div>
+      ` : ""}
+    </div>
+  `;
+}
 
   function renderTraining(occupation) {
     if (!occupation.training || !occupation.training.length) {
@@ -350,33 +377,44 @@ function initApp(rawData) {
     });
   }
 
-  function renderOccupationPage() {
-    if (!occupationPage) return;
+function renderOccupationPage() {
+  if (!occupationPage) return;
 
-    const params = new URLSearchParams(window.location.search);
-    const id = params.get("id");
-    const occupation = getOccupationById(id);
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get("id");
+  const occupation = getOccupationById(id);
 
-    if (!occupation) {
-      occupationPage.innerHTML = `
-        <div class="detail-panel occupation-page-panel">
-          <h2>Occupation not found</h2>
-          <p class="muted">The requested occupation could not be found in the current dataset.</p>
-          <p><a class="full-page-link" href="index.html">Return to explorer</a></p>
-        </div>
-      `;
-      return;
-    }
-
-    document.title = `${occupation.title} | Arizona AI Transition Pathways`;
+  if (!occupation) {
     occupationPage.innerHTML = `
       <div class="detail-panel occupation-page-panel">
-        ${detailMarkup(occupation)}
-        ${renderRelatedOccupations(occupation, null, true)}
-        ${renderTraining(occupation)}
+        <h2>Occupation not found</h2>
+        <p class="muted">The requested occupation could not be found in the current dataset.</p>
+        <p><a class="full-page-link" href="index.html">Return to explorer</a></p>
       </div>
     `;
+    return;
   }
+
+  document.title = `${occupation.title} | Arizona AI Transition Pathways`;
+
+  occupationPage.innerHTML = `
+    <div class="detail-panel occupation-page-panel">
+      ${detailMarkup(occupation)}
+      ${renderRelatedOccupations(occupation, null, true, {
+        showToggle: true,
+        expanded: occupationPageRelatedExpanded
+      })}
+      ${renderTraining(occupation)}
+    </div>
+  `;
+
+  occupationPage.querySelectorAll("[data-related-toggle]").forEach(btn => {
+    btn.addEventListener("click", () => {
+      occupationPageRelatedExpanded = btn.dataset.relatedToggle === "more";
+      renderOccupationPage();
+    });
+  });
+}
 
   function syncSearchInputs(changedInput) {
     const value = changedInput.value;
