@@ -262,7 +262,6 @@ function renderRelatedOccupations(
             <p class="muted">${escapeHtml(item.summary || "No summary available.")}</p>
             <p><strong>Median wage:</strong> ${escapeHtml(item.laborMarket?.medianWage)} · <strong>Openings:</strong> ${escapeHtml(item.laborMarket?.annualOpenings)}</p>
             <div class="button-row">
-              <button class="action-btn" type="button" data-related-id="${escapeHtml(item.id)}">View here</button>
               ${includeLinks ? `<a class="action-btn action-link" href="${fullOccupationLink(item.id)}">Open full page</a>` : ""}
             </div>
           </div>
@@ -370,11 +369,11 @@ function renderRelatedOccupations(
       ${renderRelatedOccupations(occupation, 2, true)}
     `;
 
-    detailPanel.querySelectorAll("[data-related-id]").forEach(btn => {
-      btn.addEventListener("click", () => {
-        renderDetail(btn.dataset.relatedId);
-      });
-    });
+    // detailPanel.querySelectorAll("[data-related-id]").forEach(btn => {
+    //   btn.addEventListener("click", () => {
+    //     renderDetail(btn.dataset.relatedId);
+    //   });
+    // });
   }
 
 function renderOccupationPage() {
