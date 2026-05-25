@@ -17,6 +17,8 @@ function initApp(rawData) {
 
   const OCCUPATION_INCREMENT = 20;
   const MAX_VISIBLE_OCCUPATIONS = 100;
+  const SANKEY_PAGE_PATH = "assets/sankey.html";
+  const SANKEY_SOURCE_EXPOSURES = new Set(["High", "Very High"]);
 
   const occupations = normalizeData(rawData);
   const occupationsById = new Map(occupations.map(o => [o.id, o]));
@@ -95,7 +97,7 @@ function initApp(rawData) {
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;")
+      .replace(/\"/g, "&quot;")
       .replace(/'/g, "&#39;");
   }
 
@@ -313,6 +315,34 @@ function renderRelatedOccupations(
   `;
 }
 
+  function renderSankeySection(occupation) {
+    const soc = String(occupation?.soc || "").trim();
+
+    if (!soc || !SANKEY_SOURCE_EXPOSURES.has(occupation.exposure)) {
+      return "";
+    }
+
+    const sankeyUrl = `${SANKEY_PAGE_PATH}?soc=${encodeURIComponent(soc)}`;
+    const title = `AI transition pathway Sankey diagram for ${occupation.title} (${soc})`;
+
+    return `
+      <div class="subsection sankey-section">
+        <div class="sankey-section-head">
+          <h3>Transition pathway diagram</h3>
+          <p class="sankey-note muted">
+            Compare direct and intermediary pathways from this high-exposure occupation to related lower-exposure roles.
+          </p>
+        </div>
+        <iframe
+          class="sankey-frame"
+          src="${escapeHtml(sankeyUrl)}"
+          title="${escapeHtml(title)}"
+          loading="lazy"
+        ></iframe>
+      </div>
+    `;
+  }
+
   function renderTraining(occupation) {
     if (!occupation.training || !occupation.training.length) {
       return `
@@ -429,6 +459,7 @@ function renderOccupationPage() {
   occupationPage.innerHTML = `
     <div class="detail-panel occupation-page-panel">
       ${detailMarkup(occupation)}
+      ${renderSankeySection(occupation)}
       ${renderRelatedOccupations(occupation, null, true, {
         showToggle: true,
         expanded: occupationPageRelatedExpanded,
