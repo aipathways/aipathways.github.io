@@ -338,6 +338,33 @@ h1 {
   font-weight: 600;
   background: white;
 }
+
+.sankey-section {
+  margin-top: 28px;
+}
+
+.sankey-section-head {
+  margin-bottom: 12px;
+}
+
+.sankey-section-head h3 {
+  margin-bottom: 6px;
+}
+
+.sankey-note {
+  margin: 0;
+}
+
+.sankey-frame {
+  display: block;
+  width: 100%;
+  height: min(980px, 92vh);
+  min-height: 760px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: white;
+  box-shadow: var(--shadow);
+}
 .footer {
   padding: 0 0 32px;
   color: var(--muted);
@@ -362,4 +389,8 @@ code {
   .main-grid { display: grid; }
   .detail-panel { position: static; }
   .metrics { grid-template-columns: 1fr; }
+  .sankey-frame {
+    height: 860px;
+    min-height: 680px;
+  }
 }
