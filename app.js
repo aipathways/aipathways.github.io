@@ -173,10 +173,16 @@ function initApp(rawData) {
     const visible = filtered.slice(0, visibleOccupationLimit);
 
     if (resultCount) {
+      const cappedTotal = Math.min(filtered.length, MAX_VISIBLE_OCCUPATIONS);
+
       resultCount.textContent =
         filtered.length > visible.length
-          ? `Showing ${visible.length} of ${filtered.length} occupations`
-          : `${filtered.length} occupation${filtered.length === 1 ? "" : "s"}`;
+          ? `Showing ${visible.length} of ${cappedTotal} occupations`
+          : `${visible.length} occupation${visible.length === 1 ? "" : "s"}`;
+
+      if (filtered.length > MAX_VISIBLE_OCCUPATIONS) {
+        resultCount.textContent += `, capped at ${MAX_VISIBLE_OCCUPATIONS}`;
+      }
     }
 
     if (showMoreOccupationsBtn) {

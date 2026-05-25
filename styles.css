@@ -287,23 +287,26 @@ h1 {
 }
 
 .show-more-row {
-  margin-top: 18px;
+  margin: 22px 0 8px;
   text-align: center;
 }
 
 .text-link.show-more-occupations {
-  background: none;
-  border: none;
-  padding: 0;
+  display: inline-block;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 16px;
   color: var(--blue);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 .text-link.show-more-occupations:hover {
-  text-decoration-thickness: 2px;
+  background: var(--blue-soft);
+  text-decoration: none;
 }
 
 .related-toggle-row {
