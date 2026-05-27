@@ -322,7 +322,7 @@ function renderRelatedOccupations(
       return "";
     }
 
-    const sankeyUrl = `${SANKEY_PAGE_PATH}?soc=${encodeURIComponent(soc)}`;
+    const sankeyUrl = `${SANKEY_PAGE_PATH}?id=${encodeURIComponent(occupation.id)}`;
     const title = `AI transition pathway Sankey diagram for ${occupation.title} (${soc})`;
 
     return `
