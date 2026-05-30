@@ -3,24 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Methodology | AI Displacement Risk & Transition Pathways</title>
+  <title>Methodology</title>
+  <link rel="icon" type="image/png" href="assets/AZ%20ICON%20LOGO_Solid_Agnostic_Color.png" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://static.az.gov/sliver/sliver.js" type="text/javascript"></script>
+
 </head>
 <body>
+  <header class="site-header">
+    <div class="wrap site-header-inner">
+      <a class="agency-brand" href="https://oeo.az.gov/" aria-label="Arizona Office of Economic Opportunity">
+        <img
+          src="assets/AZ_OEO_Tertiary_Black_2000px.png"
+          alt="Arizona Office of Economic Opportunity"
+        />
+      </a>
 
-  <nav class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="nav-links">
-        <a class="nav-link" href="index.html">Occupations</a>
-        <a class="nav-link" href="transitions.html">Training</a>
-        <a class="nav-link active" href="methodology.html" aria-current="page">Methodology</a>
-        <a class="nav-link" href="about.html">About</a>
+      <div class="site-header-actions">
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a class="nav-link active" href="index.html">Occupations</a>
+          <a class="nav-link" href="transitions.html">Training</a>
+          <a class="nav-link" href="methodology.html">Methodology</a>
+          <a class="nav-link" href="about.html">About</a>
+        </nav>
+
+        <form class="nav-search" id="globalSearchForm">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search all occupations"
+            aria-label="Search all occupations"
+          />
+        </form>
       </div>
-      <form class="nav-search" id="globalSearchForm">
-        <input id="globalSearchInput" type="text" placeholder="Search all occupations" aria-label="Search all occupations" />
-      </form>
     </div>
-  </nav>
+  </header>
   
   <header class="hero compact-hero boxed-hero">
     <div class="wrap">
@@ -329,6 +347,55 @@
       </div>
     </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="wrap site-footer-inner">
+      <div class="footer-brand">
+        <img
+          src="assets/ARIZONA%20PRIMARY%20LOGO_Solid_Agnostic_White.png"
+          alt="State of Arizona"
+        />
+        <div>
+          <h2>Arizona Office of Economic Opportunity</h2>
+          <p>
+            Labor market information, workforce evaluation, and economic analysis
+            for the State of Arizona.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h3>Resources</h3>
+          <a href="index.html">Occupations</a>
+          <a href="transitions.html">Training</a>
+          <a href="methodology.html">Methodology</a>
+          <a href="about.html">About</a>
+        </div>
+
+        <div>
+          <h3>State Links</h3>
+          <a href="https://az.gov/">AZ.gov</a>
+          <a href="https://oeo.az.gov/">OEO.az.gov</a>
+          <a href="https://azgovernor.gov/">Governor's Office</a>
+        </div>
+
+        <div>
+          <h3>Policies</h3>
+          <a href="https://az.gov/accessibility-policy">Accessibility</a>
+          <a href="https://az.gov/privacy-policy">Privacy Policy</a>
+          <a href="https://az.gov/terms-use">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="wrap">
+        <p>© State of Arizona. This site is a public-facing workforce analysis prototype.</p>
+      </div>
+    </div>
+  </footer>
+
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
