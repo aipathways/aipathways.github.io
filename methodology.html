@@ -5,345 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Methodology | AI Displacement Risk & Transition Pathways</title>
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    :root {
-      --bg: #f7f9fc;
-      --panel: #ffffff;
-      --text: #1f2937;
-      --muted: #5f6b7a;
-      --line: #d9e2ec;
-      --accent: #1f4e79;
-      --accent-2: #2f80ed;
-      --accent-soft: #e8f1fb;
-      --risk: #7f1d1d;
-      --success: #166534;
-      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-      --radius: 16px;
-      --max-width: 1120px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: var(--text);
-      background: linear-gradient(180deg, #eef5fb 0%, var(--bg) 340px);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--accent-2);
-    }
-
-    .page {
-      width: min(var(--max-width), calc(100% - 36px));
-      margin: 0 auto;
-      padding: 42px 0 72px;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, var(--accent) 0%, #12324f 100%);
-      color: #fff;
-      border-radius: 24px;
-      padding: 44px;
-      box-shadow: var(--shadow);
-      margin-bottom: 28px;
-    }
-
-    .eyebrow {
-      margin: 0 0 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.11em;
-      font-weight: 700;
-      font-size: 0.78rem;
-      color: #b9d7ef;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    h1 {
-      max-width: 880px;
-      font-size: clamp(2rem, 4vw, 3.35rem);
-      letter-spacing: -0.045em;
-    }
-
-    .hero p {
-      max-width: 850px;
-      margin: 18px 0 0;
-      color: #e5eff8;
-      font-size: 1.08rem;
-    }
-
-    .layout {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 28px;
-      align-items: start;
-    }
-
-    .toc {
-      position: sticky;
-      top: 22px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px;
-      backdrop-filter: blur(8px);
-    }
-
-    .toc h2 {
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .toc a {
-      display: block;
-      padding: 8px 0;
-      border-bottom: 1px solid #edf1f5;
-      color: var(--text);
-      text-decoration: none;
-      font-size: 0.94rem;
-    }
-
-    .toc a:last-child {
-      border-bottom: 0;
-    }
-
-    .toc a:hover {
-      color: var(--accent-2);
-    }
-
-    main {
-      display: grid;
-      gap: 22px;
-    }
-
-    section,
-    .card {
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 28px;
-    }
-
-    section h2 {
-      color: var(--accent);
-      font-size: clamp(1.35rem, 2.2vw, 2rem);
-      letter-spacing: -0.025em;
-      margin-bottom: 14px;
-    }
-
-    section h3 {
-      font-size: 1.05rem;
-      color: #172033;
-      margin: 22px 0 8px;
-    }
-
-    p {
-      margin: 0 0 14px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    .principles,
-    .four-grid,
-    .question-grid {
-      display: grid;
-      gap: 14px;
-      margin: 18px 0 8px;
-    }
-
-    .principles {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .four-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .question-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .mini-card {
-      border: 1px solid var(--line);
-      background: #fbfdff;
-      border-radius: 14px;
-      padding: 16px;
-    }
-
-    .mini-card strong {
-      display: block;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-
-    .formula-box {
-      margin: 18px 0;
-      padding: 18px 20px;
-      background: var(--accent-soft);
-      border-left: 5px solid var(--accent-2);
-      border-radius: 14px;
-      font-size: 1.05rem;
-    }
-
-    .formula-box code {
-      display: block;
-      color: #102a43;
-      white-space: normal;
-      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    }
-
-    .table-wrap {
-      overflow-x: auto;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      margin: 18px 0 8px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 780px;
-      font-size: 0.95rem;
-    }
-
-    caption {
-      caption-side: top;
-      text-align: left;
-      font-weight: 700;
-      color: var(--accent);
-      padding: 14px 16px;
-      background: #f4f8fc;
-      border-bottom: 1px solid var(--line);
-    }
-
-    th,
-    td {
-      padding: 13px 16px;
-      border-bottom: 1px solid #e7edf3;
-      vertical-align: top;
-      text-align: left;
-    }
-
-    th {
-      background: #f8fafc;
-      font-size: 0.82rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    tr:last-child td {
-      border-bottom: 0;
-    }
-
-    .method-flow {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin: 20px 0 4px;
-    }
-
-    .step {
-      position: relative;
-      padding: 16px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      background: #fbfdff;
-    }
-
-    .step span {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      margin-bottom: 8px;
-      border-radius: 999px;
-      background: var(--accent);
-      color: #fff;
-      font-weight: 800;
-      font-size: 0.82rem;
-    }
-
-    .step strong {
-      display: block;
-      margin-bottom: 4px;
-      color: #102a43;
-    }
-
-    ul,
-    ol {
-      margin: 12px 0 0 1.25rem;
-      padding: 0;
-    }
-
-    li {
-      margin: 6px 0;
-    }
-
-    .callout {
-      border-left: 5px solid var(--success);
-      background: #f0fdf4;
-      border-radius: 14px;
-      padding: 18px 20px;
-      margin-top: 18px;
-    }
-
-    .references li {
-      margin-bottom: 10px;
-    }
-
-    @media (max-width: 900px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
-
-      .toc {
-        position: relative;
-        top: auto;
-      }
-
-      .principles,
-      .method-flow,
-      .question-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 680px) {
-      .page {
-        width: min(100% - 24px, var(--max-width));
-        padding-top: 22px;
-      }
-
-      .hero,
-      section,
-      .card {
-        padding: 22px;
-      }
-
-      .four-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
 
@@ -360,17 +21,20 @@
       </form>
     </div>
   </nav>
-  <div class="page">
-    <header class="hero">
+  
+  <header class="hero compact-hero boxed-hero">
+    <div class="wrap">
       <p class="eyebrow">Methodology</p>
       <h1>AI Displacement Risk &amp; Transition Pathways</h1>
-      <p>
+      <p class="subtitle">
         This methodology describes an occupation-level framework for estimating relative vulnerability to AI-related labor market disruption and identifying realistic lower-risk transition pathways.
       </p>
-    </header>
+    </div>
+  </header>
 
-    <div class="layout">
-      <aside class="toc" aria-label="Methodology table of contents">
+  <main class="wrap methodology-page">
+    <div class="methodology-layout">
+      <aside class="methodology-toc" aria-label="Methodology table of contents"></aside>
         <h2>Contents</h2>
         <a href="#overview">Overview</a>
         <a href="#data-sources">Data Sources</a>
@@ -384,7 +48,7 @@
         <a href="#references">References</a>
       </aside>
 
-      <main>
+      <div class="methodology-content">
         <section id="overview">
           <h2>Overview</h2>
           <p>
@@ -662,9 +326,9 @@
             <li>National Center for O*NET Development. (2026). <em>O*NET® 30.3 database.</em> O*NET Resource Center. Retrieved May 30, 2026.</li>
           </ol>
         </section>
-      </main>
+      </div>
     </div>
-  </div>
+  </main>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>

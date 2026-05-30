@@ -102,26 +102,34 @@ h1 {
 }
 
 .boxed-hero .wrap {
-  background: linear-gradient(135deg, var(--blue) 0%, #12324f 100%);
+  background: linear-gradient(135deg, #1f4e79 0%, #12324f 100%);
   color: #ffffff;
   border-radius: 24px;
   box-shadow: var(--shadow);
-  padding: 38px;
+  padding: 44px;
 }
 
 .boxed-hero .eyebrow {
-  color: #d8e8ff;
+  color: #b9d7ef;
 }
 
 .boxed-hero h1 {
   color: #ffffff;
+  max-width: 880px;
+  letter-spacing: -0.035em;
 }
 
-.boxed-hero .subtitle {
-  color: #eef5ff;
+.boxed-hero .subtitle,
+.boxed-hero p {
+  color: #e5eff8;
+  max-width: 850px;
+  font-size: 1.08rem;
 }
 
-/* Keeps filters readable on the Occupations page */
+.boxed-hero .filters-row {
+  margin-top: 22px;
+}
+
 .boxed-hero .chip,
 .boxed-hero .secondary-btn {
   background: rgba(255, 255, 255, 0.12);
@@ -131,7 +139,7 @@ h1 {
 
 .boxed-hero .chip.active {
   background: #ffffff;
-  color: var(--blue);
+  color: #1f4e79;
   border-color: #ffffff;
 }
 
@@ -139,6 +147,7 @@ h1 {
 .boxed-hero .secondary-btn:hover {
   background: rgba(255, 255, 255, 0.2);
 }
+
 .hero-link {
   display: inline-block;
   margin-top: 16px;
@@ -470,21 +479,280 @@ code {
   padding: 2px 6px;
   border-radius: 6px;
 }
+
+/* ==========================================
+   METHODOLOGY PAGE
+========================================== */
+
+.methodology-page {
+  padding: 10px 0 72px;
+}
+
+.methodology-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.methodology-toc {
+  position: sticky;
+  top: 82px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 18px;
+}
+
+.methodology-toc h2 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  margin: 0 0 10px;
+}
+
+.methodology-toc a {
+  display: block;
+  padding: 8px 0;
+  border-bottom: 1px solid #edf1f5;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.94rem;
+}
+
+.methodology-toc a:last-child {
+  border-bottom: 0;
+}
+
+.methodology-toc a:hover {
+  color: var(--blue);
+}
+
+.methodology-content {
+  display: grid;
+  gap: 22px;
+}
+
+.methodology-content section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+.methodology-content section h2 {
+  color: #1f4e79;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  letter-spacing: -0.025em;
+  margin: 0 0 14px;
+}
+
+.methodology-content section h3 {
+  font-size: 1.05rem;
+  color: var(--text);
+  margin: 22px 0 8px;
+}
+
+.methodology-content p {
+  margin: 0 0 14px;
+  line-height: 1.6;
+}
+
+.methodology-content p:last-child {
+  margin-bottom: 0;
+}
+
+.principles,
+.four-grid,
+.question-grid {
+  display: grid;
+  gap: 14px;
+  margin: 18px 0 8px;
+}
+
+.principles {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.four-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.question-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.methodology-content .mini-card {
+  border: 1px solid var(--line);
+  background: #fbfdff;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.methodology-content .mini-card strong {
+  display: block;
+  color: #1f4e79;
+  margin-bottom: 6px;
+}
+
+.formula-box {
+  margin: 18px 0;
+  padding: 18px 20px;
+  background: var(--blue-soft);
+  border-left: 5px solid var(--blue);
+  border-radius: 14px;
+  font-size: 1.05rem;
+}
+
+.formula-box code {
+  display: block;
+  color: #102a43;
+  white-space: normal;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  margin: 18px 0 8px;
+}
+
+.methodology-content table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 780px;
+  font-size: 0.95rem;
+}
+
+.methodology-content caption {
+  caption-side: top;
+  text-align: left;
+  font-weight: 700;
+  color: #1f4e79;
+  padding: 14px 16px;
+  background: #f4f8fc;
+  border-bottom: 1px solid var(--line);
+}
+
+.methodology-content th,
+.methodology-content td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #e7edf3;
+  vertical-align: top;
+  text-align: left;
+}
+
+.methodology-content th {
+  background: #f8fafc;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.methodology-content tr:last-child td {
+  border-bottom: 0;
+}
+
+.method-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 20px 0 4px;
+}
+
+.step {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fbfdff;
+}
+
+.step span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  background: #1f4e79;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.82rem;
+}
+
+.step strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #102a43;
+}
+
+.callout {
+  border-left: 5px solid var(--green);
+  background: var(--green-soft);
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-top: 18px;
+}
+
+.references li {
+  margin-bottom: 10px;
+}
+
 @media (max-width: 960px) {
   .topbar-inner,
   .filters-row,
   .main-grid {
     grid-template-columns: 1fr;
   }
+
   .topbar-inner {
     display: grid;
   }
+
   .nav-search {
     min-width: 0;
   }
-  .main-grid { display: grid; }
-  .detail-panel { position: static; }
-  .metrics { grid-template-columns: 1fr; }
+
+  .main-grid {
+    display: grid;
+  }
+
+  .detail-panel {
+    position: static;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .methodology-toc {
+    position: static;
+  }
+
+  .principles,
+  .method-flow,
+  .question-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .four-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .boxed-hero .wrap {
+    padding: 28px;
+  }
+
   .sankey-frame {
     height: 860px;
     min-height: 680px;
