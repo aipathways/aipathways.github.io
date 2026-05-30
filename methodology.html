@@ -3,486 +3,781 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Methodology | Arizona AI Transition Pathways</title>
+  <title>Methodology | AI Displacement Risk & Transition Pathways</title>
   <link rel="stylesheet" href="styles.css" />
-  <script>
-    window.MathJax = {
-      tex: { inlineMath: [['\\(','\\)'], ['$', '$']], displayMath: [['\\[','\\]']] },
-      svg: { fontCache: 'global' }
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   <style>
-    /* Page-specific enhancements that build on the site's existing styles */
-    .methodology-page {
-      padding-bottom: 3rem;
+    :root {
+      --bg: #f7f9fc;
+      --panel: #ffffff;
+      --text: #1f2937;
+      --muted: #5f6b7a;
+      --line: #d9e2ec;
+      --accent: #1f4e79;
+      --accent-2: #2f80ed;
+      --accent-soft: #e8f1fb;
+      --risk: #7f1d1d;
+      --success: #166534;
+      --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      --radius: 16px;
+      --max-width: 1120px;
     }
 
-    .page-header {
-      margin: 2rem 0 1.5rem;
+    * {
+      box-sizing: border-box;
     }
 
-    .toc-box,
-    .method-section,
-    .subsection,
-    .equation-block,
-    .figure-block {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
-    }
-
-    .toc-box {
-      padding: 1.25rem 1.5rem;
-      margin: 0 0 1.5rem;
-    }
-
-    .toc-box h2 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-    }
-
-    .toc-list {
+    body {
       margin: 0;
-      padding-left: 1.25rem;
-      columns: 2;
-      column-gap: 2rem;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: linear-gradient(180deg, #eef5fb 0%, var(--bg) 340px);
+      line-height: 1.6;
     }
 
-    .toc-list li {
-      margin: 0.35rem 0;
-      break-inside: avoid;
+    a {
+      color: var(--accent-2);
     }
 
-    .toc-list a {
-      text-decoration: none;
+    .page {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 0 auto;
+      padding: 42px 0 72px;
     }
 
-    .method-section {
-      padding: 1.5rem;
-      margin: 0 0 1.5rem;
+    .hero {
+      background: linear-gradient(135deg, var(--accent) 0%, #12324f 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 44px;
+      box-shadow: var(--shadow);
+      margin-bottom: 28px;
     }
 
-    .method-section > h2 {
-      margin-top: 0;
-      margin-bottom: 1rem;
+    .eyebrow {
+      margin: 0 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.11em;
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: #b9d7ef;
     }
 
-    .subsection {
-      padding: 1.25rem;
-      margin-top: 1.25rem;
+    h1,
+    h2,
+    h3 {
+      line-height: 1.2;
+      margin: 0;
     }
 
-    .subsection > h3 {
-      margin-top: 0;
+    h1 {
+      max-width: 880px;
+      font-size: clamp(2rem, 4vw, 3.35rem);
+      letter-spacing: -0.045em;
     }
 
-    .figure-block {
-      padding: 1.25rem;
-      margin: 1rem 0 1.25rem;
+    .hero p {
+      max-width: 850px;
+      margin: 18px 0 0;
+      color: #e5eff8;
+      font-size: 1.08rem;
     }
 
-    .figure-block h3 {
-      margin-top: 0;
-      margin-bottom: 1rem;
-    }
-
-    .figure-grid {
+    .layout {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
+      grid-template-columns: 260px 1fr;
+      gap: 28px;
+      align-items: start;
     }
 
-    .figure-item {
-      border: 1px solid #dbe4f0;
-      border-radius: 12px;
-      background: linear-gradient(180deg, #f8fbff 0%, #eef5fc 100%);
-      padding: 1rem;
-      text-align: center;
-      font-weight: 600;
-      min-height: 84px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .toc {
+      position: sticky;
+      top: 22px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      backdrop-filter: blur(8px);
     }
 
-    .equation-block {
-      padding: 1rem 1.25rem;
-      margin: 1rem 0;
-      border-left: 5px solid #2563eb;
-      overflow-x: auto;
+    .toc h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .toc a {
+      display: block;
+      padding: 8px 0;
+      border-bottom: 1px solid #edf1f5;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.94rem;
+    }
+
+    .toc a:last-child {
+      border-bottom: 0;
+    }
+
+    .toc a:hover {
+      color: var(--accent-2);
+    }
+
+    main {
+      display: grid;
+      gap: 22px;
+    }
+
+    section,
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    section h2 {
+      color: var(--accent);
+      font-size: clamp(1.35rem, 2.2vw, 2rem);
+      letter-spacing: -0.025em;
+      margin-bottom: 14px;
+    }
+
+    section h3 {
+      font-size: 1.05rem;
+      color: #172033;
+      margin: 22px 0 8px;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .principles,
+    .four-grid,
+    .question-grid {
+      display: grid;
+      gap: 14px;
+      margin: 18px 0 8px;
+    }
+
+    .principles {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .four-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .question-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .mini-card {
+      border: 1px solid var(--line);
+      background: #fbfdff;
+      border-radius: 14px;
+      padding: 16px;
+    }
+
+    .mini-card strong {
+      display: block;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .formula-box {
+      margin: 18px 0;
+      padding: 18px 20px;
+      background: var(--accent-soft);
+      border-left: 5px solid var(--accent-2);
+      border-radius: 14px;
+      font-size: 1.05rem;
+    }
+
+    .formula-box code {
+      display: block;
+      color: #102a43;
+      white-space: normal;
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     }
 
     .table-wrap {
       overflow-x: auto;
-      margin: 1rem 0 1.25rem;
-      background: #fff;
-      border: 1px solid #e5e7eb;
+      border: 1px solid var(--line);
       border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+      margin: 18px 0 8px;
     }
 
-    .table-wrap table {
+    table {
       width: 100%;
       border-collapse: collapse;
-      min-width: 760px;
+      min-width: 780px;
+      font-size: 0.95rem;
     }
 
-    .table-wrap caption {
+    caption {
       caption-side: top;
       text-align: left;
       font-weight: 700;
-      padding: 1rem 1rem 0.5rem;
+      color: var(--accent);
+      padding: 14px 16px;
+      background: #f4f8fc;
+      border-bottom: 1px solid var(--line);
     }
 
-    .table-wrap th,
-    .table-wrap td {
-      padding: 0.9rem 1rem;
-      border-top: 1px solid #e5e7eb;
+    th,
+    td {
+      padding: 13px 16px;
+      border-bottom: 1px solid #e7edf3;
       vertical-align: top;
       text-align: left;
     }
 
-    .table-wrap thead th {
+    th {
       background: #f8fafc;
-      border-top: none;
-      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
     }
 
-    .table-wrap tbody tr:nth-child(even) {
-      background: #fcfdff;
+    tr:last-child td {
+      border-bottom: 0;
+    }
+
+    .method-flow {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 20px 0 4px;
+    }
+
+    .step {
+      position: relative;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #fbfdff;
+    }
+
+    .step span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      margin-bottom: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.82rem;
+    }
+
+    .step strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #102a43;
+    }
+
+    ul,
+    ol {
+      margin: 12px 0 0 1.25rem;
+      padding: 0;
+    }
+
+    li {
+      margin: 6px 0;
+    }
+
+    .callout {
+      border-left: 5px solid var(--success);
+      background: #f0fdf4;
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-top: 18px;
+    }
+
+    .references li {
+      margin-bottom: 10px;
+    }
+
+
+    .site-header {
+      width: min(var(--max-width), calc(100% - 36px));
+      margin: 18px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 14px 18px;
+      backdrop-filter: blur(8px);
+    }
+
+    .brand {
+      font-weight: 800;
+      color: var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .site-nav a {
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 0.94rem;
+      font-weight: 650;
+    }
+
+    .site-nav a:hover,
+    .site-nav a.active {
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .global-search {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .global-search input {
+      width: min(280px, 32vw);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 12px;
+      font: inherit;
+      background: #fff;
+      color: var(--text);
+    }
+
+    .global-search button {
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 14px;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .global-search button:hover {
+      background: #173b5d;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
     }
 
     @media (max-width: 900px) {
-      .toc-list {
-        columns: 1;
+      .site-header {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
-      .figure-grid {
+      .global-search {
+        width: 100%;
+        margin-left: 0;
+      }
+
+      .global-search input {
+        width: 100%;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        position: relative;
+        top: auto;
+      }
+
+      .principles,
+      .method-flow,
+      .question-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .site-header {
+        width: min(100% - 24px, var(--max-width));
+        margin-top: 12px;
+      }
+
+      .global-search {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .page {
+        width: min(100% - 24px, var(--max-width));
+        padding-top: 22px;
+      }
+
+      .hero,
+      section,
+      .card {
+        padding: 22px;
+      }
+
+      .four-grid {
         grid-template-columns: 1fr;
       }
     }
   </style>
 </head>
 <body>
-  <nav class="topbar">
-    <div class="wrap topbar-inner">
-      <div class="nav-links">
-        <a class="nav-link" href="index.html">Occupations</a>
-        <a class="nav-link" href="transitions.html">Training</a>
-        <a class="nav-link active" href="methodology.html">Methodology</a>
-        <a class="nav-link" href="about.html">About</a>
-      </div>
-      <form class="nav-search" id="globalSearchForm">
-        <input id="globalSearchInput" type="text" placeholder="Search all occupations" aria-label="Search all occupations" />
-      </form>
-    </div>
-  </nav>
 
-  <main class="wrap methodology-page">
-    <header class="page-header">
-      <p class="eyebrow">Arizona Workforce Prototype</p>
-      <h1>Methodology | AI Risk & Transition Pathways</h1>
-      <p class="subtitle">
-        How we define <strong>AI Risk</strong>, measure labor market change, and recommend lower-exposure occupational transitions connected to education and training pathways.
+  <header class="site-header" role="banner">
+    <a class="brand" href="index.html" aria-label="AI Pathways home">AI Pathways</a>
+    <nav class="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Occupations</a>
+      <a href="methodology.html" class="active" aria-current="page">Methodology</a>
+      <a href="about.html">About</a>
+    </nav>
+    <form id="globalSearchForm" class="global-search" role="search">
+      <label class="sr-only" for="globalSearchInput">Search occupations</label>
+      <input id="globalSearchInput" type="search" placeholder="Search occupations" autocomplete="off" />
+      <button type="submit">Search</button>
+    </form>
+  </header>
+  <div class="page">
+    <header class="hero">
+      <p class="eyebrow">Methodology</p>
+      <h1>AI Displacement Risk Score &amp; Transition Pathways</h1>
+      <p>
+        This methodology describes an occupation-level framework for estimating relative vulnerability to AI-related labor market disruption and identifying realistic lower-risk transition pathways.
       </p>
     </header>
 
-    <nav class="toc-box" aria-label="Table of contents">
-      <h2>Table of Contents</h2>
-      <ol class="toc-list">
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#defining-ai-risk">Defining AI Risk</a></li>
-        <li><a href="#theoretical-exposure">Theoretical Exposure</a></li>
-        <li><a href="#adaptive-capacity">Adaptive Capacity</a></li>
-        <li><a href="#labor-market-impact">Labor Market Impact</a></li>
-        <li><a href="#integrating-exposures">Integrating Exposures</a></li>
-        <li><a href="#defining-occupational-transitions">Defining Occupational Transitions</a></li>
-        <li><a href="#identifying-related-occupations">Identifying Related Occupations</a></li>
-        <li><a href="#ai-exposure-alignment">AI Exposure Alignment</a></li>
-        <li><a href="#ranking-transition-pathways">Ranking Transition Pathways</a></li>
-        <li><a href="#linking-education-and-training-pathways">Linking Education and Training Pathways</a></li>
-        <li><a href="#data-integration-pipeline">Data Integration Pipeline</a></li>
-      </ol>
-    </nav>
+    <div class="layout">
+      <aside class="toc" aria-label="Methodology table of contents">
+        <h2>Contents</h2>
+        <a href="#overview">Overview</a>
+        <a href="#data-sources">Data Sources</a>
+        <a href="#theoretical-exposure">Theoretical AI Exposure</a>
+        <a href="#adaptive-capacity">Adaptive Capacity</a>
+        <a href="#synthetic-control">Synthetic Control Method</a>
+        <a href="#layoff-risk">Layoff Risk Index</a>
+        <a href="#hybrid-risk">Hybrid Risk Model</a>
+        <a href="#transition-pathways">Transition Pathways</a>
+        <a href="#limitations">Limitations</a>
+        <a href="#references">References</a>
+      </aside>
 
-    <section class="method-section" id="overview">
-      <h2>Overview</h2>
+      <main>
+        <section id="overview">
+          <h2>Overview</h2>
+          <p>
+            The AI Displacement Risk Score is an occupation-level measure designed to estimate the relative vulnerability of occupations to labor market disruption associated with artificial intelligence. The framework is designed to move beyond exposure-only measures by integrating theoretical, empirical, and resilience-based indicators.
+          </p>
 
-      <section class="subsection" id="ai-risk-overview">
-        <h3>AI Risk</h3>
-        <p>This resource provides an <strong>AI Risk</strong> score for Standard Occupational Classification (SOC) codes, grouped into five categories: <strong>Very High</strong>, <strong>High</strong>, <strong>Medium</strong>, <strong>Low</strong>, and <strong>Very Low</strong> exposure. Occupations with tasks that are repetitive, rules-based, or language-intensive tend to have higher exposure, while those requiring physical skills, in-person interaction, or complex decision-making tend to have lower exposure.</p>
-        <p>Unlike traditional measures, AI Risk combines three dimensions: (1) theoretical task-based exposure, (2) adaptive capacity, and (3) real-world labor market trends (Figure 1).</p>
-
-        <figure class="figure-block">
-          <h3>Figure 1. Occupational AI Risk Dimensions</h3>
-          <div class="figure-grid">
-            <div class="figure-item">Theoretical Exposure</div>
-            <div class="figure-item">Adaptive Capacity</div>
-            <div class="figure-item">Labor Market Impact</div>
+          <div class="principles">
+            <div class="mini-card">
+              <strong>Theoretical Exposure</strong>
+              Measures the extent to which occupational tasks can be performed or augmented by AI technologies.
+            </div>
+            <div class="mini-card">
+              <strong>Displacement Signals</strong>
+              Measures whether labor market outcomes are changing in ways consistent with AI-related disruption.
+            </div>
+            <div class="mini-card">
+              <strong>Adaptive Capacity</strong>
+              Measures the ability of workers within an occupation to transition into alternative employment opportunities if displacement occurs.
+            </div>
           </div>
-        </figure>
 
-        <p>This approach reflects research showing that no single measure fully captures AI’s impact on jobs. By incorporating worker characteristics such as skill transferability alongside observed changes in employment and job postings, AI Risk provides a more complete and practical view of how occupations may be affected by AI.</p>
-      </section>
+          <p>
+            While exposure estimates identify occupations whose tasks may be affected by AI, exposure alone does not indicate whether displacement is occurring, how severe the effects may be, or whether workers possess realistic pathways into alternative employment. The AI Displacement Risk Score therefore provides a more comprehensive assessment of occupational vulnerability.
+          </p>
+        </section>
 
-      <section class="subsection" id="occupational-transition">
-        <h3>Occupational Transition</h3>
-        <p>Occupations with high AI exposure are connected to related occupations with lower exposure to help users explore potential career transitions. Rather than treating occupations in isolation, the approach leverages relationships between occupations to identify feasible pathways into roles that are less susceptible to AI-driven disruption.</p>
-        <p>For each high-exposure occupation, we surface a curated set of related occupations with lower or moderate exposure levels. We then link these occupations to relevant education and training programs, allowing users to understand not only where they could transition, but also how to get there.</p>
-      </section>
-    </section>
+        <section id="data-sources">
+          <h2>Data Sources</h2>
+          <p>
+            The analysis is conducted at the six-digit Standard Occupational Classification (SOC) level. AI exposure scores were derived from the Yale Budget Lab composite AI exposure framework and supplemented with occupational classifications developed by the Pew Research Center.
+          </p>
+          <p>
+            Longitudinal employment and job posting data were obtained from Lightcast. Employment estimates are constructed using Quarterly Census of Employment and Wages (QCEW) data and associated modeling procedures, allowing for consistent occupation-level tracking over time. Job posting data were obtained from Lightcast Job Posting Analytics.
+          </p>
+          <p>
+            Occupational relationships were identified using O*NET related occupation files, which measure occupational similarity based on skills, work activities, and knowledge requirements. Occupation-level covariates, including median annual earnings and employment growth rates, were extracted from Lightcast.
+          </p>
+        </section>
 
-    <section class="method-section" id="defining-ai-risk">
-      <h2>Defining AI Risk</h2>
+        <section id="theoretical-exposure">
+          <h2>Theoretical AI Exposure</h2>
+          <p>
+            Theoretical exposure serves as the baseline component of the framework. Rather than relying on a single AI exposure measure, the methodology follows the Yale Budget Lab approach by combining multiple occupation-level exposure measures into a unified index using Principal Component Analysis (PCA).
+          </p>
+          <p>
+            Included measures capture task acceleration, generative AI applicability, occupational exposure to AI applications, and AI-driven productivity impacts. Each measure is standardized using z-score normalization. PCA is then applied to identify the common latent exposure signal across measures. The first principal component is retained and interpreted as the theoretical AI exposure score.
+          </p>
 
-      <section class="subsection" id="theoretical-exposure">
-        <h3>Theoretical Exposure</h3>
-        <p>Organizations including O*NET, the >International Labour Organization, Anthropic, and academic researchers have developed independent measures of occupational AI exposure. One of the most widely used is from Tyna Eloundou et al. (2024), which estimates how much generative AI can accelerate task completion. However, multiple alternative measures exist, each capturing different dimensions of exposure.</p>
-        <p>Research from the Yale Budget Lab shows that while these measures tend to align for low-exposure occupations, they diverge substantially for highly exposed roles. For example, one metric may identify web developers as most at risk, while another highlights telemarketers—reflecting differences in how exposure is defined. This variability underscores a key limitation: theoretical exposure alone does not indicate where displacement will occur, how large the effects will be, or how quickly they may materialize.</p>
-        <p>To address this, we adopt a hybrid approach inspired by the Yale Budget Lab, combining multiple exposure measures into a single index using principal component analysis (PCA). Conceptually, PCA extracts the shared signal across measures by identifying a weighted combination that explains the greatest common variation. If \(X_1, X_2, \dots, X_k\) represent standardized exposure measures, the composite index is:</p>
+          <div class="table-wrap">
+            <table>
+              <caption>Table 1. AI Measures and Associated Principal Component Weights</caption>
+              <thead>
+                <tr>
+                  <th>Metric</th>
+                  <th>Source</th>
+                  <th>Measuring</th>
+                  <th>PCA Weight</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><code>dv_rating_beta</code></td>
+                  <td>Eloundou et al. (2024)</td>
+                  <td>GPTs and auxiliary technologies speeding up task completion</td>
+                  <td>0.426</td>
+                </tr>
+                <tr>
+                  <td><code>human_rating_beta</code></td>
+                  <td>Eloundou et al. (2024)</td>
+                  <td>GPTs and auxiliary technologies speeding up task completion</td>
+                  <td>0.425</td>
+                </tr>
+                <tr>
+                  <td><code>genaiexp_estz_total</code></td>
+                  <td>Eisfeldt et al. (2023)</td>
+                  <td>Task completion efficiency across all tasks</td>
+                  <td>0.419</td>
+                </tr>
+                <tr>
+                  <td><code>genai_exp_estz_core</code></td>
+                  <td>Eisfeldt et al. (2023)</td>
+                  <td>Task completion efficiency across core tasks</td>
+                  <td>0.407</td>
+                </tr>
+                <tr>
+                  <td><code>AIOE</code></td>
+                  <td>Felten et al. (2021)</td>
+                  <td>Occupational ability exposure to various AI applications</td>
+                  <td>0.410</td>
+                </tr>
+                <tr>
+                  <td><code>ai_applicability_score</code></td>
+                  <td>Tomlinson et al. (2025)</td>
+                  <td>How successfully the model completes the user's task</td>
+                  <td>0.359</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-        <div class="equation-block">
-          \[
-          PC_1 = w_1 X_1 + w_2 X_2 + \dots + w_k X_k
-          \]
-        </div>
+          <p>
+            This approach reduces dependence on any individual exposure methodology and provides broader occupational coverage. Exposure is interpreted as the likelihood that occupational tasks may be affected by AI technologies. It does not attempt to determine whether AI will complement or substitute for labor within a given occupation.
+          </p>
+        </section>
 
-        <p>where weights \(w_j\) are chosen to maximize explained variance. This produces a more stable, consensus-based estimate of exposure. A complete list of selected AI measures and PCA weights are provided in Table 1.</p>
+        <section id="adaptive-capacity">
+          <h2>Adaptive Capacity</h2>
+          <p>
+            Adaptive capacity is based on the framework developed by Manning and Aguirre and measures the ability of workers to mitigate welfare losses associated with technological disruption. Occupations facing identical levels of exposure may experience substantially different outcomes depending on worker mobility, financial resilience, and the availability of alternative employment opportunities.
+          </p>
 
-        <div class="table-wrap">
-          <table>
-            <caption>Table 1. AI Measures and Associated Principal Component Weights</caption>
-            <thead>
-              <tr>
-                <th>Metric</th>
-                <th>Source</th>
-                <th>Measuring</th>
-                <th>PCA Weight</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>dv_rating_beta</td>
-                <td>Eloundou et al. (2024)</td>
-                <td>GPTs and auxiliary technologies speeding up task completion</td>
-                <td>0.426</td>
-              </tr>
-              <tr>
-                <td>human_rating_beta</td>
-                <td>Eloundou et al. (2024)</td>
-                <td>GPTs and auxiliary technologies speeding up task completion</td>
-                <td>0.425</td>
-              </tr>
-              <tr>
-                <td>genaiexp_estz_total</td>
-                <td>Eisfeldt et al. (2023)</td>
-                <td>Task completion efficiency (all tasks)</td>
-                <td>0.419</td>
-              </tr>
-              <tr>
-                <td>genai_exp_estz_core</td>
-                <td>Eisfeldt et al. (2023)</td>
-                <td>Task completion efficiency (core tasks)</td>
-                <td>0.407</td>
-              </tr>
-              <tr>
-                <td>AIOE</td>
-                <td>Felten et al. (2021)</td>
-                <td>Occupational ability's exposure to various AI applications</td>
-                <td>0.410</td>
-              </tr>
-              <tr>
-                <td>ai_applicability_score</td>
-                <td>Tomlinson et al. (2025)</td>
-                <td>How successfully does the model complete the user's task</td>
-                <td>0.359</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <div class="four-grid">
+            <div class="mini-card">
+              <strong>Financial Capacity</strong>
+              Liquid wealth and financial resources available to workers.
+            </div>
+            <div class="mini-card">
+              <strong>Skill Transferability</strong>
+              The extent to which occupational skills can be applied to alternative occupations.
+            </div>
+            <div class="mini-card">
+              <strong>Labor Market Density</strong>
+              The availability of alternative employment opportunities across local labor markets.
+            </div>
+            <div class="mini-card">
+              <strong>Demographic Flexibility</strong>
+              Workforce characteristics associated with retraining and occupational mobility.
+            </div>
+          </div>
 
-        <p>We exclude the exposure measure developed by Michael Webb, as it captures patent-based technological overlap rather than task-level AI capability. Including this measure did not materially change PCA-derived scores but substantially reduced occupational coverage due to data limitations. As a result, excluding it improved consistency and completeness without affecting overall results.</p>
-        <p>By integrating multiple theoretical measures into a single composite index, this approach provides a more robust foundation for assessing occupational exposure, while recognizing that exposure alone is only one component of broader labor market risk.</p>
-      </section>
+          <p>
+            Each component is standardized across occupations and combined into a composite index. Higher values indicate greater resilience and lower vulnerability to displacement. The adaptive capacity measure functions as a moderating factor in the final risk calculation, reducing risk estimates for occupations with stronger transition opportunities.
+          </p>
+        </section>
 
-      <section class="subsection" id="adaptive-capacity">
-        <h3>Adaptive Capacity</h3>
-        <p>To complement measures of AI exposure, this analysis incorporates an occupation-level measure of adaptive capacity, following the framework developed by Manning and Aguirre. Adaptive capacity is defined as the ability of workers within an occupation to transition to alternative employment opportunities and mitigate welfare losses in response to technological disruption.</p>
-        <p>Adaptive capacity is modeled as a composite index capturing multiple dimensions of worker resilience. Let \(i\) index occupations. The adaptive capacity score for occupation \(i\), denoted \(AC_i\), is defined as a weighted combination of standardized components:</p>
+        <section id="synthetic-control">
+          <h2>Synthetic Control Method</h2>
+          <p>
+            Observed labor market displacement is estimated using Synthetic Control Methods (SCM) applied separately to employment and job posting outcomes. Lightcast Occupational Employment Statistic records were used to conduct analyses estimated from Quarterly Census of Employment and Wages records, allowing for time series analysis.
+          </p>
+          <p>
+            A complete-case approach was used. Occupations were excluded if employment observations were missing during the study period or if employment counts were suppressed in any year. Occupations within the top two theoretical AI exposure quintiles developed by the Yale Budget Lab were designated as treated occupations. Occupations in the lower three exposure quintiles were eligible to serve as control occupations.
+          </p>
+          <p>
+            The treatment year was defined as 2023, corresponding with the widespread adoption of large language models and generative AI technologies. Employment trajectories were indexed to 100 in 2016, allowing occupations to be compared relative to a common baseline.
+          </p>
+          <p>
+            For each treated occupation, a donor pool was constructed from lower-exposure occupations that either belonged to the same two-digit SOC major group or were identified as related occupations through O*NET. Synthetic controls were estimated using log-transformed employment and posting outcomes. Occupation-level covariates, including median annual earnings and employment growth rates, were standardized and incorporated into the optimization process to improve comparability between treated and synthetic occupations.
+          </p>
+          <p>
+            Weights were estimated using constrained nonlinear optimization subject to non-negativity and unit-sum constraints. To emphasize recent labor market dynamics, the final two pre-treatment years received triple weight during optimization. The objective function minimized a composite loss consisting of pre-treatment outcome fit, covariate balance, and regularization penalties.
+          </p>
+          <div class="callout">
+            The synthetic control represents the counterfactual trajectory that would have been expected in the absence of elevated AI exposure. Post-treatment effects are estimated as the difference between observed and synthetic outcomes. Negative values indicate underperformance relative to the counterfactual trajectory.
+          </div>
+          <p>
+            Model diagnostics included pre-treatment fit statistics, covariate balance assessments, placebo testing, and sensitivity analyses.
+          </p>
+        </section>
 
-        <div class="equation-block">
-          \[
-          AC_i = \sum_{m=1}^{M} \omega_m Z_{im}
-          \]
-        </div>
+        <section id="layoff-risk">
+          <h2>Layoff Risk Index</h2>
+          <p>
+            A Layoff Risk Index was developed using publicly available layoff announcements and workforce reduction notices collected across Arizona. These records were obtained through automated web scraping of company announcements, news articles, press releases, Worker Adjustment and Retraining Notification notices, and other publicly reported workforce reduction events.
+          </p>
+          <p>
+            Records were retained when they described actual or planned layoffs, facility closures, workforce reductions, restructuring events, or technology-related job eliminations affecting Arizona workers. Because most layoff announcements do not identify occupations directly, each event was further analyzed to estimate the occupations most likely affected.
+          </p>
+          <p>
+            Employer names, industry classifications, facility locations, and narrative descriptions contained within articles were linked to occupational staffing patterns derived from Lightcast employment data. Occupation-level exposure estimates were then assigned by distributing reported layoffs across six-digit SOC occupations according to the employer's industry-specific occupational composition.
+          </p>
+          <p>
+            Occupation-level layoff exposure estimates were aggregated across all observed events and standardized to create the Layoff Risk Index. Unlike the Synthetic Control Method, which measures realized divergence from expected employment or job posting trends, the Layoff Risk Index captures direct evidence of workforce reductions reported by employers. As a result, the index provides an additional signal of occupational vulnerability and may identify emerging displacement risks before they are fully reflected in employment or job posting data.
+          </p>
+        </section>
 
-        <p>where:</p>
-        <ul>
-          <li>\(Z_{im}\) represents the standardized (z-scored) value of component \(m\) for occupation \(i\),</li>
-          <li>\(\omega_m\) are weights applied to each component, and</li>
-          <li>\(M\) is the number of dimensions included in the index.</li>
-        </ul>
+        <section id="hybrid-risk">
+          <h2>Hybrid Risk Model</h2>
+          <p>
+            The final framework combines theoretical exposure, displacement signals, layoff risk, and adaptive capacity using a multiplicative-additive framework. Employment SCM effects and job posting SCM effects are first combined using inverse Root Mean Squared Prediction Error (RMSPE) weighting. Models with lower prediction error receive greater influence in the combined displacement estimate.
+          </p>
+          <p>
+            The combined displacement signal is then integrated with the Layoff Risk Index to produce a unified displacement measure. The methodology adopts a hybrid risk framework in which theoretical exposure serves as the baseline risk and displacement acts as an amplification mechanism. Occupations experiencing labor market deterioration are assigned higher risk only when exposure is also elevated.
+          </p>
 
-        <p>Following the NBER framework, the index incorporates four primary dimensions:</p>
-        <ul>
-          <li><strong>Financial Capacity:</strong> Proxied by measures of liquid or net wealth available to workers in the occupation, capturing the ability to withstand periods of unemployment or invest in retraining.</li>
-          <li><strong>Skill Transferability:</strong>Measures the extent to which an occupation’s skill set can be applied to other occupations. This is typically derived from task or skill similarity metrics (for example, O*NET-based similarity scores), reflecting the breadth of feasible occupational transitions.</li>
-          <li><strong>Local Labor Market Density:</strong>Captures the availability of alternative employment opportunities within local labor markets, often proxied by occupational employment concentration or job availability across regions.</li>
-          <li><strong>Demographic Factor:</strong>Incorporates age-related characteristics, recognizing that younger workers may have greater flexibility in retraining and occupational mobility relative to older workers.</li>
-        </ul>
+          <div class="formula-box" aria-label="Hybrid risk formula">
+            <code>Hybrid Risk = Exposure + λ × (Exposure × Displacement)</code>
+            <code>λ = 0.5</code>
+          </div>
 
-        <p>Each component is standardized:</p>
+          <p>
+            Adaptive capacity is subsequently applied as a resilience adjustment.
+          </p>
 
-        <div class="equation-block">
-          \[
-          Z_{im} = \frac{X_{im} - \mu_m}{\sigma_m}
-          \]
-        </div>
+          <div class="formula-box" aria-label="Final risk formula">
+            <code>Final Risk = Hybrid Risk × (1 − Adaptive Capacity)</code>
+          </div>
 
-        <p>where \(X_{im}\) is the raw value of component \(m\) for occupation \(i\), and \(\mu_m\), \(\sigma_m\) are the mean and standard deviation across occupations.</p>
-        <p>In the absence of explicit weighting guidance, equal weights are applied:</p>
+          <div class="method-flow">
+            <div class="step">
+              <span>1</span>
+              <strong>Baseline</strong>
+              Theoretical AI exposure establishes initial occupational risk.
+            </div>
+            <div class="step">
+              <span>2</span>
+              <strong>Displacement</strong>
+              Employment SCM, posting SCM, and layoff signals are combined.
+            </div>
+            <div class="step">
+              <span>3</span>
+              <strong>Amplification</strong>
+              Displacement increases risk when exposure is elevated.
+            </div>
+            <div class="step">
+              <span>4</span>
+              <strong>Resilience</strong>
+              Adaptive capacity reduces risk for occupations with stronger transition opportunities.
+            </div>
+          </div>
 
-        <div class="equation-block">
-          \[
-          \omega_m = \frac{1}{M}
-          \]
-        </div>
+          <p>
+            Occupations are separated into quintiles using the Final Risk to establish the AI Displacement Risk Score categories: Very High, High, Medium, Low, and Very Low. This structure ensures that all occupations receive a baseline risk estimate while allowing empirical labor market evidence and worker resilience to meaningfully influence final rankings.
+          </p>
+        </section>
 
-        <p>resulting in a normalized index where higher values indicate greater adaptive capacity.</p>
-      </section>
+        <section id="transition-pathways">
+          <h2>Occupational Transition Pathways</h2>
+          <p>
+            The Occupational Transition Pathways component translates risk estimates into actionable workforce strategies. For occupations classified as High or Very High Risk, related occupations are identified using O*NET related occupation relationships. Candidate occupations must exhibit lower AI risk levels than the source occupation and demonstrate sufficient occupational similarity.
+          </p>
+          <p>
+            Transition pathways are ranked using a combination of occupational similarity, reduction in AI displacement risk, wage preservation, and educational feasibility. Occupational similarity serves as the primary ranking factor because realistic transitions require substantial overlap in skills, work activities, and knowledge domains.
+          </p>
+          <p>
+            To support implementation, occupations are linked to education and training opportunities using CIP-SOC crosswalks and training provider datasets. This allows workers and workforce practitioners to identify relevant certificates, apprenticeships, associate degrees, and other educational programs aligned with lower-risk occupations.
+          </p>
 
-      <section class="subsection" id="labor-market-impact">
-        <h3>Labor Market Impact</h3>
-        <p>To estimate how AI is affecting occupations, we apply the Synthetic Control Method (SCM) to both employment and job posting data. This approach allows us to compare observed trends for high AI-exposed occupations to a data-driven counterfactual (ie what would have likely occurred in the absence of recent advances in AI).</p>
-        <p>Employment estimates were derived from Lightcast OES time series data, which integrates federal Occupational Employment and Wage Statistics (OEWS) with additional modeling to produce consistent, time-indexed occupation-level employment estimates. Job posting data are sourced from Lightcast’s Job Posting Analytics database, which aggregates postings from thousands of online sources and applies deduplication and occupational coding.</p>
-        <p>Occupations were first classified by AI exposure using our composite AI Risk measure. Occupations in the “High” and “Very High” categories are considered treated units, representing those most exposed to AI capabilities. A donor pool of lower-exposure occupations (Medium, Low, and Very Low) is then constructed to serve as potential comparison units.</p>
-        <p>To ensure comparability, donor occupations are restricted to those with similar pre-period trends in employment or postings and are drawn from the same major occupational groups.</p>
-        <p>For each high-exposure occupation, SCM creates a synthetic control, a weighted combination of lower-exposure occupations that closely matches the treated occupation’s pre-AI trend. These weights are optimized so that the synthetic control reproduces the treated occupation’s trajectory prior to the widespread adoption of modern AI systems.</p>
-        <p>The treatment period is defined as beginning following 2022, corresponding with the rapid diffusion of large language models such as ChatGPT. After constructing the synthetic control, we compared observed outcomes to the counterfactual:</p>
-        <ul>
-          <li><strong>Employment impact:</strong> Difference between actual and synthetic employment levels using Lightcast OES data</li>
-          <li><strong>Demand impact:</strong> Difference in job postings relative to the synthetic trend</li>
-        </ul>
+          <div class="question-grid">
+            <div class="mini-card">
+              <strong>1. Risk</strong>
+              Which occupations face elevated AI displacement risk?
+            </div>
+            <div class="mini-card">
+              <strong>2. Alternatives</strong>
+              Which lower-risk occupations represent realistic alternatives?
+            </div>
+            <div class="mini-card">
+              <strong>3. Training</strong>
+              What education or training pathways support the transition?
+            </div>
+          </div>
+        </section>
 
-        <p>These differences were interpreted as AI-associated deviations, capturing whether high-exposure occupations experienced relative declines, stability, or growth compared to similar, lower-exposure occupations.</p>
-        <p>We assess model quality using standard SCM diagnostics, including pre-period fit and placebo tests applied to donor occupations. Results are interpreted cautiously: SCM estimates reflect relative changes, not absolute causal effects, and should be understood as indicative of divergence from expected trends rather than definitive measures of displacement.</p>
+        <section id="limitations">
+          <h2>Limitations and Interpretation</h2>
+          <p>
+            The AI Displacement Risk Score should be interpreted as a relative measure of occupational vulnerability rather than a prediction of future job loss. The framework combines theoretical estimates, observed labor market signals, and worker resilience measures to identify occupations that may warrant additional monitoring, workforce investment, or reskilling support.
+          </p>
+          <p>
+            Because AI capabilities, labor markets, and occupational structures continue to evolve, estimates should be viewed as decision-support tools rather than deterministic forecasts. Future updates may incorporate additional AI exposure measures, labor market indicators, and occupational transition evidence as new data become available.
+          </p>
+        </section>
 
-        <div class="equation-block">
-          \[
-          \hat{Y}_{1t}^{N} = \sum_{j=2}^{J+1} w_j Y_{jt}
-          \]
-        </div>
-
-        <div class="equation-block">
-          \[
-          \hat{\alpha}_{1t} = Y_{1t} - \hat{Y}_{1t}^{N}
-          \]
-        </div>
-      </section>
-
-      <section class="subsection" id="integrating-exposures">
-        <h3>Integrating Exposures</h3>
-        <p>AI exposure, adaptive capacity and observed labor market changes were combined to assess occupational vulnerability to AI. Let:</p>
-        <ul>
-          <li>\(E_i\) denote AI exposure for occupation \(i\), derived from task-based measures (for example, share of tasks exposed),</li>
-          <li>\(L_i\) denote labor market change indicators (for example, percent change in employment or job postings), and</li>
-          <li>\(AC_i\) denote adaptive capacity.</li>
-        </ul>
-
-        <p>We define a composite <strong>AI vulnerability index</strong> as:</p>
-
-        <div class="equation-block">
-          \[
-          V_i = \alpha E_i - \beta AC_i
-          \]
-        </div>
-
-        <p>where higher \(E_i\) increases vulnerability and higher \(AC_i\) reduces vulnerability.</p>
-        <p>To incorporate observed labor market dynamics, the framework was extended as:</p>
-
-        <div class="equation-block">
-          \[
-          V_i^{*} = \alpha E_i + \gamma f(L_i) - \beta AC_i
-          \]
-        </div>
-
-        <p>where \(f(L_i)\) is a transformation of labor market trends. This allows the model to distinguish between occupations that are highly exposed but currently stable versus those already experiencing declines.</p>
-      </section>
-    </section>
-
-    <section class="method-section" id="defining-occupational-transitions">
-      <h2>Defining Occupational Transitions</h2>
-
-      <section class="subsection" id="identifying-related-occupations">
-        <h3>Identifying Related Occupations</h3>
-        <p>We use occupational similarity data from O*NET to identify relationships between occupations. Specifically, we rely on O*NET’s “Related Occupations” framework, which links occupations based on:</p>
-        <ul>
-          <li>Shared skills (for example, critical thinking, programming)</li>
-          <li>Common work activities (for example, data analysis, customer interaction)</li>
-          <li>Overlapping knowledge domains (for example, finance, healthcare)</li>
-        </ul>
-        <p>These relationships are precomputed by O*NET using a combination of task similarity and expert validation.</p>
-        <p>For each high AI-exposure occupation, we extract its set of related occupations and retain those that meet two criteria:</p>
-        <ul>
-          <li>Lower or moderate AI exposure classification</li>
-          <li>Sufficient similarity score, ensuring transitions are realistic in terms of skill transferability</li>
-        </ul>
-        <p>This filtering produces a set of viable transition occupations grounded in empirical similarity measures.</p>
-      </section>
-
-      <section class="subsection" id="ai-exposure-alignment">
-        <h3>AI Exposure Alignment</h3>
-        <p>Each occupation is assigned an AI exposure level based on a composite measure. To construct transition pathways:</p>
-        <ul>
-          <li>High-exposure occupations serve as the starting point</li>
-          <li>Related occupations with lower exposure levels are identified as target roles</li>
-          <li>Occupations with equal or higher exposure are excluded from transition recommendations</li>
-        </ul>
-        <p>This ensures that suggested pathways consistently move users toward roles that are less exposed to automation or augmentation risks.</p>
-      </section>
-
-      <section class="subsection" id="ranking-transition-pathways">
-        <h3>Ranking Transition Pathways</h3>
-        <p>Not all related occupations are equally viable. We rank potential transitions using a combination of:</p>
-        <ul>
-          <li>O*NET similarity scores (primary driver)</li>
-          <li>Exposure reduction magnitude (difference between source and target exposure)</li>
-          <li>Optional labor market indicators (for example, demand, wage levels)</li>
-        </ul>
-        <p>This prioritization ensures that recommended occupations balance feasibility with meaningful risk reduction.</p>
-      </section>
-
-      <section class="subsection" id="linking-education-and-training-pathways">
-        <h3>Linking Education and Training Pathways</h3>
-        <p>To translate occupational transitions into actionable steps, we connect target occupations to education and training programs using standardized classification systems:</p>
-        <ul>
-          <li>Occupations are mapped to instructional programs using a CIP-SOC crosswalk (Classification of Instructional Programs to Standard Occupational Classification)</li>
-          <li>Training programs are sourced from state and national education datasets (for example, community colleges, workforce training providers)</li>
-        </ul>
-        <p>For each target occupation, we identify:</p>
-        <ul>
-          <li>Relevant degree or certificate programs</li>
-          <li>Training providers aligned with occupational requirements</li>
-          <li>Program types (for example, short-term certificates, apprenticeships, associate degrees)</li>
-        </ul>
-      </section>
-
-      <section class="subsection" id="data-integration-pipeline">
-        <h3>Data Integration Pipeline</h3>
-        <p>The full pipeline integrates multiple data sources:</p>
-        <ul>
-          <li>Occupation-level AI exposure scores</li>
-          <li>O*NET related occupation mappings</li>
-          <li>CIP-SOC crosswalks</li>
-          <li>Training provider and program data</li>
-        </ul>
-        <p>These datasets are merged at the occupation level, allowing the system to generate transition pathways and associated training opportunities.</p>
-      </section>
-    </section>
-  </main>
-
+        <section id="references" class="references">
+          <h2>References</h2>
+          <ol>
+            <li>Abadie, A., Diamond, A., &amp; Hainmueller, J. (2010). <em>Synthetic Control Methods for Comparative Case Studies.</em></li>
+            <li>Eloundou, T., Manning, S., Mishkin, P., &amp; Rock, D. (2024). <em>GPTs are GPTs: An Early Look at the Labor Market Impact Potential of Large Language Models.</em></li>
+            <li>Eisfeldt, A., Schubert, G., &amp; Zhang, M. (2023). <em>Generative AI and Labor Market Exposure.</em></li>
+            <li>Felten, E., Raj, M., &amp; Seamans, R. (2021). <em>Occupational, Industry, and Geographic Exposure to Artificial Intelligence.</em></li>
+            <li>Gimbel, M., Kendall, J., &amp; Kulsakdinun, R. (2026, February 19). Labor market AI exposure: What do we know? The Budget Lab at Yale.</li>
+            <li>Lightcast. (2023, May 23). Lightcast OES time series data overview. Lightcast Knowledge Base.</li>
+            <li>Manning, S., &amp; Aguirre, T. (2025). <em>How Adaptable Are American Workers to AI-Induced Job Displacement?</em></li>
+            <li>National Center for O*NET Development. (2026). <em>O*NET® 30.3 database.</em> O*NET Resource Center. Retrieved May 30, 2026.</li>
+          </ol>
+        </section>
+      </main>
+    </div>
+  </div>
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
