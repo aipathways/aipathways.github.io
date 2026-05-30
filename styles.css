@@ -93,6 +93,52 @@ h1 {
   max-width: 760px;
   margin: 0;
 }
+/* ==========================================
+   BOXED BLUE PAGE HERO
+========================================== */
+
+.boxed-hero {
+  padding: 34px 0 28px;
+}
+
+.boxed-hero .wrap {
+  background: linear-gradient(135deg, var(--blue) 0%, #12324f 100%);
+  color: #ffffff;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 38px;
+}
+
+.boxed-hero .eyebrow {
+  color: #d8e8ff;
+}
+
+.boxed-hero h1 {
+  color: #ffffff;
+}
+
+.boxed-hero .subtitle {
+  color: #eef5ff;
+}
+
+/* Keeps filters readable on the Occupations page */
+.boxed-hero .chip,
+.boxed-hero .secondary-btn {
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.boxed-hero .chip.active {
+  background: #ffffff;
+  color: var(--blue);
+  border-color: #ffffff;
+}
+
+.boxed-hero .chip:hover,
+.boxed-hero .secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 .hero-link {
   display: inline-block;
   margin-top: 16px;
