@@ -358,13 +358,63 @@ h1 {
 .sankey-frame {
   display: block;
   width: 100%;
-  height: min(980px, 92vh);
-  min-height: 760px;
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  background: white;
-  box-shadow: var(--shadow);
+  height: 800px;
+  border: none;
+  overflow: hidden;
 }
+/* ==========================================
+   RANKED TRANSITION TABLE
+========================================== */
+
+.ranked-table-wrap {
+  width: 100%;
+  margin-top: 12px;
+  overflow-x: auto;
+}
+
+.ranked-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.9rem;
+}
+
+.ranked-table th,
+.ranked-table td {
+  padding: 10px 8px;
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.ranked-table th {
+  font-weight: 700;
+}
+
+.ranked-table td:nth-child(2) {
+  max-width: 190px;
+}
+
+.ranked-table td:nth-child(3) {
+  max-width: 120px;
+}
+
+.ranked-table td:nth-child(9) {
+  max-width: 140px;
+}
+
+.ranked-table .action-link,
+.ranked-table .full-page-link {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.ranked-table th:nth-child(10),
+.ranked-table td:nth-child(10) {
+  min-width: 100px;
+}
+
 .footer {
   padding: 0 0 32px;
   color: var(--muted);

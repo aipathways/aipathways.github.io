@@ -244,73 +244,97 @@ function renderRelatedOccupations(
   includeLinks = false,
   options = {}
 ) {
-  const { showToggle = false, expanded = false, showViewHere = true } = options;
+  const cleanSoc = value => String(value || "").trim();
+
+  const rows = (window.pathwaysData || [])
+  .filter(row => cleanSoc(row.source_soc) === cleanSoc(occupation.soc))
+  .sort((a, b) => Number(a.rank) - Number(b.rank));
 
   if (!["High", "Very High"].includes(occupation.exposure)) {
     return `
       <div class="subsection">
-        <h3>Related lower-exposure occupations</h3>
-        <p class="muted">Lower-exposure transition options are highlighted when a high-exposure occupation is selected.</p>
+        <h3>Ranked transition options</h3>
+        <p class="muted">Transition options are shown for High and Very High AI exposure occupations.</p>
       </div>
     `;
   }
 
-  const allRelated = (occupation.relatedOccupationIds || [])
-    .map(getOccupationById)
-    .filter(Boolean);
-
-  const toggleLimit = 3;
-  const shouldShowToggle = showToggle && allRelated.length > toggleLimit;
-
-  let related = allRelated;
-
-  if (shouldShowToggle && !expanded) {
-    related = allRelated.slice(0, toggleLimit);
-  } else if (typeof limit === "number") {
-    related = allRelated.slice(0, limit);
-  }
-
-  if (!related.length) {
+  if (!rows.length) {
     return `
       <div class="subsection">
-        <h3>Related lower-exposure occupations</h3>
-        <p class="muted">No related lower-exposure occupations are currently mapped for this role.</p>
+        <h3>Ranked transition options</h3>
+        <p class="muted">No ranked transition options are currently mapped for this role.</p>
       </div>
     `;
   }
 
+  const shownRows = typeof limit === "number" ? rows.slice(0, limit) : rows;
+  if (options.compact) {
   return `
     <div class="subsection">
-      <h3>Related lower-exposure occupations</h3>
+      <h3>Ranked transition options</h3>
       <div class="related-list">
-        ${related.map(item => `
+        ${shownRows.map(row => `
           <div class="mini-card">
             <div class="inline-row">
-              <span class="badge ${escapeHtml(cssExposureClass(item.exposure))}">${escapeHtml(item.exposure)} Exposure</span>
-              <span class="badge Blue">SOC ${escapeHtml(item.soc || "N/A")}</span>
+              <span class="badge ${escapeHtml(cssExposureClass(row.ai_exposure))}">${escapeHtml(row.ai_exposure)} Exposure</span>
+              <span class="badge Blue">SOC ${escapeHtml(row.soc || "N/A")}</span>
             </div>
-            <h4>${escapeHtml(item.title)}</h4>
-            <p class="muted">${escapeHtml(item.summary || "No summary available.")}</p>
-            <p><strong>Median wage:</strong> ${escapeHtml(item.laborMarket?.medianWage)} · <strong>Openings:</strong> ${escapeHtml(item.laborMarket?.annualOpenings)}</p>
+            <h4>${escapeHtml(row.occupation)}</h4>
+            <p><strong>Pathway:</strong> ${escapeHtml(row.pathway || "N/A")}</p>
+            <p><strong>Median wage:</strong> ${escapeHtml(row.median_wage || "N/A")} · <strong>Openings:</strong> ${escapeHtml(row.openings || "N/A")}</p>
+            <p><strong>Wage diff.:</strong> ${escapeHtml(row.wage_diff || "N/A")} · <strong>Growth:</strong> ${escapeHtml(row.growth || "N/A")}</p>
             <div class="button-row">
-              ${showViewHere ? `<button class="action-btn" type="button" data-related-id="${escapeHtml(item.id)}">View here</button>` : ""}
-              ${includeLinks ? `<a class="action-btn action-link" href="${fullOccupationLink(item.id)}">Open full page</a>` : ""}
+              <a class="action-btn action-link" href="${escapeHtml(row.link)}">Open full page</a>
             </div>
           </div>
         `).join("")}
       </div>
+    </div>
+  `;
+}
 
-      ${shouldShowToggle ? `
-        <div class="related-toggle-row">
-          <button
-            class="text-link related-toggle"
-            type="button"
-            data-related-toggle="${expanded ? "less" : "more"}"
-          >
-            ${expanded ? "Show less" : `Show more (${allRelated.length - toggleLimit} more)`}
-          </button>
-        </div>
-      ` : ""}
+  return `
+    <div class="subsection">
+      <h3>Ranked transition options</h3>
+      <div class="ranked-table-wrap">
+        <table class="ranked-table">
+          <thead>
+            <tr>
+              <th>Rank</th>
+              <th>Occupation</th>
+              <th>Pathway</th>
+              <th>AI Exposure</th>
+              <th>Median Wage</th>
+              <th>Wage Diff.</th>
+              <th>Openings</th>
+              <th>Growth</th>
+              <th>Destination</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${shownRows.map(row => `
+              <tr>
+                <td>${escapeHtml(row.rank)}</td>
+                <td><strong>${escapeHtml(row.occupation)}</strong><br><span class="muted">SOC ${escapeHtml(row.soc || "N/A")}</span></td>
+                <td>${escapeHtml(row.pathway || "N/A")}</td>
+                <td>
+                <span class="badge ${escapeHtml(cssExposureClass(row.ai_exposure))}">
+                 ${escapeHtml(row.ai_exposure)}
+                  </span>
+                  </td>
+                <td>${escapeHtml(row.median_wage || "N/A")}</td>
+                <td>${escapeHtml(row.wage_diff || "N/A")}</td>
+                <td>${escapeHtml(row.openings || "N/A")}</td>
+                <td>${escapeHtml(row.growth || "N/A")}</td>
+                <td>${escapeHtml(row.destination_education || "N/A")}</td>
+                <td><a class="action-link" href="${escapeHtml(row.link)}">Open full page</a></td>
+              </tr>
+            `).join("")}
+          </tbody>
+        </table>
+      </div>
     </div>
   `;
 }
@@ -344,30 +368,31 @@ function renderRelatedOccupations(
   }
 
   function renderTraining(occupation) {
-    if (!occupation.training || !occupation.training.length) {
-      return `
-        <div class="subsection">
-          <h3>Arizona training opportunities</h3>
-          <p class="muted">No Arizona training programs are currently attached to this occupation in the dataset.</p>
-        </div>
-      `;
+
+    if (
+        occupation.exposure === "Very High" ||
+        occupation.exposure === "High"
+    ) {
+        return `
+            <div class="subsection">
+                <h3>Arizona training opportunities</h3>
+
+                <p class="muted">
+                    Training programs are available for lower-exposure destination occupations. Select a transition option below to explore related Arizona education and training pathways.
+                </p>
+            </div>
+        `;
     }
 
     return `
-      <div class="subsection">
-        <h3>Arizona training opportunities</h3>
-        <div class="training-list">
-          ${occupation.training.map(t => `
-            <div class="mini-card">
-              <h4>${escapeHtml(t.program || "Untitled program")}</h4>
-              <p><strong>Provider:</strong> ${escapeHtml(t.provider || "N/A")}</p>
-              <p><strong>Award:</strong> ${escapeHtml(t.award || "N/A")}</p>
-              <p><strong>CIP:</strong> ${escapeHtml(t.cip || "N/A")}</p>
-              <p><strong>Location:</strong> ${escapeHtml(t.location || "N/A")}</p>
-            </div>
-          `).join("")}
+        <div class="subsection">
+            <h3>Arizona training opportunities</h3>
+
+            <a class="action-btn action-link"
+               href="transitions.html?soc=${encodeURIComponent(occupation.soc)}">
+               View related training programs
+            </a>
         </div>
-      </div>
     `;
   }
 
@@ -426,7 +451,7 @@ function renderRelatedOccupations(
       <div class="subsection">
         <a class="full-page-link" href="${fullOccupationLink(occupation.id)}">Open full occupation page</a>
       </div>
-      ${renderRelatedOccupations(occupation, 2, true)}
+      ${renderRelatedOccupations(occupation, 2, true, { compact: true })}
     `;
 
     detailPanel.querySelectorAll("[data-related-id]").forEach(btn => {
@@ -581,3 +606,15 @@ function renderOccupationPage() {
     renderOccupationPage();
   }
 }
+
+Promise.all([
+  fetch("data.json").then(response => response.json()),
+  fetch("pathways.json").then(response => response.json())
+])
+  .then(([data, pathways]) => {
+    window.pathwaysData = pathways;
+    initApp(data);
+  })
+  .catch(error => {
+    console.error("Error loading website data:", error);
+  });
