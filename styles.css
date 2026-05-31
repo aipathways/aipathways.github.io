@@ -87,7 +87,7 @@ a:hover {
 
 .agency-brand img {
   display: block;
-  width: min(320px, 52vw);
+  width: min(160px, 26vw);
   height: auto;
 }
 
@@ -1048,6 +1048,6 @@ h1 {
   }
 
   .agency-brand img {
-    width: min(280px, 86vw);
+    width: min(140, 43vw);
   }
 }
