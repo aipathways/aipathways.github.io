@@ -403,9 +403,15 @@ h1 {
   color: var(--muted);
 }
 
-.detail-panel {
+.main-grid > aside {
   position: sticky;
-  top: 82px;
+  top: 104px; /* adjust if your header height changes */
+  align-self: start;
+  max-height: calc(100vh - 124px);
+  overflow-y: auto;
+}
+
+.detail-panel {
   padding: 22px;
 }
 
@@ -959,6 +965,12 @@ h1 {
 
   .main-grid {
     display: grid;
+  }
+
+  .main-grid > aside {
+    position: static;
+    max-height: none;
+    overflow: visible;
   }
 
   .detail-panel {
