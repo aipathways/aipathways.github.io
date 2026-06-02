@@ -101,6 +101,22 @@ function initApp(rawData) {
       .replace(/'/g, "&#39;");
   }
 
+  function displayValue(value) {
+  const v = String(value ?? "").trim();
+
+  if (
+    !v ||
+    v.toLowerCase() === "nan" ||
+    v.toLowerCase() === "$nan" ||
+    v === "0" ||
+    v === "$0"
+  ) {
+    return "Unknown";
+  }
+
+  return v;
+  }
+
   function fullOccupationLink(id) {
     return `occupation.html?id=${encodeURIComponent(id)}`;
   }
@@ -142,31 +158,46 @@ function initApp(rawData) {
   function getFilteredOccupations() {
     const query = getSearchValue();
 
-    return occupations.filter(o => {
-      const matchesSearch =
-        !query ||
-        String(o.title || "").toLowerCase().includes(query) ||
-        String(o.soc || "").toLowerCase().includes(query) ||
-        String(o.summary || "").toLowerCase().includes(query);
+    return occupations
+      .filter(o => {
+        const matchesExposure =
+          activeFilter === "ALL" ||
+          o.exposure === activeFilter;
 
-      const matchesExposure = activeFilter === "ALL" || o.exposure === activeFilter;
-      return matchesSearch && matchesExposure;
+        const searchableText = [
+          o.title,
+          o.soc,
+          o.summary,
+          o.exposure,
+          o.laborMarket?.typicalEducation
+        ].join(" ").toLowerCase();
+
+        const matchesSearch =
+          !query || searchableText.includes(query);
+
+        return matchesSearch && matchesExposure;
+      })
+      .sort((a, b) => {
+        if (!query) return a.title.localeCompare(b.title);
+
+      const score = o => {
+        const title = String(o.title || "").toLowerCase();
+        const soc = String(o.soc || "").toLowerCase();
+        const summary = String(o.summary || "").toLowerCase();
+
+        if (title.startsWith(query)) return 1;
+        if (title.includes(query)) return 2;
+        if (soc.includes(query)) return 3;
+        if (summary.includes(query)) return 4;
+        return 5;
+      };
+
+      const diff = score(a) - score(b);
+      if (diff !== 0) return diff;
+
+      return a.title.localeCompare(b.title);
     });
-  }
-
-  function emptyDetailPanel() {
-    if (!detailPanel) return;
-
-    detailPanel.classList.add("empty-state");
-    detailPanel.innerHTML = `
-      <h3>Select an occupation</h3>
-      <p>
-        Click an occupation card to view AI exposure, labor market data, and up to two
-        related lower-exposure occupations. Use the full occupation page for all details,
-        including Arizona training opportunities.
-      </p>
-    `;
-  }
+}
 
   function renderOccupationCards() {
     if (!occupationList) return;
@@ -181,10 +212,6 @@ function initApp(rawData) {
         filtered.length > visible.length
           ? `Showing ${visible.length} of ${cappedTotal} occupations`
           : `${visible.length} occupation${visible.length === 1 ? "" : "s"}`;
-
-      if (filtered.length > MAX_VISIBLE_OCCUPATIONS) {
-        resultCount.textContent += `, capped at ${MAX_VISIBLE_OCCUPATIONS}`;
-      }
     }
 
     if (showMoreOccupationsBtn) {
@@ -225,8 +252,8 @@ function initApp(rawData) {
         </div>
         <h3>${escapeHtml(o.title)}</h3>
         <p>${escapeHtml(o.summary || "No summary available.")}</p>
-        <p class="muted"><strong>Median wage:</strong> ${escapeHtml(o.laborMarket?.medianWage)}</p>
-        <p class="muted"><strong>Employment:</strong> ${escapeHtml(o.laborMarket?.employment)}</p>
+        <p class="muted"><strong>Median wage:</strong> ${escapeHtml(displayValue(o.laborMarket?.medianWage))}</p>
+        <p class="muted"><strong>Employment:</strong> ${escapeHtml(displayValue(o.laborMarket?.employment))}</p>
       </article>
     `).join("");
 
@@ -282,8 +309,8 @@ function renderRelatedOccupations(
             </div>
             <h4>${escapeHtml(row.occupation)}</h4>
             <p><strong>Pathway:</strong> ${escapeHtml(row.pathway || "N/A")}</p>
-            <p><strong>Median wage:</strong> ${escapeHtml(row.median_wage || "N/A")} · <strong>Openings:</strong> ${escapeHtml(row.openings || "N/A")}</p>
-            <p><strong>Wage diff.:</strong> ${escapeHtml(row.wage_diff || "N/A")} · <strong>Growth:</strong> ${escapeHtml(row.growth || "N/A")}</p>
+            <p><strong>Median wage:</strong> ${escapeHtml(displayValue(row.median_wage))} · <strong>Openings:</strong> ${escapeHtml(displayValue(row.openings))}</p>
+            <p><strong>Wage diff.:</strong> ${escapeHtml(displayValue(row.wage_diff))} · <strong>Growth:</strong> ${escapeHtml(displayValue(row.growth))}</p>
             <div class="button-row">
               <a class="action-btn action-link" href="${escapeHtml(row.link)}">Open full page</a>
             </div>
@@ -321,14 +348,14 @@ function renderRelatedOccupations(
                 <td>${escapeHtml(row.pathway || "N/A")}</td>
                 <td>
                 <span class="badge ${escapeHtml(cssExposureClass(row.ai_exposure))}">
-                 ${escapeHtml(row.ai_exposure)}
-                  </span>
-                  </td>
-                <td>${escapeHtml(row.median_wage || "N/A")}</td>
-                <td>${escapeHtml(row.wage_diff || "N/A")}</td>
-                <td>${escapeHtml(row.openings || "N/A")}</td>
-                <td>${escapeHtml(row.growth || "N/A")}</td>
-                <td>${escapeHtml(row.destination_education || "N/A")}</td>
+                  ${escapeHtml(row.ai_exposure)}
+                </span>
+                </td>
+                <td>${escapeHtml(displayValue(row.median_wage))}</td>
+                <td>${escapeHtml(displayValue(row.wage_diff))}</td>
+                <td>${escapeHtml(displayValue(row.openings))}</td>
+                <td>${escapeHtml(displayValue(row.growth))}</td>
+                <td>${escapeHtml(displayValue(row.destination_education))}</td>
                 <td><a class="action-link" href="${escapeHtml(row.link)}">Open full page</a></td>
               </tr>
             `).join("")}
@@ -339,33 +366,41 @@ function renderRelatedOccupations(
   `;
 }
 
-  function renderSankeySection(occupation) {
-    const soc = String(occupation?.soc || "").trim();
+function renderSankeySection(occupation) {
+  const soc = String(occupation?.soc || "").trim();
 
-    if (!soc || !SANKEY_SOURCE_EXPOSURES.has(occupation.exposure)) {
-      return "";
-    }
+  const hasTransitions = (window.pathwaysData || []).some(
+    row => String(row.source_soc || "").trim() === soc
+  );
 
-    const sankeyUrl = `${SANKEY_PAGE_PATH}?id=${encodeURIComponent(occupation.id)}`;
-    const title = `AI transition pathway Sankey diagram for ${occupation.title} (${soc})`;
-
-    return `
-      <div class="subsection sankey-section">
-        <div class="sankey-section-head">
-          <h3>Transition pathway diagram</h3>
-          <p class="sankey-note muted">
-            Compare direct and intermediary pathways from this high-exposure occupation to related lower-exposure roles.
-          </p>
-        </div>
-        <iframe
-          class="sankey-frame"
-          src="${escapeHtml(sankeyUrl)}"
-          title="${escapeHtml(title)}"
-          loading="lazy"
-        ></iframe>
-      </div>
-    `;
+  if (
+    !soc ||
+    !SANKEY_SOURCE_EXPOSURES.has(occupation.exposure) ||
+    !hasTransitions
+  ) {
+    return "";
   }
+
+  const sankeyUrl = `${SANKEY_PAGE_PATH}?id=${encodeURIComponent(occupation.id)}`;
+  const title = `AI transition pathway Sankey diagram for ${occupation.title} (${soc})`;
+
+  return `
+    <div class="subsection sankey-section">
+      <div class="sankey-section-head">
+        <h3>Transition pathway diagram</h3>
+        <p class="sankey-note muted">
+          Compare direct and intermediary pathways from this high-exposure occupation to related lower-exposure roles.
+        </p>
+      </div>
+      <iframe
+        class="sankey-frame"
+        src="${escapeHtml(sankeyUrl)}"
+        title="${escapeHtml(title)}"
+        loading="lazy"
+      ></iframe>
+    </div>
+  `;
+}
 
   function renderTraining(occupation) {
 
@@ -408,23 +443,23 @@ function renderRelatedOccupations(
       <div class="metrics">
         <div class="metric">
           <div class="metric-label">Median wage</div>
-          <div class="metric-value">${escapeHtml(o.laborMarket?.medianWage)}</div>
+          <div class="metric-value">${escapeHtml(displayValue(o.laborMarket?.medianWage))}</div>
         </div>
         <div class="metric">
           <div class="metric-label">Annual openings</div>
-          <div class="metric-value">${escapeHtml(o.laborMarket?.annualOpenings)}</div>
+          <div class="metric-value">${escapeHtml(displayValue(o.laborMarket?.annualOpenings))}</div>
         </div>
         <div class="metric">
           <div class="metric-label">Employment</div>
-          <div class="metric-value">${escapeHtml(o.laborMarket?.employment)}</div>
+          <div class="metric-value">${escapeHtml(displayValue(o.laborMarket?.employment))}</div>
         </div>
         <div class="metric">
           <div class="metric-label">Projected growth</div>
-          <div class="metric-value">${escapeHtml(o.laborMarket?.projectedGrowth)}</div>
+          <div class="metric-value">${escapeHtml(displayValue(o.laborMarket?.projectedGrowth))}</div>
         </div>
         <div class="metric">
           <div class="metric-label">Typical education</div>
-          <div class="metric-value">${escapeHtml(o.laborMarket?.typicalEducation)}</div>
+          <div class="metric-value">${escapeHtml(displayValue(o.laborMarket?.typicalEducation))}</div>
         </div>
         <div class="metric">
           <div class="metric-label">Use case</div>
@@ -608,13 +643,21 @@ function renderOccupationPage() {
 }
 
 Promise.all([
-  fetch("data.json").then(response => response.json()),
-  fetch("pathways.json").then(response => response.json())
+  fetch("data.json").then(response => {
+    console.log("data.json status:", response.status);
+    return response.json();
+  }),
+  fetch("pathways.json").then(response => {
+    console.log("pathways.json status:", response.status);
+    return response.json();
+  })
 ])
   .then(([data, pathways]) => {
+    console.log("data loaded:", data.length);
+    console.log("pathways loaded:", pathways.length);
     window.pathwaysData = pathways;
     initApp(data);
   })
   .catch(error => {
-    console.error("Error loading website data:", error);
+    console.error("Exact load error:", error);
   });
