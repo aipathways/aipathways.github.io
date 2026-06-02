@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://static.az.gov/sliver/sliver.js" type="text/javascript"></script>
-
 </head>
+
 <body>
   <header class="site-header">
     <div class="wrap site-header-inner">
@@ -22,10 +22,10 @@
 
       <div class="site-header-actions">
         <nav class="nav-links" aria-label="Primary navigation">
-          <a class="nav-link active" href="index.html">Occupations</a>
+          <a class="nav-link" href="index.html">Occupations</a>
           <a class="nav-link" href="transitions.html">Training</a>
           <a class="nav-link" href="methodology.html">Methodology</a>
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link active" href="about.html">About</a>
         </nav>
 
         <form class="nav-search" id="globalSearchForm">
@@ -43,40 +43,297 @@
   <header class="hero compact-hero boxed-hero">
     <div class="wrap">
       <p class="eyebrow">About</p>
-      <h1>AI Displacement Risk &amp; Transition Pathways</h1>
-      <p class="subtitle">Why we measure the impact of AI on work.</p>
+      <h1>Arizona AI Workforce Pathways</h1>
+      <p class="subtitle">
+        This website helps Arizona understand how artificial intelligence may affect occupations,
+        workers, and career pathways across the state.
+      </p>
     </div>
   </header>
 
-  <main class="wrap page-wrap">
-    <div class="detail-panel static-page">
-      <h2>Why Arizona is Measuring the Impact of AI</h2>
-      <p>
-        Arizona is actively measuring the impact of artificial intelligence (AI) on the labor market to fulfill its statutory role as the state’s designated labor market information and workforce evaluation authority. The state is responsible for producing rigorous, data-driven insights that inform workforce policy, guide public investment, and ensure accountability across workforce programs. 
-      </p>
-      <p>
-        A central motivation for this work is stewardship of taxpayer-funded workforce investments. Millions of dollars are allocated annually to workforce development initiatives, including Registered Apprenticeship Program, WIOA Title I programs, and other federally supported training efforts. Evaluating how AI is reshaping occupations is critical to ensuring these investments are aligned with current and emerging labor market demand. Without this analysis, there is a risk that training programs may prepare individuals for roles undergoing rapid transformation or decline. 
-      </p>
-      <p>
-        Arizona is also advancing several major state-led workforce initiatives that depend on timely, high-quality labor market intelligence. Programs such as Talent Ready AZ, the Rural Health Talent Pipeline, and emerging efforts tied to Workforce Pell expansion aim to strengthen education-to-employment pathways. Understanding AI exposure across occupations allows the state to better align these initiatives with future skill needs, identify resilient career pathways, and prioritize investments in high-opportunity sectors. 
-      </p>
-      <p>
-        More broadly, this work supports statewide workforce alignment by connecting education systems, training providers, and industry needs through a shared evidence base. By integrating labor market data, occupational task analysis, and AI exposure metrics, Arizona can move toward a more coordinated workforce system. 
-      </p>
+  <main class="wrap methodology-page">
+    <div class="methodology-layout">
+      <aside class="methodology-toc" aria-label="About page table of contents">
+        <h2>Contents</h2>
+        <a href="#about-this-tool">About This Tool</a>
+        <a href="#why-this-matters">Why This Matters</a>
+        <a href="#how-our-approach-is-different">How Our Approach Is Different</a>
+        <a href="#who-is-vulnerable">Who Is Vulnerable to Job Displacement</a>
+        <a href="#what-users-can-explore">What Users Can Explore</a>
+        <a href="#how-to-interpret">How to Interpret the Results</a>
+        <a href="#references">References</a>
+      </aside>
 
-      <h2> Supporting Education and Industry Partners  </h2>
-      <p> 
-        The insights generated through this analysis are not intended to be static reports, they are designed to directly inform decision-making among education providers, workforce boards, and industry leaders across Arizona.
-      </p>
-      <p> 
-        For education partners, including community colleges, universities, and training providers, OEO uses these data to provide targeted consultation on program design, curriculum alignment, and credential strategy. By identifying occupations with high AI exposure and mapping them to related lower-exposure roles, we help institutions understand where programs may need to evolve. This includes guidance on incorporating emerging skills, adjusting program capacity, and strengthening pathways that lead to durable employment outcomes. These efforts are often supported through the state’s Integrated Data System (IDS), which enables longitudinal tracking of participant outcomes, including employment and wage progression.
-      </p>
-      <p> 
-        For industry partners, these data support strategic workforce planning in a rapidly changing environment. Employers can use AI exposure insights alongside labor market trends to better understand how job roles are evolving, where skill gaps may emerge, and how to invest in upskilling or reskilling their workforce. This is particularly important for sectors experiencing both technological disruption and labor shortages, where proactive planning can mitigate risk and improve competitiveness.
-      </p>
-      <p> 
-        Across both groups, our team serves as a convener and translator of complex data into actionable insights. By combining AI exposure measures, employment trends, job posting dynamics, and training program linkages, we provide a comprehensive view of workforce transformation, helping Arizona’s education and industry partners make informed, forward-looking decisions.
-      </p>
+      <div class="methodology-content">
+        <section id="about-this-tool">
+          <h2>About This Tool</h2>
+          <p>
+            This tool helps Arizona better understand how artificial intelligence may affect
+            occupations, workers, and career pathways across the state. It brings together
+            occupational task information, labor market data, AI exposure research, employment
+            trends, and pathway analysis to identify where AI-related disruption may be more likely
+            and where lower-risk transition opportunities may exist.
+          </p>
+
+          <p>
+            The core measure used on this site is an <strong>AI Displacement Index</strong>.
+            Unlike a theoretical exposure score alone, this index is designed to go beyond asking
+            whether an occupation's tasks <em>could</em> be affected by AI. It also incorporates
+            labor market signals that help assess whether exposed occupations are showing signs of
+            actual employment vulnerability, displacement pressure, or transition risk.
+          </p>
+
+          <div class="principles">
+            <div class="mini-card">
+              <strong>Exposure</strong>
+              Identifies occupations where tasks may be affected by AI technologies.
+            </div>
+            <div class="mini-card">
+              <strong>Displacement</strong>
+              Incorporates labor market signals that may indicate employment vulnerability.
+            </div>
+            <div class="mini-card">
+              <strong>Pathways</strong>
+              Highlights lower-risk occupations with related skills, wages, or training options.
+            </div>
+          </div>
+
+          <p>
+            The purpose of this website is not to predict that specific jobs will disappear. Rather,
+            it provides a data-informed planning tool to help workers, workforce partners,
+            educators, employers, and policymakers understand where AI may change job duties, skill
+            requirements, hiring demand, or career mobility.
+          </p>
+        </section>
+
+        <section id="why-this-matters">
+          <h2>Why This Matters</h2>
+          <p>
+            Artificial intelligence is expected to reshape many jobs, but the effects will not be
+            evenly distributed across occupations, regions, or groups of workers. National research
+            consistently finds that AI exposure does not necessarily mean job loss. Instead,
+            exposure identifies places in the labor market where AI may change how work is
+            performed, which tasks are valued, and what skills workers need to remain competitive.
+          </p>
+
+          <p>
+            The Yale Budget Lab notes that occupational AI exposure is not the same as predicting
+            which jobs will be automated out of existence; it identifies where AI could have an
+            impact. This distinction matters for Arizona's workforce system because some
+            occupations may experience task automation or declining demand, while others may see
+            productivity gains, new skill requirements, or growth in related roles.
+          </p>
+
+          <div class="callout">
+            For workers, the key policy question is not simply, "Will AI replace my job?" A better
+            question is: <strong>Which workers are most exposed, which workers have fewer options
+            if disruption occurs, and what training or transition pathways can help them move into
+            more resilient opportunities?</strong>
+          </div>
+
+          <p>
+            The International Labour Organization similarly finds that generative AI is more likely
+            to augment jobs than eliminate entire occupations, because many jobs include only some
+            tasks that are susceptible to automation.
+          </p>
+        </section>
+
+        <section id="how-our-approach-is-different">
+          <h2>How Our Approach Is Different</h2>
+          <p>
+            Many AI risk tools focus primarily on <strong>theoretical exposure</strong>. These
+            approaches typically estimate whether the tasks within an occupation can be performed,
+            assisted, or transformed by AI. That is useful, but it does not always tell us whether
+            workers in those occupations are actually facing displacement risk in the labor market.
+          </p>
+
+          <p>
+            The <strong>AI Displacement Index</strong> used on this website is different because it
+            combines theoretical exposure with labor market evidence. Instead of relying only on
+            whether AI <em>could</em> affect an occupation, the index also considers whether an
+            occupation appears vulnerable based on employment patterns, displacement-related
+            indicators, and Arizona-specific labor market context.
+          </p>
+
+          <div class="question-grid">
+            <div class="mini-card">
+              <strong>AI Exposure</strong>
+              Asks whether the tasks in an occupation may be affected by AI.
+            </div>
+            <div class="mini-card">
+              <strong>AI Impact</strong>
+              Asks whether AI may change the way the occupation is performed.
+            </div>
+            <div class="mini-card">
+              <strong>AI Displacement Risk</strong>
+              Asks whether workers may face reduced demand, weaker mobility, or greater difficulty
+              transitioning if disruption occurs.
+            </div>
+          </div>
+
+          <p>
+            This distinction is important because some highly exposed occupations may remain stable
+            or even grow if AI increases productivity or demand. Other occupations may have only
+            moderate theoretical exposure but still show signs of labor market vulnerability due to
+            weak growth, limited transferability, low wages, or poor transition options.
+          </p>
+
+          <p>
+            The index should therefore be understood as a <strong>workforce planning measure</strong>,
+            not a prediction of automation. It is intended to help identify where Arizona may need
+            targeted reskilling, upskilling, career navigation, employer engagement, or training
+            investment.
+          </p>
+        </section>
+
+        <section id="who-is-vulnerable">
+          <h2>Who Is Vulnerable to Job Displacement</h2>
+          <p>
+            Workers are most vulnerable to AI-related displacement when several risks overlap. High
+            AI exposure alone does not necessarily mean a worker is at high risk. Vulnerability
+            increases when an occupation is exposed to AI and also has weak labor market demand,
+            limited related career pathways, lower wage mobility, or skill requirements that do not
+            transfer easily into growing occupations.
+          </p>
+
+          <p>
+            National research suggests that AI exposure is concentrated differently than earlier
+            waves of automation. Earlier automation risk often focused on lower-wage or
+            less-educated workers in routine manual or production roles. Generative AI exposure is
+            more concentrated in office, clerical, administrative, analytical, and professional
+            tasks.
+          </p>
+
+          <p>
+            Pew Research Center found that about one-fifth of U.S. workers are in jobs with high
+            exposure to AI, with women, Asian workers, college-educated workers, and higher-paid
+            workers more represented in highly exposed occupations. However, exposure and
+            vulnerability are not the same.
+          </p>
+
+          <p>
+            Some highly exposed workers may have strong adaptive capacity because they have
+            transferable skills, higher earnings, more education, or access to growing related
+            occupations. Brookings notes that existing AI exposure measures can overlook workers'
+            adaptive capacity, including their ability to navigate displacement and move into new
+            work.
+          </p>
+
+          <p>
+            For this reason, this website pays special attention to workers who may face multiple
+            barriers at once, including those in occupations with high AI displacement risk, limited
+            transition options, lower wages, lower educational access, or weaker projected demand.
+            These workers may benefit most from proactive workforce services, training alignment,
+            career counseling, and employer partnerships.
+          </p>
+        </section>
+
+        <section id="what-users-can-explore">
+          <h2>What Users Can Explore</h2>
+          <p>
+            Users can use this website to explore how AI displacement risk varies across occupations
+            in Arizona. The site allows users to compare occupations by risk level, employment size,
+            wage, projected growth, annual openings, and typical education requirements.
+          </p>
+
+          <p>
+            Users can also explore related occupations that may offer lower AI displacement risk or
+            stronger transition opportunities. These pathways are designed to help workers and
+            workforce partners identify occupations that may share similar skills, offer comparable
+            wages, require attainable education or training, or provide stronger long-term labor
+            market prospects.
+          </p>
+
+          <div class="method-flow">
+            <div class="step">
+              <span>1</span>
+              <strong>Compare Risk</strong>
+              Explore occupations with higher or lower AI displacement risk.
+            </div>
+            <div class="step">
+              <span>2</span>
+              <strong>Review Labor Market Data</strong>
+              Compare employment, wages, openings, and projected growth.
+            </div>
+            <div class="step">
+              <span>3</span>
+              <strong>Identify Pathways</strong>
+              Find related lower-risk occupations and training options.
+            </div>
+            <div class="step">
+              <span>4</span>
+              <strong>Support Decisions</strong>
+              Use results to guide career navigation, planning, and investment.
+            </div>
+          </div>
+
+          <p>
+            The goal is to support practical decision-making. A worker may use the tool to identify
+            possible next-step occupations. A workforce board may use it to prioritize training
+            investments. A policymaker may use it to understand which occupations or worker groups
+            may need additional support as AI adoption increases.
+          </p>
+        </section>
+
+        <section id="how-to-interpret">
+          <h2>How to Interpret the Results</h2>
+          <p>
+            The results should be interpreted as a planning resource, not a definitive forecast. A
+            high AI Displacement Index score does not mean that an occupation will disappear. It
+            means that the occupation has characteristics that may make it more vulnerable to
+            AI-related disruption, especially when theoretical exposure overlaps with labor market
+            weakness or limited transition options.
+          </p>
+
+          <p>
+            Similarly, a low score does not mean that an occupation will be unaffected by AI. AI may
+            still change job duties, required skills, tools, workflows, or productivity expectations
+            in lower-risk occupations. The index is intended to identify relative risk across
+            occupations, not to provide certainty about any individual job.
+          </p>
+
+          <p>
+            Users should also interpret transition pathways carefully. A related occupation may be a
+            strong comparison because it has similar skills, lower AI displacement risk, better
+            projected demand, or comparable wages. However, individual career decisions should also
+            consider location, prior experience, credentials, licensing requirements,
+            transportation, childcare, training availability, and personal interests.
+          </p>
+
+          <div class="callout">
+            The best use of this website is to support informed conversations. Workers, career
+            counselors, training providers, employers, and policymakers can use the results to ask
+            better questions about where AI-related changes may occur, what skills may become more
+            important, and which pathways may offer greater resilience.
+          </div>
+        </section>
+
+        <section id="references" class="references">
+          <h2>References</h2>
+          <ol>
+            <li>
+              Gimbel, M., Kendall, J., &amp; Kulsakdinun, R. (2026, February 19).
+              <em>Labor market AI exposure: What do we know?</em> The Budget Lab at Yale.
+              <a href="https://budgetlab.yale.edu/research/labor-market-ai-exposure-what-do-we-know" target="_blank" rel="noopener noreferrer">Link</a>.
+            </li>
+            <li>
+              International Labour Organization. (2023).
+              <em>Generative AI likely to augment rather than destroy jobs.</em>
+              <a href="https://www.ilo.org/resource/news/generative-ai-likely-augment-rather-destroy-jobs" target="_blank" rel="noopener noreferrer">Link</a>.
+            </li>
+            <li>
+              Pew Research Center. (2023).
+              <em>Which U.S. workers are more exposed to AI on their jobs?</em>
+              <a href="https://www.pewresearch.org/social-trends/2023/07/26/which-u-s-workers-are-more-exposed-to-ai-on-their-jobs/" target="_blank" rel="noopener noreferrer">Link</a>.
+            </li>
+            <li>
+              Brookings Institution. (2025).
+              <em>Measuring U.S. workers' capacity to adapt to AI-driven job displacement.</em>
+              <a href="https://www.brookings.edu/articles/measuring-us-workers-capacity-to-adapt-to-ai-driven-job-displacement/" target="_blank" rel="noopener noreferrer">Link</a>.
+            </li>
+          </ol>
+        </section>
+      </div>
     </div>
   </main>
 
@@ -127,7 +384,7 @@
       </div>
     </div>
   </footer>
-  
+
   <script src="data.js"></script>
   <script src="app.js"></script>
 </body>
