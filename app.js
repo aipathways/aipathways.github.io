@@ -643,21 +643,44 @@ function renderOccupationPage() {
 }
 
 Promise.all([
-  fetch("data.json").then(response => {
-    console.log("data.json status:", response.status);
+  fetch("data.json", { cache: "no-store" }).then(response => {
+    if (!response.ok) {
+      throw new Error(`Failed to load data.json: ${response.status} ${response.statusText}`);
+    }
     return response.json();
   }),
-  fetch("pathways.json").then(response => {
-    console.log("pathways.json status:", response.status);
+
+  fetch("pathways.json", { cache: "no-store" }).then(response => {
+    if (!response.ok) {
+      throw new Error(`Failed to load pathways.json: ${response.status} ${response.statusText}`);
+    }
     return response.json();
   })
 ])
   .then(([data, pathways]) => {
-    console.log("data loaded:", data.length);
-    console.log("pathways loaded:", pathways.length);
     window.pathwaysData = pathways;
     initApp(data);
   })
   .catch(error => {
-    console.error("Exact load error:", error);
+    console.error("Data load error:", error);
+
+    const occupationList = document.getElementById("occupationList");
+    const detailPanel = document.getElementById("detailPanel");
+
+    if (occupationList) {
+      occupationList.innerHTML = `
+        <div class="card static-card">
+          <h3>Data failed to load</h3>
+          <p class="muted">Check that <code>data.json</code> and <code>pathways.json</code> exist and contain valid JSON.</p>
+        </div>
+      `;
+    }
+
+    if (detailPanel) {
+      detailPanel.classList.add("empty-state");
+      detailPanel.innerHTML = `
+        <h3>Unable to load occupations</h3>
+        <p>Please verify the JSON files are present and valid.</p>
+      `;
+    }
   });
