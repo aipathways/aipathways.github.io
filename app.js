@@ -16,7 +16,6 @@ function initApp(rawData) {
   let visibleOccupationLimit = 20;
 
   const OCCUPATION_INCREMENT = 20;
-  const MAX_VISIBLE_OCCUPATIONS = 100;
   const SANKEY_PAGE_PATH = "assets/sankey.html";
   const SANKEY_SOURCE_EXPOSURES = new Set(["High", "Very High"]);
 
@@ -220,30 +219,25 @@ function initApp(rawData) {
     const visible = filtered.slice(0, visibleOccupationLimit);
 
     if (resultCount) {
-      const cappedTotal = Math.min(filtered.length, MAX_VISIBLE_OCCUPATIONS);
-
       resultCount.textContent =
         filtered.length > visible.length
-          ? `Showing ${visible.length} of ${cappedTotal} occupations`
+          ? `Showing ${visible.length} of ${filtered.length} occupations`
           : `${visible.length} occupation${visible.length === 1 ? "" : "s"}`;
     }
 
     if (showMoreOccupationsBtn) {
-      const canShowMore =
-        filtered.length > visible.length &&
-        visibleOccupationLimit < MAX_VISIBLE_OCCUPATIONS;
+      const canShowMore = filtered.length > visible.length;
 
       showMoreOccupationsBtn.hidden = !canShowMore;
 
-      const remainingBeforeCap = Math.min(
+      const remaining = Math.min(
         OCCUPATION_INCREMENT,
-        MAX_VISIBLE_OCCUPATIONS - visibleOccupationLimit,
         filtered.length - visible.length
       );
 
       showMoreOccupationsBtn.textContent =
-        remainingBeforeCap > 0
-          ? `Show ${remainingBeforeCap} more occupations`
+        remaining > 0
+          ? `Show ${remaining} more occupations`
           : "Show more occupations";
     }
 
@@ -635,11 +629,7 @@ function renderOccupationPage() {
 
   if (showMoreOccupationsBtn) {
     showMoreOccupationsBtn.addEventListener("click", () => {
-      visibleOccupationLimit = Math.min(
-        visibleOccupationLimit + OCCUPATION_INCREMENT,
-        MAX_VISIBLE_OCCUPATIONS
-      );
-
+      visibleOccupationLimit += OCCUPATION_INCREMENT;
       renderOccupationCards();
     });
   }
