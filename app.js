@@ -121,6 +121,20 @@ function initApp(rawData) {
     return `occupation.html?id=${encodeURIComponent(id)}`;
   }
 
+  function emptyDetailPanel() {
+  if (!detailPanel) return;
+
+  detailPanel.classList.add("empty-state");
+  detailPanel.innerHTML = `
+    <h3>Select an occupation</h3>
+    <p>
+      Click an occupation card to view AI exposure, labor market data, and up to two
+      related lower-exposure occupations. Use the full occupation page for all details,
+      including Arizona training opportunities.
+    </p>
+  `;
+}
+
   function getActiveSearchInput() {
     return searchInput || globalSearchInput || null;
   }
@@ -662,7 +676,7 @@ Promise.all([
     initApp(data);
   })
   .catch(error => {
-    console.error("Data load error:", error);
+    console.error("App initialization error:", error);
 
     const occupationList = document.getElementById("occupationList");
     const detailPanel = document.getElementById("detailPanel");
