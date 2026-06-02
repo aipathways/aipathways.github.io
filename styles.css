@@ -852,9 +852,16 @@ h1 {
   color: #102a43;
 }
 
+.step-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .callout {
-  border-left: 5px solid var(--green);
-  background: var(--green-soft);
+  border-left: 5px solid #1f4e79;
+  background: #eef6ff;
+  color: #1f2933;
   border-radius: 14px;
   padding: 18px 20px;
   margin-top: 18px;
