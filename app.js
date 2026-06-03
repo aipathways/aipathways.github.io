@@ -446,7 +446,9 @@ function renderSankeySection(occupation) {
     `;
   }
 
-  function detailMarkup(o) {
+  function detailMarkup(o, options = {}) {
+    const showAltTitle = options.showAltTitle === true;
+
     return `
       <div class="inline-row">
         <span class="badge ${escapeHtml(cssExposureClass(o.exposure))}">${escapeHtml(o.exposure)} AI Exposure</span>
@@ -454,7 +456,7 @@ function renderSankeySection(occupation) {
       </div>
       <h2>${escapeHtml(o.title)}</h2>
       <p>${escapeHtml(o.summary || "No summary available.")}</p>
-      ${o.altTitle ? `
+      ${showAltTitle && o.altTitle ? `
         <p class="alt-title">
           <strong>Alternate titles:</strong> ${escapeHtml(o.altTitle)}
         </p>
@@ -502,7 +504,7 @@ function renderSankeySection(occupation) {
     activeOccupationId = id;
     detailPanel.classList.remove("empty-state");
     detailPanel.innerHTML = `
-      ${detailMarkup(occupation)}
+      ${detailMarkup(occupation, { showAltTitle: false })}
       <div class="subsection">
         <a class="full-page-link" href="${fullOccupationLink(occupation.id)}">Open full occupation page</a>
       </div>
@@ -538,7 +540,7 @@ function renderOccupationPage() {
 
   occupationPage.innerHTML = `
     <div class="detail-panel occupation-page-panel">
-      ${detailMarkup(occupation)}
+      ${detailMarkup(occupation, { showAltTitle: true })}
       ${renderSankeySection(occupation)}
       ${renderRelatedOccupations(occupation, null, true, {
         showToggle: true,
