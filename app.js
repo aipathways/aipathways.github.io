@@ -452,7 +452,7 @@ function renderSankeySection(occupation) {
       <p>${escapeHtml(o.summary || "No summary available.")}</p>
       ${o.altTitle ? `
         <p class="alt-title">
-          <strong>Alternate title:</strong> ${escapeHtml(o.altTitle)}
+          <strong>Alternate titles:</strong> ${escapeHtml(o.altTitle)}
         </p>
       ` : ""}
 
