@@ -207,6 +207,22 @@ h1 {
   font-size: 1.08rem;
 }
 
+.boxed-hero .hero-actions {
+  margin-top: 28px;
+}
+
+.boxed-hero .hero-back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.boxed-hero .hero-back-btn:hover {
+  text-decoration: none;
+}
+
 .page > .hero p:not(.eyebrow) {
   margin-top: 18px;
 }

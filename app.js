@@ -194,25 +194,29 @@ function initApp(rawData) {
         return matchesSearch && matchesExposure;
       })
       .sort((a, b) => {
-        if (!query) return a.title.localeCompare(b.title);
+        // Preserve the original data.json order when no search query is active.
+        if (!query) return 0;
 
-      const score = o => {
-        const title = String(o.title || "").toLowerCase();
-        const soc = String(o.soc || "").toLowerCase();
-        const summary = String(o.summary || "").toLowerCase();
+        const score = o => {
+          const title = String(o.title || "").toLowerCase();
+          const altTitle = String(o.altTitle || "").toLowerCase();
+          const soc = String(o.soc || "").toLowerCase();
+          const summary = String(o.summary || "").toLowerCase();
 
-        if (title.startsWith(query)) return 1;
-        if (title.includes(query)) return 2;
-        if (soc.includes(query)) return 3;
-        if (summary.includes(query)) return 4;
-        return 5;
-      };
+          if (title.startsWith(query)) return 1;
+          if (title.includes(query)) return 2;
+          if (altTitle.includes(query)) return 3;
+          if (soc.includes(query)) return 4;
+          if (summary.includes(query)) return 5;
+          return 6;
+        };
 
-      const diff = score(a) - score(b);
-      if (diff !== 0) return diff;
+        const diff = score(a) - score(b);
+        if (diff !== 0) return diff;
 
-      return a.title.localeCompare(b.title);
-    });
+        // Keep original relative order for equivalent search matches.
+        return 0;
+      });
 }
 
   function renderOccupationCards() {
@@ -424,7 +428,7 @@ function renderSankeySection(occupation) {
                 <h3>Arizona training opportunities</h3>
 
                 <p class="muted">
-                    Training programs are available for lower-exposure destination occupations. Select a transition option below to explore related Arizona education and training pathways.
+                    Training programs are available for lower-exposure destination occupations. Select a transition option above to identify a lower-exposure occupation and associated training opportunities.
                 </p>
             </div>
         `;
