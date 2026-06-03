@@ -335,7 +335,57 @@ a {
         Training programs are linked to lower-exposure occupations through SOC-to-CIP mappings.
     </div>
 
-</main>
+    <div class="note" id="displayLimitNote"></div>
+
+    </div>
+
+    <footer class="site-footer">
+        <div class="wrap site-footer-inner">
+        <div class="footer-brand">
+            <img
+            src="assets/ARIZONA%20PRIMARY%20LOGO_Solid_Agnostic_White.png"
+            alt="State of Arizona"
+            />
+            <div>
+            <h2>Arizona Office of Economic Opportunity</h2>
+            <p>
+                Labor market information, workforce evaluation, and economic analysis
+                for the State of Arizona.
+            </p>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <div>
+            <h3>Resources</h3>
+            <a href="index.html">Occupations</a>
+            <a href="transitions.html">Training</a>
+            <a href="methodology.html">Methodology</a>
+            <a href="about.html">About</a>
+            </div>
+
+            <div>
+            <h3>State Links</h3>
+            <a href="https://az.gov/">AZ.gov</a>
+            <a href="https://oeo.az.gov/">OEO.az.gov</a>
+            <a href="https://azgovernor.gov/">Governor's Office</a>
+            </div>
+
+            <div>
+            <h3>Policies</h3>
+            <a href="https://az.gov/accessibility-policy">Accessibility</a>
+            <a href="https://az.gov/privacy-policy">Privacy Policy</a>
+            <a href="https://az.gov/terms-use">Terms of Use</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+        <div class="wrap">
+            <p>© State of Arizona. This site is a public-facing workforce analysis prototype.</p>
+        </div>
+        </div>
+    </footer>
 
 <script>
 
@@ -498,7 +548,9 @@ function renderTable() {
 
     const seen = new Set();
 
-    filteredData.forEach(d => {
+    const DISPLAY_LIMIT = 100;
+
+    filteredData.slice(0, DISPLAY_LIMIT).forEach(d => {
 
         const key =
             d.program_name +
@@ -557,6 +609,15 @@ function renderTable() {
 
             </tr>
         `;
+
+    const displayLimitNote = document.getElementById("displayLimitNote");
+
+    if (displayLimitNote) {
+        displayLimitNote.textContent =
+            filteredData.length > DISPLAY_LIMIT
+            ? `Showing the first ${DISPLAY_LIMIT} of ${filteredData.length.toLocaleString()} filtered training programs. Use the filters or download the CSV to review more results.`
+            : "";
+    }
 
         tbody.insertAdjacentHTML("beforeend", row);
     });
