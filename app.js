@@ -428,7 +428,7 @@ function renderSankeySection(occupation) {
                 <h3>Arizona training opportunities</h3>
 
                 <p class="muted">
-                    Training programs are available for lower-exposure destination occupations. Select a transition option above to identify a lower-exposure occupation and associated training opportunities.
+                    Training programs are available for lower-exposure destination occupations. Select a transition option above if available, to identify a lower-exposure occupation, and associated training opportunities.
                 </p>
             </div>
         `;
