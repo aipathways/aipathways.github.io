@@ -38,6 +38,7 @@ function initApp(rawData) {
     if (!item || typeof item !== "object") return null;
 
     const title = item.title ?? item.occupationTitle ?? item.name ?? "";
+    const altTitle = item.alt_title ?? item.altTitle ?? item.alternateTitle ?? item.alternate_title ?? "";
     const soc = item.soc ?? item.socCode ?? item.code ?? "";
     const exposure = normalizeExposure(item.exposure ?? item.aiExposure ?? item.exposureLevel ?? "Unknown");
     const summary = item.summary ?? item.description ?? "";
@@ -47,6 +48,7 @@ function initApp(rawData) {
     return {
       id: item.id ?? makeId(title || soc || `occupation-${index}`),
       title: String(title || "Untitled occupation"),
+      altTitle: String(altTitle || ""),
       soc: String(soc || ""),
       exposure,
       summary: String(summary || ""),
@@ -179,6 +181,7 @@ function initApp(rawData) {
 
         const searchableText = [
           o.title,
+          o.altTitle,
           o.soc,
           o.summary,
           o.exposure,
@@ -447,6 +450,11 @@ function renderSankeySection(occupation) {
       </div>
       <h2>${escapeHtml(o.title)}</h2>
       <p>${escapeHtml(o.summary || "No summary available.")}</p>
+      ${o.altTitle ? `
+        <p class="alt-title">
+          <strong>Alternate title:</strong> ${escapeHtml(o.altTitle)}
+        </p>
+      ` : ""}
 
       <div class="metrics">
         <div class="metric">

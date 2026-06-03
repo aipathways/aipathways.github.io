@@ -403,6 +403,16 @@ h1 {
   color: var(--muted);
 }
 
+.alt-title {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.alt-title strong {
+  color: var(--text);
+}
+
 .main-grid > aside {
   position: sticky;
   top: 104px; /* adjust if your header height changes */
