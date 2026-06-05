@@ -39,6 +39,7 @@ function initApp(rawData) {
 
     const title = item.title ?? item.occupationTitle ?? item.name ?? "";
     const altTitle = item.alt_title ?? item.altTitle ?? item.alternateTitle ?? item.alternate_title ?? "";
+    const aiSummary = item.aiSummary ?? item.ai_summary ?? item.aiExposureSummary ?? item.ai_exposure_summary ?? "";
     const soc = item.soc ?? item.socCode ?? item.code ?? "";
     const exposure = normalizeExposure(item.exposure ?? item.aiExposure ?? item.exposureLevel ?? "Unknown");
     const summary = item.summary ?? item.description ?? "";
@@ -49,6 +50,7 @@ function initApp(rawData) {
       id: item.id ?? makeId(title || soc || `occupation-${index}`),
       title: String(title || "Untitled occupation"),
       altTitle: String(altTitle || ""),
+      aiSummary: String(aiSummary || ""),
       soc: String(soc || ""),
       exposure,
       summary: String(summary || ""),
@@ -448,6 +450,7 @@ function renderSankeySection(occupation) {
 
   function detailMarkup(o, options = {}) {
     const showAltTitle = options.showAltTitle === true;
+    const showAiSummary = options.showAiSummary === true;
 
     return `
       <div class="inline-row">
@@ -456,6 +459,9 @@ function renderSankeySection(occupation) {
       </div>
       <h2>${escapeHtml(o.title)}</h2>
       <p>${escapeHtml(o.summary || "No summary available.")}</p>
+      ${showAiSummary && o.aiSummary ? `
+        <p class="ai-summary">${escapeHtml(o.aiSummary)}</p>
+      ` : ""}
       ${showAltTitle && o.altTitle ? `
         <p class="alt-title">
           <strong>Alternate titles:</strong> ${escapeHtml(o.altTitle)}
@@ -503,8 +509,11 @@ function renderSankeySection(occupation) {
 
     activeOccupationId = id;
     detailPanel.classList.remove("empty-state");
+
     detailPanel.innerHTML = `
-      ${detailMarkup(occupation, { showAltTitle: false })}
+      ${detailMarkup(occupation, { 
+        showAltTitle: false,
+        showAiSummary: false })}
       <div class="subsection">
         <a class="full-page-link" href="${fullOccupationLink(occupation.id)}">Open full occupation page</a>
       </div>
@@ -540,7 +549,10 @@ function renderOccupationPage() {
 
   occupationPage.innerHTML = `
     <div class="detail-panel occupation-page-panel">
-      ${detailMarkup(occupation, { showAltTitle: true })}
+      ${detailMarkup(occupation, {
+        showAiSummary: true,
+        showAltTitle: true
+      })}
       ${renderSankeySection(occupation)}
       ${renderRelatedOccupations(occupation, null, true, {
         showToggle: true,
