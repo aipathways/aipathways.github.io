@@ -458,13 +458,15 @@ function renderSankeySection(occupation) {
         <span class="badge Blue">SOC ${escapeHtml(o.soc || "N/A")}</span>
       </div>
       <h2>${escapeHtml(o.title)}</h2>
-      <p>${escapeHtml(o.summary || "No summary available.")}</p>
+      <p><strong>Occupation Description:</strong> ${escapeHtml(o.summary || "No summary available.")}</p>
       ${showAiSummary && o.aiSummary ? `
-        <p class="ai-summary">${escapeHtml(o.aiSummary)}</p>
+        <p class="ai-summary">
+          <strong>AI Exposure Summary:</strong> ${escapeHtml(o.aiSummary)}
+        </p>
       ` : ""}
       ${showAltTitle && o.altTitle ? `
         <p class="alt-title">
-          <strong>Alternate titles:</strong> ${escapeHtml(o.altTitle)}
+          <strong>Alternate Titles:</strong> ${escapeHtml(o.altTitle)}
         </p>
       ` : ""}
 
