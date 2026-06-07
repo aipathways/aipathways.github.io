@@ -10,7 +10,7 @@ function initApp(rawData) {
   const showMoreOccupationsBtn = document.getElementById("showMoreOccupationsBtn");
   const chips = Array.from(document.querySelectorAll(".chip"));
 
-  let activeFilter = "ALL";
+  let activeFilter = "Very High";
   let activeOccupationId = null;
   let occupationPageRelatedExpanded = false;
   let visibleOccupationLimit = 20;
@@ -618,12 +618,12 @@ function renderOccupationPage() {
   if (clearBtn) {
     clearBtn.addEventListener("click", () => {
       setSearchValue("");
-      activeFilter = "ALL";
+      activeFilter = "Very High";
       activeOccupationId = null;
       visibleOccupationLimit = OCCUPATION_INCREMENT;
 
       chips.forEach(chip => {
-        chip.classList.toggle("active", chip.dataset.filter === "ALL");
+        chip.classList.toggle("active", chip.dataset.filter === "Very High");
       });
 
       renderOccupationCards();
